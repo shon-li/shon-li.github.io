@@ -7,10 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Thanks to &lt;a href=&#39;https://twitter.com/siegerts&#39;&gt;siegerts&lt;/a&gt; for the &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Hugo Theme Basic&lt;/a&gt;.&lt;/br&gt;© 2019 shon-bottle. Licenses &lt;a href=&#39;https://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;CC BY-NC-SA 4.0&lt;/a&gt;.</copyright>
-    <lastBuildDate>Sun, 10 Feb 2019 16:53:06 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2019 23:35:35 +1300</lastBuildDate>
     
 	<atom:link href="https://shon-li.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>bulletin</title>
+      <link>https://shon-li.github.io/bulletin/</link>
+      <pubDate>Sun, 17 Mar 2019 23:35:35 +1300</pubDate>
+      
+      <guid>https://shon-li.github.io/bulletin/</guid>
+      <description>Alright, I made my &amp;lsquo;alpha version&amp;rsquo; site almost ready. Need to find a way to upload this to my gayhub now. Only… I want a better code block look, and a better domain name. I will try to figure those out later.
+UTC+13 00:35:23 / 18 Mar 2019
+I will randomally write something short and mark the time below, like this one. So maybe this can be a way for me to do a quick reply to you.</description>
+    </item>
+    
+    <item>
+      <title>hello</title>
+      <link>https://shon-li.github.io/hello/</link>
+      <pubDate>Sun, 17 Mar 2019 22:18:15 +1300</pubDate>
+      
+      <guid>https://shon-li.github.io/hello/</guid>
+      <description>shon-bottle? Like a bottle in the sea, the information on this site is floating on the internet. It&amp;rsquo;s pretty intriguing to me that you are here. Because through this language this media, somehow we connected. It will be really a pleasure for me if you like something here.
+So, really nice to meet you here, you can call me shon, or you will find my other names somewhere. I am now in New Zealand on a working holiday.</description>
+    </item>
+    
+    <item>
+      <title>shonScript</title>
+      <link>https://shon-li.github.io/post/shonscript/</link>
+      <pubDate>Sun, 17 Mar 2019 18:00:22 +1300</pubDate>
+      
+      <guid>https://shon-li.github.io/post/shonscript/</guid>
+      <description>I wrote an AutoHotKey script for the booking system of the hostel I am working in. Sorry, it can be tedious and confusing for you to read these code here directly. I am not so sure about why I post this here either. If you like reading it, it’s down there.
+It can extract the booking information from the Outlook mail and the SiteMinder Channel Manager, then help to search and fill forms on the Backpack Online System.</description>
+    </item>
     
     <item>
       <title>Hugo</title>

@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="shonScript" />
+<meta property="og:site_name" content="# shon-bottle" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="https://shon-li.github.io/post/shonscript/" />
+<meta property="og:locale" content="en-us" />
+<meta property="article:published_time" content="2019-03-17
+" /> <meta property="article:modified_time" content="2019-03-17
+" />
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@hishawnli" />
+<meta name="twitter:creator" content="@hishawnli" />
+<meta
+  name="twitter:title"
+  content="shonScript | # shon-bottle"
+/>
+<meta
+  name="twitter:description"
+  content="I wrote an AutoHotKey script for the booking system of the hostel I am working in. Sorry, it can be tedious and confusing for you to read these code here directly. I am not so sure about why I post this here either. If you like reading it, it’s down there.
+It can extract the booking information from the Outlook mail and the SiteMinder Channel Manager, then help to search and fill forms on the Backpack Online System.|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="https://shon-li.github.io/post/shonscript/" />
+
+
+    <title>shonScript</title>
+    <link rel="canonical" href="https://shon-li.github.io/post/shonscript/" />
+
+    <link
+      href=""
+      rel="alternate"
+      type="application/rss+xml"
+      title="shonScript"
+    />
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="https://shon-li.github.iocss/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-XXXXXXXXX-X', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+</html>
+
+<body
+  lang="en-us"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="https://shon-li.github.io" class="b bb bw1 pb1 no-underline black"># shon-bottle</a>
+  <span class="b"> / </span>
+  <a href="/post" class="b bb bw1 pb1 no-underline black">blog</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">shonScript</h1>
+    <span class="f6 gray">March 17, 2019</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p>I wrote an AutoHotKey script for the booking system of the hostel I am working in. Sorry, it can be tedious and confusing for you to read these code here directly. I am not so sure about why I post this here either. If you like reading it, it’s down there.</p>
+
+<p>It can extract the booking information from the Outlook mail and the SiteMinder Channel Manager, then help to search and fill forms on the Backpack Online System.</p>
+
+<p>The first version is started in December 2018, named “shon-script_alpha”. Because I don’t have experience in making this that time, and I think that there is a possibility to fail. Luckily, I finished it. It feels pretty good that I succeeded in this. I was thinking of learning and trying to use the post method later, but I gave up. I got help from my colleagues on making this, they helped me to use a better English on these message boxes.</p>
+
+<pre><code>CoordMode, ToolTip, Screen
+SetTitleMatchMode, 2
+SysGet, Mon1, Monitor
+^Numpad5::
+	ClipBackup = %Clipboard%
+	bookSrc =
+	guestAdd =
+	guestMail =
+	guestPhone =
+	nonRefund =
+	guestNameArray := []
+
+	; Start
+	MsgBox, 262145, shonScript,
+	(LTrim
+		Welcome to shonScript!
+		*Version 190308
+
+		Before starting, please make sure you have done these in the following order,
+
+		-    1. Log into the Backpack Online System
+		-    2. Keep a separate SiteMinder reservation search window open
+		-    3. Enter the security code to be able to see credit card details on SiteMinder
+		-    4. Select the booking email and click it
+
+		All done? Let’s click 'OK' to start!
+
+		Hold 'Ctrl', 'Alt' then press number pad '4' to make a booking starting from the SiteMinder ID you copied;
+
+		Hold 'Ctrl' and press number pad '4' to search for something you've copied on SiteMinder;
+
+		Hold 'Ctrl' and number pad '6' to search for something that you've copied on the Backpack Online system.
+	)
+	IfMsgBox, Cancel
+		return
+
+	; #0. Select and copy current content
+	WinActivate, Microsoft Outlook
+	WinMaximize, Microsoft Outlook
+	Sleep, 500
+	MouseClick, left, 1150, 410
+	Sleep, 200
+	Send, {Ctrl down}a
+	Sleep, 100
+	Send, c{Ctrl up}
+	MouseClick, left, 1145, 405
+	Sleep, 100
+	IfWinNotExist Untitled - Notepad
+	{
+		Run, Notepad.exe
+		Sleep, 700
+	}
+	WinActivate, Untitled - Notepad
+	Send, {Ctrl down}a{Ctrl up}{Backspace}
+	Sleep, 50
+	Send, {Ctrl down}v{Ctrl up}
+
+	; Search Booking Source
+	Clipboard = Booking.com
+	Send, {Ctrl down}{Home}fv{Ctrl up}{Alt down}c{Alt up}{Enter}{Esc}{Esc}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	If (Clipboard = &quot;Booking.com&quot;)
+	{
+		bookSrc = %Clipboard%
+		Goto, readBookingcom
+	}
+	else
+	{
+		Clipboard = agoda
+		Send, {Ctrl down}{Home}fv{Ctrl up}{Enter}{Esc}{Esc}
+		Clipboard =
+		Send, {Ctrl down}c{Ctrl up}
+		ClipWait, 0
+		If (Clipboard = &quot;agoda&quot;)
+		{
+			bookSrc = %Clipboard%
+			Goto, readAgoda
+		}
+		else
+		{
+			Clipboard = EXPEDIA
+			Send, {Ctrl down}{Home}fv{Ctrl up}{Alt down}c{Alt up}{Enter}{Esc}{Esc}
+			Clipboard =
+			Send, {Ctrl down}c{Ctrl up}
+			ClipWait, 0
+			If (Clipboard = &quot;EXPEDIA&quot;)
+			{
+				bookSrc = %Clipboard%
+				Goto, readExpedia
+			}
+			else
+			{
+				Clipboard = BOOKIT
+				Send, {Ctrl down}{Home}fv{Ctrl up}{Alt down}c{Alt up}{Enter}{Esc}{Esc}
+				Clipboard =
+				Send, {Ctrl down}c{Ctrl up}
+				ClipWait, 0
+				If (Clipboard = &quot;BOOKIT&quot;)
+				{
+					bookSrc = %Clipboard%
+					Goto, readBookIT
+				}
+				else
+				{
+					MsgBox, 262404, shonScript, Sorry I can't read this, you may should switch to a booking mail before you start.`n`nYou can also skip the mail, just now go to copy the SiteMinder Booking ID, and go back to this window click 'Yes'.`nYou can also do this by holding 'Ctrl' and 'Alt' then press 'Numberpad 4' after copying the SiteMinder ID.`n`nClick 'No' to stop.
+					IfMsgBox, No
+						Goto, end
+					IfMsgBox, Yes
+					{
+						bookID = %Clipboard%
+						Goto, getSiteMinder
+					}
+				}
+			}
+		}
+	}
+
+	; #1.1 Read Booking.com mail content
+	readBookingcom:
+	WinActivate, Untitled - Notepad
+	Send, {Ctrl down}{Home}{Ctrl up}
+
+	; Get bookID, nonRefund, guestPhone, guestMail, guestAdd.
+
+	; Booking Confirmation Id
+	Clipboard = Booking Confirmation Id
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	bookID = %Clipboard%
+	If bookID is not number
+	{
+		MsgBox, 262145, shonScript,
+		(LTrim
+			Getting Booking ID failed, please click the booking mail then retry.
+			You can also just copy the SiteMinder Booking ID then click 'OK' to make the booking from SiteMinder.
+
+			Please leave the mouse and keyboard for me when I am operating.
+			Thank you!
+		)
+		IfMsgBox, Cancel
+			Goto, end
+		IfMsgBox, OK
+		{
+			bookID = %Clipboard%
+			Goto, getSiteMinder
+		}
+	}
+
+	; Non-refundable
+	Clipboard = Non-refundable
+	Send, {Ctrl down}fv{Ctrl up}{Alt down}c{Alt up}{Enter}{Esc}{Esc}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	nonRefund = %Clipboard%
+	If (nonRefund != &quot;Non-refundable&quot;)
+		nonRefund =
+
+	; PrePay
+	Clipboard = PrePay
+	Send, {Ctrl down}{Home}fv{Ctrl up}{Alt down}c{Alt up}{Enter}{Esc}{Esc}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	prepay = %Clipboard%
+	If (prepay = &quot;PrePay&quot;)
+		prepay = &quot;Prepaid&quot;
+
+	; Booker Name
+	Clipboard = Booker Name
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestName = %Clipboard%
+	guestNameArray := StrSplit(guestName, &quot;, &quot;)
+
+	; Phone
+	Clipboard = Phone
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestPhone = %Clipboard%
+
+	; Email
+	Clipboard = Email
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestMail = %Clipboard%
+
+	; Address
+	Clipboard = Address
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{End}{Shift down}{Ctrl down}{Left}{Ctrl up}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestAdd = %Clipboard%
+	If (guestAdd = &quot;Zealand&quot;)
+		guestAdd = New Zealand
+	else If (guestAdd = &quot;Kingdom&quot;)
+		guestAdd = UK
+	else If (guestAdd = &quot;States&quot;)
+		guestAdd = USA
+
+	Goto, getSiteMinder
+
+	; #1.2 Read Agoda mail content
+	readAgoda:
+	WinActivate, Untitled - Notepad
+	Send, {Ctrl down}{Home}{Ctrl up}
+
+	; Get bookID, ;prepaid, guestAdd, ;nonRefund, guestPhone, guestMail.
+
+	; Booking ID
+	Clipboard = Booking ID
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Left}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	bookID = %Clipboard%
+	If bookID is not number
+	{
+		MsgBox, 262145, shonScript,
+		(LTrim
+			Getting Booking ID failed, please switch to the booking mail and retry.
+			Or, you can copy the SiteMinder Booking ID then click 'OK' to skip to SiteMinder.
+
+			Please leave the mouse and keyboard for me when I am operating.
+			Thank you!
+		)
+		IfMsgBox, Cancel
+			Goto, end
+		IfMsgBox, OK
+		{
+			bookID = %Clipboard%
+			Goto, getSiteMinder
+		}
+	}
+
+	; First Name &amp; Last Name
+	Clipboard = First Name
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{Right}{Right}{Shift down}{End}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestName = %Clipboard%
+	Clipboard = Last Name
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{Right}{Right}{Shift down}{End}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestNameArray.Push(Clipboard)
+	guestNameArray.Push(guestName)
+	guestName = %Clipboard%, %guestName%
+
+	; Country of Residence
+	Clipboard = Country of Residence
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{Right}{Right}{Shift down}{End}{Left}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestAdd = %Clipboard%
+	If (guestAdd = &quot;United Kingdom&quot;)
+		guestAdd = UK
+	else If (guestAdd = &quot;United States&quot;)
+		guestAdd = USA
+
+	; Non-Refundable
+	;Clipboard = Non-Refundable
+	;Send, {Ctrl down}fv{Ctrl up}{Alt down}c{Alt up}{Enter}{Esc}{Esc}
+	;Clipboard =
+	;Send, {Ctrl down}c{Ctrl up}
+	;ClipWait, 0
+	;nonRefund = %Clipboard%
+	;If (nonRefund != &quot;Non-Refundable&quot;)
+	;{
+	;	nonRefund =
+	;}
+
+	; Phone
+	Clipboard = Phone
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{Ctrl down}{right}{Shift down}{Right}{Right}{Ctrl up}{Left}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestPhone = %Clipboard%
+
+	; Email
+	Clipboard = Email
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{Ctrl down}{right}{Shift down}{Right}{Right}{Ctrl up}{Left}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestMail = %Clipboard%
+
+	Goto, getSiteMinder
+
+	; #1.3 Read Expedia mail content
+	readExpedia:
+	WinActivate, Untitled - Notepad
+	Send, {Ctrl down}{Home}{Ctrl up}
+
+	; Get bookID, nonRefund, guestAdd, guestPhone, guestMail.
+
+	; Booking Confirmation Id
+	Clipboard = Booking Confirmation Id
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	bookID = %Clipboard%
+	If bookID is not number
+	{
+		MsgBox, 262145, shonScript,
+		(LTrim
+			Getting Booking ID failed, please switch to the booking mail and retry.
+			Or, you can copy the SiteMinder Booking ID then click 'OK' to skip to SiteMinder.
+
+			Please leave the mouse and keyboard for me when I am operating.
+			Thank you!
+		)
+		IfMsgBox, Cancel
+			Goto, end
+		IfMsgBox, OK
+		{
+			bookID = %Clipboard%
+			Goto, getSiteMinder
+		}
+	}
+
+	; Non-Refundable
+	Clipboard = Non-refundable
+	Send, {Ctrl down}fv{Ctrl up}{Alt down}c{Alt up}{Enter}{Esc}{Esc}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	nonRefund = %Clipboard%
+	If (nonRefund != &quot;Non-refundable&quot;)
+	{
+		nonRefund =
+	}
+
+	; Address
+	Clipboard = Address
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{End}{Shift down}{Ctrl down}{Left}{Shift up}{Ctrl up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	If (guestAdd = &quot;Zealand&quot;)
+		guestAdd = New Zealand
+	else If (guestAdd = &quot;Kingdom&quot;)
+		guestAdd = UK
+	else If (guestAdd = &quot;States&quot;)
+		guestAdd = USA
+
+	; Booker Name
+	Clipboard = Booker Name
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestName = %Clipboard%
+	guestNameArray := StrSplit(guestName, &quot;, &quot;)
+
+	; Phone
+	Clipboard = Phone
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestPhone = %Clipboard%
+
+	; Email
+	Clipboard = Email
+	Send, {End}{Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestMail = %Clipboard%
+
+	Goto, getSiteMinder
+
+	; #1.4 Read BOOKIT mail content
+	readBookIT:
+	WinActivate, Untitled - Notepad
+	Send, {Ctrl down}{Home}{Ctrl up}
+
+	; Get guestMail, guestAdd, bookID.
+
+	; Email:
+	Clipboard = Email:
+	Send, {End}{Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Ctrl down}{Shift down}{Left}{Shift up}{Ctrl up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestMail = %Clipboard%
+
+	; Telephone
+	Clipboard = Telephone:
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Ctrl down}{Shift down}{Left}{Shift up}{Ctrl up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestPhone = %Clipboard%
+
+	; Guest Address
+	Clipboard = Guest Address
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{End}{Shift down}{Ctrl down}{Left}{Ctrl up}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	guestAdd = %Clipboard%
+	If (guestAdd = &quot;NZ&quot;)
+		guestAdd = New Zealand
+	else If (guestAdd = &quot;Kingdom&quot;)
+		guestAdd = UK
+	else If (guestAdd = &quot;States&quot;)
+		guestAdd = USA
+
+	; BookIt reference:
+	Clipboard = BookIt reference:
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Ctrl down}{Shift down}{Left}{Shift up}{Ctrl up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	bookID = %Clipboard%
+	If bookID is not number
+	{
+		MsgBox, 262145, shonScript,
+		(LTrim
+			Getting Booking ID failed, please switch to the booking mail and retry.
+			Or, you can copy the SiteMinder Booking ID then click 'OK' to skip to SiteMinder.
+
+			Please leave the mouse and keyboard for me when I am operating.
+			Thank you!
+		)
+		IfMsgBox, Cancel
+			Goto, end
+		IfMsgBox, OK
+		{
+			bookID = %Clipboard%
+			Goto, getSiteMinder
+		}
+	}
+	prepay = Prepaid
+	Goto, getSiteMinder
+
+
+	; #2 Get info from SiteMinder
+	getSiteMinder:
+	IfWinNotExist, SiteMinder
+	{
+		MsgBox, 262145, shonScript, Please make a separate SiteMinder webpage window ready,`nthen go back to this window and click 'OK'.
+			IfMsgBox, Cancel
+				Goto, end
+			IfMsgBox, OK
+				Goto, getSiteMinder
+	}
+	WinActivate SiteMinder
+	WinMaximize SiteMinder
+	Send, {Ctrl down}0{Ctrl up}{Home}
+	Sleep, 500
+	MouseClick, left, 110, 300,
+	Sleep, 700
+	MouseClick, left, 110, 300, 3
+	Clipboard = %bookID%
+	Send, {Ctrl down}v{Ctrl up}{Enter}
+	Clipboard =
+	Sleep, 1350
+	MouseClick, left, 110, 509
+	Sleep, 300
+	Send, {Ctrl down}a
+	Sleep, 300
+	Send, c{Ctrl up}
+	MouseClick, left, 585, 322
+	Sleep, 100
+	IfWinNotExist Untitled - Notepad
+	{
+		Run, Notepad.exe
+		Sleep, 700
+	}
+	WinActivate, Untitled - Notepad
+	Send, {Ctrl down}a{Ctrl up}{Backspace}
+	Send, {Ctrl down}v{Ctrl up}
+	Send, {Ctrl down}{Home}h{Ctrl up}/{Tab}{Space}{Alt down}a{Alt up}{Esc}
+
+	; Get status, ckInDDMMYY, ckOutDDMMYY, guestName, bookSum, roomType, totalPrice, cardName, cardNum, cardType, expMM, expYY
+
+	; Status
+	Clipboard = Status
+	Send, {Ctrl down}fv{Ctrl up}{Alt down}c{Alt up}{Enter}{Esc}{Esc}{End}{Right}{Ctrl down}{Right}{Shift down}{Right}{Ctrl up}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	status = %Clipboard%
+
+	; Check In Date
+	Send, {Ctrl down}{Right}{Right}{Right}{Right}{Right}{Right}{Shift down}{Right}{Ctrl up}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	ckInMM = %Clipboard%
+	If ckInMM is not number
+	{
+		MsgBox, 262145, shonScript, Getting Check-In date failed, you can check SiteMinder then click 'OK' to retry.
+		IfMsgBox, Cancel
+			Goto, end
+		IfMsgBox, OK
+			Goto, getSiteMinder
+	}
+	Send, {Right}{Shift down}{Ctrl down}{Right}{Ctrl up}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	ckInDD = %Clipboard%
+	Send, {Right}{Shift down}{Ctrl down}{Right}{Ctrl up}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	ckInYY = %Clipboard%
+
+	; Check Out Date
+	Send, {Right}{Shift down}{Ctrl down}{Right}{Ctrl up}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	ckOutMM = %Clipboard%
+	Send, {Right}{Shift down}{Ctrl down}{Right}{Ctrl up}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	ckOutDD = %Clipboard%
+	Send, {Right}{Shift down}{Ctrl down}{Right}{Ctrl up}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	ckOutYY = %Clipboard%
+
+	; Booking Summary
+	Clipboard = Booking Summary:
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{Right}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	bookSum = %Clipboard%
+
+	; Channel Manager Room Type
+	roomType := []
+	roomNum = 0
+	addRoomType:
+	Clipboard = Channel Manager Room Type
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	If (Clipboard = &quot;Channel Manager Room Type&quot;)
+	{
+		roomNum += 1
+		Send, {End}{Right}{Shift down}{End}{Shift up}
+		Clipboard =
+		Send, {Ctrl down}c{Ctrl up}
+		ClipWait, 0
+		roomType.Push(Clipboard)
+		Goto, addRoomType
+	}
+
+	; Guest Name
+	Clipboard := guestNameArray[1]
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}
+	Clipboard = Guest Details
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	If (Clipboard = &quot;Guest Details&quot; )
+	{
+		Send, {End}{Right}{Shift down}{End}{Shift up}
+		Clipboard =
+		Send, {Ctrl down}c{Ctrl up}
+		ClipWait, 0
+		guestName = %Clipboard%
+		useMailName =
+	}
+	else
+		useMailName = 1
+
+	; Total Amount
+	Clipboard = Total Amount
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Ctrl down}{Shift down}{Right}{Ctrl up}{Left}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	totalPrice = %Clipboard%
+	If totalPrice is not number
+	{
+		Send, {Ctrl down}{Home}{Ctrl up}
+		Clipboard = Total Amount
+		Send, {Ctrl down}fv{Ctrl up}{Enter}{Enter}{Esc}{Esc}{End}{Right}{Ctrl down}{Shift down}{Right}{Ctrl up}{Left}{Shift up}
+		Clipboard =
+		Send, {Ctrl down}c{Ctrl up}
+		ClipWait, 0
+		totalPrice = %Clipboard%
+		If totalPrice is not number
+		{
+			MsgBox, 262145, shonScript,
+			(LTrim
+				The total price is not found, you can click 'OK' to retry.
+				Please leave the mouse and keyboard for me when I am operating.
+				Thank you!
+			)
+			IfMsgBox, Cancel
+				Goto, end
+			IfMsgBox, OK
+				Goto, getSiteMinder
+		}
+	}
+
+	If (bookSrc = &quot;BOOKIT&quot;)
+	{
+		Send, {Ctrl down}a{Ctrl up}{Backspace}
+		Goto, getBOS
+	}
+
+	; Cardholder Name
+	Clipboard = Cardholder Name
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	cardName = /
+	cardName = %Clipboard%
+	prepay =
+	If (cardName = &quot;Bookingcom Agent&quot;)
+		prepay = Prepaid
+	else If (cardName = &quot;Agoda Company Pte Ltd.&quot;)
+	{
+		bookSrc = agoda
+		prepay = Prepaid
+	}
+	else If (bookSrc = &quot;BOOKIT&quot;)
+		prepay = Prepaid
+
+	; Card Number
+	Clipboard = Card Number
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	cardNum = %Clipboard%
+	If cardNum is not number
+	{
+		MsgBox, 262146, shonScript, Looks like the Card Number is not right, please check. `nYou can check that on SiteMinder, then click 'Retry' to start from SiteMinder again, or click 'Ignore' to continue using this number.
+		IfMsgBox, Abort
+		{
+			Send, {Ctrl down}a{Ctrl up}{Backspace}
+			WinActivate SiteMinder
+			Goto, end
+		}
+		IfMsgBox, Retry
+		{
+			cardNum =
+			Goto, getSiteMinder
+		}
+	}
+
+	; Card Type
+	Clipboard = Card Type
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{End}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	cardType =
+	cardType = %Clipboard%
+
+	; Expiry Date
+	Clipboard = Expiry Date
+	Send, {Ctrl down}fv{Ctrl up}{Enter}{Esc}{Esc}{End}{Right}{Shift down}{Right}{Right}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	expMM =
+	expMM = %Clipboard%
+	expMM := Round(expMM, 0)
+	Send, {Right}{Shift down}{Right}{Right}{Shift up}
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	expYY =
+	expYY = %Clipboard%
+	expYY := expYY + 2000
+
+	If (cardName = &quot;Card Number&quot;)
+	{
+		cardName = /
+		cardNum = /
+		cardType = /
+		expMM =
+		expYY =
+	}
+	Send, {Ctrl down}a{Ctrl up}{Backspace}
+
+	If (status = &quot;CANCELLED&quot;)
+	{
+		WinActivate SiteMinder
+		MsgBox, 262145, shonScript, % &quot;-	&quot; . bookSum . &quot;`n`n-	Check-In Date:	&quot; . ckInDD . &quot; / &quot; . ckInMM . &quot; / &quot; . ckInYY . &quot;`n-	Check-Out Date:	&quot; . ckOutDD . &quot; / &quot; . ckOutMM . &quot; / &quot; . ckOutYY . &quot;`n-	Guest Name:	&quot; . guestName . &quot;`n-	Name on Card:	&quot; . cardName . &quot;`n-	Total Price:	$ &quot; . totalPrice . &quot;`n-	&quot; . roomNum . &quot; Beds Booked:	&quot; . roomType[1] . &quot;`n			&quot; . roomType[2] . &quot;`n			&quot; . roomType[3] . &quot;`n			&quot; . roomType[4] . &quot;`n			&quot; . roomType[5] . &quot;`n			&quot; . roomType[6] . &quot;`n			&quot; . roomType[7] . &quot;`n			&quot; . roomType[8] . &quot;`n`nThis booking is cancelled on SiteMinder.                        `nYou can click 'OK' to continue making it.&quot;
+		IfMsgBox, Cancel
+			Goto, end
+	}
+
+	; #3 Opearte the BackpackOnlineSystem
+	getBOS:
+	IfWinNotExist Backpack Online
+	{
+		MsgBox, 262145, shonScript, Please make Backpack Online System webpage ready, then click 'OK'.
+		IfMsgBox, Cancel
+			Goto, end
+		IfMsgBox, OK
+			Goto, getBOS
+	}
+	WinActivate, Backpack Online
+	WinMaximize, Backpack Online
+	Send, {Ctrl down}0{Ctrl up}{Home}
+	Sleep, 200
+
+	; Check double booking
+	If (Mon1Right = &quot;1280&quot;)
+		MouseClick, left, 1024, 141, 3
+	else
+		MouseClick, left, 1103, 141, 3
+	Send, %ckInDD%/%ckInMM%/%ckInYY%
+	If (Mon1Right = &quot;1280&quot;)
+		MouseClick, left, 1115, 142
+	else
+		MouseClick, left, 1196, 141
+	ImageSearch, FoundX, FoundY, 53, 201, 696, 397, C:\Program Files\AutoHotkey\link_out_button.gif
+	FoundX := FoundX - 65
+	MouseClick, left, FoundX, FoundY, 3
+	Clipboard = %guestName%
+	Send, {Ctrl down}v{Ctrl up}{Enter}
+	Sleep, 1800
+	If (Mon1Right = &quot;1280&quot;)
+		MouseClick, Left, 1057, 306, 2
+	else
+		MouseClick, Left, 1137, 305, 2
+	If (ckInDD &lt; 10) &amp;&amp; (ckInMM &lt;10)
+		Clipboard = 0%ckInDD%/0%ckInMM%/20%ckInYY%
+	else If (ckInDD &lt; 10) &amp;&amp; (ckInMM &gt;= 10)
+		Clipboard = 0%ckInDD%/%ckInMM%/20%ckInYY%
+	else If (ckInDD &gt;= 10) &amp;&amp; (ckInMM &lt;10)
+		Clipboard = %ckInDD%/0%ckInMM%/20%ckInYY%
+	else
+		Clipboard = %ckInDD%/%ckInMM%/20%ckInYY%
+	Send, {Ctrl down}fv{Ctrl up}{Enter}
+	Sleep, 300
+	Send, {Esc}
+	MsgBox, 262150, shonScript, % &quot;-	&quot; . bookSum . &quot;`n`n-	Check-In Date:	&quot; . ckInDD . &quot; / &quot; . ckInMM . &quot; / &quot; . ckInYY . &quot;`n-	Check-Out Date:	&quot; . ckOutDD . &quot; / &quot; . ckOutMM . &quot; / &quot; . ckOutYY . &quot;`n-	Guest Name:	&quot; . guestName . &quot;`n-	Name on Card:	&quot; . cardName . &quot;`n-	Total Price:	$ &quot; . totalPrice . &quot;`n-	&quot; . roomNum . &quot; Beds Booked:	&quot; . roomType[1] . &quot;`n			&quot; . roomType[2] . &quot;`n			&quot; . roomType[3] . &quot;`n			&quot; . roomType[4] . &quot;`n			&quot; . roomType[5] . &quot;`n			&quot; . roomType[6] . &quot;`n			&quot; . roomType[7] . &quot;`n			&quot; . roomType[8] . &quot;`n`nPlease check if the booking has already been made. `nYou can click 'Try Again' to retry the search.`n`nWhen you're ready, please select the booking dates and room type, then click 'Book Beds'. `nWhen you see 'Step 2' on the page, please return to this window and click 'Continue'.&quot;
+	IfMsgBox, Cancel
+		Goto, end
+	IfMsgBox, TryAgain
+		Goto, getBOS
+	IfMsgBox, Continue
+	{
+		; Input Contact Info
+		WinActivate, Backpack Online
+		WinMaximize, Backpack Online
+		Sleep, 200
+		Send, {Tab}
+		Clipboard := guestNameArray[2]
+		If (bookSrc = &quot;agoda&quot;)
+		{
+			If (useMailName = 1)
+			{
+				Clipboard = %Clipboard% (Agoda)
+				Send, {Ctrl down}v{Ctrl up}
+			}
+			else
+				Send, %guestName%{Ctrl down}{Backspace}{Ctrl up}(Agoda)
+		}
+		else If (prepay = &quot;Prepaid&quot;)
+		{
+			If (useMailName = 1)
+			{
+				Clipboard = %Clipboard% (Prepaid)
+				Send, {Ctrl down}v{Ctrl up}
+			}
+			else
+				Send, %guestName%{Ctrl down}{Backspace}{Ctrl up}(Prepaid)
+		}
+		else
+		{
+			If (useMailName = 1)
+				Send, {Ctrl down}v{Ctrl up}
+			else
+				Send, %guestName%{Ctrl down}{Backspace}{Ctrl up}{Backspace}
+		}
+		Send, {Tab}
+		If (useMailName = 1)
+		{
+			Clipboard := guestNameArray[1]
+			Send, {Ctrl down}v{Ctrl up}
+		}
+		else
+			Send, %guestName%{Ctrl down}{Left}{Backspace}{Backspace}{Backspace}{Backspace}{Ctrl up}
+		Send, {Tab}{Tab}
+		Clipboard = %guestMail%
+		Send, {Ctrl down}v{Ctrl up}{Tab}%guestAdd%{Tab}{Tab}{Tab}
+		Clipboard = %cardName%
+		Send, {Ctrl down}v{Ctrl up}{Tab}
+		Clipboard = %cardNum%
+		If (expMM != 1)
+			Send, {Ctrl down}v{Ctrl up}{Tab}%cardType%{Tab}%expMM%{Tab}%expYY%{Tab}{Tab}{Tab}{Tab}{Tab}{Tab}we{Tab}{Tab}{Tab}{Tab}{Tab}{Tab}
+		else
+			Send, {Ctrl down}v{Ctrl up}{Tab}%cardType%{Tab}1111{Tab}%expYY%{Tab}{Tab}{Tab}{Tab}{Tab}{Tab}we{Tab}{Tab}{Tab}{Tab}{Tab}{Tab}
+		Clipboard = %guestPhone%
+		Send, {Ctrl down}v{Ctrl up}
+		MsgBox, 262145, shonScript, % &quot;-	Name:		&quot; . guestName . &quot;`n-	Email:		&quot; . guestMail . &quot;`n-	Nationality:	&quot; . guestAdd . &quot;`n-	Name on Card:	&quot; . cardName . &quot;`n-	Card Number:	&quot; . cardNum . &quot;`n-	Card Type:	&quot; . cardType . &quot;`n-	Expiry Date:	&quot; . expMM . &quot; / &quot; . expYY . &quot;`n-	Phone:		&quot; . guestPhone . &quot;`n`n`nPlease check the details.`nIf everything looks okay, you can click the 'Make Reservation' button.`n`nUsing the 'Search' button, now is the chance to check if the guest has been banned from our hostel, or has caused trouble before!`n`nWhen you have the Notes tab open, please return to this window and click 'OK'.&quot;
+		IfMsgBox, Cancel
+			Goto, end
+		IfMsgBox, OK
+		{
+			cardNum =
+			expMM =
+			expYY =
+
+			; Input Note
+			WinActivate, Backpack Online
+			WinMaximize, Backpack Online
+			If (Mon1Right = &quot;1280&quot;)
+				MouseClick, left, 800, 480
+			else
+				MouseClick, left, 880, 482
+			Clipboard = %bookSum%
+			Send, {Ctrl down}v{Ctrl up}{Enter}
+
+			If (bookSrc = &quot;BOOKIT&quot;)
+			{
+				Clipboard = Register payment as a voucher
+				Send, {Ctrl down}v{Ctrl up}{Enter}
+				Clipboard = Collect KD
+				Send, {Ctrl down}v{Ctrl up}{Tab}{Tab}{Enter}
+				Goto, bosDiscount
+			}
+			else If (bookSrc = &quot;agoda&quot;)
+			{
+				Clipboard = Charge %cardName% $%totalPrice%
+				Send, {Ctrl down}v{Ctrl up}{Enter}
+				Clipboard = Collect KD
+				Send, {Ctrl down}v{Ctrl up}{Tab}{Tab}{Enter}
+				Goto, bosDiscount
+			}
+			If (nonRefund = &quot;Non-refundable&quot;)
+				Send, Non-Refundable{Enter}
+			If (prepay = &quot;Prepaid&quot;)
+			{
+				Send, Prepaid{Enter}
+				Clipboard = Charge %cardName% $%totalPrice%
+				Send, {Ctrl down}v{Ctrl up}{Enter}
+			}
+			Send, Collect KD
+			If (prepay != &quot;Prepaid&quot;)
+				Send, {Space}and $%totalPrice%
+			Send, {Tab}{Tab}{Enter}
+		}
+	}
+
+	; collect BackpackOnlineSystem price
+	bosDiscount:
+	IfWinNotExist, Backpack Online
+	{
+		MsgBox,, shonScript, Please switch to Backpack Online System and back here click 'OK'.
+		IfMsgBox, OK
+			Goto, bosDiscount
+	}
+	WinActivate, Backpack Online
+	WinMaximize, Backpack Online
+	Send, {Ctrl down}0{Ctrl up}{Home}
+	Sleep, 1750
+	If (Mon1Right = &quot;1280&quot;)
+		MouseClick, left, 1117, 287, 3
+	else
+		MouseClick, left, 1202, 285, 3
+	Clipboard =
+	Send, {Ctrl down}c{Ctrl up}
+	ClipWait, 0
+	bosPrice := Round(Clipboard, 2)
+	difPrice := bosPrice - totalPrice
+	difPrice := Round(difPrice, 2)
+	If (Mon1Right = &quot;1280&quot;)
+		MouseClick, left, 422, 454
+	else
+		MouseClick, left, 505, 451
+	Sleep, 1660
+	If (Mon1Right = &quot;1280&quot;)
+		MouseClick, left, 698, 377
+	else
+		MouseClick, left, 782, 374
+	Sleep, 200
+	Send, {Tab}{Tab}{Tab}sp{Tab}%difPrice%
+	If (difPrice &gt;= 0)
+	{
+
+		MsgBox, 262149, shonScript, % &quot;-	&quot; . bookSum . &quot;`n`n-	Check-In Date:	&quot; . ckInDD . &quot; / &quot; . ckInMM . &quot; / &quot; . ckInYY . &quot;`n-	Check-Out Date:	&quot; . ckOutDD . &quot; / &quot; . ckOutMM . &quot; / &quot; . ckOutYY . &quot;`n-	Guest Name:	&quot; . guestName . &quot;`n-	Name on Card:	&quot; . cardName . &quot;`n-	Total Price:	$ &quot; . totalPrice . &quot;`n-	&quot; . roomNum . &quot; Beds Booked:	&quot; . roomType[1] . &quot;`n			&quot; . roomType[2] . &quot;`n			&quot; . roomType[3] . &quot;`n			&quot; . roomType[4] . &quot;`n			&quot; . roomType[5] . &quot;`n			&quot; . roomType[6] . &quot;`n			&quot; . roomType[7] . &quot;`n			&quot; . roomType[8]&quot;`n`nThe discount you need to make is: &quot; . bosPrice . &quot; - &quot; . totalPrice . &quot; = $ &quot; . difPrice . &quot;.`n`nIf anything is incorrect, you can fix it now and return to this discount step.`nClicking on 'Retry' recalculates what the discount should be.`n`nNext you can send the confirmation email to the guest from the Details tab.`nPlease make sure the payment due is correct, and that the details (name, email etc.) aren't still there from an earlier booking. (If it's prepaid you can just delete the two lines about paid/payment).`n`nWhen you've finished, please click 'Cancel' or close this window. This webpage will automatically be refreshed.&quot;
+	}
+	else
+	{
+		MsgBox, 262149, shonScript, % &quot;-	&quot; . bookSum . &quot;`n`n-	Check-In Date:	&quot; . ckInDD . &quot; / &quot; . ckInMM . &quot; / &quot; . ckInYY . &quot;`n-	Check-Out Date:	&quot; . ckOutDD . &quot; / &quot; . ckOutMM . &quot; / &quot; . ckOutYY . &quot;`n-	Guest Name:	&quot; . guestName . &quot;`n-	Name on Card:	&quot; . cardName . &quot;`n-	Total Price:	$ &quot; . totalPrice . &quot;`n-	&quot; . roomNum . &quot; Beds Booked:	&quot; . roomType[1] . &quot;`n			&quot; . roomType[2] . &quot;`n			&quot; . roomType[3] . &quot;`n			&quot; . roomType[4] . &quot;`n			&quot; . roomType[5] . &quot;`n			&quot; . roomType[6] . &quot;`n			&quot; . roomType[7] . &quot;`n			&quot; . roomType[8]&quot;`n`nThe Price on SiteMinder is $ &quot; . totalPrice . &quot;.`nYou may need to add a charge to the bill. The difference is $ &quot; . difPrice . &quot;.`n`nIf anything is incorrect, you can fix it now and return to this discount step.`nClicking on 'Retry' recalculates what the discount should be.`n`nNext you can send the confirmation email to the guest from the Details tab.`nPlease make sure the payment due is correct, and that the details (name, email etc.) aren't still there from an earlier booking. (If it's prepaid you can just delete the two lines about paid/payment).`n`nWhen you've finished, please click 'Cancel' or close this window. This webpage will automatically be refreshed.&quot;
+	}
+	IfMsgBox, Cancel
+	{
+		WinActivate, Backpack Online
+		Send, {Ctrl down}r{Ctrl up}
+		Goto, end
+	}
+	IfMsgBox, Retry
+		Goto, bosDiscount
+
+	end:
+	Clipboard = %ClipBackup%
+	bookSrc =
+	guestAdd =
+	guestMail =
+	guestPhone =
+	nonRefund =
+	prepay =
+	guestName =
+	guestNameArray := []
+	useMailName =
+	guestAdd =
+	cardName =
+	cardNum =
+	expMM =
+	expYY =
+	WinActivate, Untitled - Notepad
+	Send, {Ctrl down}a{Ctrl up}{Backspace}{Ctrl up}
+	WinMinimize, Untitled - Notepad
+return
+
+; Paste without style in Excel 2003
+; First copy anything, and switch to box on excel
+; then hold Super (Windows logo key) and press V.
+#v::
+	Send, {Shift down}{F10}{Shift up}
+	Sleep, 50
+	Send, s
+	Sleep, 50
+	Send, {End}{Enter}
+return
+
+; ### Go to BackpackOnlineSystem ref page
+; First copy the ref# and switch to a blank browser page,
+; then hold Ctrl key and press Numpad 0.
+^Numpad0::
+	refAdd = https://online.backpacksoftware.com/popout/booking/bookingStandalone.php?idBookings=
+	ref = %Clipboard%
+	Send, {Ctrl down}l
+	Sleep, 100
+	Send, {Ctrl up}
+	Clipboard = %refAdd%
+	Send, {Ctrl down}v{Ctrl up}
+	Clipboard = %ref%
+	Send, {Ctrl down}v{Ctrl up}{Enter}
+return
+
+; Input Contact Info
+^Numpad1::
+	Clipboard := guestNameArray[2]
+	If (bookSrc = &quot;agoda&quot;)
+	{
+		If (useMailName = 1)
+		{
+			Clipboard = %Clipboard% (Agoda)
+			Send, {Ctrl down}v{Ctrl up}
+		}
+		else
+			Send, %guestName%{Ctrl down}{Backspace}{Ctrl up}(Agoda)
+	}
+	else If (prepay = &quot;Prepaid&quot;)
+	{
+		If (useMailName = 1)
+		{
+			Clipboard = %Clipboard% (Prepaid)
+			Send, {Ctrl down}v{Ctrl up}
+		}
+		else
+			Send, %guestName%{Ctrl down}{Backspace}{Ctrl up}(Prepaid)
+	}
+	else
+	{
+		If (useMailName = 1)
+			Send, {Ctrl down}v{Ctrl up}
+		else
+			Send, %guestName%{Ctrl down}{Backspace}{Ctrl up}{Backspace}
+	}
+	Send, {Tab}
+	If (useMailName = 1)
+	{
+		Clipboard := guestNameArray[1]
+		Send, {Ctrl down}v{Ctrl up}
+	}
+	else
+		Send, %guestName%{Ctrl down}{Left}{Backspace}{Backspace}{Backspace}{Backspace}{Ctrl up}
+	Send, {Tab}{Tab}
+	Clipboard = %guestMail%
+	Send, {Ctrl down}v{Ctrl up}{Tab}%guestAdd%{Tab}{Tab}{Tab}
+	Clipboard = %cardName%
+	Send, {Ctrl down}v{Ctrl up}{Tab}
+	Clipboard = %cardNum%
+	If (expMM != 1)
+		Send, {Ctrl down}v{Ctrl up}{Tab}%cardType%{Tab}%expMM%{Tab}%expYY%{Tab}{Tab}{Tab}{Tab}{Tab}{Tab}we{Tab}{Tab}{Tab}{Tab}{Tab}{Tab}
+	else
+		Send, {Ctrl down}v{Ctrl up}{Tab}%cardType%{Tab}1111{Tab}%expYY%{Tab}{Tab}{Tab}{Tab}{Tab}{Tab}we{Tab}{Tab}{Tab}{Tab}{Tab}{Tab}
+	Clipboard = %guestPhone%
+	Send, {Ctrl down}v{Ctrl up}
+return
+
+; Input Note
+^Numpad2::
+	Clipboard = %bookSum%
+	Send, {Ctrl down}v{Ctrl up}{Enter}
+	If (bookSrc = &quot;BOOKIT&quot;)
+	{
+		Clipboard = Register payment as a voucher
+		Send, {Ctrl down}v{Ctrl up}{Enter}
+		Clipboard = Collect KD
+		Send, {Ctrl down}v{Ctrl up}{Tab}{Tab}{Enter}
+		return
+	}
+	else If (bookSrc = &quot;agoda&quot;)
+	{
+		Clipboard = Charge %cardName% $%totalPrice%
+		Send, {Ctrl down}v{Ctrl up}{Enter}
+		Clipboard = Collect KD
+		Send, {Ctrl down}v{Ctrl up}{Tab}{Tab}{Enter}
+		return
+	}
+	If (nonRefund = &quot;Non-refundable&quot;)
+		Send, Non-Refundable{Enter}
+	If (prepay = &quot;Prepaid&quot;)
+	{
+		Send, Prepaid{Enter}
+		Clipboard = Charge %cardName% $%totalPrice%
+		Send, {Ctrl down}v{Ctrl up}{Enter}
+	}
+	Send, Collect KD
+	If (prepay != &quot;Prepaid&quot;)
+		Send, {Space}and $%totalPrice%
+return
+
+; ### Check-In Cards
+^Numpad3::
+	Send, {Tab}{Shift down}{Tab}{Shift up}{Ctrl down}c{Ctrl up}{Shift down}{Tab}{Shift up}
+	WinActivate, Backpack Online
+	Send, {Ctrl down}fv{Ctrl up}{Enter}
+	Sleep, 300
+	Send, {Esc}
+return
+
+; ### Search ID on SiteMinder
+; First copy the ID number, then press Numpad 4
+^Numpad4::
+	searchSiteMinder:
+	IfWinNotExist, SiteMinder
+	{
+		MsgBox, 262145,, Please switch to the SiteMinder webpage then click OK.
+		IfMsgBox, Cancel
+			return
+		IfMsgBox, OK
+			Goto, searchSiteMinder
+	}
+	WinActivate SiteMinder
+	WinMaximize SiteMinder
+	MouseClick, left, 110, 300,
+	Sleep, 700
+	MouseClick, left, 110, 300, 3
+	Send, {Ctrl down}v{Ctrl up}{Enter}
+	Sleep, 1100
+	MouseClick, left, 110, 509
+return
+
+; Make booking from SiteMinder
+^!Numpad4::
+	bookSrc =
+	guestAdd =
+	guestMail =
+	guestPhone =
+	nonRefund =
+	bookID = %Clipboard%
+	Goto, getSiteMinder
+return
+
+;Search BackpackOnlineSystem
+^Numpad6::
+	searchBOS:
+	IfWinNotExist Backpack Online
+	{
+		MsgBox, 262145, shonScript, Please make Backpack Online System webpage ready, then click 'OK'.
+		IfMsgBox, Cancel
+			return
+		IfMsgBox, OK
+			Goto, searchBOS
+	}
+	WinActivate, Backpack Online
+	WinMaximize, Backpack Online
+	Send, {Ctrl down}0{Ctrl up}{Home}
+	Sleep, 500
+	ImageSearch, FoundX, FoundY, 53, 201, 696, 397, ..\AutoHotkey\link_out_button.gif
+	FoundX := FoundX - 65
+	MouseClick, left, FoundX, FoundY, 3
+	Send, {Ctrl down}v{Ctrl up}{Enter}
+	Sleep, 1800
+	If (Mon1Right = &quot;1280&quot;)
+		MouseClick, Left, 1057, 306, 2
+	else
+		MouseClick, Left, 1137, 305, 2
+return
+
+; ### Go to Shaun Share folder
+^Numpad7::
+	Run ..\Staff\Shaun
+return
+
+; ### Log in BackpackOnlineSystem
+^Numpad8::
+	Run https://online.backpacksoftware.com/login.php
+return
+
+; ### Log in SiteMinder
+^Numpad9::
+	Run https://login.siteminder.com/login/auth
+	Clipboard = *password*
+return
+
+; Quick Phrases
+::gu::Guest
+::sh::Shaun
+::nrf::Non-Refundable
+::prp::Prepaid
+::cnf::Guest cancelled the booking, no cancellation fee.
+::gcc::Guest cancelled the booking, charged $
+::cko::Checked out,{Enter}$20 returned.
+::cki::Checked in, paid by CC,{Enter}$20 as KD for 1 key.
+::trf::Transferred KD
+::ckp::Collect KD and payment.
+::agd::Charge from Agoda credit card.{Enter}Collect KD on arrival.
+::btr::Register payment as a voucher.{Enter}Collect KD on arrival.
+::wli::Walk-In Booking{Enter}Collect payment and KD on arrival.
+::sfb::Surf and Snow booking{Enter}Collect payment and KD on arrival.
+::phb::Phone booking.{Enter}Collect payment and KD on arrival.
+
+; Copyright © 2019 Shaun Xiaohang Li. All rights reserved.
+</code></pre>
+
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: March 17, 2019. Published at: 2019-03-17.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        Thanks to <a href='https://twitter.com/siegerts'>siegerts</a> for the <a href='https://github.com/siegerts/hugo-theme-basic'>Hugo Theme Basic</a>.</br>© 2019 shon-bottle. Licenses <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+  </body>
+  </html>
+</body>
