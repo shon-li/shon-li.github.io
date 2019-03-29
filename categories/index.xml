@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on # shon-bottle</title>
+    <title># shon-bottle</title>
     <link>https://shon-li.github.io/categories/</link>
-    <description>Recent content in Categories on # shon-bottle</description>
+    <description>Recent content on # shon-bottle</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Using &lt;a href=&#39;https://github.com/siegerts/hugo-theme-basic&#39;&gt;Hugo Theme Basic&lt;/a&gt; by &lt;a href=&#39;https://twitter.com/siegerts&#39;&gt;siegerts&lt;/a&gt;.&lt;/br&gt;© 2019 shon-bottle. &lt;a href=&#39;https://creativecommons.org/licenses/by-nc-sa/4.0/&#39;&gt;CC BY-NC-SA 4.0&lt;/a&gt;.</copyright>
@@ -13,14 +13,16 @@
     
     
     <item>
-      <title></title>
-      <link>https://shon-li.github.io/categories/</link>
+      <title>Hugo</title>
+      <link>https://shon-li.github.io/project/hugo/</link>
       <pubDate>Sun, 10 Feb 2019 16:53:06 -0500</pubDate>
       
-      <guid>https://shon-li.github.io/categories/</guid>
+      <guid>https://shon-li.github.io/project/hugo/</guid>
       <description></description>
     </item>
     
+  </channel>
+</rss>
     <item>
       <title>Development</title>
       <link>https://shon-li.github.io/categories/development/</link>
