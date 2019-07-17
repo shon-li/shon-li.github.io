@@ -3,14 +3,14 @@
 <head>
     <title>shon-bottle</title>
 </head>
-<body style="font-family:Arial;color:#999;">
-    <h1 style="font-size:7em;position:fixed;top:50%;left:50%;transform:translate(-49%,-150%);"><em>rebuilding</em></h1>
-    <p style="font-size:16px;position:fixed;top:55%;left:50%;transform:translate(-49%,-160%);"><em>shon-bottle · 16th July 2019</em></p>
+<body style="margin:auto;font-family:Courier,Arial;color:#999;">
+    <h1 id="h1" style="font-size:7em;position:fixed;padding-right:0.3em;top:50%;left:50%;transform:translate(-48%,-130%);"><em>rebuilding</em></h1></br>
+    <p style="font-size:16px;position:fixed;padding-right:0.3em;top:55%;left:50%;transform:translate(-50%,-120%);">shon-bottle · 16th July 2019</p>
     <script>
-        var h1Elements = document.getElementsByTagName("h1");
-        for(var i = 0; i < h1Elements.length; i++){
-            h1Elements[i].style.color = '#'+Math.random().toString(16).substr(-6);
-        }
+        var fonts = [ "Arial", "Times New Roman", "Helvetica", "Courier New", "Courier", "Verdana", "Georgia", "Palatino", "Garamond", "Bookman", "Comic Sans MS", "Trebuchet MS", "Impact"];
+        var j = Math.floor(Math.random()*13);
+        document.getElementById("h1").style.fontFamily = fonts[j];
+        document.getElementById("h1").style.color = '#'+Math.random().toString(16).substr(-6);
     </script>
 </body>
 </html>
