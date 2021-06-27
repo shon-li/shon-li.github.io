@@ -48,6 +48,7 @@
       letter-spacing: -.017em;
       margin: 0 0 .2em -.04em;
     }
+    code {font-family: 'Source Code Pro', 'Noto Sans SC', monospace; padding: 0 .3em .12em .3em;}
     footer {
       color: var(--alter);
       font-size: 14px;
@@ -117,32 +118,18 @@
   </nav>
   <footer aria-label="这个部分是版权声明信息">
     <p>&copy;&nbsp;2020<script>
-        new Date().getFullYear() > 2020 && document.write("–" + new Date().getFullYear());
+        new Date().getFullYear() > 2020 && document.write(" – " + new Date().getFullYear());
       </script>&nbsp;shon.li&nbsp;浮瓶</p>
   </footer>
 
   <article>
     <h1 id="h1">404</h1>
-    <p>如果你在浏览器里提交的地址不能被服务器找到你就会看到这个页面。<br>烦请给我留言或写信，告诉我你找不到哪个页面。</p>
+    <p>如果你在浏览器里提交的地址不能被服务器找到你就会看到这个页面。<br>烦请写信到<code>hi@shon.li</code>，告诉我你找不到哪个页面。</p>
   </article>
 
-  <div id="disqus_thread" aria-label="这是 Disqus 评论区域"></div>
   <script>
-    var disqus_config = function() {
-      this.page.url = "https:\/\/shon.li\/404"; // Replace PAGE_URL with your page's canonical URL variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document,
-        s = d.createElement('script');
-      s.src = 'https://bottle-journal.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-    function changeColor() {
-      document.getElementById("h1").style.color = '#' + Math.random().toString(16).substr(-6);
-    }
+    function changeColor() {document.getElementById("h1").style.color = '#' + Math.random().toString(16).substr(-6);}
     var a = setInterval(changeColor, 120);
   </script>
-  <noscript>你可能需要开启浏览器的 Javascript 才能看到这个位置的 <a href="https://disqus.com/?ref_noscript">Disqus 评论区</a>。</noscript>
 </body>
 </html>
