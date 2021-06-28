@@ -47,7 +47,6 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-  transition: all .4s ease-out;
 }
 
 h1, article {
@@ -56,7 +55,7 @@ h1, article {
   overflow-y: hidden;
 }
 
-footer {
+.footer {
   color: var(--alter);
   font-size: var( --ssize);
   font-weight: 300;
@@ -66,16 +65,16 @@ footer {
   padding: .2em .1em .2em 0;
 }
 
-footer a {
+.footer a {
   border-bottom: 1px dotted var(--navtext);
   font-size: var( --ssize);
 }
 
-footer a:hover {
+.footer a:hover {
   border-bottom: 1px solid var(--navtext);
 }
 
-nav {
+.nav {
   background-color: var(--alter);
   box-shadow: 0 0 4px -2px var(--alter);
   border-radius: 2px 2px 4px 4px;
@@ -85,12 +84,12 @@ nav {
   padding: .6em .5em .4em .5em;
 }
 
-nav:hover {
+.nav:hover {
   background-color: var(--text);
   padding: .6em .5em .6em .5em;
 }
 
-nav a {
+.nav a {
   text-decoration: none;
   border-bottom: none;
   color: var(--bg);
@@ -101,13 +100,13 @@ nav a {
   position: relative;
 }
 
-nav a:hover {font-weight: 500; top: .3em;}
+.nav a:hover {font-weight: 500; transition: all .2s ease-out; top: .3em;}
 
 @media only screen and (max-width: 700px) {
-  nav{padding-top: 1.1em;}
-  footer {margin-bottom: 16vh;}
+  .nav{padding-top: 1.1em;}
+  .footer {margin-bottom: 16vh;}
   p,a{word-wrap: break-word;}
-  nav:hover{background-color: var(--alter);padding: 1.1em .5em .4em .5em;}
+  .nav:hover{background-color: var(--alter);padding: 1.1em .5em .4em .5em;}
 }
 
 article {
