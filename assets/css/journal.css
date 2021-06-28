@@ -82,7 +82,6 @@ h1, article {
   margin-left: -.11em;
   position: fixed;
   padding: .6em .5em .4em .5em;
-  transition: all .2s ease-out;
 }
 
 .nav:hover {
@@ -99,10 +98,10 @@ h1, article {
   padding-left: .1em;
   margin: 0 .5em 0 .5em;
   position: relative;
-  transition: all .2s ease-out;
+  transition: all .5s ease-out;
 }
 
-.nav a:hover {font-weight: 500; top: .5em;}
+.nav a:hover {font-weight: 500; transition: all .2s ease-out; top: .3em;}
 
 @media only screen and (max-width: 700px) {
   .nav{padding-top: 1.1em;}

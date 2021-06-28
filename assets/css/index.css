@@ -119,13 +119,13 @@ img {
   padding-left: .1em;
   margin: 0 .5em 0 .5em;
   position: relative;
-  transition: all .2s ease-out;
 }
 
 .nav a:hover {
   color: var(--bg);
   font-weight: 500;
-  top: .5em;
+  transition: all .5s ease-out;
+  top: .3em;
 }
 
 .email {
