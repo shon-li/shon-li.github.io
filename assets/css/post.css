@@ -159,11 +159,13 @@ sup a {margin-left: .14em;}
   letter-spacing: .1em;
   padding-left: .01em;
   margin: 0 .5em 0 .5em;
+  position: relative;
 }
 
 .nav a:hover {
   color: var(--bg);
   font-weight: 500;
+  top: .5em;
 }
 
 img {
