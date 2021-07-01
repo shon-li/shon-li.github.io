@@ -48,6 +48,15 @@ body {
 
 @media only screen and (min-width: 1365px) {body{max-width:960px;font-size:19px;--ssize:17px;}}
 
+img {
+  width: 99.5%;
+  height: 100%;
+  object-fit: scale-down;
+  border-radius: 4px;
+  margin-bottom: -.4em;
+  z-index: auto;
+}
+
 h1 {
   color: var(--alter);
   font-family: 'Noto Serif SC', 'Source Han Serif SC', serif;
