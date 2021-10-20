@@ -1,2 +1,2 @@
 # https://shon.li
-Sorry it's only in Mandarian Chinese now.
+Sorry it's only in Chinese Mandarin now.
