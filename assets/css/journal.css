@@ -61,7 +61,7 @@ h1, article {
   font-weight: 300;
   line-height: 1.6;
   letter-spacing: .04em;
-  margin: .82em 0 28vh 5.4em;
+  margin: .82em 0 24vh 5.4em;
   padding: .2em .1em .2em 0;
 }
 
@@ -112,12 +112,13 @@ h1, article {
 
 article {
   border-bottom: 1px dotted var(--alter);
-  margin-bottom: 3em;
+  margin: 0 0 4.5em -.1em;
 }
 
 h2 {
   font-size: 15px;
   font-weight: 500;
+  margin-left: .08em;
 }
 
 h1 {
@@ -126,9 +127,9 @@ h1 {
   -webkit-text-fill-color: transparent;
   font-weight: 900;
   font-size: 64px;
-  line-height: 1.42;
+  line-height: 1.2;
   letter-spacing: -.017em;
-  margin: 0 0 .3em -.04em;
+  margin: .1em 0 .26em 0em;
 }
 
 @media only screen and (min-width: 1365px) {body{font-size:19px;--ssize:17px;}h2{font-size: 19px;}h1{font-size: 72px;}}
