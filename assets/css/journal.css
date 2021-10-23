@@ -129,7 +129,7 @@ h1 {
   font-size: 64px;
   line-height: 1.2;
   letter-spacing: -.017em;
-  margin: .1em 0 .26em 0em;
+  margin: .04em 0 .26em 0em;
 }
 
 @media only screen and (min-width: 1365px) {body{font-size:19px;--ssize:17px;}h2{font-size: 19px;}h1{font-size: 72px;}}
