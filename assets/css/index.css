@@ -134,7 +134,6 @@ img {
   color: var(--bg);
   font-weight: 500;
   transition: all .5s ease-out;
-  top: .3em;
 }
 
 .email {
