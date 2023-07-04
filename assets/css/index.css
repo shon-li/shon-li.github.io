@@ -10,7 +10,6 @@ html {
 }
 
 body {
-  font-family: 'IBM Plex Mono', monospace;
   display: flex;
   width: 100vw;
   height: 98vh;
@@ -22,7 +21,7 @@ p {
   color: #E6E6E6;
   text-align: center;
   font-size: 24px;
-  font-family: IBM Plex Mono;
+  font-family: 'IBM Plex Mono', monospace;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
