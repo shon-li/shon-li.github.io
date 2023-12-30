@@ -1,2 +1,1 @@
-# https://shon.li
-Sorry it's only in Chinese Mandarin now.
+My personal blog. Written in Mandarin Chinese.
