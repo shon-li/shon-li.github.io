@@ -31,7 +31,6 @@
         width: 62vw;
         max-width: 800px;
         margin: 38vh auto 38vh auto;
-        /* padding-left: .05em; */
 
         color: var(--colour_text);
         background-color: var(--colour_background);
@@ -46,14 +45,18 @@
 
       /* Shift layout on wide screen. */
       @media (min-width: 1500px) {
-        body{ width: 38vw; }
+        body{
+          width: 38vw;
+          font-size: x-large;
+        }
       }
 
-      /* Shift layout on narrow screen. */
-      @media (max-width: 1000px) {
+      /* Shift layout on vertical phone screen. */
+      @media (max-width: 1000px) and (min-height: 1500px) {
         body{
           width: 80vw;
-          font-size: 64px;
+          font-size: 48px;
+          padding-left: .1em;
         }
       }
 
