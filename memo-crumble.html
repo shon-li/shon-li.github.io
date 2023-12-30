@@ -10,7 +10,7 @@
 
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600&family=Noto+Serif+SC:wght@500&display=swap');
 
-      @viewport { width: device-width; }
+      /* @viewport { width: device-width; } */
 
       * {
         margin: 0;
@@ -30,23 +30,34 @@
         --colour_bright: #006AFF;
         --colour_secondary: #B2B2B2;
 
-        width: 62%;
+        width: 62vw;
+        max-width: 860px;
         margin: 38vh auto 38vh auto;
 
         color: var(--colour_text);
         background-color: var(--colour_background);
 
         font-family: 'Noto Sans SC', sans-serif;
-        font-size: 16px;
+        font-size: medium;
         font-weight: 400;
         line-height: 2;
         letter-spacing: .05em;
       }
 
+      /* Shift layout on wide screen. */
       @media (min-width: 1500px) {
         body{
-          max-width: 38%;
-          margin-right: 38vw;
+          width: 38vw;
+          margin: 38vh auto 38vh 38vw;
+        }
+      }
+
+      /* Shift layout on narrow screen. */
+      @media (max-width: 1000px) {
+        body{
+          width: 80vw;
+          margin: 38vh auto 38vh auto;
+          font-size: large;
         }
       }
 
@@ -62,18 +73,17 @@
       }
 
       img {
+        margin: 1.2em auto .2em 0;
         width: 99.5%;
         height: 100%;
         min-height: 300px;
         object-fit: scale-down;
-        border-radius: 4px;
-        margin-bottom: -.4em;
-        z-index: auto;
+        border-radius: 2px;
       }
 
       section {
         margin: 5em 0 5em 0;
-        padding-bottom: 5.3em;
+        padding-bottom: 5.2em;
         border-bottom: 1px dotted var(--colour_secondary);
       }
 
@@ -109,7 +119,7 @@
       }
 
       a {
-        padding-bottom: .89px;
+        padding-bottom: 1px;
       }
 
       a:link, a:visited {
@@ -133,6 +143,10 @@
 
       footer a:link, footer a:visited {
         color: var(--colour_secondary);
+      }
+
+      footer a:hover {
+        border-bottom: 1.2px solid var(--colour_bright);
       }
 
     </style>
@@ -271,7 +285,7 @@
 
       <p>看到了一个居民楼上有人在清洗建筑墙面，喷出来的水变成了雾，在蓝天下面我觉得很漂亮。</p>
 
-      <img src="/assets/img/building-cleaning.jpeg" alt="图片：两个人吊在半空清洗建筑，喷出的水柱在蓝天下变成烟雾。">
+      <img src="https://shon.li/assets/img/building-cleaning.jpeg" alt="图片：两个人吊在半空清洗建筑，喷出的水柱在蓝天下变成烟雾。">
 
     </section>
 
