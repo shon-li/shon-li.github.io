@@ -47,22 +47,24 @@
         word-break: break-word;
       }
 
-      /* Shift layout on wide screen. */
+      /* Wide screen */
       @media (min-width: 1500px) {
-
-        body{ width: 38vw; }
-
+        body{
+          width: 38vw;
+          max-width: 800px;
+        }
       }
 
-      /* Shift layout on vertical phone screen. */
-      @media (max-width: 1000px) and (min-height: 900px) {
-
+      /* Narrow screen */
+      @media (max-width: 1000px) {
         body{
-          padding-left: .1em;
-          width: 96vw;
+          padding-left: .2em;
+          width: 86vw;
         }
+      }
 
-        /* Use large font size if the resolution is high */
+      /* High resolution vertical phone screen */
+      @media (max-width: 1000px) and (min-height: 900px) {
         @media
         only screen and (-webkit-min-device-pixel-ratio: 2),
         only screen and (   min--moz-device-pixel-ratio: 2),
@@ -70,11 +72,9 @@
         only screen and (        min-device-pixel-ratio: 2),
         only screen and (                min-resolution: 192dpi),
         only screen and (                min-resolution: 2dppx) { 
-
           body {
             font-size: large;
           }
-
         }
       }
 
