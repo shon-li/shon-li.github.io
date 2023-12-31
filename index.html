@@ -1,8 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hans">
+
   <head>
 
     <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>碎语・memo crumble</title>
 
@@ -45,18 +49,29 @@
 
       /* Shift layout on wide screen. */
       @media (min-width: 1500px) {
-        body{
-          width: 38vw;
-          font-size: large;
-        }
+
+        body{ width: 38vw; }
+
       }
 
       /* Shift layout on vertical phone screen. */
-      @media (max-width: 1000px) and (min-height: 1500px) {
+      @media (max-width: 1000px) and (min-height: 900px) {
         body{
           padding-left: .1em;
-          width: 80vw;
-          font-size: 48px;
+          width: 86vw;
+        }
+
+        /* Use large font size if the resolution is high */
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (   min--moz-device-pixel-ratio: 2),
+        only screen and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (        min-device-pixel-ratio: 2),
+        only screen and (                min-resolution: 192dpi),
+        only screen and (                min-resolution: 2dppx) { 
+          body {
+            font-size: large;
+          }
         }
       }
 
