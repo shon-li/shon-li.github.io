@@ -47,6 +47,14 @@
         word-break: break-word;
       }
 
+      img {
+        margin: 1.2em auto .1em 0;
+        width: 100%;
+        min-height: 60px;
+        object-fit: scale-down;
+        border-radius: 2px;
+      }
+
       /* Wide screen */
       @media (min-width: 1440px) {
         body{
@@ -61,6 +69,7 @@
           padding-left: .2em;
           width: 84vw;
         }
+        img { width: 99.2%; }
       }
 
       /* High resolution vertical phone screen */
@@ -85,14 +94,6 @@
         }
 
         img { filter: brightness(90%); }
-      }
-
-      img {
-        margin: 1.2em auto .1em 0;
-        width: 99%;
-        min-height: 60px;
-        object-fit: scale-down;
-        border-radius: 2px;
       }
 
       section {
