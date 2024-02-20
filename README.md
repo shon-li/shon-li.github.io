@@ -1,1 +1,1 @@
-My personal blog. Written in Mandarin Chinese.
+my personal blog. most content in Mandarin Chinese.
