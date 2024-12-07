@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 lang: en
 categories: articles
 date: 2024-12-06
