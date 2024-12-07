@@ -26,18 +26,17 @@ PasswordAuthentication no</pre><p>之后保存并退出文本编辑器。用下�
 sudo apt-get install nginx -y #开始安装 Nginx</pre><p>上面的命令里 <code>sudo</code> 是获得管理权限的工具，如果你使用的是 root 用户请省略。<code>apt-get</code> 大概在 Ubuntu 17.4 及以后的版本里可以简写成 <code>apt</code>，<code>-y</code> 能跳过询问是否确认安装的过程。如果你在命令行里觉得失控了，一般你都可以压下 <kbd>Ctrl</kbd> 键后按字母 <kbd>C</kbd> 键退出当前进程。</p> <h3>Nginx 配置文件目录</h3> <p>在 Ubuntu 系统里 Nginx 相关的目录主要是下面这些。其他系统可能不一样请去搜索。</p> <ul> <li><code>/var/www/html</code> 里面是网站用到的网页文件，这是一个默认的目录，把你用到的网页文件复制到这里就好了。当然你也能自己指定目录；</li> <li><code>/etc/nginx</code> 里面是 Nginx 所有的配置文件；</li> <li><code>/etc/nginx/nginx.conf</code> 这个文件是控制 Nginx 的全局配置的主要配置文件；</li> <li><code>/etc/nginx/sites-available/</code> 里面保存 Nginx 的所有可用网站配置文件，这里的文件只有用<strong>符号链接</strong>（Symbolic&nbsp;link）链接到下面的 <code>sites-enabled</code> 目录里才会被启用；</li> <li><code>/etc/nginx/sites-enabled/</code> 这里是上面 <code>sites-available</code> 目录里配置文件的符号链接，这里的配置才会被 Nginx 启用；</li> <li><code>/etc/nginx/snippets</code> 里存放部分的配置文件，这些配置可以在别的地方被重复使用，我还没用过这个目录；</li> <li><code>/var/log/nginx/access.log</code> 这个文件里是 Nginx 服务器的所有访问记录；</li> <li><code>/var/log/nginx/error.log</code> 这个文件里是 Nginx 服务器的所有错误记录。</li> </ul> <p>符号链接的作用是把另一个位置的文件引用过来。你会在 <code>sites-available</code> 和 <code>sites-enabled</code> 都看到一个名为 <code>default</code> 的文件，这是一个 Nginx 开发维护人员为你创建的默认网站配置，打开之后你会看到里面有很多以井号 <code>#</code> 开头的英文<strong>注释，</strong>注释的内容也很有帮助，再往下看你能找到表示网页服务器配置的字段。</p> <h3>新建服务器配置文件（Server Block）</h3> <p>复制默认配置文件来创建新的你的配置文件，用 <code>nano</code> 或者其他你喜欢的文本编辑器编辑配置文件。</p><pre>cd /etc/nginx/sites-available/
 sudo cp default 你的配置文件名 #请替换“你的配置文件名”，下面都要替换
 sudo nano 你的配置文件名</pre><p>默认的配置文件里有很多注释，你可以试着阅读了解一下。<br>下面是一个最简单的处理 HTTP（80 端口）访问的服务器配置。</p><pre>server {
-listen 80;
-listen [::]:80;
-#监听所有 80 端口访问
+    listen 80;
+    listen [::]:80; #监听所有 80 端口访问
 
-root /var/www/html; #指定网页文件存放的根目录
-index index.html index.htm index.nginx-debian.html; #index（首页）文件的文件名，一般静态网站只写 index.html 就足够了
+    root /var/www/html; #指定网页文件存放的根目录
+    index index.html index.htm index.nginx-debian.html; #index（首页）文件的文件名，一般静态网站只写 index.html 就足够了
 
-server_name example.com www.example.com; #你使用的域名，把 example.com www.example.com 替换成你自己的域名
+    server_name example.com www.example.com; #你使用的域名，把 example.com www.example.com 替换成你自己的域名
 
-location / { #访问域名根目录‘/’时的行为
-  try_files $uri $uri/ =404; #查找网址‘/’后半段指定的文件，找不到的话显示 404 错误页面
-  }
+    location / { #访问域名根目录‘/’时的行为
+      try_files $uri $uri/ =404; #查找网址‘/’后半段指定的文件，找不到的话显示 404 错误页面
+    }
 }</pre><p>为了让服务器配置生效我们需要在 <code>sites-enabled</code> 目录里删除默认配置文件并创建符号链接，在下面的命令里请用<strong>绝对路径</strong>以免造成链接混乱。</p><pre>sudo rm /etc/nginx/sites-enabled/default #删除默认配置文件的符号链接
 sudo ln -s /etc/nginx/sites-available/你的配置文件名 /etc/nginx/sites-enabled/你的配置文件名</pre><p>每次更改过配置文件之后你都需要重新启动 Nginx 才能让新的配置生效。如果你改动了 <code>/etc/nginx/nginx.conf</code> 主配置文件，你可以用 <code>sudo nginx -t</code> 命令来测试你的主配置文件是否有语句错误。</p> <p>下面的命令能启动 <code>start</code>，重新启动 <code>restart</code> 和重新加载 <code>reload</code> Nginx。重新加载比重新启动更优雅，它会逐渐关闭组件处理完当前连接请求之后重新启动。在修改完设置之后重新加载或重新启动 Nginx，新设置就会生效了。除了使用 <code>systemctl</code> 控制 Nginx 外也有其他的命令可以达到同样的效果，比如 <code>service reload nginx</code>。</p><pre>sudo systemctl start nginx #启动 Nginx
 sudo systemctl restart nginx #重新启动 #Nginx

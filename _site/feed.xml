@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-08T01:23:41+13:00</updated><id>https://shon.li/feed.xml</id><title type="html">晓航的网站</title><author><name>李晓航</name></author><entry xml:lang="zh-Hans"><title type="html">做好事的麻雀</title><link href="https://shon.li/articles/sparrows-did-well.html" rel="alternate" type="text/html" title="做好事的麻雀" /><published>2024-12-07T00:00:00+13:00</published><updated>2024-12-07T00:00:00+13:00</updated><id>https://shon.li/articles/sparrows-did-well</id><content type="html" xml:base="https://shon.li/articles/sparrows-did-well.html"><![CDATA[<p>我阳台斜对角的房子水管上挂了一大簇枯死的像爬山虎一样的植物。我最近注意到麻雀在那簇看起来像垃圾的枯枝里面筑了一个巢。可能这就是为什么每天早上五点左右我都会听到尖锐的麻雀叫声吧。可能是小麻雀们早上在练嗓子。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-08T01:33:56+13:00</updated><id>https://shon.li/feed.xml</id><title type="html">晓航的网站</title><author><name>李晓航</name></author><entry xml:lang="zh-Hans"><title type="html">做好事的麻雀</title><link href="https://shon.li/articles/sparrows-did-well.html" rel="alternate" type="text/html" title="做好事的麻雀" /><published>2024-12-07T00:00:00+13:00</published><updated>2024-12-07T00:00:00+13:00</updated><id>https://shon.li/articles/sparrows-did-well</id><content type="html" xml:base="https://shon.li/articles/sparrows-did-well.html"><![CDATA[<p>我阳台斜对角的房子水管上挂了一大簇枯死的像爬山虎一样的植物。我最近注意到麻雀在那簇看起来像垃圾的枯枝里面筑了一个巢。可能这就是为什么每天早上五点左右我都会听到尖锐的麻雀叫声吧。可能是小麻雀们早上在练嗓子。</p>
 
 <p>不知道为什么，我就是觉得麻雀特别可爱特别亲切。可能是因为我小时候见过他们吧，一些怀旧的感情就因此跟麻雀联系在了一起。当我看到麻雀的时候就会下意识的觉得自己也没有离开我曾经的家太远。麻雀还在。</p>
 
@@ -241,18 +241,17 @@ sudo cp default 你的配置文件名 #请替换“你的配置文件名”，�
 sudo nano 你的配置文件名</pre>
 <p>默认的配置文件里有很多注释，你可以试着阅读了解一下。<br>下面是一个最简单的处理 HTTP（80 端口）访问的服务器配置。</p>
 <pre>server {
-listen 80;
-listen [::]:80;
-#监听所有 80 端口访问
+    listen 80;
+    listen [::]:80; #监听所有 80 端口访问
 
-root /var/www/html; #指定网页文件存放的根目录
-index index.html index.htm index.nginx-debian.html; #index（首页）文件的文件名，一般静态网站只写 index.html 就足够了
+    root /var/www/html; #指定网页文件存放的根目录
+    index index.html index.htm index.nginx-debian.html; #index（首页）文件的文件名，一般静态网站只写 index.html 就足够了
 
-server_name example.com www.example.com; #你使用的域名，把 example.com www.example.com 替换成你自己的域名
+    server_name example.com www.example.com; #你使用的域名，把 example.com www.example.com 替换成你自己的域名
 
-location / { #访问域名根目录‘/’时的行为
-  try_files $uri $uri/ =404; #查找网址‘/’后半段指定的文件，找不到的话显示 404 错误页面
-  }
+    location / { #访问域名根目录‘/’时的行为
+      try_files $uri $uri/ =404; #查找网址‘/’后半段指定的文件，找不到的话显示 404 错误页面
+    }
 }</pre>
 <p>为了让服务器配置生效我们需要在 <code>sites-enabled</code> 目录里删除默认配置文件并创建符号链接，在下面的命令里请用<strong>绝对路径</strong>以免造成链接混乱。</p>
 <pre>sudo rm /etc/nginx/sites-enabled/default #删除默认配置文件的符号链接

@@ -230,18 +230,17 @@ sudo cp default 你的配置文件名 #请替换“你的配置文件名”，�
 sudo nano 你的配置文件名</pre>
 <p>默认的配置文件里有很多注释，你可以试着阅读了解一下。<br>下面是一个最简单的处理 HTTP（80 端口）访问的服务器配置。</p>
 <pre>server {
-listen 80;
-listen [::]:80;
-#监听所有 80 端口访问
+    listen 80;
+    listen [::]:80; #监听所有 80 端口访问
 
-root /var/www/html; #指定网页文件存放的根目录
-index index.html index.htm index.nginx-debian.html; #index（首页）文件的文件名，一般静态网站只写 index.html 就足够了
+    root /var/www/html; #指定网页文件存放的根目录
+    index index.html index.htm index.nginx-debian.html; #index（首页）文件的文件名，一般静态网站只写 index.html 就足够了
 
-server_name example.com www.example.com; #你使用的域名，把 example.com www.example.com 替换成你自己的域名
+    server_name example.com www.example.com; #你使用的域名，把 example.com www.example.com 替换成你自己的域名
 
-location / { #访问域名根目录‘/’时的行为
-  try_files $uri $uri/ =404; #查找网址‘/’后半段指定的文件，找不到的话显示 404 错误页面
-  }
+    location / { #访问域名根目录‘/’时的行为
+      try_files $uri $uri/ =404; #查找网址‘/’后半段指定的文件，找不到的话显示 404 错误页面
+    }
 }</pre>
 <p>为了让服务器配置生效我们需要在 <code>sites-enabled</code> 目录里删除默认配置文件并创建符号链接，在下面的命令里请用<strong>绝对路径</strong>以免造成链接混乱。</p>
 <pre>sudo rm /etc/nginx/sites-enabled/default #删除默认配置文件的符号链接
