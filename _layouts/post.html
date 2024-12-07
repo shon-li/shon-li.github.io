@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="{% if page.lang %}{{ page.lang }}{% else %}zh-Hans{% endif %}">
-<head>
-<meta charset="utf-8">
-<title>{{ page.title }}・{{ site.title }}</title>
-<link rel="stylesheet" href="/assets/css/main.css">
-{% feed_meta %}
-{% seo %}
-</head>
-<body>
-{% if page.figure %}<figure>{{ page.figure }}</figure>{% endif %}
-<main>
-<h1>{{ page.title }}</h1>
-{{ content }}
-</main>
-{% include nav.html %}
-</body>
+<html lang="{%- if page.lang -%}{{- page.lang -}}{%- else -%}zh-Hans{%- endif -%}">
+
+  <head>
+    <meta charset="utf-8">
+    <title>{{- page.title -}}・{{- site.title -}}</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    {%- feed_meta -%}
+    {%- seo -%}
+  </head>
+
+  <body>
+    {%- if page.figure -%}<figure>{{- page.figure -}}</figure>{%- endif -%}
+    <main>
+      <h1>{{- page.title -}}</h1>
+      {{- content -}}
+    </main>
+    {%- include nav.html -%}
+  </body>
+
 </html>
