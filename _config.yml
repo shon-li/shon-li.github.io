@@ -1,9 +1,13 @@
-collections:
-  categories:
+title        : "晓航的网站"
+url          : "https://shon.li"
+fullurl      : "shon.li"
+permalink    : none
 
-title: "晓航的网站"
+collections  :
+  categories :
+  output     : false
 
-plugins:
+plugins      :
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag

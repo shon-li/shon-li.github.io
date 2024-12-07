@@ -1,4 +1,4 @@
 ---
-shorthand: article
+shorthand: articles
 name: 文章
 ---
