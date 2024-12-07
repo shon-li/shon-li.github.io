@@ -1,6 +1,4 @@
 ---
-layout: default
-lang: zh-Hans
 categories: articles
 date: 2024-12-07
 title: 麻雀的好事

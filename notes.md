@@ -1,5 +1,4 @@
 ---
-layout: default
 title: 备注
 ---
 ## 网站信息

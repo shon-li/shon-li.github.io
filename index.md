@@ -1,6 +1,4 @@
 ---
-layout: default
-lang: zh-Hans
 title: index
 ---
 我叫李晓航，你现在看到的是我网站的首页。我在这里放了些我弄的东西，奇奇怪怪的字，奇奇怪怪的照片。
