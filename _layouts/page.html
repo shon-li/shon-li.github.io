@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{% if page.lang %}{{ page.lang }}{% else %}en{% endif %}">
+<head>
+<meta charset="utf-8">
+<title> {% if page.title != "index" %}{{ page.title }}・{% endif %}{{ site.title }}</title>
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+<main>
+{{ content }}
+</main>
+{% include nav.html %}
+</body>
+</html>
