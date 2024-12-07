@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: zh-Hans
-collections: articles
+categories: article
 date: 2024-12-07
 title: 做好事的麻雀
 ---

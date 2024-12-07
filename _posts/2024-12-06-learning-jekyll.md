@@ -1,7 +1,7 @@
 ---
 layout: post
 lang: en
-collections: articles
+categories: article
 date: 2024-12-06
 title: Learning Jekyll
 ---

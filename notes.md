@@ -2,9 +2,9 @@
 layout: page
 title: 备注
 ---
-# 网站技术信息
+# 技术信息
 
-这个网站是用 Jekyll 静态网站生成器生成的，通过 GitHub Page 服务发布到互联网上的。这是[我的 GitHub 链接](https://github.com/shon-li/shon-li.github.io/)。
+这个网站是用静态网站生成器 Jekyll 生成的，通过 GitHub Page 服务发布到互联网上的。这是[我的 GitHub 链接](https://github.com/shon-li/shon-li.github.io/)。
 
 # 版权
 
