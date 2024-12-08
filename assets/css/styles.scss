@@ -19,8 +19,8 @@ html {
 /* Switch to dark colour scheme */
 @media (prefers-color-scheme: dark) {
   html {
-    --color_space:    hsl(0, 0%, 15%);
-    --color_paper:    hsl(46, 2%, 30%);
+    --color_space:    hsl(0, 0%, 13%);
+    --color_paper:    hsl(46, 2%, 32%);
     --color_text:     hsl(46, 10%, 90%);
     --color_text_alt: hsl(46, 1%, 60%);
     --color_accent:   hsl(55, 100%, 45%);
@@ -107,6 +107,12 @@ article {
   letter-spacing: .05em;
   word-break: break-word;
   text-align: justify;
+
+  img,
+  video {
+    width: 100%;
+    border-radius: 3px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -142,16 +148,16 @@ figure {
   height: 100vh;
   display: flex;
   align-items: center;
-}
 
-img,
-video {
-  display: block;
-  margin: auto;
-  max-width: 82vw;
-  max-height: 82vh;
-  object-fit: scale-down;
-  border-radius: 3px;
+  img,
+  video {
+    display: block;
+    margin: auto;
+    max-width: 82vw;
+    max-height: 82vh;
+    object-fit: scale-down;
+    border-radius: 3px;
+  }
 }
 
 footer {
@@ -159,27 +165,27 @@ footer {
   color: var(--color_paper);
   font-family: "Noto Sans SC", sans-serif;
   font-size: normal;
-  font-weight: 400;
+  font-weight: 450;
   letter-spacing: 0em;
-}
 
-footer table {
-  margin: auto;
-  padding: 0;
-}
+  table {
+    margin: auto;
+    padding: 0;
+  }
 
-footer table td {
-    text-align: center;
-    padding: 0 1em 0 1em;
-}
+  table td {
+      text-align: center;
+      padding: 0 1em 0 1em;
+  }
 
-footer a:link,
-footer a:visited {
-  color: var(--color_paper);
-}
+  a:link,
+  a:visited {
+    color: var(--color_paper);
+  }
 
-footer a:hover {
-  color: var(--color_accent);
+  a:hover {
+    color: var(--color_accent);
+  }
 }
 
 .copyright {
