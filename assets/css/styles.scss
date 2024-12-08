@@ -5,7 +5,7 @@
 
 /*-------------------------------------- Define variables ----------------------------------------*/
 
-html {
+body {
   --color_space:    hsl(0, 0%, 60%);
   --color_paper:    hsl(46 100% 99%);
   --color_text:     hsl(46, 15%, 25%);
@@ -16,15 +16,23 @@ html {
 
 /*------------------------------------------- Styling --------------------------------------------*/
 
+// Include padding and borders into size calculation
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: auto;
+  width: 100vw;
+  min-height: 100vh;
+  display: block;
   background-color: var(--color_space);
   overflow-x: auto;
 }
 
 main {
-  width: 61.8vw;
-  max-width: 595px;
+  width: 68.1vw;
+  max-width: fit-content;
   margin: 38.21vh auto 0 auto;
   padding: var(--page_margin);
   background-color: var(--color_paper);
@@ -32,6 +40,7 @@ main {
 }
 
 article {
+  margin: auto;
   color: var(--color_text);
   font-family: 'Noto Serif SC', serif;
   font-size: large;
@@ -135,7 +144,7 @@ footer {
 
 /* Switch to dark colour scheme */
 @media (prefers-color-scheme: dark) {
-  html {
+  body {
     --color_space:    hsl(0, 0%, 13%);
     --color_paper:    hsl(46, 2%, 32%);
     --color_text:     hsl(46, 10%, 90%);
@@ -151,13 +160,14 @@ footer {
   }
 }
 
-/* Screen width <= 860 */
-@media (max-width: 860px) {
+/* Screen width <= 960 */
+@media (max-width: 960px) {
   html {
     --page_margin: 2.5em;
   }
   main {
-    width: 92vw;
+    width: 82vw;
+    min-width: none;
     margin: 4vw auto 4vw auto;
   }
   figure {
@@ -187,7 +197,8 @@ footer {
          only screen and (min-device-pixel-ratio: 2),
          only screen and (min-resolution: 192dpi),
          only screen and (min-resolution: 2dppx) {
-    body {
+    article,
+    footer {
       font-size: large;
     }
   }
