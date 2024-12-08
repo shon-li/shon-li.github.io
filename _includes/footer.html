@@ -6,7 +6,7 @@
           <td><a href="{{ item.link }}">{{- item.name -}}</a></td>
         {%- endif -%}
       {%- endfor -%}
-      <td>&copy;&nbsp;
+      <td class="copyright">&copy;&nbsp;
         {%- if page.date -%}
           {{- page.date | date: "%Y 年 %-m 月 %-d 日" -}}
           &nbsp;
