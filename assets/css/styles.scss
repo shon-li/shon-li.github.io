@@ -1,0 +1,187 @@
+---
+# Front matter
+---
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/*-------------------------------------- Define variables ----------------------------------------*/
+
+html {
+  --color_space:    hsl(0, 0%, 60%);
+  --color_paper:    hsl(46 100% 99%);
+  --color_text:     hsl(46, 15%, 25%);
+  --color_text_alt: hsl(46, 2%, 50%);
+  --color_accent:   hsl(230, 100%, 50%);
+  --page_margin:      6em;
+}
+
+/*--------------------------- Respond to width, dpi and color change -----------------------------*/
+
+/* Switch to dark colour scheme */
+@media (prefers-color-scheme: dark) {
+  html {
+    --color_space:    hsl(0, 0%, 15%);
+    --color_paper:    hsl(46, 2%, 30%);
+    --color_text:     hsl(46, 10%, 90%);
+    --color_text_alt: hsl(46, 1%, 60%);
+    --color_accent:   hsl(55, 100%, 45%);
+  }
+
+  /* Dim images a bit */
+  img,
+  video {
+    filter: brightness(90%);
+  }
+}
+
+/* Screen width <= 1280 */
+@media (max-width: 1280px) {
+  html {
+    --page_margin: 4em;
+  }
+}
+
+/* Screen width <= 860 */
+@media (max-width: 860px) {
+  html {
+    --page_margin: 2.5em;
+  }
+  body {
+    width: 92vw;
+    margin: 4vw auto 4vw auto;
+  }
+}
+
+/* Screen width <= 500 */
+@media (max-width: 500px) {
+  html {
+    --page_margin: 2em;
+  }
+}
+
+/* Screen width <= 260 */
+@media (max-width: 260px) {
+  body {
+    font-size: small;
+  }
+}
+
+/* High resolution vertical phone screen */
+@media (max-width: 950px) and (min-height: 900px) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+         only screen and (min--moz-device-pixel-ratio: 2),
+         only screen and (-o-min-device-pixel-ratio: 2/1),
+         only screen and (min-device-pixel-ratio: 2),
+         only screen and (min-resolution: 192dpi),
+         only screen and (min-resolution: 2dppx) {
+    body {
+      font-size: large;
+    }
+  }
+}
+
+/*------------------------------------------- Styling --------------------------------------------*/
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--color_space);
+}
+
+main {
+  width: 68.1vw;
+  max-width: 595pt;
+  margin: 38.21vh auto 0 auto;
+  padding: var(--page_margin) 0 var(--page_margin) 0;
+  background-color: var(--color_paper);
+  border-radius: 3px;
+}
+
+article {
+  margin: 0 var(--page_margin) 0 var(--page_margin);
+  color: var(--color_text);
+  font-family: 'Noto Serif SC', serif;
+  font-size: large;
+  font-weight: 400;
+  line-height: 2.1;
+  letter-spacing: .05em;
+  word-break: break-word;
+  text-align: justify;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0 0;
+  text-align: center;
+}
+
+p {
+  margin: 1.5em 0 1.5em 0;
+}
+
+pre {
+  width: 108%;
+  overflow-x: scroll;
+}
+
+a:link,
+a:visited {
+  color: var(--color_text);
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px dotted var(--color_text);
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom: 3px solid var(--color_accent);
+}
+
+figure {
+  margin: 0 0 -37vh 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+img,
+video {
+  display: block;
+  margin: auto;
+  max-width: 82vw;
+  max-height: 82vh;
+  object-fit: scale-down;
+  border-radius: 3px;
+}
+
+footer {
+  margin: .8em auto 38vh auto;
+  color: var(--color_paper);
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+
+footer table {
+  margin: auto;
+  padding: 0;
+}
+
+footer table td {
+    text-align: center;
+    padding: 0 1em 0 1em;
+}
+
+footer a:link,
+footer a:visited {
+  color: var(--color_paper);
+}
+
+footer a:hover {
+  color: var(--color_accent);
+}
+
+.copyright {
+  padding-top: 3px;
+}

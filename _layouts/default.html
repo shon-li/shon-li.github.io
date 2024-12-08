@@ -1,0 +1,44 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="{{- page.lang -}}">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>
+    {%- if page.title != "index" -%}
+      {{- page.title -}}・
+    {%- endif -%}
+    {{- site.title -}}
+  </title>
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  {%- feed_meta -%}
+  {%- seo -%}
+</head>
+
+<body>
+  {% comment %} Insert a figure if the page has one {% endcomment %}
+
+  {%- if page.figure -%}
+    <figure>{{- page.figure -}}</figure>
+  {%- endif -%}
+
+    <main>
+      <article>
+        {% comment %} If a page has categories entry, then the page's title will be displayed {% endcomment %}
+
+        {%- if page.categories -%}
+          <h1>{{- page.title -}}</h1>
+        {%- endif -%}
+
+        {{- content -}}
+      </article>
+  </main>
+  {%- include footer.html -%}
+</body>
+
+</html>

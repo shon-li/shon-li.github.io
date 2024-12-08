@@ -1,0 +1,39 @@
+title         : "晓航的网站"
+author        : "李晓航"
+
+url           : "https://shon.li"
+fullurl       : "shon.li"
+permalink     : none
+
+collections   :
+  categories  :
+  output      : false
+
+# Default front matter for all pages and posts
+defaults      :
+  -
+    scope     :
+      path    : ""
+    values    :
+      layout  : "default"
+      lang    : "zh-Hans"
+
+# Config for compress html layout
+compress_html :
+  clippings   : all
+  comments    : []
+  endings     : all
+  ignore      :
+    envs      : []
+  blanklines  : false
+  profile     : false
+  startings   : []
+
+# Sass
+sass:
+    style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

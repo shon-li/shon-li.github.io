@@ -1,0 +1,14 @@
+---
+title: 目录
+---
+{%- for category in site.categories -%}
+  <h1>{{- category.name -}}</h1>
+  <ol>
+    {%- assign filteredPosts = site.posts | where: 'categories', category.shorthand -%}
+      {%- for post in filteredPosts -%}
+      <li>
+        <a href="{{- post.url -}}">{{- post.title -}}</a>
+      </li>
+    {%- endfor -%}
+  </ol>
+{%- endfor -%}
