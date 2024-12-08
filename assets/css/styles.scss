@@ -153,8 +153,8 @@ figure {
   video {
     display: block;
     margin: auto;
-    max-width: 82vw;
-    max-height: 82vh;
+    max-width: 86vw;
+    max-height: 86vh;
     object-fit: scale-down;
     border-radius: 3px;
   }
@@ -181,10 +181,12 @@ footer {
   a:link,
   a:visited {
     color: var(--color_paper);
+    border-bottom: 1px dotted var(--color_paper);
   }
 
   a:hover {
     color: var(--color_accent);
+    border-bottom: 3px solid var(--color_accent);
   }
 }
 
