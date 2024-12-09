@@ -42,7 +42,11 @@ layout: compress
     <figure>{{- page.figure -}}</figure>
   {%- endif -%}
 
-    <main>
+    <main
+    {% if page.title == "contents" %}
+      class="contents-page"
+    {%- endif -%}
+    >
       <article>
         {% comment %} If a page has categories entry, then the page's title will be displayed {% endcomment %}
 

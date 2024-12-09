@@ -1,0 +1,21 @@
+---
+title: contents
+---
+{%- for category in site.categories -%}
+
+  <table class="posts-table">
+
+    <th colspan="2"><h2 class="posts-title">{{- category.name -}}</h2></th>
+
+    {%- assign filteredPosts = site.posts | where: 'categories', category.shorthand -%}
+
+    {%- for post in filteredPosts -%}
+      <tr>
+        <td><a href="{{- post.url -}}">{{- post.title -}}</a></td>
+        <td class="posts-date-col"><span class="posts-date">{{- post.date | date: "%Y-%m" -}}</span></td>
+      </tr>
+    {%- endfor -%}
+
+  </table>
+
+{%- endfor -%}

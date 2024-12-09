@@ -10,7 +10,7 @@ body {
   --color_space:    hsl(0, 0%, 60%);
   --color_paper:    hsl(46 100% 99%);
   --color_text:     hsl(46, 15%, 25%);
-  --color_text_alt: hsl(46, 2%, 50%);
+  --color_text_alt: hsl(46, 2%, 35%);
   --color_accent:   hsl(230, 100%, 47%);
   --paper_width:      39rem;
 }
@@ -40,12 +40,19 @@ main {
   border-radius: 3px;
 }
 
+.contents-page {
+  padding-bottom: 2.7em;
+}
+
 article {
+  width: auto;
+  height: auto;
+  margin: auto;
   color: var(--color_text);
   font-family: 'Noto Serif SC', serif;
   font-weight: 400;
   line-height: 2.1;
-  letter-spacing: .035em;
+  letter-spacing: .038em;
   word-break: break-word;
   text-align: justify;
 
@@ -56,6 +63,38 @@ article {
     border-radius: 3px;
     object-fit: scale-down;
   }
+}
+
+.posts-table {
+  width: 95%;
+  margin: 0 auto 2.5em auto;
+  border-collapse: collapse;
+  letter-spacing: .03em;
+
+  td {
+    padding: .8em 0 .8em .03em;
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 380;
+  }
+
+  th {
+    padding-bottom: 1em;
+  }
+}
+
+.posts-title {
+  letter-spacing: .4em;
+}
+
+.posts-date-col {
+  width: 5.2em;
+  text-align: right;
+}
+
+.posts-date {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 370;
+  letter-spacing: -.02em;
 }
 
 h1, h2, h3, h4, h5, h6 {
