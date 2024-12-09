@@ -97,8 +97,8 @@ figure {
 
   img,
   video {
-    max-width: 88vw;
-    max-height: 88vh;
+    max-width: 82vw;
+    max-height: 82vh;
     margin: auto;
     object-fit: scale-down;
     border-radius: 3px;
@@ -166,6 +166,12 @@ footer {
 
   figure {
     margin-bottom: 0;
+
+    img,
+    video {
+      max-width: 88vw;
+      max-height: 88vh;
+    }
   }
 
   footer {
