@@ -35,7 +35,7 @@ main {
   min-width: 4em;
   max-width: var(--paper_width);
   margin: 37vh auto 0 auto;
-  padding: 5em;
+  padding: 5em 5em 3.8em 5em;
   background-color: var(--color_paper);
   border-radius: 3px;
 }
@@ -64,7 +64,7 @@ article {
 /*-------------------------------------- 2. Contents page ----------------------------------------*/
 
 .contents-page {
-  padding-bottom: 2.7em;
+  padding-bottom: 2em;
 }
 
 .contents-table,
@@ -78,9 +78,10 @@ article {
   width: 95%;
   margin: 0 auto 2.5em auto;
   letter-spacing: .03em;
+  vertical-align: top;
 
   td {
-    padding: .8em 0 .8em 0;
+    padding: .8em 0 .8em .1em;
     font-family: "Noto Sans SC", sans-serif;
     font-weight: 380;
   }
@@ -91,7 +92,7 @@ article {
 }
 
 .contents-title {
-  letter-spacing: .1em;
+  letter-spacing: .02em;
 }
 
 .contents-date-col {
@@ -185,7 +186,7 @@ footer {
   font-family: "Noto Sans SC", sans-serif;
   font-size: 16px;
   font-weight: 480;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.1em;
   display: flex;
   flex-direction: row;
 
@@ -216,7 +217,7 @@ footer {
 
 .copyright {
   padding: 3px 0 0 1em;
-  letter-spacing: 0;
+  letter-spacing: .02em;
   text-align: left;
 }
 
@@ -265,10 +266,6 @@ footer {
     text-align: center;
     padding: 1px 0 0 0;
   }
-
-  .contents-table td {
-    vertical-align: top;
-  }
 }
 
 /*--------------------------------- 6. Special page overwrites -----------------------------------*/
@@ -279,9 +276,12 @@ footer {
 
 .en-page {
   h1, h2, h3, h4, h5, h6,
-  article,
-  footer {
+  article {
     letter-spacing: normal;
+  }
+
+  footer {
+    letter-spacing: .02em;
   }
 
   h1, h2, h3, h4, h5, h6 {

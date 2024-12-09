@@ -3,7 +3,7 @@ title: 备注
 ---
 ## 网站信息
 
-这个网站是用静态网站生成器 Jekyll 生成的，通过 GitHub Page 服务发布到互联网上的。这是[我的 GitHub 链接](https://github.com/shon-li/shon-li.github.io/)。我用到了一个别人做的能压缩 HTML 文件的 layout。作者是 Anatol Broder，链接：[Compress HTML in Jekyll](https://jch.penibelst.de/)。
+这个网站是用静态网站生成器 Jekyll 生成的，通过 GitHub Page 和 Cloudflare 服务发布到互联网上的。这是[我的 GitHub 链接](https://github.com/shon-li/shon-li.github.io/)。我用到了一个别人做的能压缩 HTML 文件的 layout。作者是 Anatol Broder，链接：[Compress HTML in Jekyll](https://jch.penibelst.de/)。
 
 我在网页上用的字体是 [Noto Serif SC](https://fonts.google.com/noto/specimen/Noto+Serif+SC)、[Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)，还有 [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)。我是从 [Google Fonts](https://fonts.google.com) 上嵌入的这些字体。
 
@@ -16,7 +16,3 @@ title: 备注
 ## 联系方式
 
 请亲亲通过发送电子邮件联系我哦。用这种古老又陌生的方式跟我唠唠嗑吧。我炫酷的邮箱地址是 hi@shon.li。万一你想要个我拍的照片的大图的话我可以发给你。
-
-## 我喜欢看的网站
-
-待续……
