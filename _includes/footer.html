@@ -1,4 +1,8 @@
-<footer>
+<footer
+  {% if page.figure %}
+    class="figure-page"
+  {%- endif -%}
+>
   <table>
     <tr>
       {%- for item in site.data.nav -%}
@@ -16,34 +20,34 @@
           {%- endif -%}
 
       {%- endfor -%}
-
-      <td class="copyright">&copy;&nbsp;
-        {%- if page.lang == "en" -%}
-
-          {%- if page.date -%}
-            {{- page.date | date: "%-d %b %Y" -}}
-            &nbsp;・&nbsp;
-            {{- site.author-en -}}
-          {%- else -%}
-            {{- site.time | date: "%Y" -}}
-            &nbsp;・&nbsp;
-            {{- site.title-en -}}
-          {%- endif -%}
-
-        {%- else -%}
-
-          {%- if page.date -%}
-            {{- page.date | date: "%Y 年 %-m 月 %-d 日" -}}
-            &nbsp;・&nbsp;
-            {{- site.author -}}
-          {%- else -%}
-            {{- site.time | date: "%Y" -}}
-            &nbsp;・&nbsp;
-            {{- site.title -}}
-          {%- endif -%}
-
-        {%- endif -%}
-      </td>
     </tr>
   </table>
+
+  <span class="copyright">&copy;&nbsp;
+    {%- if page.lang == "en" -%}
+
+      {%- if page.date -%}
+        {{- page.date | date: "%-d %b %Y" -}}
+        &nbsp;・&nbsp;
+        {{- site.author-en -}}
+      {%- else -%}
+        {{- site.time | date: "%Y" -}}
+        &nbsp;・&nbsp;
+        {{- site.title-en -}}
+      {%- endif -%}
+
+    {%- else -%}
+
+      {%- if page.date -%}
+        {{- page.date | date: "%Y 年 %-m 月 %-d 日" -}}
+        &nbsp;・&nbsp;
+        {{- site.author -}}
+      {%- else -%}
+        {{- site.time | date: "%Y" -}}
+        &nbsp;・&nbsp;
+        {{- site.title -}}
+      {%- endif -%}
+
+    {%- endif -%}
+  </span>
 </footer>

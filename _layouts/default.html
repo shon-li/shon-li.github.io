@@ -20,7 +20,7 @@ layout: compress
   </title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 
   {%- if page.lang == "en" -%}
     <style>
@@ -43,9 +43,9 @@ layout: compress
   {%- endif -%}
 
     <main
-    {% if page.title == "contents" %}
-      class="contents-page"
-    {%- endif -%}
+      {% if page.title == "contents" %}
+        class="contents-page"
+      {%- endif -%}
     >
       <article>
         {% comment %} If a page has categories entry, then the page's title will be displayed {% endcomment %}

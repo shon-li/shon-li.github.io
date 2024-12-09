@@ -1,8 +1,8 @@
 ---
-# Front matter
+# Front matter that makes Liquid process this file
 ---
 
-/*-------------------------------------- Define variables ----------------------------------------*/
+/*------------------------------------- 0. Define variables --------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
@@ -15,18 +15,18 @@ body {
   --paper_width:      39rem;
 }
 
-/*------------------------------------------- Styling --------------------------------------------*/
+/*--------------------------------------- 1. Page & Main -----------------------------------------*/
 
-// Include padding and borders into size calculation
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; // Include padding and borders into size calculation
 }
 
 html {
-  font-size: large;
+  font-size: large; // Root font size is used as a metric for sizes in the following code
 }
 
 body {
+  min-width: 280px;
   margin: auto;
   background-color: var(--color_space);
 }
@@ -38,10 +38,6 @@ main {
   padding: 5em;
   background-color: var(--color_paper);
   border-radius: 3px;
-}
-
-.contents-page {
-  padding-bottom: 2.7em;
 }
 
 article {
@@ -65,10 +61,26 @@ article {
   }
 }
 
-.posts-table {
+.figure-page {
+  margin-bottom: 8em;
+}
+
+/*-------------------------------------- 2. Contents page ----------------------------------------*/
+
+.contents-page {
+  padding-bottom: 2.7em;
+}
+
+.contents-table,
+.contents-table th,
+.contents-table td {
+  padding: 0;
+  border: none;
+}
+
+.contents-table {
   width: 95%;
   margin: 0 auto 2.5em auto;
-  border-collapse: collapse;
   letter-spacing: .03em;
 
   td {
@@ -82,26 +94,27 @@ article {
   }
 }
 
-.posts-title {
+.contents-title {
   letter-spacing: .4em;
 }
 
-.posts-date-col {
+.contents-date-col {
   width: 5.2em;
   text-align: right;
 }
 
-.posts-date {
+.contents-date {
   font-family: "Roboto Mono", monospace;
   font-weight: 370;
   letter-spacing: -.02em;
 }
 
+/*-------------------------------------- 3. Page elements ----------------------------------------*/
+
 h1, h2, h3, h4, h5, h6 {
-  max-width: 90%;
+  max-width: 17em;
   margin: 0 auto 0 auto;
   text-align: center;
-  letter-spacing: .08em;
 }
 
 p {
@@ -114,7 +127,7 @@ pre {
 }
 
 pre {
-  width: 106%;
+  width: 103%;
   overflow-x: scroll;
 }
 
@@ -148,24 +161,43 @@ figure {
   }
 }
 
+article table {
+  width: 100%;
+  margin: auto;
+  margin-top: 1em;
+  border-collapse: collapse;
+
+  th,
+  td {
+    padding: .2em .5em;
+    border: 1px var(--color_text_alt) dotted;
+  }
+}
+
+/*------------------------------------------ 4. Footer -------------------------------------------*/
+
 footer {
-  max-width: fit-content;
-  min-width: min-content;
-  margin: .8em auto 36vh auto;
+  width: fit-content;
+  margin: .8em auto 32vh auto;
   color: var(--color_paper);
   font-family: "Noto Sans SC", sans-serif;
   font-size: 16px;
   font-weight: 480;
   letter-spacing: 0.4em;
+  display: flex;
+  flex-direction: row;
 
-  table {
-    margin: auto;
+  table,
+  table th,
+  table td {
     padding: 0;
+    border: none;
   }
 
   table td {
+      width: auto;
       text-align: center;
-      padding: 0 1em 0 1em;
+      padding: 0 .8em .7em .8em;
   }
 
   a:link,
@@ -181,11 +213,12 @@ footer {
 }
 
 .copyright {
-  padding-top: 3px;
+  padding: 2px 0 0 1em;
   letter-spacing: 0;
+  text-align: left;
 }
 
-/*------------------------------ Respond to color or width change --------------------------------*/
+/*-------------------------- 5. Adjust to color scheme or width change ---------------------------*/
 
 /* Switch to dark colour scheme */
 @media (prefers-color-scheme: dark) {
@@ -198,13 +231,13 @@ footer {
   }
 }
 
-/* If cannot maintain preferred width */
-@media screen and ( max-width: 45rem ) {
+// If cannot maintain preferred width
+@media screen and ( max-width: 45rem ) { // 45 rem ~= `--paper_width` + 4rem
   main {
     min-width: auto;
     max-width: auto;
-    margin: 1em;
-    padding: 2em;
+    margin: .8em;
+    padding: 1.8em;
   }
 
   figure {
@@ -218,6 +251,11 @@ footer {
   }
 
   footer {
-    margin-bottom: 20vh;
+    margin-bottom: 1em;
+    flex-direction: column;
+  }
+
+  .copyright {
+    text-align: center;
   }
 }
