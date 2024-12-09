@@ -106,11 +106,12 @@ figure {
 }
 
 footer {
-  width: calc(var(--paper_width) - 4rem);
+  max-width: fit-content;
+  min-width: min-content;
   margin: .8em auto 36vh auto;
   color: var(--color_paper);
   font-family: "Noto Sans SC", sans-serif;
-  font-size: normal;
+  font-size: 16px;
   font-weight: 450;
   letter-spacing: 0.2em;
 
@@ -157,7 +158,8 @@ footer {
 /* If cannot maintain preferred width */
 @media screen and ( max-width: 45rem ) {
   main {
-    width: auto;
+    min-width: auto;
+    max-width: auto;
     margin: 1em;
     padding: 2em;
   }
