@@ -53,7 +53,7 @@ article {
   font-weight: 400;
   line-height: 2.1;
   letter-spacing: .038em;
-  word-break: break-word;
+  word-break: normal;
   text-align: justify;
 
   img,
@@ -72,7 +72,7 @@ article {
   letter-spacing: .03em;
 
   td {
-    padding: .8em 0 .8em .03em;
+    padding: .8em 0 .8em 0;
     font-family: "Noto Sans SC", sans-serif;
     font-weight: 380;
   }
@@ -98,8 +98,10 @@ article {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0;
+  max-width: 90%;
+  margin: 0 auto 0 auto;
   text-align: center;
+  letter-spacing: .08em;
 }
 
 p {
@@ -153,7 +155,7 @@ footer {
   color: var(--color_paper);
   font-family: "Noto Sans SC", sans-serif;
   font-size: 16px;
-  font-weight: 450;
+  font-weight: 480;
   letter-spacing: 0.4em;
 
   table {
@@ -188,8 +190,8 @@ footer {
 /* Switch to dark colour scheme */
 @media (prefers-color-scheme: dark) {
   body {
-    --color_space:    hsl(0, 0%, 13%);
-    --color_paper:    hsl(46, 2%, 32%);
+    --color_space:    hsl(0, 0%, 12%);
+    --color_paper:    hsl(46, 2%, 33%);
     --color_text:     hsl(46, 10%, 90%);
     --color_text_alt: hsl(46, 1%, 60%);
     --color_accent:   hsl(55, 100%, 45%);
