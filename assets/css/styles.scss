@@ -34,7 +34,7 @@ body {
 main {
   min-width: 4em;
   max-width: var(--paper_width);
-  margin: 38.21vh auto 0 auto;
+  margin: 37vh auto 0 auto;
   padding: 5em;
   background-color: var(--color_paper);
   border-radius: 3px;
@@ -45,14 +45,16 @@ article {
   font-family: 'Noto Serif SC', serif;
   font-weight: 400;
   line-height: 2.1;
-  letter-spacing: .04em;
+  letter-spacing: .035em;
   word-break: break-word;
   text-align: justify;
 
   img,
   video {
     width: 100%;
+    height: auto;
     border-radius: 3px;
+    object-fit: scale-down;
   }
 }
 
@@ -91,7 +93,7 @@ a:hover {
 figure {
   height: 100vh;
   margin: 0;
-  margin-bottom: -38vh;
+  margin-bottom: -35vh;
   display: flex;
   align-items: center;
 
@@ -100,8 +102,8 @@ figure {
     max-width: 82vw;
     max-height: 82vh;
     margin: auto;
-    object-fit: scale-down;
     border-radius: 3px;
+    object-fit: scale-down;
   }
 }
 
@@ -113,7 +115,7 @@ footer {
   font-family: "Noto Sans SC", sans-serif;
   font-size: 16px;
   font-weight: 450;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.4em;
 
   table {
     margin: auto;
@@ -165,7 +167,7 @@ footer {
   }
 
   figure {
-    margin-bottom: 0;
+    margin-bottom: 2vh;
 
     img,
     video {

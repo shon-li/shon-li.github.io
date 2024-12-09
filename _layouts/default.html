@@ -11,11 +11,26 @@ layout: compress
     {%- if page.title != "index" -%}
       {{- page.title -}}・
     {%- endif -%}
-    {{- site.title -}}
+
+    {%- if page.lang == "en" -%}
+      {{- site.title-en -}}
+    {%- else -%}
+      {{- site.title -}}
+    {%- endif -%}
   </title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/assets/css/styles.css">
+
+  {%- if page.lang == "en" -%}
+    <style>
+      article,
+      footer {
+        letter-spacing: normal;
+      }
+    </style>
+  {%- endif -%}
+
   {%- feed_meta -%}
   {%- seo -%}
 </head>

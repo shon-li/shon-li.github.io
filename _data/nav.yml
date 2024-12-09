@@ -1,6 +1,9 @@
-- name: 目录
-  link: /posts.html
-- name: 首页
-  link: /
-- name: 备注
-  link: /notes.html
+- name    : 目录
+  name-en : Contents
+  link    : /posts.html
+- name    : 首页
+  name-en : Home
+  link    : /
+- name    : 备注
+  name-en : Appendix
+  link    : /appendix.html
