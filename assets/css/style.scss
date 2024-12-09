@@ -61,10 +61,6 @@ article {
   }
 }
 
-.figure-page {
-  margin-bottom: 8em;
-}
-
 /*-------------------------------------- 2. Contents page ----------------------------------------*/
 
 .contents-page {
@@ -258,5 +254,28 @@ footer {
   .copyright {
     text-align: center;
     padding: 2px 0 0 0;
+  }
+}
+
+/*--------------------------------- 6. Special page overwrites -----------------------------------*/
+
+.figure-page {
+  margin-bottom: 8em;
+}
+
+.en-page {
+  h1, h2, h3, h4, h5, h6,
+  article,
+  footer {
+    letter-spacing: normal;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    word-spacing: .2em;
+  }
+
+  article {
+    text-align: center;
+    word-spacing: .08em;
   }
 }

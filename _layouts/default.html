@@ -22,20 +22,15 @@ layout: compress
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  {%- if page.lang == "en" -%}
-    <style>
-      article,
-      footer {
-        letter-spacing: normal;
-      }
-    </style>
-  {%- endif -%}
-
   {%- feed_meta -%}
   {%- seo -%}
 </head>
 
-<body>
+<body
+  {% if page.lang == "en" %}
+    class="en-page"
+  {%- endif -%}
+>
   {% comment %} Insert a figure if the page has one {% endcomment %}
 
   {%- if page.figure -%}
@@ -57,6 +52,7 @@ layout: compress
         {{- content -}}
       </article>
   </main>
+
   {%- include footer.html -%}
 </body>
 
