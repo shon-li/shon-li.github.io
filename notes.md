@@ -7,7 +7,7 @@ title: 备注
 
 我在网页上用的字体是 [Noto Serif SC](https://fonts.google.com/noto/specimen/Noto+Serif+SC)、[Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC)，还有 [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono)。我是从 [Google Fonts](https://fonts.google.com) 上嵌入的这些字体。
 
-不好意思我把导航链接放到了页面的底部。这意味着在很长的文章里你得跑到最下面才能看见导航的链接。我目前就觉得放在下面比较好。劝你你多用用手机浏览器里的返回功能。电脑上的话，试试像 `end` 这样的键盘按键。
+不好意思我把导航链接放到了页面的底部。这意味着在很长的文章里你得跑到最下面才能看见导航的链接。我目前就觉得放在下面比较好。只好劝你多用用手机浏览器里的返回功能，或者试试电脑上的 `End` 之类的按键。
 
 ## 版权
 

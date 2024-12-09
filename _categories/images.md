@@ -1,4 +1,4 @@
 ---
 shorthand: images
-name: 图像
+name: 照片
 ---
