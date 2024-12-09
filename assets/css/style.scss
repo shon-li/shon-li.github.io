@@ -91,7 +91,7 @@ article {
 }
 
 .contents-title {
-  letter-spacing: .4em;
+  letter-spacing: .1em;
 }
 
 .contents-date-col {
@@ -108,9 +108,10 @@ article {
 /*-------------------------------------- 3. Page elements ----------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
-  max-width: 17em;
   margin: 0 auto 0 auto;
   text-align: center;
+  letter-spacing: normal;
+  line-height: normal;
 }
 
 p {
@@ -236,6 +237,10 @@ footer {
     padding: 1.8em;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    max-width: 9em;
+  }
+
   figure {
     margin-bottom: 2vh;
 
@@ -254,6 +259,10 @@ footer {
   .copyright {
     text-align: center;
     padding: 2px 0 0 0;
+  }
+
+  .contents-table td {
+    vertical-align: top;
   }
 }
 
