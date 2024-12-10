@@ -44,13 +44,15 @@ article {
   width: auto;
   height: auto;
   margin: auto;
+  padding-left: .15em;
   color: var(--color_text);
   font-family: 'Noto Serif SC', serif;
   font-weight: 400;
   line-height: 2.1;
   letter-spacing: .038em;
+  word-spacing: .06em;
   word-break: normal;
-  text-align: justify;
+  text-align: left;
 
   img,
   video {
@@ -261,6 +263,11 @@ footer {
 }
 
 /*--------------------------------- 6. Special page overwrites -----------------------------------*/
+
+.post-page article {
+  padding: 0;
+  text-align: justify;
+}
 
 .figure-page {
   margin-bottom: 8em;

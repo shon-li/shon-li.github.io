@@ -29,6 +29,10 @@ layout: compress
   {% if page.lang == "en" %}
     class="en-page"
   {%- endif -%}
+
+  {% if page.date %}
+    class="post-page"
+  {%- endif -%}
 >
   {% comment %} Insert a figure if the page has one {% endcomment %}
 
