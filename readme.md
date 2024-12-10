@@ -23,7 +23,7 @@ I apologise for placing the navigation links at the end of webpages. This means 
 
 ## Copyright Notice
 
-Shon Li is the original author of all contents on this website, unless specifically noted otherwise on the page. Please keep the source when sharing. Please do not use my contents for commercial purposes, even if it is possible to do so. Therefore, please follow [ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)](https://creativecommons.org/licenses/by-nc-sa/4.0/) Deed.
+Shon Li is the original author of all content on this website, unless otherwise specified. Please retain proper attribution when sharing. Do not use my content for commercial purposes, even if it is possible to do so. By sharing, you agree to follow the [ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 
 ## 联系方式
 

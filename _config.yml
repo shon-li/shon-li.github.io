@@ -20,7 +20,7 @@ defaults      :
       layout  : "default"
       lang    : "zh-Hans"
 
-# Config for compress html layout
+# Config for compress-html layout
 compress_html :
   clippings   : all
   comments    : []
