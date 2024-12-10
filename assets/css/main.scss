@@ -15,11 +15,11 @@
 }
 
 body {
-  --color_space:       hsl(0, 0%, 60%);
-  --color_paper:       hsl(46 100% 99%);
-  --color_text:        hsl(46, 15%, 25%);
-  --color_text_footer: hsl(46, 15%, 92%);
-  --color_accent:      hsl(230, 100%, 50%);
+  --color_space:       hsl(0, 0%, 12%);
+  --color_paper:       hsl(46, 2%, 33%);
+  --color_text:        hsl(46, 10%, 90%);
+  --color_text_footer: hsl(46, 1%, 50%);
+  --color_accent:      hsl(55, 100%, 80%);
   --paper_width:       39rem;
 }
 
@@ -80,7 +80,7 @@ pre {
 }
 
 pre {
-  width: 103%;
+  width: 100%;
   overflow-x: scroll;
 }
 
@@ -204,13 +204,13 @@ footer {
 
 /*-------------------------- 5. Adjust to color scheme or width change ---------------------------*/
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   body {
-    --color_space:       hsl(0, 0%, 12%);
-    --color_paper:       hsl(46, 2%, 33%);
-    --color_text:        hsl(46, 10%, 90%);
-    --color_text_footer: hsl(46, 1%, 50%);
-    --color_accent:      hsl(55, 100%, 80%);
+    --color_space:       hsl(0, 0%, 60%);
+    --color_paper:       hsl(46 100% 99%);
+    --color_text:        hsl(46, 15%, 25%);
+    --color_text_footer: hsl(46, 15%, 92%);
+    --color_accent:      hsl(230, 100%, 50%);
   }
 }
 
@@ -220,7 +220,7 @@ footer {
     min-width: auto;
     max-width: auto;
     margin: .8em;
-    padding: 1.8em 1.8em 1.8em 1.90em;
+    padding: 1.8em;
   }
 
   .contents-page {                    // `.contents-page` selects `main` in '/_layouts/default.html'
