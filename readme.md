@@ -9,13 +9,17 @@ title: 备注 Appendix
 
 不好意思我把导航链接放到了页面的底部。这意味着在很长的文章里你得跑到最下面才能看见导航的链接。我目前就觉得放在下面比较好。只好劝你多用用手机浏览器里的返回功能，或者试试电脑上的 `End` 之类的按键。
 
+我安装了 Jekyll 的 RSS 插件。你可以试试[订阅我的 RSS](https://shon.li/feed.xml) 噢。
+
 ## About This Site
 
 [Jekyll](https://jekyllrb.com) generates the webpage files; [Github Pages](https://pages.github.com) and [Cloudflare](https://www.cloudflare.com/) hosts and delivers the content for this website. [Here\'s the link to my GitHub repository](https://github.com/shon-li/shon-li.github.io/).
 
-A layout from [Compress HTML in Jekyll](https://jch.penibelst.de/) by Anatol Broder helps me to compress HTML files. My selection of typefaces are: [Noto Serif SC](https://fonts.google.com/noto/specimen/Noto+Serif+SC)、[Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC) and [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono). They are from [Google Fonts](https://fonts.google.com).
+A layout from [Compress HTML in Jekyll](https://jch.penibelst.de/) by Anatol Broder helps me to compress HTML files. My selection of typefaces are: [Noto Serif SC](https://fonts.google.com/noto/specimen/Noto+Serif+SC), [Noto Sans SC](https://fonts.google.com/noto/specimen/Noto+Sans+SC) and [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono). They are from [Google Fonts](https://fonts.google.com).
 
 I apologise for placing the navigation links at the end of webpages. This means readers have to go to the end of the page to access them even if the page is endlessly long. It is my intentional design choice. Please make use of the \'back\' button on your web browser, or use keys like `End` on the keyboard.
+
+I installed Jekyll\'s RSS plugin. Would you like to [subscribe my RSS](https://shon.li/feed.xml)?
 
 ## 版权
 
@@ -31,4 +35,4 @@ Shon Li is the original author of all content on this website, unless otherwise 
 
 ## Contact
 
-I would love to see an Email – the traditional way. My awesome email address is `hi@shon.li`. I can send ya the original images if you would like.
+I would love to see an Email from you. It\'s kinda traditional. I know... My awesome email address is `hi@shon.li`. I can send ya the original images if you would like one.
