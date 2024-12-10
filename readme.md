@@ -19,11 +19,11 @@ I apologise for placing the navigation links at the end of webpages. This means 
 
 ## 版权
 
-如果没有特别说明，这个网站上的内容都是作者（李晓航）的原创。希望您在分享的时候不要隐去来源。请您不要用我做的东西去赚钱，即使能赚到也请不要赚。因此，请遵从[署名-非商业性使用-相同方式共享 4.0 国际（CC BY-NC-SA 4.0 DEED）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)协议。感谢。
+如果没有特别说明，这个网站上的内容都是作者（李晓航）的原创。希望您在获取或分享的时候不要隐去来源。请您不要用我做的东西去赚钱，即使能赚到也请不要赚。因此，请遵从[署名-非商业性使用-相同方式共享 4.0 国际（CC BY-NC-SA 4.0 DEED）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)协议。感谢。
 
 ## Copyright Notice
 
-Shon Li is the original author of all content on this website, unless otherwise specified. Please retain proper attribution when sharing. Do not use my content for commercial purposes, even if it is possible to do so. By sharing, you agree to follow the [ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+Shon Li is the original author of all content on this website, unless otherwise specified. Please retain proper attribution when sharing. Do not use my content for commercial purposes, even if it is possible to do so. By sharing or acquiring my work, you agree to follow the [ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 
 ## 联系方式
 
