@@ -2,9 +2,19 @@
 # Empty front matter that makes Jekyll process this file
 ---
 
-/*------------------------------------- 0. Define variables --------------------------------------*/
+/*-------------------------------------- 0. Initialisatin ----------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+  box-sizing: border-box;                       // Include padding and borders into size calculation
+}
+
+html {
+  font-size: large;                        // Root font size is used as a metric for `--paper_width`
+}
+
+/*--------------------------------------- 1. Page & Main -----------------------------------------*/
 
 body {
   --color_space:       hsl(0, 0%, 60%);
@@ -13,16 +23,6 @@ body {
   --color_text_footer: hsl(46, 15%, 92%);
   --color_accent:      hsl(230, 100%, 50%);
   --paper_width:       39rem;
-}
-
-/*--------------------------------------- 1. Page & Main -----------------------------------------*/
-
-* {
-  box-sizing: border-box;                       // Include padding and borders into size calculation
-}
-
-html {
-  font-size: large;                        // Root font size is used as a metric for `--paper_width`
 }
 
 body {
