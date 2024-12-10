@@ -1,4 +1,4 @@
 ---
 shorthand: articles
-name: 文字
+name: 文字・Words
 ---

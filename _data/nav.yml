@@ -1,11 +1,11 @@
-- name    : 目录
-  name-en : Contents
+- name    : 目录 CONTENTS
+  name-en : CONTENTS
   link    : /contents.html
 
-- name    : 首页
-  name-en : Front-page
+- name    : 首页 FRONT-PAGE
+  name-en : FRONT-PAGE
   link    : /
 
-- name    : 备注
-  name-en : Appendix
+- name    : 备注 APPENDIX
+  name-en : APPENDIX
   link    : /appendix.html
