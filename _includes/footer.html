@@ -34,24 +34,26 @@
     {%- endif -%}
   </span>
 
-  <table>
+  <nav>
     <tr>
       {%- for item in site.data.nav -%}
 
         {%- if item.link != page.url -%}
 
-          <td><a href="{{ item.link }}">
+          <span>
+            <a href="{{ item.link }}">
             {%- if page.lang == "en" -%}
               {{- item.name-en -}}
             {%- else -%}
               {{- item.name -}}
             {%- endif -%}
-          </a></td>
+            </a>
+          </span>
 
           {%- endif -%}
 
       {%- endfor -%}
     </tr>
-  </table>
+  </nav>
 
 </footer>

@@ -26,7 +26,7 @@ body {
 /*--------------------------------------- 1. Page & Main -----------------------------------------*/
 
 body {
-  min-width: 280px;
+  min-width: 16rem;
   margin: auto;
   background-color: var(--color_space);
 }
@@ -139,31 +139,15 @@ article {
 /*------------------------------------------ 3. Footer -------------------------------------------*/
 
 footer {
-  width: fit-content;
-  margin: 1em auto 32vh auto;
+  max-width: fit-content;
+  margin: 1.38em auto 32vh auto;
   color: var(--color_text_footer);
+  font-size: medium;
   font-family: "Noto Sans SC", sans-serif;
   font-weight: 400;
-  font-size: normal;
   text-align: center;
   display: flex;
   flex-direction: column;
-
-  table,
-  table td {
-    width: fit-content;
-    margin: auto;
-    padding: 0;
-    border: none;
-    text-align: center;
-  }
-
-  table td {
-      padding: .6em .8em 0 .8em;
-      font-size: medium;
-      text-align: center;
-
-  }
 
   a:link,
   a:visited {
@@ -174,6 +158,15 @@ footer {
   a:hover {
     color: var(--color_accent);
     border-bottom: 3px solid var(--color_accent);
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+
+    span {
+      padding: .8em;
+    }
   }
 }
 
@@ -247,6 +240,15 @@ footer {
   }
 
   footer {
-    margin-bottom: 2em;
+    margin-bottom: 8em;
+
+    nav {
+      margin-top: 5em;
+      flex-direction: column;
+
+      span {
+        padding: 1.5em 0 0 0;
+      }
+    }
   }
 }
