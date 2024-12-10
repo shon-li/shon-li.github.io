@@ -27,7 +27,7 @@ I installed Jekyll\'s RSS plugin. Would you like to [subscribe my RSS](https://s
 
 ## Copyright Notice
 
-Shon Li is the original author of all content on this website, unless otherwise specified. Please retain proper attribution when sharing. Do not use my content for commercial purposes, even if it is possible to do so. By sharing, you agree to follow the [ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+Shon Li is the original author of all content on this website, unless otherwise specified. Please retain proper attribution when sharing. Do not use my content for commercial purposes, even if it is possible to do so. By sharing, you agree to follow the [ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 
 ## 联系方式
 
@@ -35,4 +35,4 @@ Shon Li is the original author of all content on this website, unless otherwise 
 
 ## Contact
 
-I would love to see an Email from you. It\'s kinda traditional. I know... My awesome email address is `hi@shon.li`. I can send ya the original images if you would like one.
+I would love to see an Email from you. It\'s kinda traditional. I know\... My awesome email address is `hi@shon.li`. I can send ya the original images if you would like one.

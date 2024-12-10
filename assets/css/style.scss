@@ -65,10 +65,6 @@ article {
 
 /*-------------------------------------- 2. Contents page ----------------------------------------*/
 
-.contents-page {
-  padding-bottom: 2em;
-}
-
 .contents-table,
 .contents-table th,
 .contents-table td {
@@ -113,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin: 1.5em 0 1.5em 0;
+  margin: 2em 0;
 }
 
 code,
@@ -267,6 +263,14 @@ footer {
 .post-page article {
   padding: 0;
   text-align: justify;
+}
+
+.contents-page {
+  padding-bottom: 2em;
+
+  article {
+    padding-left: 0;
+  }
 }
 
 .figure-page {
