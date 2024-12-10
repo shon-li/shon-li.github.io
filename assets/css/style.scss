@@ -1,5 +1,5 @@
 ---
-# Empty front matter makes Jekyll to process this file
+# Empty front matter that makes Jekyll process this file
 ---
 
 /*------------------------------------- 0. Define variables --------------------------------------*/
@@ -12,17 +12,17 @@ body {
   --color_text:        hsl(46, 15%, 25%);
   --color_text_footer: hsl(46, 15%, 92%);
   --color_accent:      hsl(230, 100%, 50%);
-  --paper_width:         39rem;
+  --paper_width:       39rem;
 }
 
 /*--------------------------------------- 1. Page & Main -----------------------------------------*/
 
 * {
-  box-sizing: border-box; // Include padding and borders into size calculation
+  box-sizing: border-box;                       // Include padding and borders into size calculation
 }
 
 html {
-  font-size: large; // Root font size is used as a metric for sizes in the following code
+  font-size: large;                        // Root font size is used as a metric for `--paper_width`
 }
 
 body {
@@ -249,16 +249,16 @@ footer {
 /* Switch to dark colour scheme */
 @media (prefers-color-scheme: dark) {
   body {
-    --color_space:    hsl(0, 0%, 12%);
-    --color_paper:    hsl(46, 2%, 33%);
-    --color_text:     hsl(46, 10%, 90%);
+    --color_space:       hsl(0, 0%, 12%);
+    --color_paper:       hsl(46, 2%, 33%);
+    --color_text:        hsl(46, 10%, 90%);
     --color_text_footer: hsl(46, 1%, 50%);
-    --color_accent:   hsl(55, 100%, 45%);
+    --color_accent:      hsl(55, 100%, 45%);
   }
 }
 
-// Set breakpoint at a width a bit wider than desired paper width
-@media screen and ( max-width: 45rem ) { // 45 rem ~= `--paper_width` + 4rem
+                           // Set breakpoint at a width that is a bit wider than desired paper width
+@media screen and ( max-width: 45rem ) {                         // 45 rem ~= `--paper_width` + 4rem
   main {
     min-width: auto;
     max-width: auto;
