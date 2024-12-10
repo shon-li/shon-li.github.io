@@ -2,7 +2,7 @@
 # Empty front matter that makes Jekyll process this file
 ---
 
-/*-------------------------------------- 0. Initialisatin ----------------------------------------*/
+/*-------------------------------------- 0. Initialisation ---------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
@@ -52,61 +52,9 @@ article {
   word-spacing: .06em;
   word-break: normal;
   text-align: left;
-
-  img,
-  video {
-    width: 100%;
-    height: auto;
-    border-radius: 3px;
-    object-fit: scale-down;
-  }
 }
 
-/*-------------------------------------- 2. Contents page ----------------------------------------*/
-
-.contents-page {                      // `.contents-page` selects `main` in '/_layouts/default.html'
-  padding-bottom: 2em;
-
-  article {
-    padding-left: 0;
-  }
-}
-
-.contents-table,                            // `.contents-table` selects `table` in '/contents.html'
-.contents-table th,
-.contents-table td {
-  padding: 0;
-  border: none;
-}
-
-.contents-table {
-  width: 95%;
-  margin: 0 auto 2.6em auto;
-
-  td {
-    padding: .8em 0 .8em .1em;
-    font-family: "Noto Sans SC", sans-serif;
-    font-weight: 380;
-    vertical-align: baseline;
-  }
-
-  th {
-    padding-bottom: 1em;
-    vertical-align: middle;
-  }
-}
-
-.contents-date-col {      // `.contents-table-col` selects the second `table td` in '/contents.html'
-  width: 5.2em;
-  text-align: right;
-}
-
-.contents-date {        // `.contents-date` selects the `span` inside `table td` in '/contents.html'
-  font-family: "Roboto Mono", monospace;
-  font-weight: 370;
-}
-
-/*-------------------------------------- 3. Page elements ----------------------------------------*/
+/*-------------------------------------- 2. Page elements ----------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
   max-width: 16em;
@@ -159,15 +107,25 @@ figure {
   }
 }
 
-article table {
+article {
+  img,
+  video {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    object-fit: scale-down;
+  }
+
+  table {
   width: 100%;
   margin: 1.5em auto;
   border-collapse: collapse;
 
-  th,
-  td {
-    padding: .2em .5em;
-    border: 1px var(--color_space) dotted;
+    th,
+    td {
+      padding: .2em .5em;
+      border: 1px var(--color_space) dotted;
+    }
   }
 }
 
@@ -176,7 +134,7 @@ ul {
   margin: 1.5em auto;
 }
 
-/*------------------------------------------ 4. Footer -------------------------------------------*/
+/*------------------------------------------ 3. Footer -------------------------------------------*/
 
 footer {
   width: fit-content;
@@ -217,7 +175,7 @@ footer {
   }
 }
 
-/*--------------------------------- 5. Special page overwrites -----------------------------------*/
+/*--------------------------------- 4. Special page overwrites -----------------------------------*/
 
 .figure-page {                        // `.figure-page` selects `footer` in '/_includes/footer.html'
   margin-bottom: 8em;
@@ -244,7 +202,7 @@ footer {
   }
 }
 
-/*-------------------------- 6. Adjust to color scheme or width change ---------------------------*/
+/*-------------------------- 5. Adjust to color scheme or width change ---------------------------*/
 
 @media (prefers-color-scheme: dark) {
   body {

@@ -1,0 +1,45 @@
+---
+# Empty front matter that makes Jekyll process this file
+---
+
+.contents-page {                      // `.contents-page` selects `main` in '/_layouts/default.html'
+  padding-bottom: 2em;
+
+  article {
+    padding-left: 0;
+  }
+}
+
+.contents-table,                            // `.contents-table` selects `table` in '/contents.html'
+.contents-table th,
+.contents-table td {
+  padding: 0;
+  border: none;
+}
+
+.contents-table {
+  width: 95%;
+  margin: 0 auto 2.6em auto;
+
+  td {
+    padding: .8em 0 .8em .1em;
+    font-family: "Noto Sans SC", sans-serif;
+    font-weight: 380;
+    vertical-align: baseline;
+  }
+
+  th {
+    padding-bottom: 1em;
+    vertical-align: middle;
+  }
+}
+
+.contents-date-col {      // `.contents-table-col` selects the second `table td` in '/contents.html'
+  width: 5.2em;
+  text-align: right;
+}
+
+.contents-date {        // `.contents-date` selects the `span` inside `table td` in '/contents.html'
+  font-family: "Roboto Mono", monospace;
+  font-weight: 370;
+}
