@@ -15,7 +15,7 @@ You are now looking at the front page of my website. I have some things I made h
 
 I am a nobody. I am like a grain of sand at a beach. I don\'t like being forced to work; I don\'t want a life that is predictable; I refuse to be defined. I love being sincere, patient and kind. I will always be a little kid who pursuits novelties.
 
-So many things in this world pains me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.
+So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.
 
 ## 我的近况
 

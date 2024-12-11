@@ -31,7 +31,7 @@ I would love to see an Email from you. It\'s kinda traditional. I know\... My aw
 
 ## Spotted My Mistakes?
 
-Feel free to let me know. Please send an Email or do something on my GitHub. I do make lots of mistakes in English.
+Feel free to let me know. Please send an Email or do something on my GitHub. I do make tons of mistakes in English.
 
 ## 版权
 
