@@ -35,25 +35,21 @@
   </span>
 
   <nav>
-    <tr>
-      {%- for item in site.data.nav -%}
+    {%- for item in site.data.nav -%}
 
-        {%- if item.link != page.url -%}
+      {%- if item.link != page.url -%}
 
-          <span>
-            <a href="{{ item.link }}">
-            {%- if page.lang == "en" -%}
-              {{- item.name-en -}}
-            {%- else -%}
-              {{- item.name -}}
-            {%- endif -%}
-            </a>
-          </span>
-
+          <a href="{{ item.link }}">
+          {%- if page.lang == "en" -%}
+            {{- item.name-en -}}
+          {%- else -%}
+            {{- item.name -}}
           {%- endif -%}
+          </a>
 
-      {%- endfor -%}
-    </tr>
+        {%- endif -%}
+
+    {%- endfor -%}
   </nav>
 
 </footer>

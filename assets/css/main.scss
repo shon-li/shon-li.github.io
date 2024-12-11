@@ -15,12 +15,12 @@
 }
 
 body {
-  --color_space:       hsl(0, 0%, 12%);
-  --color_paper:       hsl(46, 2%, 33%);
-  --color_text:        hsl(46, 10%, 90%);
-  --color_text_footer: hsl(46, 1%, 50%);
-  --color_accent:      hsl(55, 100%, 80%);
-  --paper_width:       39rem;
+  --color_space:     hsl(0, 0%, 10%);
+  --color_paper:     hsl(46, 2%, 30%);
+  --color_text:      hsl(46, 10%, 80%);
+  --color_paper_alt: hsl(46, 1%, 50%);
+  --color_accent:    hsl(55, 100%, 80%);
+  --paper_width:     39rem;
 
   animation-name: slideUpAnimation;
   animation-timing-function: ease;
@@ -66,31 +66,35 @@ article {
   color: var(--color_text);
   font-family: 'Noto Serif SC', serif;
   font-weight: 400;
-  line-height: 2.1;
+  line-height: 2;
   letter-spacing: normal;
   word-spacing: .06em;
   word-break: normal;
   text-align: left;
   box-sizing: content-box;
 
+  > :first-child {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
   > :last-child {                                                // Remove last item's bottom margin
     margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
 }
 
 /*----------------------------------------- 2. Elements ------------------------------------------*/
 
 h1, h2, h3, h4, h5, h6 {
+  width: fit-content;
   max-width: 16em;
   height: auto;
-  margin: 0 auto;
+  margin: auto;
+  padding-top: 1rem;
   line-height: 1.5;
   letter-spacing: normal;
   text-align: center;
-}
-
-p {
-  margin: 2em 0;
 }
 
 ol,
@@ -98,17 +102,11 @@ ul {
   margin: 1.5em auto;
 }
 
-a,
-pre,
-code {
-  word-break: break-all;
-}
-
 pre,
 kbd,
 code {
-  margin-top: -1.5em;
-  background-color: var(--color_text_footer);
+  margin-top: -.5em;
+  background-color: var(--color_paper_alt);
   border-radius: 3px;
   font-family: "Roboto Mono", monospace;
   overflow-x: scroll;
@@ -132,7 +130,6 @@ a:visited {
 }
 
 a:hover {
-  // border-bottom: 3px solid var(--color_accent);
   text-decoration: none;
 
   animation-name: fadeInAnimation;
@@ -150,7 +147,7 @@ a:hover {
 
   100% {
     opacity: 1;
-    border-bottom: 5px solid var(--color_accent);
+    border-bottom: .25em solid var(--color_accent);
   }
 }
 
@@ -188,7 +185,8 @@ article {
     th,
     td {
       padding: .2em .5em;
-      border: 1px var(--color_space) dotted;
+      border: 1px var(--color_text) dotted;
+      vertical-align: top;
     }
   }
 }
@@ -197,33 +195,31 @@ article {
 
 footer {
   max-width: fit-content;
-  margin: 1.38em auto 32vh auto;
-  color: var(--color_text_footer);
+  margin: 1.25rem auto 32vh auto;
+  color: var(--color_paper_alt);
   font-size: medium;
   font-family: "Noto Sans SC", sans-serif;
   font-weight: 400;
   text-align: center;
   display: flex;
   flex-direction: column;
+  row-gap: 1em;
 
   a:link,
   a:visited {
-    color: var(--color_text_footer);
+    color: var(--color_paper_alt);
     border-bottom: 1px dotted var(--color_paper);
   }
 
   a:hover {
     color: var(--color_accent);
-    border-bottom: 3px solid var(--color_accent);
   }
 
   nav {
+    width: fit-content;
     display: flex;
     flex-direction: row;
-
-    span {
-      padding: .8em;
-    }
+    column-gap: 1.6em;
   }
 }
 
@@ -245,7 +241,8 @@ footer {
   article {
     letter-spacing: normal;
     word-spacing: .08em;
-    text-align: center;
+    text-align: justify;
+    hyphens: auto;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -257,11 +254,11 @@ footer {
 
 @media (prefers-color-scheme: light) {
   body {
-    --color_space:       hsl(0, 0%, 60%);
-    --color_paper:       hsl(46 100% 99%);
-    --color_text:        hsl(46, 15%, 25%);
-    --color_text_footer: hsl(46, 15%, 92%);
-    --color_accent:      hsl(230, 100%, 50%);
+    --color_space:     hsl(0, 0%, 60%);
+    --color_paper:     hsl(46 100% 99%);
+    --color_text:      hsl(46, 15%, 25%);
+    --color_paper_alt: hsl(46, 15%, 92%);
+    --color_accent:    hsl(230, 100%, 50%);
   }
 }
 
@@ -292,6 +289,12 @@ footer {
     max-width: 11.5em;
   }
 
+    a,
+  pre,
+  code {
+    word-break: break-all;
+  }
+
   figure {
     margin-bottom: 9vh;
 
@@ -308,10 +311,7 @@ footer {
     nav {
       margin-top: 5em;
       flex-direction: column;
-
-      span {
-        padding: 1.5em 0 0 0;
-      }
+      row-gap: 2em;
     }
   }
 }
