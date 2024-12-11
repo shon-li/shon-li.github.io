@@ -79,6 +79,12 @@ ul {
   margin: 1.5em auto;
 }
 
+a,
+pre,
+code {
+  word-break: break-all;
+}
+
 pre,
 kbd,
 code {
