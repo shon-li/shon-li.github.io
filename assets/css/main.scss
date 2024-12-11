@@ -26,7 +26,6 @@ body {
 /*--------------------------------------- 1. Page & Main -----------------------------------------*/
 
 body {
-  min-width: 16rem;
   margin: auto;
   background-color: var(--color_space);
 }
@@ -74,14 +73,15 @@ ul {
   margin: 1.5em auto;
 }
 
-code,
-pre {
+pre,
+code {
+  width: 100%;
   font-family: "Roboto Mono", monospace;
+  overflow-x: scroll;
 }
 
 pre {
-  width: 100%;
-  overflow-x: scroll;
+  width: 103%;
 }
 
 a:link,
@@ -179,7 +179,7 @@ footer {
 .post-page {                              // `.post-page` selects `body` in '/_layouts/default.html'
   article {
     padding-left: 0;
-    letter-spacing: .08em;
+    letter-spacing: .05em;
     text-align: justify;
   }
 }
@@ -215,6 +215,10 @@ footer {
     max-width: auto;
     margin: .8em;
     padding: 1.8em;
+  }
+
+  article {
+    word-break: break-all;
   }
 
   .contents-page {                    // `.contents-page` selects `main` in '/_layouts/default.html'
