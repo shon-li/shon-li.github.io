@@ -36,7 +36,7 @@ I just finished my electrical engineering degree part two at University of Auckl
 
 ## My Recent Focus
 
-1. Make this website. I look forward on posting something deep and something that inspires wisdom, you know\...
+1. Make this website. I look forward on posting something deep and something that inspires wisdom\...
 2. Learn NZ road code and prepare for learner\'s license test.
 3. Quit watching short videos and using social medias.
 4. Read the book *Less is More* by Jason Hickel, sometimes.

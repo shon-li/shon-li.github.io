@@ -39,4 +39,4 @@ Feel free to let me know. Please send an Email or do something on my GitHub. I d
 
 ## Copyright Notice
 
-Shon Li is the original author of all content on this website, unless otherwise specified. Please retain proper attribution when sharing. Do not use my content for commercial purposes. By sharing or acquiring my work, you agree to follow the [ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+Shon Li is the original author of all content on this website, unless otherwise specified. Please retain proper attribution when sharing. Do not use my content for commercial purposes. By sharing or acquiring my work, you agree to follow the [ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. Thanks.
