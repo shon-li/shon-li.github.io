@@ -53,7 +53,7 @@ article {
   word-break: normal;
   text-align: left;
 
-  > :last-child {                                   // Remove the annoying last item's bottom margin
+  > :last-child {                                                // Remove last item's bottom margin
     margin-bottom: 0 !important;
   }
 }
