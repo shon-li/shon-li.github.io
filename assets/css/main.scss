@@ -21,6 +21,25 @@ body {
   --color_text_footer: hsl(46, 1%, 50%);
   --color_accent:      hsl(55, 100%, 80%);
   --paper_width:       39rem;
+
+  animation-name: slideUpAnimation;
+  animation-timing-function: ease;
+  animation-duration:  1.5s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideUpAnimation {
+  0% {
+      padding-top: 4rem;
+      opacity: 0;
+  }
+
+  100% {
+      padding-top: 0;
+      opacity: 1;
+  }
 }
 
 /*--------------------------------------- 1. Page & Main -----------------------------------------*/
