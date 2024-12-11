@@ -216,10 +216,16 @@ footer {
   }
 
   nav {
-    width: fit-content;
+    margin:auto;
     display: flex;
     flex-direction: row;
     column-gap: 1.6em;
+
+    a {
+      width: fit-content;
+      margin: auto;
+      box-sizing: content-box;
+    }
   }
 }
 
