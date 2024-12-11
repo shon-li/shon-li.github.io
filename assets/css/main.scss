@@ -26,6 +26,7 @@ body {
 /*--------------------------------------- 1. Page & Main -----------------------------------------*/
 
 body {
+  min-width: 11em;
   margin: auto;
   background-color: var(--color_space);
 }
@@ -51,6 +52,7 @@ article {
   word-spacing: .06em;
   word-break: normal;
   text-align: left;
+  box-sizing: content-box;
 }
 
 /*----------------------------------------- 2. Elements ------------------------------------------*/
@@ -218,6 +220,8 @@ footer {
   }
 
   article {
+    padding-top: 1em;
+    padding-bottom: 0em;
     word-break: break-all;
   }
 
