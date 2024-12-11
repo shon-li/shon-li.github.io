@@ -1,5 +1,5 @@
 ---
-categories: images
+categories: photos
 date: 2018-05-21
 title: 递归
 figure: <img src="/assets/img/recursion.jpeg" alt="把手机画面投屏到电视上然后拍照。">

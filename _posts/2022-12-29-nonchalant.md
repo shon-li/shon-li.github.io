@@ -1,6 +1,6 @@
 ---
 lang: en
-categories: images
+categories: photos
 date: 2022-12-29
 title: Nonchalant
 figure: <img src="/assets/img/nonchalant.jpeg" alt="A nonchalant looking lizard in a container.">

@@ -1,6 +1,6 @@
 ---
 lang: en
-categories: articles
+categories: words
 date: 2024-12-06
 title: Learning Jekyll
 ---

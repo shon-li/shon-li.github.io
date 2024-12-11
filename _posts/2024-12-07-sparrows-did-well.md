@@ -1,5 +1,5 @@
 ---
-categories: articles
+categories: words
 date: 2024-12-07
 title: 麻雀过得还好
 ---

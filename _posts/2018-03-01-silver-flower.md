@@ -1,5 +1,5 @@
 ---
-categories: images
+categories: photos
 date: 2018-03-01
 title: 银花
 figure: <img src="/assets/img/silver-flower.jpeg" alt="工厂料盒里的金属线缆接头。">
