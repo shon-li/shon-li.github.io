@@ -5,31 +5,28 @@
 >
 
   <span>
-    {%- if page.lang == "en" -%}
+    {%- if page.date -%}                  {% comment %} A dated page is a post page {% endcomment %}
+      &copy;&nbsp;
 
-      {%- if page.date -%}
-        &copy;&nbsp;
+      {%- if page.lang == "en" -%}   {% comment %} Add english date and author name {% endcomment %}
+
         {{- page.date | date: "%-d %b %Y" -}}
         &nbsp;・&nbsp;
         {{- site.author-en -}}
-      {%- else -%}
-        {{- site.time | date: "%Y" -}}
-        &nbsp;・&nbsp;
-        {{- site.title-en -}}
-      {%- endif -%}
 
-    {%- else -%}
+      {%- else -%}                    {% comment %} Add normal date and author name {% endcomment %}
 
-      {%- if page.date -%}
-        &copy;&nbsp;
         {{- page.date | date: "%Y 年 %-m 月 %-d 日" -}}
         &nbsp;・&nbsp;
         {{- site.author -}}
-      {%- else -%}
-        {{- site.time | date: "%Y–%m" -}}
-        &nbsp;・&nbsp;
-        {{- site.title -}}
+
       {%- endif -%}
+
+    {%- else -%}                               {% comment %} Add date and site name {% endcomment %}
+
+      {{- site.time | date: "%Y" -}}
+      &nbsp;・&nbsp;
+      {{- site.title -}}
 
     {%- endif -%}
   </span>
@@ -39,15 +36,9 @@
 
       {%- if item.link != page.url -%}
 
-          <a href="{{ item.link }}">
-          {%- if page.lang == "en" -%}
-            {{- item.name-en -}}
-          {%- else -%}
-            {{- item.name -}}
-          {%- endif -%}
-          </a>
+          <a href="{{ item.link }}">{{- item.name -}}</a>
 
-        {%- endif -%}
+      {%- endif -%}
 
     {%- endfor -%}
   </nav>
