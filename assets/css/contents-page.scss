@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
 }
 
-.contents-date {        // `.contents-date` selects the `span` inside `table td` in '/contents.html'
+.contents-date {      // `.contents-date` selects `.contents-table-col`'s `span` in '/contents.html'
   font-family: "Roboto Mono", monospace;
   font-weight: 370;
 }
