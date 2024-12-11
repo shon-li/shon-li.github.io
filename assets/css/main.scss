@@ -34,7 +34,7 @@ body {
 main {
   max-width: var(--paper_width);
   margin: 37vh auto 0 auto;
-  padding: 5em 5.2em 4em 5.2em;
+  padding: 5em 5.2em 5em 5.2em;
   background-color: var(--color_paper);
   border-radius: 3px;
 }
@@ -52,7 +52,10 @@ article {
   word-spacing: .06em;
   word-break: normal;
   text-align: left;
-  box-sizing: content-box;
+
+  > :last-child {                                   // Remove the annoying last item's bottom margin
+    margin-bottom: 0 !important;
+  }
 }
 
 /*----------------------------------------- 2. Elements ------------------------------------------*/
@@ -220,8 +223,8 @@ footer {
   }
 
   article {
-    padding-top: 1em;
-    padding-bottom: 0em;
+    padding-top: .5em;
+    padding-bottom: 1em;
     word-break: break-all;
   }
 
