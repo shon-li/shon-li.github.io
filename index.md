@@ -7,11 +7,15 @@ title: 首页 Front-page
 
 我是个微不足道的人。我在这社会里的地位就像沙滩里的一粒沙。我不想被迫劳动，我不安分，我不想被定义。我想当个真诚、耐心又善良的人。我心里永远有一个好奇的小孩儿。
 
+这世上有太多东西让我觉得难受。我经常后悔许多我干过的坏事。可能因为这些经历，我才领悟到我其实想当个好点的人。
+
 ## Hello. My name is Shon Li.
 
 You are now looking at the front page of my website. I have some things I made here – weird words, weird photos.
 
 I am a nobody. I am like a grain of sand at a beach. I don\'t like being forced to work; I don\'t want a life that is predictable; I refuse to be defined. I love being sincere, patient and kind. I will always be a little kid who pursuits novelties.
+
+So many things in this world pains me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.
 
 ## 我的近况
 

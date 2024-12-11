@@ -17,14 +17,6 @@ A layout from [Compress HTML in Jekyll](https://jch.penibelst.de/) by Anatol Bro
 
 I apologise for placing the navigation links at the end of webpages. This means readers have to go to the end of the page to access them even if the page is endlessly long. It is my intentional design choice. Please make use of the \'back\' button on your web browser, or use keys like `End` on the keyboard.
 
-## 版权
-
-如果没有特别说明，这个网站上的内容都是作者（李晓航）的原创。希望您在获取或分享的时候不要隐去来源。请您不要用我做的东西去赚钱，即使能赚到也请不要赚。因此，请遵从[署名-非商业性使用-相同方式共享 4.0 国际（CC BY-NC-SA 4.0 DEED）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)协议。感谢。
-
-## Copyright Notice
-
-Shon Li is the original author of all content on this website, unless otherwise specified. Please retain proper attribution when sharing. Do not use my content for commercial purposes, even if it is possible to do so. By sharing or acquiring my work, you agree to follow the [ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
-
 ## 联系方式
 
 请亲亲通过发送电子邮件联系我哦。用这种古朴的方式跟我唠唠嗑吧。我炫酷的邮箱地址是 `hi@shon.li`。万一你想要个我的照片的大图的话我也可以发给你。
@@ -32,3 +24,19 @@ Shon Li is the original author of all content on this website, unless otherwise 
 ## Contact
 
 I would love to see an Email from you. It\'s kinda traditional. I know\... My awesome email address is `hi@shon.li`. I can send ya the original images if you would like one.
+
+## 你注意到我搞错东西啦？
+
+可以的话麻烦你告诉我吧。你可以给我发邮件或者去我的 GitHub 上做点什么。我的确经常说错话或者用错字。
+
+## Spotted My Mistakes?
+
+Feel free to let me know. Please send an Email or do something on my GitHub. I do make lots of mistakes in English.
+
+## 版权
+
+如果没有特别说明，这个网站上的内容都是作者（李晓航）的原创。希望您在获取或分享的时候不要隐去来源。请您不要用我做的东西去赚钱，即使能赚到也请不要赚。因此，请遵从[署名-非商业性使用-相同方式共享 4.0 国际（CC BY-NC-SA 4.0 DEED）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)协议。感谢。
+
+## Copyright Notice
+
+Shon Li is the original author of all content on this website, unless otherwise specified. Please retain proper attribution when sharing. Do not use my content for commercial purposes, even if it is possible to do so. By sharing or acquiring my work, you agree to follow the [ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.
