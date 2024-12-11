@@ -71,7 +71,6 @@ article {
   word-spacing: .06em;
   word-break: normal;
   text-align: left;
-  box-sizing: content-box;
 
   > :first-child {
     padding-top: 0 !important;
@@ -223,8 +222,8 @@ footer {
 
     a {
       width: fit-content;
-      margin: auto;
-      box-sizing: content-box;
+      height: max-content;
+      margin: 0 auto;
     }
   }
 }
