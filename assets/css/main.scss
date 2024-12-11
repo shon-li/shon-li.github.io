@@ -227,14 +227,13 @@ footer {
   main {
     min-width: auto;
     max-width: auto;
-    margin: .8em;
+    margin: .8em !important;
     padding: 1.8em;
   }
 
   article {
     padding-top: .5em;
     padding-bottom: 1em;
-    word-break: break-all;
   }
 
   .contents-page {                    // `.contents-page` selects `main` in '/_layouts/default.html'
@@ -261,7 +260,7 @@ footer {
   }
 
   footer {
-    margin-bottom: 8em;
+    margin-bottom: 8em !important;
 
     nav {
       margin-top: 5em;

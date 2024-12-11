@@ -3,8 +3,8 @@ title: Error 404
 permalink: /404.html
 ---
 <style>
-  body {
-
+  main {
+    margin-top: 8em;
   }
 
   article {
@@ -15,8 +15,23 @@ permalink: /404.html
     column-gap: 2em;
   }
 
+  footer {
+    margin-bottom: 8em;
+  }
+
   section {
     width: 50%;
+    margin: auto;
+  }
+
+  @media screen and ( max-width: 45rem ) {
+    article {
+      flex-direction: column;
+    }
+
+    section {
+      width: 100%;
+    }
   }
 </style>
 
