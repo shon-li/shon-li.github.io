@@ -2,12 +2,8 @@
 # Empty front matter that makes Jekyll process this file
 ---
 
-.contents-page {                      // `.contents-page` selects `main` in '/_layouts/default.html'
-  padding-bottom: 4.2em;
-
-  article {
+.contents-page article {              // `.contents-page` selects `main` in '/_layouts/default.html'
     padding-left: 0;
-  }
 }
 
 .contents-table,                            // `.contents-table` selects `table` in '/contents.html'

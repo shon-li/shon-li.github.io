@@ -42,7 +42,7 @@ main {
 article {
   width:  auto;
   height: auto;
-  margin: auto;
+  margin: 0 auto;
   padding-left: .15em;
   color: var(--color_text);
   font-family: 'Noto Serif SC', serif;
@@ -52,6 +52,7 @@ article {
   word-spacing: .06em;
   word-break: normal;
   text-align: left;
+  box-sizing: content-box;
 
   > :last-child {                                                // Remove last item's bottom margin
     margin-bottom: 0 !important;
@@ -79,14 +80,22 @@ ul {
 }
 
 pre,
+kbd,
 code {
-  width: 100%;
+  margin-top: -1.5em;
+  background-color: var(--color_text_footer);
+  border-radius: 3px;
   font-family: "Roboto Mono", monospace;
   overflow-x: scroll;
 }
 
 pre {
-  width: 103%;
+  padding-left: .5em;
+}
+
+kbd,
+code {
+  padding: 0 .25em;
 }
 
 a:link,
