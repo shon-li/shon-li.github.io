@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-12T22:03:35+13:00</updated><id>https://shon.li/feed.xml</id><title type="html">晓航的网站 Shon’s Site</title><author><name>李晓航</name></author><entry xml:lang="zh-Hans"><title type="html">毛茛 Buttercup</title><link href="https://shon.li/photos/buttercup.html" rel="alternate" type="text/html" title="毛茛 Buttercup" /><published>2024-12-09T00:00:00+13:00</published><updated>2024-12-09T00:00:00+13:00</updated><id>https://shon.li/photos/buttercup</id><content type="html" xml:base="https://shon.li/photos/buttercup.html"><![CDATA[<p>我在公园里闲逛的时候看到了这个不知名的小黄花。后来我知道了它叫 <span lang="en">buttercup</span>。上网搜了之后知道了它的汉语名字叫毛<ruby>茛<rt>gèn</rt></ruby>。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-12T22:06:33+13:00</updated><id>https://shon.li/feed.xml</id><title type="html">晓航的网站 Shon’s Site</title><author><name>李晓航</name></author><entry xml:lang="zh-Hans"><title type="html">毛茛 Buttercup</title><link href="https://shon.li/photos/buttercup.html" rel="alternate" type="text/html" title="毛茛 Buttercup" /><published>2024-12-09T00:00:00+13:00</published><updated>2024-12-09T00:00:00+13:00</updated><id>https://shon.li/photos/buttercup</id><content type="html" xml:base="https://shon.li/photos/buttercup.html"><![CDATA[<p>我在公园里闲逛的时候看到了这个不知名的小黄花。后来我知道了它叫 <span lang="en">buttercup</span>。上网搜了之后知道了它的汉语名字叫毛<ruby>茛<rt>gèn</rt></ruby>。</p>
 
 <p>这张照片让我想到我以前在一个论坛上看到的一个让我印象深刻的个性签名：</p>
 <blockquote>
@@ -65,6 +65,7 @@
 
 <p>依着绳索飞檐走壁的人、在风中飞散的水雾、湛蓝的天，挺好看的。</p>]]></content><author><name>李晓航</name></author><category term="photos" /><summary type="html"><![CDATA[一栋居民楼上有建筑工人在用水枪清洗墙壁。原来一栋建筑想要保持漂亮的外观这么麻烦啊。]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">用 VPS、Nginx 和手写网页文件做静态网站</title><link href="https://shon.li/words/website-building-journal.html" rel="alternate" type="text/html" title="用 VPS、Nginx 和手写网页文件做静态网站" /><published>2020-05-10T00:00:00+12:00</published><updated>2020-05-10T00:00:00+12:00</updated><id>https://shon.li/words/website-building-journal</id><content type="html" xml:base="https://shon.li/words/website-building-journal.html"><![CDATA[<ol class="toc">
   <li><a href="#preface">前言</a></li>
+  <li><a href="#my-steps">我的步骤</a></li>
   <li><a href="#buying-vps">买 <span lang="en">VPS</span></a></li>
   <li><a href="#buying-domain-name">买域名</a></li>
   <li><a href="#update-dns-a-record">更新域名 <span lang="en">DNS A</span> 记录</a></li>
@@ -143,7 +144,7 @@
     这是我看过的搬瓦工不同机房对比的文章：<a href='https://www.bandwagonhost.net/5885.html'>搬瓦工 <span lang="en">CN2 GIA</span>、<span lang="en">CN2</span>、<span lang="en">KVM</span>、香港方案区别对比和怎么选择</a>。看完了之后我从文章的链接里买了 <span lang="en">CN2</span> 机房的服务器。</dd>
   <dt><span lang="en">Vultr</span></dt>
   <dd>大部分人都把它读作 “<span lang="en">Vulture</span>”。
-    <span lang="en">Vultr</span> 有 5 美元左右一个月的方案，是短期使用比较方便的选择。<span lang="en">Vultr</span> 是我第一个用的 <span lang="en">VPS</span>，我用了 <span lang="en">Vultr</span> 日本的服务器。</dd>
+    <span lang="en">Vultr</span> 有 5 美元左右一个月的方案，是短期使用比较方便的选择。<span ˜lang="en">Vultr</span> 是我第一个用的 <span lang="en">VPS</span>，我用了 <span lang="en">Vultr</span> 日本的服务器。</dd>
   <dt><span lang="en">Digital&nbsp;Ocean</span></dt>
   <dd><span lang="en">Digital Ocean</span> 在 2020 年 3 月的价格和 <span lang="en">Vultr</span> 相似，他们的宣传里很多次提到开发者。文章快写完我才发现 <a lang="en" href="https://www.digitalocean.com/community">Digital Ocean Community</a> 里有非常多优质的教程文章。</dd>
   <dt>谷歌云 <span lang="en">Google Cloud Platform</span></dt>
@@ -471,6 +472,6 @@ server {
 <h2 id="the-end">结语</h2>
 <p>从三月末下定决心买域名到五月初，我花了一个多月的时间去学去做这个网站，去写这篇文章。因为新型冠状病毒在全球被感染，我才有这么长的连续的时间，我感受到了有充足的时间去思考的重要性。我绝对认为瘟疫蔓延是灾难，我希望人类能理清前因后果，搞清楚为了防止灾难再发生而要做的事。<br>我想让你也相信的想法是：困难的事是要花时间的事，我们需要找到好的方法。在我生活里我有超级多摸不着头绪的事，我相信你也有。有些事让我痛苦与绝望，让我觉得我到死也不能做到。但是除了痛苦和绝望与你相伴之外，希望总在隐隐发光，别放弃它。相比是否能做到，我们更要花时间从最根本的地方去想的是：都要去做什么，为了什么要去。</p>
 <p>我不知道怎么去回答“做这网站有什么用？”的问题，就像我不知道我做为一个人有什么用一样。我不能确信地列出这个网站或者我的价值，但我肯定她们都有价值，每个人感受到的价值都不一样。我想更好的问题是：做一个网站有什么样的作用你才会去做呢？是否能达到你的目的，要不要做，是只与你相关的事。我决定做这个网站的原因有很多，我不想详细地列出来，我想我希望我能让一些事方便一点点；我希望我能对在看这些字的你产生一点影响。</p>
-<p>去发现，去改变吧。</p>]]></content><author><name>李晓航</name></author><category term="words" /><summary type="html"><![CDATA[前言 买 VPS 买域名 更新域名 DNS A 记录 配置与登陆 VPS 安装与配置 Nginx 数字证书（或 SSL 证书） 用 OpenSSL 生成私钥和 CSR 配置 Nginx 使用 HTTPS 写网页文件 用 Rsync 上传网页文件到 VPS 结语]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">红颜</title><link href="https://shon.li/photos/red.html" rel="alternate" type="text/html" title="红颜" /><published>2018-10-16T00:00:00+13:00</published><updated>2018-10-16T00:00:00+13:00</updated><id>https://shon.li/photos/red</id><content type="html" xml:base="https://shon.li/photos/red.html"><![CDATA[<p>这是我跟一个很好的朋友一起吃饭的时候拍的。餐厅的红色玻璃杯子里充满了气泡，我很喜欢。</p>
+<p>去发现，去改变吧。</p>]]></content><author><name>李晓航</name></author><category term="words" /><summary type="html"><![CDATA[前言 我的步骤 买 VPS 买域名 更新域名 DNS A 记录 配置与登陆 VPS 安装与配置 Nginx 数字证书（或 SSL 证书） 用 OpenSSL 生成私钥和 CSR 配置 Nginx 使用 HTTPS 写网页文件 用 Rsync 上传网页文件到 VPS 结语]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">红颜</title><link href="https://shon.li/photos/red.html" rel="alternate" type="text/html" title="红颜" /><published>2018-10-16T00:00:00+13:00</published><updated>2018-10-16T00:00:00+13:00</updated><id>https://shon.li/photos/red</id><content type="html" xml:base="https://shon.li/photos/red.html"><![CDATA[<p>这是我跟一个很好的朋友一起吃饭的时候拍的。餐厅的红色玻璃杯子里充满了气泡，我很喜欢。</p>
 
 <p>我跟这位朋友很久没有再见过了。希望生活没有虐待他。</p>]]></content><author><name>李晓航</name></author><category term="photos" /><summary type="html"><![CDATA[这是我跟一个很好的朋友一起吃饭的时候拍的。餐厅的红色玻璃杯子里充满了气泡，我很喜欢。]]></summary></entry></feed>
