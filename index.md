@@ -23,7 +23,7 @@ title: 首页 Front-page
 
 <h2 lang="en">How I Am Doing In Life</h2>
 
-<p lang="en">I just finished the part two of my electrical engineering degree at University of Auckland. I study because I once wanted to be at a competitive position on the job market. However, I am no longer an A-grade student after a few crazily stressful years. I no longer care much about what kind of job I can get. I am sure I won't starve myself because of not doing a job. I decided to continue my study because I love learning new things, and the modern human technology based on electricity fascinates me. I also love making things on computers – making beautiful meaningful things. So I am somewhat learning what I love.</p>
+<p lang="en">I just finished the part two of my electrical engineering degree at University of Auckland. I study because I once wanted to be at a competitive position on the job market. However, I am no longer a top grade student after a few crazily stressful years. I no longer care much about what kind of job I can get. I am sure I won't starve myself because of not doing a job. I decided to continue my study because I love learning new things, and the modern human technology based on electricity fascinates me. I also love making things on computers – making beautiful meaningful things. So I am somewhat learning what I love.</p>
 
 ## 目前我在忙活的东西
 

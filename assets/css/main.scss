@@ -45,7 +45,7 @@ body {
 /*--------------------------------------- 1. Page & Main -----------------------------------------*/
 
 body {
-  min-width: 11em;
+  min-width: 16.5rem;
   margin: auto;
   background-color: var(--color_space);
 }
@@ -296,10 +296,17 @@ footer {
   article {
     padding-top: .5em;
     padding-bottom: 1em;
+    letter-spacing: normal;
   }
 
   .contents-table td {                      // `.contents-table` selects `table` in '/contents.html'
     vertical-align: top;
+  }
+
+  p:lang(en),
+  li:lang(en),
+  span:lang(en) {
+    hyphens: auto;
   }
 
   h1 {                                               // Avoid leaving one character at the last line
@@ -307,6 +314,7 @@ footer {
   }
 
     a,
+    p,
   pre,
   code {
     word-break: break-all;
