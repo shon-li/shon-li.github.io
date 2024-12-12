@@ -55,7 +55,7 @@ main {
   margin: 37vh auto 0 auto;
   padding: 5em 5.2em 5em 5.2em;
   background-color: var(--color_paper);
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 article {
@@ -115,7 +115,7 @@ kbd,
 code {
   margin-top: -.5em;
   background-color: var(--color_paper_alt);
-  border-radius: 3px;
+  border-radius: 2px;
   font-family: "Roboto Mono", monospace;
   letter-spacing: normal;
   overflow-x: scroll;
@@ -134,6 +134,17 @@ code {
 blockquote {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+}
+
+rt {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: x-small;
+  font-weight: 450;
+  margin-bottom: -.45em;
+}
+
+ruby {
+  text-align: center;
 }
 
 a:link,
@@ -178,7 +189,7 @@ figure {
     max-width: 82vw;
     max-height: 82vh;
     margin: auto;
-    border-radius: 3px;
+    border-radius: 2px;
     object-fit: scale-down;
   }
 }
@@ -188,7 +199,7 @@ article {
   video {
     width: 100%;
     height: auto;
-    border-radius: 3px;
+    border-radius: 2px;
     object-fit: scale-down;
   }
 
