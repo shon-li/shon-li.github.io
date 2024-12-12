@@ -8,7 +8,7 @@ permalink: /404.html
   }
 
   article {
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: row;
     column-gap: 2em;
@@ -24,6 +24,16 @@ permalink: /404.html
     margin: 0 auto;
   }
 
+  section > :first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  section > :last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
   @media screen and ( max-width: 45rem ) {
     article {
       flex-direction: column;
@@ -32,6 +42,10 @@ permalink: /404.html
     section {
       width: 100%;
     }
+
+    article > :last-child {
+    margin-top: 1.5rem;
+   }
   }
 </style>
 
@@ -41,6 +55,6 @@ permalink: /404.html
 </section>
 
 <section>
-  <h2>Wrong URL?</h2>
-  <p style="margin-bottom: 0;">The server could not find any webpages at the address you entered. That page maybe gone.</p>
+  <h2 lang="en">Wrong URL?</h2>
+  <p lang="en" style="margin-bottom: 0;">The server could not find any webpages at the address you entered. That page maybe gone.</p>
 </section>

@@ -5,7 +5,7 @@ title: 备注 Appendix
 
 这个网站是用静态网站生成器 <a lang="en" href="https://jekyllrb.com">Jekyll</a> 生成的，通过 <a lang="en" href="https://pages.github.com">Github Pages</a> 和 <a lang="en" href="https://www.cloudflare.com/">Cloudflare</a> 服务发布到互联网上的。[这是我的 GitHub 链接](https://github.com/shon-li/shon-li.github.io/)。我安装了 Jekyll 的 RSS 插件。你可以试试[订阅我的 RSS](https://shon.li/feed.xml) 噢。
 
-我用到了一个别人做的能压缩 HTML 文件的 layout，名叫：<a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a>。作者是 Anatol Broder。我在网页上用的字体是 <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>、<a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a> 还有 <a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>。我是从 <a lang="en" href="https://fonts.google.com">Google Fonts</a> 上嵌入的这些字体。
+我用到了一个别人做的能压缩 <span lang="en">HTML</span> 文件的 <span lang="en">layout</span>，名叫：<a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a>。作者是 <span lang="en">Anatol Broder</span>。我在网页上用的字体是 <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>、<a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a> 还有 <a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>。我是从 <a lang="en" href="https://fonts.google.com">Google Fonts</a> 上嵌入的这些字体。
 
 不好意思我把导航链接放到了页面的底部。这意味着在很长的文章里你得跑到最下面才能看见导航的链接。我目前就觉得放在下面比较好。只好劝你多用用手机浏览器里的返回功能，或者试试电脑上的 <kbd>End</kbd> 之类的按键。
 
@@ -37,7 +37,7 @@ title: 备注 Appendix
 
 ## 你注意到我搞错东西啦？
 
-可以的话麻烦你告诉我吧。你可以给我发邮件或者去我的 GitHub 上做点什么。我的确经常说错话或者用错字。
+可以的话麻烦你告诉我吧。你可以给我发邮件或者去我的 <span lang="en">GitHub</span> 上做点什么。我的确经常说错话或者用错字。
 
 <h2 lang="en">Spotted My Mistakes?</h2>
 
@@ -45,7 +45,7 @@ title: 备注 Appendix
 
 ## 版权
 
-如果没有特别说明，这个网站上的内容都是李晓航的原创。希望您在获取或分享的时候不要隐去来源。请您不要用我做的东西去赚钱。故请遵从[署名-非商业性使用-相同方式共享 4.0 国际（CC BY-NC-SA 4.0 DEED）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)协议。感谢。
+如果没有特别说明，这个网站上的内容都是李晓航的原创。希望您在获取或分享的时候不要隐去来源。请您不要用我做的东西去赚钱。故请遵从[署名-非商业性使用-相同方式共享 4.0 国际（<span lang="en">CC BY-NC-SA 4.0 DEED</span>）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)协议。感谢。
 
 <h2 lang="en">Copyright Notice</h2>
 

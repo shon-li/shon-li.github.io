@@ -67,7 +67,7 @@ article {
   font-family: 'Noto Serif SC', serif;
   font-weight: 400;
   line-height: 2;
-  letter-spacing: .05em;
+  letter-spacing: .125em;
   word-spacing: .06em;
   word-break: normal;
   text-align: left;
@@ -88,9 +88,11 @@ article {
 h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en), h5:lang(en), h6:lang(en),
 p:lang(en),
 li:lang(en),
+i:lang(en),
+a:lang(en),
 span:lang(en),
 blockquote:lang(en) {
-  // color: var(--color_accent);                               // A cheap way to check lang markings
+  color: var(--color_accent);                               // A cheap way to check lang markings
   letter-spacing: normal;
   word-spacing: .08em;
   hyphens: none;
@@ -267,7 +269,7 @@ footer {
 .post-page {                              // `.post-page` selects `body` in '/_layouts/default.html'
   article {
     padding-left: 0;
-    letter-spacing: .05em;
+    letter-spacing: .125em;
     text-align: justify;
   }
 
