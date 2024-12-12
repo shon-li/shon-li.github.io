@@ -98,6 +98,10 @@ blockquote:lang(en) {
   hyphens: none;
 }
 
+ruby:lang(zh) {
+  letter-spacing: .125em;
+}
+
 h1, h2, h3, h4, h5, h6 {
   width: fit-content;
   max-width: 16em;
@@ -141,10 +145,11 @@ blockquote {
 }
 
 rt {
+  margin-bottom: -.45em;
   font-family: "Noto Sans SC", sans-serif;
   font-size: x-small;
   font-weight: 450;
-  margin-bottom: -.45em;
+  letter-spacing: normal;
 }
 
 ruby {

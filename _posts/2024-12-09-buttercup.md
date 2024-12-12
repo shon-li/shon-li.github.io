@@ -1,19 +1,11 @@
 ---
 categories: photos
 date: 2024-12-09
-title: 毛茛 Buttercup
+title: Buttercup 毛茛
 figure: <img src="/assets/img/buttercup.jpeg" alt="公园草地上不知名的小黄花">
 ---
-我在公园里闲逛的时候看到了这个不知名的小黄花。后来我知道了它叫 <span lang="en">buttercup</span>。上网搜了之后知道了它的汉语名字叫毛<ruby>茛<rt>gèn</rt></ruby>。
-
-这张照片让我想到我以前在一个论坛上看到的一个让我印象深刻的个性签名：
-> 你知道，你爱惜，花儿努力地开。\\
-> 你不知，你厌恶，花儿努力地开。
-
-好像那是泰戈尔的诗，可是我找不到原句。挺遗憾的。
-
 <p lang="en">
-  I found this little yellow flower in Albert Park, and I am told it's called buttercup. Later I found its Chinese name, but disappointingly, I have never heard of that name before.
+  I found this little yellow flower in Albert Park, and I am told it's called buttercup. Later I found its Chinese name (<ruby lang="zh">毛<rt>máo</rt>茛<rt>gèn</rt></ruby>), but disappointingly, I have never heard of that name before.
 </p>
 
 <p lang="en">
@@ -30,3 +22,12 @@ figure: <img src="/assets/img/buttercup.jpeg" alt="公园草地上不知名的�
 <p lang="en">
   I heard that is from a poem written by Rabindranath Tagore, but I cannot find the origin of it. Alas.
 </p>
+
+\\
+我在公园里闲逛的时候看到了这个不知名的小黄花。后来我知道了它叫 <span lang="en">buttercup</span>。上网搜了之后知道了它的汉语名字叫毛<ruby>茛<rt>gèn</rt></ruby>。
+
+这张照片让我想到我以前在一个论坛上看到的一个让我印象深刻的个性签名：
+> 你知道，你爱惜，花儿努力地开。\\
+> 你不知，你厌恶，花儿努力地开。
+
+好像那是泰戈尔的诗，可是我找不到原句。挺遗憾的。

@@ -1,15 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-12T22:10:04+13:00</updated><id>https://shon.li/feed.xml</id><title type="html">晓航的网站 Shon’s Site</title><author><name>李晓航</name></author><entry xml:lang="zh-Hans"><title type="html">毛茛 Buttercup</title><link href="https://shon.li/photos/buttercup.html" rel="alternate" type="text/html" title="毛茛 Buttercup" /><published>2024-12-09T00:00:00+13:00</published><updated>2024-12-09T00:00:00+13:00</updated><id>https://shon.li/photos/buttercup</id><content type="html" xml:base="https://shon.li/photos/buttercup.html"><![CDATA[<p>我在公园里闲逛的时候看到了这个不知名的小黄花。后来我知道了它叫 <span lang="en">buttercup</span>。上网搜了之后知道了它的汉语名字叫毛<ruby>茛<rt>gèn</rt></ruby>。</p>
-
-<p>这张照片让我想到我以前在一个论坛上看到的一个让我印象深刻的个性签名：</p>
-<blockquote>
-  <p>你知道，你爱惜，花儿努力地开。<br />
-你不知，你厌恶，花儿努力地开。</p>
-</blockquote>
-
-<p>好像那是泰戈尔的诗，可是我找不到原句。挺遗憾的。</p>
-
-<p lang="en">
-  I found this little yellow flower in Albert Park, and I am told it's called buttercup. Later I found its Chinese name, but disappointingly, I have never heard of that name before.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-12T22:16:45+13:00</updated><id>https://shon.li/feed.xml</id><title type="html">晓航的网站 Shon’s Site</title><author><name>李晓航</name></author><entry xml:lang="zh-Hans"><title type="html">Buttercup 毛茛</title><link href="https://shon.li/photos/buttercup.html" rel="alternate" type="text/html" title="Buttercup 毛茛" /><published>2024-12-09T00:00:00+13:00</published><updated>2024-12-09T00:00:00+13:00</updated><id>https://shon.li/photos/buttercup</id><content type="html" xml:base="https://shon.li/photos/buttercup.html"><![CDATA[<p lang="en">
+  I found this little yellow flower in Albert Park, and I am told it's called buttercup. Later I found its Chinese name (<ruby lang="zh">毛<rt>máo</rt>茛<rt>gèn</rt></ruby>), but disappointingly, I have never heard of that name before.
 </p>
 
 <p lang="en">
@@ -25,7 +15,18 @@
 
 <p lang="en">
   I heard that is from a poem written by Rabindranath Tagore, but I cannot find the origin of it. Alas.
-</p>]]></content><author><name>李晓航</name></author><category term="photos" /><summary type="html"><![CDATA[我在公园里闲逛的时候看到了这个不知名的小黄花。后来我知道了它叫 buttercup。上网搜了之后知道了它的汉语名字叫毛茛gèn。]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">麻雀过得还好</title><link href="https://shon.li/words/sparrows-did-well.html" rel="alternate" type="text/html" title="麻雀过得还好" /><published>2024-12-07T00:00:00+13:00</published><updated>2024-12-07T00:00:00+13:00</updated><id>https://shon.li/words/sparrows-did-well</id><content type="html" xml:base="https://shon.li/words/sparrows-did-well.html"><![CDATA[<p>我阳台斜对角的房子水管上挂了一大簇枯死的像爬山虎一样的植物。我最近注意到麻雀在那簇看起来像垃圾的枯枝里面筑了一个巢。可能这就是为什么每天早上五点左右我都会听到尖锐的麻雀叫声吧。可能是小麻雀们早上在练嗓子。</p>
+</p>
+
+<p><br />
+我在公园里闲逛的时候看到了这个不知名的小黄花。后来我知道了它叫 <span lang="en">buttercup</span>。上网搜了之后知道了它的汉语名字叫毛<ruby>茛<rt>gèn</rt></ruby>。</p>
+
+<p>这张照片让我想到我以前在一个论坛上看到的一个让我印象深刻的个性签名：</p>
+<blockquote>
+  <p>你知道，你爱惜，花儿努力地开。<br />
+你不知，你厌恶，花儿努力地开。</p>
+</blockquote>
+
+<p>好像那是泰戈尔的诗，可是我找不到原句。挺遗憾的。</p>]]></content><author><name>李晓航</name></author><category term="photos" /><summary type="html"><![CDATA[I found this little yellow flower in Albert Park, and I am told it's called buttercup. Later I found its Chinese name (毛máo茛gèn), but disappointingly, I have never heard of that name before.]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">麻雀过得还好</title><link href="https://shon.li/words/sparrows-did-well.html" rel="alternate" type="text/html" title="麻雀过得还好" /><published>2024-12-07T00:00:00+13:00</published><updated>2024-12-07T00:00:00+13:00</updated><id>https://shon.li/words/sparrows-did-well</id><content type="html" xml:base="https://shon.li/words/sparrows-did-well.html"><![CDATA[<p>我阳台斜对角的房子水管上挂了一大簇枯死的像爬山虎一样的植物。我最近注意到麻雀在那簇看起来像垃圾的枯枝里面筑了一个巢。可能这就是为什么每天早上五点左右我都会听到尖锐的麻雀叫声吧。可能是小麻雀们早上在练嗓子。</p>
 
 <p>不知道为什么，我就是觉得麻雀特别可爱特别亲切。可能是因为我小时候见过他们吧，一些怀旧的感情就因此跟麻雀联系在了一起。当我看到麻雀的时候就会下意识的觉得自己也没有离开我曾经的家太远。麻雀还在。</p>
 
