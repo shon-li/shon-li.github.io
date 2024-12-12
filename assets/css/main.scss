@@ -85,10 +85,12 @@ article {
 
 /*----------------------------------------- 2. Elements ------------------------------------------*/
 
+h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en), h5:lang(en), h6:lang(en),
 p:lang(en),
 li:lang(en),
-span:lang(en) {
-  // color: var(--color_accent);
+span:lang(en),
+blockquote:lang(en) {
+  // color: var(--color_accent);                               // A cheap way to check lang markings
   letter-spacing: normal;
   word-spacing: .08em;
   hyphens: none;
@@ -313,17 +315,21 @@ footer {
   article {
     padding-top: .5em;
     padding-bottom: 1em;
+    padding-left: .1em;
     letter-spacing: normal;
+    text-align: left !important;
   }
 
   .contents-table td {                      // `.contents-table` selects `table` in '/contents.html'
     vertical-align: top;
   }
 
+  h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en), h5:lang(en), h6:lang(en),
   p:lang(en),
   li:lang(en),
-  span:lang(en) {
-    hyphens: auto;
+  span:lang(en),
+  blockquote:lang(en) {
+    hyphens: auto !important;
   }
 
   h1 {                                               // Avoid leaving one character at the last line
@@ -336,7 +342,6 @@ footer {
   }
 
     a,
-    p,
   pre,
   code {
     word-break: break-all;
