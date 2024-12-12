@@ -17,14 +17,6 @@ title: 首页 Front-page
 
 <p lang="en">So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.</p>
 
-## 我的近况
-
-我现在在奥克兰大学学电子工程。我学这个是因为当初想混上个好赚钱点的工作。经厉了一段高压后的疯狂之后，我的成绩烂掉了。我觉得赚不赚钱无所谓了。我应该不至于因为不上班而被饿死。我还继续学这个是因为我想弄懂一点现代人类科技的基础的知识。我喜欢在电脑上捯饬点东西，弄点好玩的有意思的东西。我的爱好也算是跟我学的东西接近吧。
-
-<h2 lang="en">How I Am Doing In Life</h2>
-
-<p lang="en">I just finished the part two of my electrical engineering degree at University of Auckland. I study because I once wanted to be at a competitive position on the job market. However, I am no longer a top grade student after a few crazily stressful years. I no longer care much about what kind of job I can get. I am sure I won't starve myself because of not doing a job. I decided to continue my study because I love learning new things, and the modern human technology based on electricity fascinates me. I also love making things on computers – making beautiful meaningful things. So I am somewhat learning what I love.</p>
-
 ## 目前我在忙活的东西
 
 1. 弄这个博客网站。我想搁这儿弄点有深度有思考的东西。
@@ -39,21 +31,31 @@ title: 首页 Front-page
 <ol>
 <li  lang="en">
   Make this website. I look forward on posting something deep and something that inspires wisdom...
-
+</li>
 <li  lang="en">
   Learn NZ road code and prepare for learner's license test.
-
-  <li  lang="en">
+</li>
+<li  lang="en">
   Stop picking my acnes. Avoid scratching my skin with my finger nails.
-
+</li>
 <li  lang="en">
   Quit watching short videos and quit using social medias.
-
+</li>
 <li  lang="en">
   Read the book <i>Less is More</i> by Jason Hickel, sometimes.
-
+</li>
 <li  lang="en">
   Keep a good sleeping cycle. I wanna sleep ten long hours every single night.
-
+</li>
 <li  lang="en">
   Understand myself. Know my stresses.
+</li>
+</ol>
+
+## 我的近况
+
+我现在在奥克兰大学学电子工程。我学这个是因为当初想混上个好赚钱点的工作。经厉了一段高压后的疯狂之后，我的成绩烂掉了。我觉得赚不赚钱无所谓了。我应该不至于因为不上班而被饿死。我还继续学这个是因为我想弄懂一点现代人类科技的基础的知识。我喜欢在电脑上捯饬点东西，弄点好玩的有意思的东西。我的爱好也算是跟我学的东西接近吧。
+
+<h2 lang="en">Life Update</h2>
+
+<p lang="en">I just finished the part two of my electrical engineering degree at University of Auckland. I study because I once wanted to be at a competitive position on the job market. However, I am no longer a top grade student after a few crazily stressful years. I no longer care much about what kind of job I can get. I am sure I won't starve myself because of not doing a job. I decided to continue my study because I love learning new things, and the modern human technology based on electricity fascinates me. I also love making things on computers – making beautiful meaningful things. So I am somewhat learning what I love.</p>
