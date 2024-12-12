@@ -20,7 +20,7 @@ body {
   --color_text:      hsl(46, 10%, 80%);
   --color_paper_alt: hsl(46, 1%, 50%);
   --color_accent:    hsl(55, 100%, 80%);
-  --paper_width:     39rem;
+  --paper_width:     41rem;
 
   animation-name: slideUpAnimation;
   animation-timing-function: ease;
@@ -92,7 +92,7 @@ i:lang(en),
 a:lang(en),
 span:lang(en),
 blockquote:lang(en) {
-  // color: var(--color_accent);                               // A cheap way to check lang markings
+  color: var(--color_accent) !important;                       // A cheap way to check lang markings
   letter-spacing: normal;
   word-spacing: .08em;
   hyphens: none;
@@ -287,9 +287,9 @@ footer {
 .en-page {                                  // `.en-page` selects `body` in '/_layouts/default.html'
   article {
     letter-spacing: normal;
-    word-spacing: .08em;
-    text-align: center;
-    hyphens: none !important;
+    word-spacing: .1em;
+    text-align: justify;
+    hyphens: auto !important;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -311,7 +311,7 @@ footer {
 }
 
                            // Set breakpoint at a width that is a bit wider than desired paper width
-@media screen and ( max-width: 45rem ) {                         // 45 rem ~= `--paper_width` + 4rem
+@media screen and ( max-width: 46rem ) {                         // 46 rem ~= `--paper_width` + 4rem
   main {
     min-width: auto;
     max-width: auto;

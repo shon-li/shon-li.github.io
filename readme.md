@@ -3,7 +3,7 @@ title: 备注 Appendix
 ---
 ## 网站信息
 
-这个网站是用静态网站生成器 <a lang="en" href="https://jekyllrb.com">Jekyll</a> 生成的，通过 <a lang="en" href="https://pages.github.com">Github Pages</a> 和 <a lang="en" href="https://www.cloudflare.com/">Cloudflare</a> 服务发布到互联网上的。[这是我的 GitHub 链接](https://github.com/shon-li/shon-li.github.io/)。我安装了 Jekyll 的 RSS 插件。你可以试试[订阅我的 RSS](https://shon.li/feed.xml) 噢。
+这个网站是用静态网站生成器 <a lang="en" href="https://jekyllrb.com">Jekyll</a> 生成的，通过 <a lang="en" href="https://pages.github.com">Github Pages</a> 和 <a lang="en" href="https://www.cloudflare.com/">Cloudflare</a> 服务发布到互联网上的。[这是我的 <span lang="en">GitHub</span> 链接](https://github.com/shon-li/shon-li.github.io/)。我安装了 <span lang="en">Jekyll</span> 的 <span lang="en">RSS</span> 插件。你可以试试[订阅我的 <span lang="en">RSS</span>](https://shon.li/feed.xml) 噢。
 
 我用到了一个别人做的能压缩 <span lang="en">HTML</span> 文件的 <span lang="en">layout</span>，名叫：<a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a>。作者是 <span lang="en">Anatol Broder</span>。我在网页上用的字体是 <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>、<a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a> 还有 <a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>。我是从 <a lang="en" href="https://fonts.google.com">Google Fonts</a> 上嵌入的这些字体。
 
