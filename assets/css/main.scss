@@ -102,6 +102,18 @@ ruby:lang(zh) {
   letter-spacing: .125em;
 }
 
+rt {
+  margin-bottom: -.45em;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: x-small;
+  font-weight: 450;
+  letter-spacing: .125em;
+}
+
+ruby {
+  text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6 {
   width: fit-content;
   max-width: 16em;
@@ -142,18 +154,6 @@ code {
 blockquote {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
-}
-
-rt {
-  margin-bottom: -.45em;
-  font-family: "Noto Sans SC", sans-serif;
-  font-size: x-small;
-  font-weight: 450;
-  letter-spacing: normal;
-}
-
-ruby {
-  text-align: center;
 }
 
 a:link,
