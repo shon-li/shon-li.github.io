@@ -24,7 +24,7 @@
 
     {%- else -%}                               {% comment %} Add date and site name {% endcomment %}
 
-      {{- site.time | date: "%Y" -}}
+      {{- site.time | date: "%Y-%-m" -}}
       &nbsp;・&nbsp;
       {{- site.title -}}
 
