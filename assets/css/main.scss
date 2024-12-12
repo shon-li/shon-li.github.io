@@ -374,3 +374,46 @@ footer {
     }
   }
 }
+
+@media print {
+  html,
+  body,
+  main,
+  footer {
+    margin: 0 auto;
+    padding: 0;
+    color: black !important;
+    background-color: white !important;
+  }
+
+  article {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  figure {
+    margin: 0;
+    align-items: flex-start;
+
+    img,
+    video {
+      margin: auto;
+      width: fit-content;
+      height: fit-content;
+    }
+  }
+
+  footer {
+    margin-top: 1rem;
+    color: darkgray;
+
+    nav {
+      display: none;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
