@@ -17,7 +17,7 @@ figure: <img src="/assets/img/buttercup.jpeg" alt="公园草地上不知名的�
 </p>
 
 <p lang="en">
-  Some thing came into my mind about this flower – it's someone's signature I saw from a BBS. It goes like this:
+  Something came into my mind about this flower – it's someone's signature I saw from a BBS. It goes like this:
   <blockquote>
   <p lang="en">
   You see it. You like it. Flowers bloom.
