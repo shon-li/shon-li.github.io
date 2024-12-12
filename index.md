@@ -5,7 +5,7 @@ title: 首页 Front-page
 
 你现在看到的是我网站的首页。我在这里放了些我弄的东西，奇奇怪怪的字，奇奇怪怪的照片。
 
-我是个微不足道的人。我在这社会里的地位就像沙滩里的一粒沙。我不想被迫劳动，我不安分，我不想被定义。我想当个真诚、耐心又善良的人。我心里永远有一个好奇的小孩儿。
+我是个微不足道的人。我在这社会里的地位就像沙滩里的一粒沙。我不想被迫劳动，我不安分，我不想被定义。我想当个真诚、耐心、善良又温柔的人。我心里永远有一个好奇的小孩儿。
 
 这世上有太多东西让我觉得难受。我经常后悔许多我干过的坏事。可能因为这些经历，我才领悟到我想多干点好事。
 
@@ -13,7 +13,7 @@ title: 首页 Front-page
 
 <p lang="en">You are now looking at the front page of my website. I have some things I made here – weird words, weird photos.</p>
 
-<p lang="en">I am a nobody. I am like a grain of sand at a beach. I don't like being forced to work; I don't want a life that is predictable; I refuse to be defined. I love being sincere, patient and kind. I will always be a little kid who pursuits novelties.</p>
+<p lang="en">I am a nobody. I am like a grain of sand at a beach. I don't like being forced to work; I don't want a life that is predictable; I refuse to be defined. I love being sincere, patient, kind and gentle. I will always be a little kid who pursuits novelties.</p>
 
 <p lang="en">So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.</p>
 
@@ -29,10 +29,11 @@ title: 首页 Front-page
 
 1. 弄这个博客网站。我想搁这儿弄点有深度有思考的东西。
 2. 学新西兰交规和驾照考试。
-3. 戒掉视频网站和社交应用。
-4. 间歇性地看几眼这本书：<i lang="en">Less is More</i>。作者是 <span lang="en">Jason Hickel</span>。
-5. 保持规律的睡眠。我想每天都睡它个十小时。
-6. 了解我自己。了解我的压力。
+3. 停止挤痘痘。不用指甲碰我的皮肤。
+4. 戒掉视频网站和戒掉社交应用。
+5. 间歇性地看几眼这本书：<i lang="en">Less is More</i>。作者是 <span lang="en">Jason Hickel</span>。
+6. 保持规律的睡眠。我想每天都睡它个十小时。
+7. 了解我自己。了解我的压力。
 
 <h2 lang="en">My Recent Focus</h2>
 <ol>
@@ -42,8 +43,11 @@ title: 首页 Front-page
 <li  lang="en">
   Learn NZ road code and prepare for learner's license test.
 
+  <li  lang="en">
+  Stop picking my acnes. Avoid scratching my skin with my finger nails.
+
 <li  lang="en">
-  Quit watching short videos and using social medias.
+  Quit watching short videos and quit using social medias.
 
 <li  lang="en">
   Read the book <i>Less is More</i> by Jason Hickel, sometimes.
