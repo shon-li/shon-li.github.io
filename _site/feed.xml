@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-12T14:40:45+13:00</updated><id>https://shon.li/feed.xml</id><title type="html">晓航的网站 Shon’s Site</title><author><name>李晓航</name></author><entry xml:lang="zh-Hans"><title type="html">麻雀过得还好</title><link href="https://shon.li/words/sparrows-did-well.html" rel="alternate" type="text/html" title="麻雀过得还好" /><published>2024-12-07T00:00:00+13:00</published><updated>2024-12-07T00:00:00+13:00</updated><id>https://shon.li/words/sparrows-did-well</id><content type="html" xml:base="https://shon.li/words/sparrows-did-well.html"><![CDATA[<p>我阳台斜对角的房子水管上挂了一大簇枯死的像爬山虎一样的植物。我最近注意到麻雀在那簇看起来像垃圾的枯枝里面筑了一个巢。可能这就是为什么每天早上五点左右我都会听到尖锐的麻雀叫声吧。可能是小麻雀们早上在练嗓子。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-12T14:55:57+13:00</updated><id>https://shon.li/feed.xml</id><title type="html">晓航的网站 Shon’s Site</title><author><name>李晓航</name></author><entry xml:lang="zh-Hans"><title type="html">麻雀过得还好</title><link href="https://shon.li/words/sparrows-did-well.html" rel="alternate" type="text/html" title="麻雀过得还好" /><published>2024-12-07T00:00:00+13:00</published><updated>2024-12-07T00:00:00+13:00</updated><id>https://shon.li/words/sparrows-did-well</id><content type="html" xml:base="https://shon.li/words/sparrows-did-well.html"><![CDATA[<p>我阳台斜对角的房子水管上挂了一大簇枯死的像爬山虎一样的植物。我最近注意到麻雀在那簇看起来像垃圾的枯枝里面筑了一个巢。可能这就是为什么每天早上五点左右我都会听到尖锐的麻雀叫声吧。可能是小麻雀们早上在练嗓子。</p>
 
 <p>不知道为什么，我就是觉得麻雀特别可爱特别亲切。可能是因为我小时候见过他们吧，一些怀旧的感情就因此跟麻雀联系在了一起。当我看到麻雀的时候就会下意识的觉得自己也没有离开我曾经的家太远。麻雀还在。</p>
 
@@ -384,38 +384,37 @@ lxtJ2dAeFT3ArIveYwsPLxM2VI4tcREzP16VHpcDOa8MQQ==
 <p>另外为了让网址更简洁好看不包含 <code>.html</code> 和斜杠 <code>/</code>，我搜索到了下面这个教程并且更新了我的配置文件。<a href="https://cobwwweb.com/remove-html-extension-and-trailing-slash-in-nginx-config">https://cobwwweb.com/remove-html-extension-and-trailing-slash-in-nginx-config</a>
 <pre>#把 80 端口 http 连接全都转向到域名 https 连接
 server {
-listen 80;
-listen [::]:80;
-server_name your-vps-ip-address shon.li;
-#请把 your-vps-ip-address 换成你的 VPS IP 地址，把 shon.li 换成你的域名，下面也全都要换
-return 301 https://shon.li$request_uri;
+    listen 80;
+    listen [::]:80;
+    server_name your-vps-ip-address shon.li;
+    #请把 your-vps-ip-address 换成你的 VPS IP 地址，把 shon.li 换成你的域名，下面也全都要换
+    return 301 https://shon.li$request_uri;
 }
 
 #添加证书、私钥、协议等等的字段
 server {
-listen 443 ssl;
-listen [::]:443 ssl;
-ssl_certificate		/cert-file/www_server_com.crt;
-ssl_certificate_key	/cert-file/www_server_com.key;
-ssl_session_timeout	1d;
-ssl_session_cache	shared:MozSSL:10m;
-ssl_session_tickets	off;
-ssl_protocols		TLSv1.2 TLSv1.3; #推荐只用更安全的新协议
-ssl_ciphers		ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
-ssl_prefer_server_ciphers off;
-add_header Strict-Transport-Security "max-age=31536000; includeSubdomains;" always;
-#增加避免中间人攻击的 HSTS
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    ssl_certificate		/cert-file/www_server_com.crt;
+    ssl_certificate_key	/cert-file/www_server_com.key;
+    ssl_session_timeout	1d;
+    ssl_session_cache	shared:MozSSL:10m;
+    ssl_session_tickets	off;
+    ssl_protocols		TLSv1.2 TLSv1.3; #推荐只用更安全的新协议
+    ssl_ciphers		ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+    ssl_prefer_server_ciphers off;
+    add_header Strict-Transport-Security "max-age=31536000; includeSubdomains;" always;
+    #增加避免中间人攻击的 HSTS
 
-server_name your-vps-ip-address shon.li www.shon.li; #把 your-vps-ip-address 换成你的 VPS IP 地址，把 shon.li 换成你的域名
+    server_name your-vps-ip-address shon.li www.shon.li; #把 your-vps-ip-address 换成你的 VPS IP 地址，把 shon.li 换成你的域名
 
-rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent; #把网址重定向到没有“.html”后缀的地址
-rewrite ^/(.*)/$ /$1 permanent; #把网址重定向到没有“/”的地址
+    rewrite ^(/.*)\.html(\?.*)?$ $1$2 permanent; #把网址重定向到没有“.html”后缀的地址
+    rewrite ^/(.*)/$ /$1 permanent; #把网址重定向到没有“/”的地址
 
-root /var/www/mysite/public/; #网页存放文件夹的绝对路径
-index index.html; #index 文件的文件名，静态网站一般是 index.html
+    root /var/www/mysite/public/; #网页存放文件夹的绝对路径
+    index index.html; #index 文件的文件名，静态网站一般是 index.html
 
-try_files $uri/index.html $uri.html $uri/ $uri =404; #让 Nginx 从不包含“.html 和 /”的网址里查到对应的网页文件
-
+    try_files $uri/index.html $uri.html $uri/ $uri =404; #让 Nginx 从不包含“.html 和 /”的网址里查到对应的网页文件
 }</pre>
 
 <h2 id="write-webpage-files">写网页文件</h2>

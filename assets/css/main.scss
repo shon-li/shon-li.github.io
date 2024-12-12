@@ -117,6 +117,7 @@ code {
   background-color: var(--color_paper_alt);
   border-radius: 3px;
   font-family: "Roboto Mono", monospace;
+  letter-spacing: normal;
   overflow-x: scroll;
   hyphens: none !important;
 }
@@ -128,6 +129,11 @@ pre {
 kbd,
 code {
   padding: 0 .25em;
+}
+
+blockquote {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 
 a:link,
@@ -311,6 +317,11 @@ footer {
 
   h1 {                                               // Avoid leaving one character at the last line
     max-width: 9em;
+  }
+
+  blockquote {
+    margin-left: .75rem;
+    margin-right: .75rem;
   }
 
     a,
