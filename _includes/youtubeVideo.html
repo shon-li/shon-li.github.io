@@ -1,6 +1,6 @@
-<!-- This code is inspired by Nathan Lam www.nathan-lam.com/projects/jekyll-embed-video -->
-<!-- For unknown styling errors, videos can only be at the end of a page -->
+{% comment %} This code is inspired by Nathan Lam www.nathan-lam.com/projects/jekyll-embed-video {%endcomment%}
 
-<figure class="video-{{- page.vidRatio -}}">
+<div class="video-{{- page.vidRatio -}}">
   <iframe src="https://www.youtube.com/embed/{{- page.vidId -}}" allowfullscreen="true"></iframe>
-</figure>
+  <figcaption>{{- page.figCaption -}}</figcaption>
+</div>

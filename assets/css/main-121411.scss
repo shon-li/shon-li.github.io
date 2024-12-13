@@ -229,10 +229,11 @@ article {
   }
 }
 
-.video-16-9 {                    // `.video-16-9` selects `figure` in '/_includes/youtubeVideo.html'
+.video-16-9 {                       // `.video-16-9` selects `div` in '/_includes/youtubeVideo.html'
   max-width: 100%;
   height: fit-content;
   margin-top: 4rem;
+  margin-bottom: 0;
   padding-top: 56.25%;                                                     // 100% * 9 / 16 = 56.25%
   position: relative;
   overflow: hidden;
