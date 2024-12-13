@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-13T23:50:03+13:00</updated><id>https://shon.li/feed.xml</id><title type="html">晓航的网站 Shon’s Site</title><author><name>李晓航 Shon Li</name></author><entry xml:lang="zh-Hans"><title type="html">杂讯 Noise</title><link href="https://shon.li/photos/noise.html" rel="alternate" type="text/html" title="杂讯 Noise" /><published>2024-12-13T00:00:00+13:00</published><updated>2024-12-13T00:00:00+13:00</updated><id>https://shon.li/photos/noise</id><content type="html" xml:base="https://shon.li/photos/noise.html"><![CDATA[<p>我经常看到的一块大广告牌坏了，它原本应该显示广告的画面变成了不断闪动的灰白杂讯。我记得我小时候在电视上见到的这样的画面。好玩。可惜才过了一天这牌子就被修好了。搞笑的是过了大概一个星期之后它又坏了，然后我录下了一小段录像。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-14T01:16:16+13:00</updated><id>https://shon.li/feed.xml</id><title type="html">晓航的网站 Shon’s Site</title><author><name>李晓航 Shon Li</name></author><entry xml:lang="zh-Hans"><title type="html">杂讯 Noise</title><link href="https://shon.li/photos/noise.html" rel="alternate" type="text/html" title="杂讯 Noise" /><published>2024-12-13T00:00:00+13:00</published><updated>2024-12-13T00:00:00+13:00</updated><id>https://shon.li/photos/noise</id><content type="html" xml:base="https://shon.li/photos/noise.html"><![CDATA[<p>我经常看到的一块大广告牌坏了，它原本应该显示广告的画面变成了不断闪动的灰白杂讯。我记得我小时候在电视上见到的这样的画面。好玩。可惜才过了一天这牌子就被修好了。搞笑的是过了大概一个星期之后它又坏了，然后我录下了一小段录像。</p>
 
 <p>后来我在网上冲浪的时候突然看到了“娱乐至死”这样的内容。我记得它里面说到媒介就是信息。当看电视看视频取代了读书读文章变成了人们获取信息的方式，这种行为上的改变也会造成思考习惯的改变。</p>
 
@@ -77,7 +77,107 @@
 
 <p>I found something annoying – the apostrophe, “’”. It is always rendered in full width which is what I hate to see. My HTML file encoding is alright; CSS text align is non-negotiable; I want to use Markdown to simply writing. <del>So I am out of solution for now. I will try to avoid typing that key when I am writing here.</del> Agh… Turns out I only need to use a backslash to escape that character when writing in Markdown. <code class="language-plaintext highlighter-rouge">\'</code> gives '. Hahah… =D</p>
 
-<p>I will add some of my understandings about Jekyll here later.</p>]]></content><author><name>李晓航 Shon Li</name></author><category term="words" /><summary type="html"><![CDATA[I finally decided to use a static site generator. Tools like Jekyll once looked mysterious to me. After some irrelevant coding practices during my engineering study, I somehow feel more confident about learning to use them.]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">波纹</title><link href="https://shon.li/photos/ripples.html" rel="alternate" type="text/html" title="波纹" /><published>2024-02-12T00:00:00+13:00</published><updated>2024-02-12T00:00:00+13:00</updated><id>https://shon.li/photos/ripples</id><content type="html" xml:base="https://shon.li/photos/ripples.html"><![CDATA[<p>这是在阳光照射下，水滴落在一滩水上产生的倒影。画面里一圈圈的明暗变化让我看出了神。</p>
+<p>I will add some of my understandings about Jekyll here later.</p>]]></content><author><name>李晓航 Shon Li</name></author><category term="words" /><summary type="html"><![CDATA[I finally decided to use a static site generator. Tools like Jekyll once looked mysterious to me. After some irrelevant coding practices during my engineering study, I somehow feel more confident about learning to use them.]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">你想写一句吗? What Will Your Verse Be?</title><link href="https://shon.li/words/what-will-ur-verse-be.html" rel="alternate" type="text/html" title="你想写一句吗? What Will Your Verse Be?" /><published>2024-09-12T00:00:00+12:00</published><updated>2024-09-12T00:00:00+12:00</updated><id>https://shon.li/words/what-will-ur-verse-be</id><content type="html" xml:base="https://shon.li/words/what-will-ur-verse-be.html"><![CDATA[<table class="two-colums">
+      <tr>
+        <td>
+          读诗写诗不是因为它漂亮。<br>
+          读诗写诗是因为我们是人，<br>
+          人，有热情。
+        </td>
+        <td>
+          <span lang="en">
+            We don't read and write poetry because it's cute.<br>
+            We read and write poetry because we are members of the human race.<br>
+            And the human race is filled with passion.
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          医学、法学、商学、工程学，<br>
+          都很高尚，<br>
+          靠它们能延续生命。<br>
+          但诗歌、美、浪漫与爱，<br>
+          才是生命的向往。
+        </td>
+        <td>
+          <span lang="en">
+            And medicine, law, business, engineering,<br>
+            these are noble pursuits and necessary to sustain life.<br>
+            But poetry, beauty, romance, love,<br>
+            these are what we stay alive for.
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          惠特曼的诗里写过，<br>
+          「我啊！人生啊！…<br>
+          首尾牵连的迷问啊；<br>
+          永无休止的漠视啊…<br>
+          愚昧漫天的城市啊；<br>
+          这里还有什么美好？<br>
+          我啊，人生啊。」
+        </td>
+        <td>
+          <span lang="en">
+            To quote from Whitman,<br>
+            "O me! O life!...<br>
+            of the questions of these recurring;<br>
+            of the endless trains of the faithless...<br>
+            of cities filled with the foolish;<br>
+            what good amid these,<br>
+            O me, O life?"
+          </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          答案：<br>
+          你活着。<br>
+          有生命，有自我。<br>
+          宏大的演出展开着，<br>
+          你也能献诗一句。<br>
+          宏大的演出继续着，<br>
+          你也能献诗一句。
+        </td>
+        <td>
+          <span lang="en">
+          Answer.<br>
+          That you are here –<br>
+          that life exists, and identity;<br>
+          that the powerful play goes on and you may contribute a verse.<br>
+          That the powerful play <i>goes on</i><br>
+          and you may contribute a verse.
+        </span>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          你想写一句吗？
+        </td>
+        <td>
+          <span lang="en">
+            What will your verse be?
+          </p lang="en">
+        </td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>
+          <span lang="en">— Nancy H. Kleinbaum, <i>Dead Poets Society</i></span>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      我是从一部叫《死亡诗社》电影里知道的这段话。大学时候的一个室友给一个英语课作业做一个视频配音，他配到了这段话。可是在那之后我就忘了。再次听到这些话是看了一个苹果公司的广告片。我特别喜欢那个广告片里的配音。后来才知道原来那个配音就是电影里的演员⸺<span lang="en">Robbin Willams</span>。
+    </p>]]></content><author><name>李晓航 Shon Li</name></author><category term="words" /><summary type="html"><![CDATA[读诗写诗不是因为它漂亮。 读诗写诗是因为我们是人， 人，有热情。 We don't read and write poetry because it's cute. We read and write poetry because we are members of the human race. And the human race is filled with passion.]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">波纹</title><link href="https://shon.li/photos/ripples.html" rel="alternate" type="text/html" title="波纹" /><published>2024-02-12T00:00:00+13:00</published><updated>2024-02-12T00:00:00+13:00</updated><id>https://shon.li/photos/ripples</id><content type="html" xml:base="https://shon.li/photos/ripples.html"><![CDATA[<p>这是在阳光照射下，水滴落在一滩水上产生的倒影。画面里一圈圈的明暗变化让我看出了神。</p>
 
 <p>我想着像一个个大圆球一样的波在扩散。波与波相遇后发生的神奇的事情。如果两个波持续不停，那么他们可以叠加出驻波……这一大堆我还不知道的事，有点好玩，也有点让我觉得我永远都不会弄明白。</p>]]></content><author><name>李晓航 Shon Li</name></author><category term="photos" /><summary type="html"><![CDATA[这是在阳光照射下，水滴落在一滩水上产生的倒影。画面里一圈圈的明暗变化让我看出了神。]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">闪光的沙</title><link href="https://shon.li/photos/shiny-sand.html" rel="alternate" type="text/html" title="闪光的沙" /><published>2023-01-18T00:00:00+13:00</published><updated>2023-01-18T00:00:00+13:00</updated><id>https://shon.li/photos/shiny-sand</id><content type="html" xml:base="https://shon.li/photos/shiny-sand.html"><![CDATA[<p>这是我跟朋友在 Muriwai Beach 玩时拍下的照片。那天阳光刺眼，海风微咸。我被地上闪着光的沙滩吸引了。那儿的沙颜色发黑，好像是因为富含矿物。</p>
 
@@ -494,6 +594,4 @@ server {
 <h2 id="the-end">结语</h2>
 <p>从三月末下定决心买域名到五月初，我花了一个多月的时间去学去做这个网站，去写这篇文章。因为新型冠状病毒在全球被感染，我才有这么长的连续的时间，我感受到了有充足的时间去思考的重要性。我绝对认为瘟疫蔓延是灾难，我希望人类能理清前因后果，搞清楚为了防止灾难再发生而要做的事。<br>我想让你也相信的想法是：困难的事是要花时间的事，我们需要找到好的方法。在我生活里我有超级多摸不着头绪的事，我相信你也有。有些事让我痛苦与绝望，让我觉得我到死也不能做到。但是除了痛苦和绝望与你相伴之外，希望总在隐隐发光，别放弃它。相比是否能做到，我们更要花时间从最根本的地方去想的是：都要去做什么，为了什么要去。</p>
 <p>我不知道怎么去回答“做这网站有什么用？”的问题，就像我不知道我做为一个人有什么用一样。我不能确信地列出这个网站或者我的价值，但我肯定她们都有价值，每个人感受到的价值都不一样。我想更好的问题是：做一个网站有什么样的作用你才会去做呢？是否能达到你的目的，要不要做，是只与你相关的事。我决定做这个网站的原因有很多，我不想详细地列出来，我想我希望我能让一些事方便一点点；我希望我能对在看这些字的你产生一点影响。</p>
-<p>去发现，去改变吧。</p>]]></content><author><name>李晓航 Shon Li</name></author><category term="words" /><summary type="html"><![CDATA[前言 我的步骤 买 VPS 买域名 更新域名 DNS A 记录 配置与登陆 VPS 安装与配置 Nginx 数字证书（或 SSL 证书） 用 OpenSSL 生成私钥和 CSR 配置 Nginx 使用 HTTPS 写网页文件 用 Rsync 上传网页文件到 VPS 结语]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">红颜</title><link href="https://shon.li/photos/red.html" rel="alternate" type="text/html" title="红颜" /><published>2018-10-16T00:00:00+13:00</published><updated>2018-10-16T00:00:00+13:00</updated><id>https://shon.li/photos/red</id><content type="html" xml:base="https://shon.li/photos/red.html"><![CDATA[<p>这是我跟一个很好的朋友一起吃饭的时候拍的。餐厅的红色玻璃杯子里充满了气泡，我很喜欢。</p>
-
-<p>我跟这位朋友很久没有再见过了。希望生活没有虐待他。</p>]]></content><author><name>李晓航 Shon Li</name></author><category term="photos" /><summary type="html"><![CDATA[这是我跟一个很好的朋友一起吃饭的时候拍的。餐厅的红色玻璃杯子里充满了气泡，我很喜欢。]]></summary></entry></feed>
+<p>去发现，去改变吧。</p>]]></content><author><name>李晓航 Shon Li</name></author><category term="words" /><summary type="html"><![CDATA[前言 我的步骤 买 VPS 买域名 更新域名 DNS A 记录 配置与登陆 VPS 安装与配置 Nginx 数字证书（或 SSL 证书） 用 OpenSSL 生成私钥和 CSR 配置 Nginx 使用 HTTPS 写网页文件 用 Rsync 上传网页文件到 VPS 结语]]></summary></entry></feed>
