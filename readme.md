@@ -37,11 +37,11 @@ title: 备注 Appendix
 
 ## 你注意到我搞错东西啦？
 
-可以的话麻烦你告诉我吧。你可以给我发邮件或者去我的 <span lang="en">GitHub</span> 上做点什么。我的确经常说错话或者用错字。
+可以的话麻烦你告诉我吧。你可以给我发邮件或者去我的 <span lang="en">GitHub</span> 上做点什么。我在这里写字不会认真检查。哈哈。
 
 <h2 lang="en">Spotted My Mistakes?</h2>
 
-<p lang="en">Feel free to let me know. Please send an Email or do something on my GitHub. I do make tons of mistakes in English.</p>
+<p lang="en">Feel free to let me know. Please send an Email or do something on my GitHub. I write without a grammar check here. I hope you enjoy the madness.</p>
 
 ## 版权
 
