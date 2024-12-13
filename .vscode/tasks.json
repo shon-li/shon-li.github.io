@@ -8,6 +8,12 @@
       "group": "build"
     },
     {
+      "label": "Jekyll Preview",
+      "type": "shell",
+      "command": "JEKYLL_ENV=production bundle exec jekyll serve --livereload",
+      "group": "test"
+    },
+    {
       "label": "Jekyll Serve",
       "type": "shell",
       "command": "bundle exec jekyll serve --livereload",
