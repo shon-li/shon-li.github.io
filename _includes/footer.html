@@ -24,7 +24,24 @@
 
     {%- else -%}                          {% comment %} Add date and site name only {% endcomment %}
 
-      {{- site.time | date: "%Y-%-m" -}}
+      {%- if page.date -%}
+
+          {%- if page.lang == "en" -%}               {% comment %} Add english date {% endcomment %}
+
+            {{- page.date | date_to_long_string: "ordinal" -}}
+
+          {%- else -%}                                {% comment %} Add normal date {% endcomment %}
+
+            {{- page.date | date: "%Y 年 %-m 月 %-d 日 - %-d %b" -}}
+
+          {%- endif -%}
+
+      {%- else -%}
+
+        {{- site.time | date: "%Y-%-m" -}}
+
+      {%- endif -%}
+
       &nbsp;・&nbsp;
       {{- site.title -}}
 
