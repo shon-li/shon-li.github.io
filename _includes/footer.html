@@ -16,7 +16,7 @@
 
       {%- else -%}                    {% comment %} Add normal date and author name {% endcomment %}
 
-        {{- page.date | date: "%Y 年 %-m 月 %-d 日" -}}
+        {{- page.date | date: "%Y 年 %-m 月 %-d 日 - %-d %b" -}}
         &nbsp;・&nbsp;
         {{- site.author -}}
 
