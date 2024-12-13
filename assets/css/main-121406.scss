@@ -155,6 +155,10 @@ blockquote {
   margin-right: 1.25rem;
 }
 
+cite {
+  font-style: italic;
+}
+
 a:link,
 a:visited {
   padding-bottom: 1px;
@@ -297,7 +301,7 @@ footer {
   }
 }
 
-.two-columns {                                       // `two-colums` selects a `table` inside a post
+.two-columns {                                      // `two-columns` selects a `table` inside a post
   td {
     width: 50%;
     border: none;
