@@ -1,5 +1,6 @@
 ---
-title: 首页 Front-page
+copyright : false
+title     : 首页 Front-page
 ---
 ## 你好，我叫李晓航。
 

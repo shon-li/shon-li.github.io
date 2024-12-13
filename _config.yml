@@ -1,34 +1,35 @@
-title         : "晓航的网站 Shon's Site"
-author        : "李晓航 Shon Li"
-author-en     : "Shon Li"
+title           : "晓航的网站 Shon's Site"
+author          : "李晓航 Shon Li"
+author-en       : "Shon Li"
 
-url           : "https://shon.li"
-fullurl       : "shon.li"
-permalink     : none
+url             : "https://shon.li"
+fullurl         : "shon.li"
+permalink       : none
 
-collections   :
-  categories  :
-  output      : false
+collections     :
+  categories    :
+  output        : false
 
 # Default front matter for all pages and posts
-defaults      :
+defaults        :
   -
-    scope     :
-      path    : ""
-    values    :
-      layout  : "default"
-      lang    : "zh-Hans"
+    scope       :
+      path      : ""
+    values      :
+      layout    : "default"
+      lang      : "zh-Hans"
+      copyright : true
 
 # Config for compress-html layout
-compress_html :
-  clippings   : all
-  comments    : []
-  endings     : all
-  ignore      :
-    envs      : []
-  blanklines  : false
-  profile     : false
-  startings   : []
+compress_html   :
+  clippings     : all
+  comments      : []
+  endings       : all
+  ignore        :
+    envs        : []
+  blanklines    : false
+  profile       : false
+  startings     : []
 
 # Sass
 sass:

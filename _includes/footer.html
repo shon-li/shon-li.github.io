@@ -5,7 +5,7 @@
 >
 
   <span>
-    {%- if page.date -%}                  {% comment %} A dated page is a post page {% endcomment %}
+    {%- if page.copyright -%} {% comment %} Only show copyright if the page sets it {% endcomment %}
       &copy;&nbsp;
 
       {%- if page.lang == "en" -%}   {% comment %} Add english date and author name {% endcomment %}
@@ -22,7 +22,7 @@
 
       {%- endif -%}
 
-    {%- else -%}                               {% comment %} Add date and site name {% endcomment %}
+    {%- else -%}                          {% comment %} Add date and site name only {% endcomment %}
 
       {{- site.time | date: "%Y-%-m" -}}
       &nbsp;・&nbsp;

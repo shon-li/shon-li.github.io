@@ -1,5 +1,6 @@
 ---
-title: 备注 Appendix
+copyright : false
+title     : 备注 Appendix
 ---
 ## 网站信息
 
