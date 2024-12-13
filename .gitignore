@@ -1,5 +1,4 @@
-.DS_Store
 Gemfile.lock
-.vscode/
+.DS_Store
 .jekyll-cache/
 .sass-cache/
