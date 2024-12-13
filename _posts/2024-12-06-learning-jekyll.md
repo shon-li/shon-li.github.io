@@ -1,8 +1,8 @@
 ---
-lang: en
-categories: words
-date: 2024-12-06
-title: Learning Jekyll
+lang       : en
+categories : words
+date       : 2024-12-06
+title      : Learning Jekyll
 ---
 I finally decided to use a static site generator. Tools like Jekyll once looked mysterious to me. After some irrelevant coding practices during my engineering study, I somehow feel more confident about learning to use them.
 

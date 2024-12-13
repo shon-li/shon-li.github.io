@@ -1,8 +1,8 @@
 ---
-categories: photos
-date: 2018-05-21
-title: 递归
-figure: <img src="/assets/img/recursion.jpeg" alt="把手机画面投屏到电视上然后拍照。">
+categories : photos
+date       : 2018-05-21
+title      : 递归
+figure     : <img src="/assets/img/recursion.jpeg" alt="把手机画面投屏到电视上然后拍照。">
 ---
 把手机画面投影到电视上，然后用相机拍电视就可以拍到这样的画面。当电视上的画面看不出变化的时候，画面上最小的那个图像里发生了什么？
 
