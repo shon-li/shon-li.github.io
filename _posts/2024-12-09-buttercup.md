@@ -23,7 +23,7 @@ figure: <img src="/assets/img/buttercup.jpeg" alt="公园草地上不知名的�
   I heard that is from a poem written by Rabindranath Tagore, but I cannot find the origin of it. Alas.
 </p>
 
-\\
+<br>
 我在公园里闲逛的时候看到了这个不知名的小黄花。后来我知道了它叫 <span lang="en">buttercup</span>。上网搜了之后知道了它的汉语名字叫毛<ruby>茛<rt>gèn</rt></ruby>。
 
 这张照片让我想到我以前在一个论坛上看到的一个让我印象深刻的个性签名：
