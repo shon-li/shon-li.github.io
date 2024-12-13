@@ -1,8 +1,8 @@
 - name    : 目录 CONTENTS
-  link    : /contents.html
+  link    : /
 
 - name    : 首页 FRONT-PAGE
-  link    : /
+  link    : /front-page.html
 
 - name    : 备注 APPENDIX
   link    : /readme.html
