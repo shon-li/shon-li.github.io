@@ -46,7 +46,7 @@ title     : 备注 Appendix
 
 ## 版权
 
-如果没有特别说明，这个网站上的内容都是李晓航的原创。请看页面底部的版权标志。希望您在获取或分享的时候不要隐去来源。请您不要用我做的东西去赚钱。故请遵从[署名-非商业性使用-相同方式共享 4.0 国际（<span lang="en">CC BY-NC-SA 4.0 DEED</span>）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)协议。感谢。
+如果没有特别说明，这个网站上的内容都是李晓航的原创。请看页面底部的版权标志。希望您在获取或分享的时候不要隐去来源。请您不要用我做的东西去赚钱。故请遵从[署名-非商业性使用-相同方式共享 4.0 国际（<span lang="en">CC BY-NC-SA 4.0 DEED</span>）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)协议。感谢。
 
 <h2 lang="en">Copyright Notice</h2>
 

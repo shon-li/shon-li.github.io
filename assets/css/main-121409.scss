@@ -241,7 +241,7 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-  row-gap: 1em;
+  row-gap: .8em;
 
   a,
   a:link,
@@ -345,13 +345,13 @@ footer {
   main {
     min-width: auto;
     max-width: auto;
-    margin: .8em !important;
-    padding: 1.8em;
+    margin: .8rem !important;
+    padding: 1.8rem;
   }
 
   article {
-    padding-top: .5em;
-    padding-bottom: 1em;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
     letter-spacing: normal;
     text-align: left !important;
   }
@@ -395,6 +395,8 @@ footer {
 
   footer {
     margin-bottom: 8em !important;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
 
     nav {
       margin-top: 5em;

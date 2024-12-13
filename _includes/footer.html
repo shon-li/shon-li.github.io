@@ -4,9 +4,9 @@
   {%- endif -%}
 >
 
-  <span>
     {%- if page.copyright -%} {% comment %} Only show copyright if the page sets it {% endcomment %}
-      &copy;&nbsp;
+
+    CC BY-NC-SA 4.0 &nbsp; &copy; &nbsp;
 
       {%- if page.lang == "en" -%}   {% comment %} Add english date and author name {% endcomment %}
 
@@ -46,7 +46,6 @@
       {{- site.title -}}
 
     {%- endif -%}
-  </span>
 
   <nav>
     {%- for item in site.data.nav -%}
