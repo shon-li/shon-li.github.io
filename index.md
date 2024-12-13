@@ -19,19 +19,15 @@ title: 首页 Front-page
 
 ## 目前我在忙活的东西
 
-1. 弄这个博客网站。我想搁这儿弄点有深度有思考的东西。
-2. 学新西兰交规和驾照考试。
-3. 停止挤痘痘。不用指甲碰我的皮肤。
-4. 戒掉视频网站和戒掉社交应用。
-5. 间歇性地看几眼这本书：<i lang="en">Less is More</i>。作者是 <span lang="en">Jason Hickel</span>。
-6. 保持规律的睡眠。我想每天都睡它个十小时。
-7. 了解我自己。了解我的压力。
+1. 学新西兰交规和驾照考试。
+2. 停止挤痘痘。不用指甲碰我的皮肤。
+3. 戒掉视频网站和戒掉社交应用。
+4. 间歇性地看几眼这本书：<i lang="en">Less is More</i>。作者是 <span lang="en">Jason Hickel</span>。
+5. 保持规律的睡眠。我想每天都睡它个十小时。
+6. 了解我自己。了解我的压力。
 
 <h2 lang="en">My Recent Focus</h2>
 <ol>
-<li  lang="en">
-  Make this website. I look forward on posting something deep and something that inspires wisdom...
-</li>
 <li  lang="en">
   Learn NZ road code and prepare for learner's license test.
 </li>
