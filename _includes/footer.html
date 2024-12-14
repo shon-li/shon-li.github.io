@@ -12,13 +12,13 @@
 
         {{- page.date | date_to_long_string: "ordinal" -}}
         &nbsp;・&nbsp;
-        {{- site.author-en -}}
+        {{- site.data.information.author-en -}}
 
       {%- else -%}                    {% comment %} Add normal date and author name {% endcomment %}
 
         {{- page.date | date: "%Y 年 %-m 月 %-d 日 - %-d %b" -}}
         &nbsp;・&nbsp;
-        {{- site.author -}}
+        {{- site.data.information.author -}}
 
       {%- endif -%}
 
@@ -43,12 +43,12 @@
       {%- endif -%}
 
       &nbsp;・&nbsp;
-      {{- site.title -}}
+      {{- site.data.information.title -}}
 
     {%- endif -%}
 
   <nav>
-    {%- for item in site.data.nav -%}
+    {%- for item in site.data.navigation -%}
 
       {%- if item.link != page.url -%}
 

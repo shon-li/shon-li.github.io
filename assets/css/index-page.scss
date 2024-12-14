@@ -7,12 +7,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto auto auto;
 }
 
-.contents-page article {              // `.contents-page` selects `main` in '/_layouts/default.html'
+.index-page article {                    // `.index-page` selects `main` in '/_layouts/default.html'
     padding-left: 0;
     letter-spacing: normal;
 }
 
-.contents-table,                            // `.contents-table` selects `table` in '/contents.html'
+.contents-table,                               // `.contents-table` selects `table` in '/index.html'
 .contents-table th,
 .contents-table td {
   padding: 0;
@@ -36,12 +36,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.contents-date-col {      // `.contents-table-col` selects the second `table td` in '/contents.html'
+.contents-date-col {         // `.contents-table-col` selects the second `table td` in '/index.html'
   width: 5.2em;
   text-align: right;
 }
 
-.contents-date {      // `.contents-date` selects `.contents-table-col`'s `span` in '/contents.html'
+.contents-date {         // `.contents-date` selects `.contents-table-col`'s `span` in '/index.html'
   font-family: "Roboto Mono", monospace;
   font-weight: 370;
 }

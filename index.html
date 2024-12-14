@@ -1,16 +1,14 @@
 ---
+indexPage : true
 copyright : false
 title     : 目录 Contents
 ---
-{%- for category in site.categories -%}
-
+{%- for category in site.data.categories -%}
   <table class="contents-table">
 
     <th colspan="2"><h2 class="contents-title">{{- category.name -}}</h2></th>
 
-    {%- assign filteredPosts = site.posts | where: 'categories', category.shorthand -%}
-
-    {%- for post in filteredPosts -%}
+    {%- for post in site.categories[category.keyword] -%}
       <tr>
         <td><a href="{{- post.url -}}">{{- post.title -}}</a></td>
         <td class="contents-date-col"><span class="contents-date">{{- post.date | date: "%Y-%m" -}}</span></td>
@@ -18,5 +16,4 @@ title     : 目录 Contents
     {%- endfor -%}
 
   </table>
-
 {%- endfor -%}

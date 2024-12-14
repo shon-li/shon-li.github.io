@@ -1,14 +1,7 @@
-title           : "晓航的网站 Shon's Site"
-author          : "李晓航 Shon Li"
-author-en       : "Shon Li"
-
+# URLs
 url             : "https://shon.li"
-fullurl         : "shon.li"
+# fullurl         : "shon.li"
 permalink       : none
-
-collections     :
-  categories    :
-  output        : false
 
 # Default front matter for all pages and posts
 defaults        :
@@ -33,7 +26,8 @@ compress_html   :
 
 # Sass
 sass:
-    style: compressed
+  sass_dir: ./_sass
+  style: compressed
 
 plugins:
   - jekyll-feed
