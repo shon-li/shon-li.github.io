@@ -13,8 +13,8 @@ layout: compress
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/assets/css/main-121411.css">
 
-  {%- if page.title == "目录 Contents" -%}
-    <link rel="stylesheet" href="/assets/css/contents-page.css">
+  {%- if page.indexPage -%}
+    <link rel="stylesheet" href="/assets/css/index-page.css">
   {%- endif -%}
 
   {%- if jekyll.environment != "production" -%}
@@ -52,8 +52,8 @@ layout: compress
   {%- endif -%}
 
     <main
-      {% if page.title == "目录 Contents" %}
-        class="contents-page"
+      {% if page.indexPage %}
+        class="index-page"
       {%- endif -%}
     >
       <article>

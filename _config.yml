@@ -6,9 +6,9 @@ url             : "https://shon.li"
 fullurl         : "shon.li"
 permalink       : none
 
-collections     :
-  categories    :
-  output        : false
+# collections     :
+#   categories    :
+#   output        : false
 
 # Default front matter for all pages and posts
 defaults        :
