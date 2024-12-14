@@ -1,17 +1,24 @@
 ---
 indexPage : true
 copyright : false
-title     : 文字 Words
 ---
-<table class="contents-table">
+{% assign folderName = [page.dir | remove: "/"] %}
 
-  <th colspan="2"><h2 class="contents-title">文字・Words</h2></th>
+{%- for category in site.data.categories -%}
 
-  {%- for post in site.categories.words -%}
-    <tr>
-      <td><a href="{{- post.url -}}">{{- post.title -}}</a></td>
-      <td class="contents-date-col"><span class="contents-date">{{- post.date | date: "%Y-%m" -}}</span></td>
-    </tr>
-  {%- endfor -%}
+  {%- if category.keyword == folderName -%}
+    <table class="contents-table">
 
-</table>
+      <th colspan="2"><h2 class="contents-title">{{- category.name -}}</h2></th>
+
+      {%- for post in site.categories.[category.keyword] -%}
+        <tr>
+          <td>{{- forloop.index -}} .&nbsp; <a href="{{- post.url -}}">{{- post.title -}}</a></td>
+          <td class="contents-date-col"><span class="contents-date">{{- post.date | date: "%Y-%m" -}}</span></td>
+        </tr>
+      {%- endfor -%}
+
+    </table>
+  {%- endif -%}
+
+{%- endfor -%}
