@@ -1,5 +1,5 @@
-name    : 文字・Words
-keyword : words
+- keyword : words
+  name    : 文字・Words
 
-name    : 照片・Photos
-keyword : photos
+- keyword : photos
+  name    : 照片・Photos

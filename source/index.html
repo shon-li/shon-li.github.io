@@ -3,28 +3,17 @@ indexPage : true
 copyright : false
 title     : 目录 Contents
 ---
-<table class="contents-table">
+{%- for category in site.data.categories -%}
+  <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">文字・Words</h2></th>
+    <th colspan="2"><h2 class="contents-title">{{- category.name -}}</h2></th>
 
-  {%- for post in site.categories.words -%}
-    <tr>
-      <td><a href="{{- post.url -}}">{{- post.title -}}</a></td>
-      <td class="contents-date-col"><span class="contents-date">{{- post.date | date: "%Y-%m" -}}</span></td>
-    </tr>
-  {%- endfor -%}
+    {%- for post in site.categories.[category.keyword] -%}
+      <tr>
+        <td><a href="{{- post.url -}}">{{- post.title -}}</a></td>
+        <td class="contents-date-col"><span class="contents-date">{{- post.date | date: "%Y-%m" -}}</span></td>
+      </tr>
+    {%- endfor -%}
 
-</table>
-
-<table class="contents-table">
-
-  <th colspan="2"><h2 class="contents-title">照片・Photos</h2></th>
-
-  {%- for post in site.categories.photos -%}
-    <tr>
-      <td><a href="{{- post.url -}}">{{- post.title -}}</a></td>
-      <td class="contents-date-col"><span class="contents-date">{{- post.date | date: "%Y-%m" -}}</span></td>
-    </tr>
-  {%- endfor -%}
-
-</table>
+  </table>
+{%- endfor -%}
