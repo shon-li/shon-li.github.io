@@ -159,6 +159,10 @@ cite {
   font-style: italic;
 }
 
+.url{                                          // `.url` selects `a` marked as url text on all pages
+  font-family: "Roboto Mono", monospace;
+}
+
 a:link,
 a:visited {
   padding-bottom: 1px;
@@ -192,7 +196,6 @@ a:hover {
 figure {
   height: 100vh;
   margin: 0;
-  margin-bottom: -35vh;
   display: flex;
   align-items: center;
 
@@ -213,10 +216,6 @@ article {
     height: auto;
     border-radius: 2px;
     object-fit: scale-down;
-  }
-
-  p a {
-    font-family: "Roboto Mono", "Noto Serif SC", serif;
   }
 
   table {
@@ -297,8 +296,12 @@ footer {
 
 /*--------------------------------- 4. Special page overwrites -----------------------------------*/
 
-.figure-page {                        // `.figure-page` selects `footer` in '/_includes/footer.html'
-  margin-bottom: 8em;
+.figure-page {                          // `.figure-page` selects `main` in '/_layouts/default.html'
+  margin-top: 4rem;
+}
+
+.figure-page-footer {          // `.figure-page-footer` selects `footer` in '/_includes/footer.html'
+  margin-bottom: 8rem;
 }
 
 .post-page {                              // `.post-page` selects `body` in '/_layouts/default.html'
@@ -372,8 +375,12 @@ footer {
   main {
     min-width: auto;
     max-width: auto;
-    margin: .8rem !important;
+    margin: .8rem ;
     padding: 1.8rem;
+  }
+
+  .figure-page {                        // `.figure-page` selects `main` in '/_layouts/default.html'
+    margin-top: 6rem;
   }
 
   article {
@@ -411,8 +418,6 @@ footer {
   }
 
   figure {
-    margin-bottom: 9vh;
-
     img,
     video {
       max-width: 88vw;

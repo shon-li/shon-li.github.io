@@ -14,9 +14,11 @@ figure     : <img src="/assets/img/going-home.jpeg" alt="黑暗的公交车里�
 找到了：<br>
 <span lang="en">
 Sophie Zelmani - Going Home\\
+<span class="url">
 [music.apple.com/nz/album/going-home/179129252](https://music.apple.com/nz/album/going-home/179129252)
 <br>
 [youtube.com/watch?v=hO6BgqS4814](https://youtube.com/watch?v=hO6BgqS4814)
+</span>
 </span>
 
 {%- include youtubeVideo.html -%}

@@ -58,6 +58,9 @@ layout: compress
       {% if page.indexPage %}
         class="index-page"
       {%- endif -%}
+      {% if page.figure %}
+        class="figure-page"
+      {%- endif -%}
     >
       <article>
         {% comment %} If a page has categories entry, then the page's title will be displayed {% endcomment %}

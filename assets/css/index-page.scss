@@ -23,9 +23,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 95%;
   margin: 0 auto 2.6em auto;
 
+  td,
+  td a {
+    font-family: "Noto Sans SC", sans-serif;
+  }
+
   td {
     padding: .8em 0 .8em .1em;
-    font-family: "Noto Sans SC", sans-serif;
     font-weight: 380;
     vertical-align: baseline;
   }
