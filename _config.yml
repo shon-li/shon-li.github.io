@@ -1,6 +1,5 @@
 # Custom file directories
 source          : ./doc
-destination     : ./output
 
 # URLs
 url             : "https://shon.li"
