@@ -215,6 +215,10 @@ article {
     object-fit: scale-down;
   }
 
+  p a {
+    font-family: "Roboto Mono", "Noto Serif SC", serif;
+  }
+
   table {
   width: 100%;
   margin: 1.5em auto;
@@ -270,6 +274,7 @@ footer {
   a:visited {
     color: var(--color_paper_alt);
     border-bottom: 1px dotted var(--color_paper);
+    font-family: 'Noto Sans SC', sans-serif;
   }
 
   a:hover {
