@@ -1,6 +1,6 @@
 ---
 categories : photos
-date       :
+date       : 20
 title      :
 figure     : <img src="/assets/img/_.jpeg" alt="_">
 ---

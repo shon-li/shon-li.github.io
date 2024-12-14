@@ -1,7 +1,7 @@
 ---
 categories : photos
 date       : 2023-01-18
-title      : 闪光的沙
+title      : 闪光的沙子
 figure     : <img src="/assets/img/sparkling-sand.jpeg" alt="海边的沙滩在阳光下闪烁点点的光。">
 ---
 
