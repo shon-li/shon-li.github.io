@@ -8,7 +8,7 @@ title     : 目录 Contents
 
     <th colspan="2"><h2 class="contents-title">{{- category.name -}}</h2></th>
 
-    {%- for post in site.categories.[category.keyword] -%}
+    {%- for post in site.categories[category.keyword] -%}
       <tr>
         <td><a href="{{- post.url -}}">{{- post.title -}}</a></td>
         <td class="contents-date-col"><span class="contents-date">{{- post.date | date: "%Y-%m" -}}</span></td>

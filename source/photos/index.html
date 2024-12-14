@@ -2,7 +2,7 @@
 indexPage : true
 copyright : false
 ---
-{% assign folderName = [page.dir | remove: "/"] %}
+{% assign folderName = page.dir | remove: "/" %}
 
 {%- for category in site.data.categories -%}
 
@@ -11,7 +11,7 @@ copyright : false
 
       <th colspan="2"><h2 class="contents-title">{{- category.name -}}</h2></th>
 
-      {%- for post in site.categories.[category.keyword] -%}
+      {%- for post in site.categories[category.keyword] -%}
         <tr>
           <td>{{- forloop.index -}} .&nbsp; <a href="{{- post.url -}}">{{- post.title -}}</a></td>
           <td class="contents-date-col"><span class="contents-date">{{- post.date | date: "%Y-%m" -}}</span></td>
