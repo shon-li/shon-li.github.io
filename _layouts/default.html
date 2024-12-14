@@ -6,7 +6,10 @@ layout: compress
 
 <head>
   <title>
-      {{- page.title -}}・{{- site.data.information.title -}}
+    {%- if page.title -%}
+      {{- page.title -}}・
+    {%- endif -%}
+    {{- site.data.information.title -}}
   </title>
 
   <meta charset="UTF-8">
