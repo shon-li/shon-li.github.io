@@ -1,6 +1,3 @@
-# Custom file directories
-source          : ./doc
-
 # URLs
 url             : "https://shon.li"
 # fullurl         : "shon.li"
