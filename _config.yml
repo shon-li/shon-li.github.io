@@ -2,10 +2,7 @@
 source          : ./source
 destination     : ./destination
 
-title           : "晓航的网站 Shon's Site"
-author          : "李晓航 Shon Li"
-author-en       : "Shon Li"
-
+# URLs
 url             : "https://shon.li"
 fullurl         : "shon.li"
 permalink       : none
