@@ -1,8 +1,8 @@
 ---
 categories : photos
-date       : 
-title      : 
-figure     : <img src="/assets/img/__.jpeg" alt="">
+date       :
+title      :
+figure     : <img src="/assets/img/_.jpeg" alt="_">
 ---
 <p lang="en">
 English paragraph here...
