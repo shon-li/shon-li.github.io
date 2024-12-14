@@ -1,10 +1,10 @@
 # Custom file directories
-source          : ./source
-destination     : ./destination
+source          : ./doc
+destination     : ./output
 
 # URLs
 url             : "https://shon.li"
-fullurl         : "shon.li"
+# fullurl         : "shon.li"
 permalink       : none
 
 # Default front matter for all pages and posts
@@ -30,7 +30,8 @@ compress_html   :
 
 # Sass
 sass:
-    style: compressed
+  sass_dir: ./_sass
+  style: compressed
 
 plugins:
   - jekyll-feed
