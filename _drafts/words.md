@@ -1,5 +1,0 @@
----
-categories : words
-date       :
-title      :
----
