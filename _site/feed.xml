@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-15T23:09:04+13:00</updated><id>https://shon.li/feed.xml</id><entry xml:lang="zh-Hans"><title type="html">我怎么用电子表格记账</title><link href="https://shon.li/words/money-tracking.html" rel="alternate" type="text/html" title="我怎么用电子表格记账" /><published>2024-12-15T00:00:00+13:00</published><updated>2024-12-15T00:00:00+13:00</updated><id>https://shon.li/words/money-tracking</id><content type="html" xml:base="https://shon.li/words/money-tracking.html"><![CDATA[<h2 id="第一步理解问题">第一步：理解问题</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-15T23:17:17+13:00</updated><id>https://shon.li/feed.xml</id><entry xml:lang="zh-Hans"><title type="html">我怎么用电子表格记账</title><link href="https://shon.li/words/money-tracking.html" rel="alternate" type="text/html" title="我怎么用电子表格记账" /><published>2024-12-15T00:00:00+13:00</published><updated>2024-12-15T00:00:00+13:00</updated><id>https://shon.li/words/money-tracking</id><content type="html" xml:base="https://shon.li/words/money-tracking.html"><![CDATA[<h2 id="第一步理解问题">第一步：理解问题</h2>
 
 <p>解决问题的第一步是弄明白都要干啥。在过去的几年里我都不太确定我要搞明白什么。最一开始我只是想要记下来我都把钱花哪儿了。后来我想知道明确的知道我一共有多少钱。再后来我赚钱了，我想知道收入减去支出之后还剩多少。明年我就要借学生贷款了，我得知道我会欠多少钱。</p>
 
@@ -247,7 +247,7 @@
 <p>现有存款 − 去年存款 = 收入 − 支出 <br />
 现有存款 − 去年存款 – 收入 + 支出 = 零</p>
 
-<p>如果这个结果是零的话就表示没有记错账。如果结果是正数的话说明是既有的钱比账上记得多，可能是有收入漏记了；如果是负数的话说明支出漏记了。最下面一行需要输入公式来计算。收入和支出的总和数字在它们各自的表单上，输入公式的时候切换到那个表单然后点一下那个数字就可以把它输进公式里了。</p>
+<p>如果这个结果是零的话就表示没有记错账。如果结果是正数的话说明是现有的钱比账上记得多，可能是有收入漏记了；如果是负数的话说明支出漏记了。最下面一行需要输入公式来计算。收入和支出的总和数字在它们各自的表单上，输入公式的时候切换到那个表单然后点一下那个数字就可以把它输进公式里了。</p>
 
 <h3 id="负债">负债</h3>
 
