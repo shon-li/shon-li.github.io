@@ -232,12 +232,11 @@ article {
   }
 }
 
-.video-16-9 {                       // `.video-16-9` selects `div` in '/_includes/youtubeVideo.html'
+.embedded-video {                // `embedded-video` selects `div` in '/_includes/youtubeVideo.html'
   max-width: 100%;
   height: fit-content;
   margin-top: 4rem;
   margin-bottom: 0;
-  padding-top: 56.25%;                                                     // 100% * 9 / 16 = 56.25%
   position: relative;
   overflow: hidden;
 
@@ -252,6 +251,10 @@ article {
     border-radius: 2px;
     border: none;
   }
+}
+
+.video-16-9 {                       // `.video-16-9` selects `div` in '/_includes/youtubeVideo.html'
+  padding-top: 56.25%;                                                     // 100% * 9 / 16 = 56.25%
 }
 
 /*------------------------------------------ 3. Footer -------------------------------------------*/
