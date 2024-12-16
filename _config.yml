@@ -26,7 +26,6 @@ compress_html   :
 
 # Sass
 sass:
-  sass_dir: ./_sass
   style: compressed
 
 plugins:
