@@ -35,8 +35,8 @@ layout: compress
     </style>
   {%- endif -%}
 
-  {%- feed_meta -%}
   {%- seo -%}
+  {%- feed_meta -%}
 </head>
 
 <body
@@ -48,29 +48,30 @@ layout: compress
     class="post-page"
   {%- endif -%}
 >
-  {% comment %} Insert a figure if the page has one {% endcomment %}
 
   {%- if page.figure -%}
     <figure>{{- page.figure -}}</figure>
   {%- endif -%}
 
-    <main
-      {% if page.indexPage %}
-        class="index-page"
-      {%- endif -%}
-      {% if page.figure %}
-        class="figure-page"
-      {%- endif -%}
-    >
-      <article>
-        {% comment %} If a page has categories entry, then the page's title will be displayed {% endcomment %}
+  <main
+    {% if page.indexPage %}
+      class="index-page"
+    {%- endif -%}
+    {% if page.figure %}
+      class="figure-page"
+    {%- endif -%}
+  >
+    <article>
+      {% comment %}
+        Show page's title if the page has a category variable.
+      {% endcomment %}
 
-        {%- if page.categories -%}
-          <h1>{{- page.title -}}</h1>
-        {%- endif -%}
+      {%- if page.categories -%}
+        <h1>{{- page.title -}}</h1>
+      {%- endif -%}
 
-        {{- content -}}
-      </article>
+      {{- content -}}
+    </article>
   </main>
 
   {%- include footer.html -%}
