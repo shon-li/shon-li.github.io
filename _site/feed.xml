@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-16T20:39:17+13:00</updated><id>https://shon.li/feed.xml</id><entry xml:lang="zh-Hans"><title type="html">我怎么用电子表格记账</title><link href="https://shon.li/words/money-tracking.html" rel="alternate" type="text/html" title="我怎么用电子表格记账" /><published>2024-12-15T00:00:00+13:00</published><updated>2024-12-15T00:00:00+13:00</updated><id>https://shon.li/words/money-tracking</id><content type="html" xml:base="https://shon.li/words/money-tracking.html"><![CDATA[<ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-16T21:57:20+13:00</updated><id>https://shon.li/feed.xml</id><entry xml:lang="zh-Hans"><title type="html">我怎么用电子表格记账</title><link href="https://shon.li/words/money-tracking.html" rel="alternate" type="text/html" title="我怎么用电子表格记账" /><published>2024-12-15T00:00:00+13:00</published><updated>2024-12-15T00:00:00+13:00</updated><id>https://shon.li/words/money-tracking</id><content type="html" xml:base="https://shon.li/words/money-tracking.html"><![CDATA[<ul>
   <li><a href="#第一步理解问题">第一步：理解问题</a></li>
   <li><a href="#第二步想好怎么用电子表格">第二步：想好怎么用电子表格</a></li>
   <li><a href="#第三步理解电子表格的细节">第三步：理解电子表格的细节</a>
@@ -14,7 +14,7 @@
 
 <h2 id="第一步理解问题">第一步：理解问题</h2>
 
-<p>解决问题的第一步是弄明白都要干啥。在过去的几年里我都不太确定我要搞明白什么。最一开始我只是想要记下来我都把钱花哪儿了。后来我想准确地知道我一共有多少钱。再后来我赚钱了，我想知道收入减去支出之后还剩多少。明年我就要借学生贷款了，我得知道我会欠多少钱。</p>
+<p>解决问题的第一步是弄明白想要达到什么目的。在过去的几年里我都不太确定我要搞明白什么。最一开始我只是想要记下来我都把钱花哪儿了。后来我想准确地知道我一共有多少钱。再后来我赚钱了，我想知道收入减去支出之后还剩多少。明年我就要借学生贷款了，我得知道我会欠多少钱。</p>
 
 <p>我从 2020 年开始用电子表格记账。从别人做的模板开始学习，后来自己慢慢改。我每年都试着做些调整。我因为想把所有的记录都写在一个大表格里，搞得到处都是字，很复杂。我今天开始为明年做新的表格了，做的时候我就觉得其实我之前弄的很多数字我都不在乎，看起来也没那么方便。所以我一边做一边试着简化我对问题的理解。试着试着就得到了这样的结果。</p>
 
@@ -30,7 +30,7 @@
 
 <p>我对应上面的每个问题都单独做了一个表单（<span lang="en">sheet</span>）。又额外做了一个叫做“其他”的表单，在里面放了一个算数用的表（<span lang="en">table</span>）和计算天数的表，天数是用来帮我算平均花费的。</p>
 
-<p>我一共有下面这五个表单。我一般每个周末都会打开表格把每个表单里的记录更新一下。每个表单也都会显示一些对我来说有用的统计结果，比如从开始记账到现在我一共花了多少钱、吃饭一共花了多少钱、平均每周吃饭花多少钱、每个月平均吃饭花多少钱。</p>
+<p>我一共有下面这五个表单。</p>
 
 <ol>
   <li>支出</li>
@@ -39,6 +39,8 @@
   <li>负债</li>
   <li>其他</li>
 </ol>
+
+<p>我一般每个周末都会打开表格把每个表单里的记录更新一下。每个表单也都会显示一些对我来说有用的统计结果，比如从开始记账到现在我一共花了多少钱、吃饭一共花了多少钱、平均每周吃饭花多少钱、每个月平均吃饭花多少钱。</p>
 
 <h2 id="第三步理解电子表格的细节">第三步：理解电子表格的细节</h2>
 
@@ -84,7 +86,8 @@
 
 <p>我的周号是让表格自动帮我算的，我用的计算公式（函数）是 <code class="language-plaintext highlighter-rouge">WEEKNUM(D2,2)</code>。<br />
 <code class="language-plaintext highlighter-rouge">D2</code> 是周号左边的日期单元格。<br />
-<code class="language-plaintext highlighter-rouge">2</code> 是公式要求我告诉它把星期一当作一周里的第一天。我想显示周号是因为它比日期更直观得告诉我哪些记录是在同一个星期里的。<br />
+<code class="language-plaintext highlighter-rouge">2</code> 是公式要求我告诉它把星期一当作一周里的第一天。<br />
+我想显示周号是因为它能比日期更直观地告诉我哪些记录是在同一个星期里的。<br />
 一个我知道的小技巧是如果我在表格软件里选中一列数字，表格软件的状态栏会显示他们的总和和平均数。这是我在代工厂里上班的时候上司教我的。</p>
 
 <p><br /></p>
@@ -331,7 +334,8 @@
 
 <h3 id="负债">负债</h3>
 
-<p>我还不确定我都需要记下来什么，因为我对于负债没什么经验。目前我只是粗略放了一个表格记下我什么时候借了多少。</p>
+<p>我还不确定我都需要记下来什么，因为我对于负债没什么经验。目前我只是粗略放了一个表格记下我什么时候借了多少。<br />
+以后应该再放一个表来记还了多少，这样可以知道还剩多少要还。</p>
 
 <table>
   <thead>
@@ -411,7 +415,7 @@
   </tbody>
 </table>
 
-<p>这个表最多就算三个人，因为我没什么朋友吧。当每个人有自己买的东西和一起分钱的东西的时候用它算就安心一点。<br />
+<p>这个表最多就算三个人，而且只能算平均分钱。当每个人有自己买的东西和一起分钱的东西的时候用它算就安心一点。<br />
 一起分钱的东西写进最左边的一列算平均。每个人自己买的东西写在自己的那一列算总和。这样表格就会算出来每个人该付多少钱。</p>
 
 <p><br /></p>
@@ -527,9 +531,9 @@
 
 <p>This post is intentionally written in English. Not to show-off my competency in this language, but a test on the layout design. After some trials and errors, I decided to take a chaotic approach on multi-language support. I will simply smash two languages together on my website. It is much easier to handle on a static site generator; also, it is how I process the languages in my mind. Words and characters swirl in my mind wiggling meanings and concepts. I know most people probably will not enjoy that, but for the ones who do – yay!</p>
 
-<p>I found something annoying – the apostrophe, “’”. It is always rendered in full width which is what I hate to see. My HTML file encoding is alright; CSS text align is non-negotiable; I want to use Markdown to simply writing. <del>So I am out of solution for now. I will try to avoid typing that key when I am writing here.</del> Agh… Turns out I only need to use a backslash to escape that character when writing in Markdown. <code class="language-plaintext highlighter-rouge">\'</code> gives '. Hahah… =D</p>
+<p>I found something annoying – the apostrophe, “’”. It is always rendered in full width which is what I hate to see. My HTML file encoding is alright; CSS text align is non-negotiable; I want to use Markdown to simply writing. <del>So I am out of solution for now. I will try to avoid typing that key when I am writing here.</del> Agh… Turns out I only need to use a backslash to escape that character when writing in Markdown. So typing in <code class="language-plaintext highlighter-rouge">\'</code> gives <code class="language-plaintext highlighter-rouge">'</code>. Hahah… =D</p>
 
-<p>I will add some of my understandings about Jekyll here later.</p>]]></content><author><name></name></author><category term="words" /><summary type="html"><![CDATA[I finally decided to use a static site generator. Tools like Jekyll once looked mysterious to me. After some irrelevant coding practices during my engineering study, I somehow feel more confident about learning to use them.]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">你想写一句吗? What Will Your Verse Be?</title><link href="https://shon.li/words/verse.html" rel="alternate" type="text/html" title="你想写一句吗? What Will Your Verse Be?" /><published>2024-09-12T00:00:00+12:00</published><updated>2024-09-12T00:00:00+12:00</updated><id>https://shon.li/words/verse</id><content type="html" xml:base="https://shon.li/words/verse.html"><![CDATA[<table class="two-columns">
+<p>I will add some of my understandings about Jekyll here later. By 'later', I might mean a decade…</p>]]></content><author><name></name></author><category term="words" /><summary type="html"><![CDATA[I finally decided to use a static site generator. Tools like Jekyll once looked mysterious to me. After some irrelevant coding practices during my engineering study, I somehow feel more confident about learning to use them.]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">你想写一句吗? What Will Your Verse Be?</title><link href="https://shon.li/words/verse.html" rel="alternate" type="text/html" title="你想写一句吗? What Will Your Verse Be?" /><published>2024-09-12T00:00:00+12:00</published><updated>2024-09-12T00:00:00+12:00</updated><id>https://shon.li/words/verse</id><content type="html" xml:base="https://shon.li/words/verse.html"><![CDATA[<table class="two-columns">
 
   <tr>
     <td>
