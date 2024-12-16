@@ -10,7 +10,7 @@
     {
       "label": "Jekyll Preview",
       "type": "shell",
-      "command": "JEKYLL_ENV=production bundle exec jekyll serve --livereload",
+      "command": "JEKYLL_ENV=production bundle exec jekyll serve",
       "group": "test"
     },
     {
