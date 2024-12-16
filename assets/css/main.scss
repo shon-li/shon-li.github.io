@@ -174,7 +174,7 @@ a:visited {
 a:hover {
   text-decoration: none;
 
-  animation-name: fadeInAnimation;
+  animation-name: underlineAnimation;
   animation-timing-function: ease;
   animation-duration: 1.5s;
   animation-delay: 0s;
@@ -182,7 +182,7 @@ a:hover {
   animation-direction: alternate;
 }
 
-@keyframes fadeInAnimation {
+@keyframes underlineAnimation {
   0% {
     border-bottom: 1px solid var(--color_accent);
   }
