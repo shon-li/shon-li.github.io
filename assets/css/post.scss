@@ -4,6 +4,10 @@
 
 /*------------------------------------------ 0. Common -------------------------------------------*/
 
+hr {
+  border: .5px dotted var(--color_text);
+}
+
 ruby:lang(zh) {
   letter-spacing: .125em;
 }
@@ -62,7 +66,7 @@ article {
     th,
     td {
       padding: .25em .5em;
-      border: 1px var(--color_text) dotted;
+      border: 1px solid var(--color_paper_alt);
       letter-spacing: normal;
       text-align: left;
       vertical-align: top;

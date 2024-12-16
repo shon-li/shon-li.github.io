@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-12-16T17:59:21+13:00</updated><id>http://localhost:4000/feed.xml</id><entry xml:lang="zh-Hans"><title type="html">我怎么用电子表格记账</title><link href="http://localhost:4000/words/money-tracking.html" rel="alternate" type="text/html" title="我怎么用电子表格记账" /><published>2024-12-15T00:00:00+13:00</published><updated>2024-12-15T00:00:00+13:00</updated><id>http://localhost:4000/words/money-tracking</id><content type="html" xml:base="http://localhost:4000/words/money-tracking.html"><![CDATA[<p>[toc]</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-16T19:32:36+13:00</updated><id>https://shon.li/feed.xml</id><entry xml:lang="zh-Hans"><title type="html">我怎么用电子表格记账</title><link href="https://shon.li/words/money-tracking.html" rel="alternate" type="text/html" title="我怎么用电子表格记账" /><published>2024-12-15T00:00:00+13:00</published><updated>2024-12-15T00:00:00+13:00</updated><id>https://shon.li/words/money-tracking</id><content type="html" xml:base="https://shon.li/words/money-tracking.html"><![CDATA[<ul>
+  <li><a href="#第一步理解问题">第一步：理解问题</a></li>
+  <li><a href="#第二步想好怎么用电子表格">第二步：想好怎么用电子表格</a></li>
+  <li><a href="#第三步理解电子表格的细节">第三步：理解电子表格的细节</a>
+    <ul>
+      <li><a href="#收入">收入</a></li>
+      <li><a href="#存款">存款</a></li>
+      <li><a href="#负债">负债</a></li>
+      <li><a href="#其他">其他</a></li>
+    </ul>
+  </li>
+  <li><a href="#最后一步动手做表格">最后一步：动手做表格</a></li>
+</ul>
+
 <h2 id="第一步理解问题">第一步：理解问题</h2>
 
 <p>解决问题的第一步是弄明白都要干啥。在过去的几年里我都不太确定我要搞明白什么。最一开始我只是想要记下来我都把钱花哪儿了。后来我想准确地知道我一共有多少钱。再后来我赚钱了，我想知道收入减去支出之后还剩多少。明年我就要借学生贷款了，我得知道我会欠多少钱。</p>
@@ -15,7 +28,7 @@
 
 <h2 id="第二步想好怎么用电子表格">第二步：想好怎么用电子表格</h2>
 
-<p>我对应上面的每个问题都单独做了一个表单（<span lang="en">sheet</span>）。又额外做了一个叫做“其他”的表单，在里面放了一个算数用的列表和计算天数的列表（<span lang="en">table</span>），天数是用来帮我算平均花费的。</p>
+<p>我对应上面的每个问题都单独做了一个表单（<span lang="en">sheet</span>）。又额外做了一个叫做“其他”的表单，在里面放了一个算数用的表和计算天数的表（<span lang="en">table</span>），天数是用来帮我算平均花费的。</p>
 
 <p>我一共有下面这五个表单。我一般每个周末都会打开表格把每个表单里的记录更新一下。每个表单也都会显示一些对我来说有用的统计结果，比如从开始记账到现在我一共花了多少钱、吃饭一共花了多少钱、平均每周吃饭花多少钱、每个月平均吃饭花多少钱。</p>
 
@@ -27,7 +40,7 @@
   <li>其他</li>
 </ol>
 
-<h2 id="第三步制作电子表格的细节">第三步：制作电子表格的细节</h2>
+<h2 id="第三步理解电子表格的细节">第三步：理解电子表格的细节</h2>
 
 <p>我用的表格软件是斥巨资买苹果电脑送的 <span lang="en">Numbers</span>，我下面写的计算公式都是它的格式。各个表格软件比如微软的 <span lang="en">Excel</span> 和 <span lang="en">Libre Office</span> 开源免费的 <span lang="en">Calc</span> 公式都大同小异。你去网上搜索搜索应该都是可以弄明白我用的公式在它里面怎么写。</p>
 
@@ -39,7 +52,7 @@
 
 <p>在支出表单里，我放了两个表格。</p>
 
-<p>第一个表格就一直往下填每次花了多少钱，像下面这样。我每次记账的时候都会写一个关键字，比如吃饭和房租。记下来日期可以方便我自己去看看每周花了多少钱。</p>
+<p>第一个表格就一直往下填每次花了多少钱，像下面这样。我每次记账的时候都会写一个关键字，比如“吃饭”和“房租”。记下来日期可以方便我自己去看看每周花了多少钱。</p>
 
 <table>
   <thead>
@@ -72,9 +85,9 @@
 <p>我的周号是让表格自动帮我算的，我用的计算公式（函数）是 <code class="language-plaintext highlighter-rouge">WEEKNUM(D2,2)</code>。<br />
 <code class="language-plaintext highlighter-rouge">D2</code> 是周号左边的日期单元格。<br />
 <code class="language-plaintext highlighter-rouge">2</code> 是公式要求我告诉它把星期一当作一周里的第一天。我想显示周号是因为它比日期更直观得告诉我哪些记录是在同一个星期里的。<br />
-一个我知道的小技巧是如果我在表格软件里选中一列数字，表格软件的状态栏会显示他们的总和和平均数。这是我在台湾代工厂里的上司教我的呢。</p>
+一个我知道的小技巧是如果我在表格软件里选中一列数字，表格软件的状态栏会显示他们的总和和平均数。这是我在代工厂里上班的时候上司教我的。</p>
 
-<hr />
+<p><br /></p>
 
 <p>第二个表格用来显示一些自动算出的统计数字。下面的例子里分别是：总计一共花了多少钱、吃饭花多少钱、房租花多少钱。</p>
 
@@ -110,14 +123,14 @@
 </table>
 
 <p>第一行“总计”就是把金额列的总和算出来，这样我就知道了一共花了多少钱。公式是 <code class="language-plaintext highlighter-rouge">SUM(支出::金额)</code>。<br />
-<code class="language-plaintext highlighter-rouge">支出::</code> 是上面提到的第一个列表（<span lang="en">table</span>）；<br />
+<code class="language-plaintext highlighter-rouge">支出::</code> 是上面提到的第一个表（<span lang="en">table</span>）；<br />
 <code class="language-plaintext highlighter-rouge">金额</code> 是金额的那一列。<br />
 整个公式就是算那一列的总和。</p>
 
 <p>我计算吃饭花多少钱的时候用了一个 <code class="language-plaintext highlighter-rouge">SUMIF</code> 的公式。它能帮我算出来一个关键字对应的金额的总和。我的算式是 <code class="language-plaintext highlighter-rouge">SUMIF(支出::$关键字,$A3,支出::$金额)</code>。<br />
-算式里面的 <code class="language-plaintext highlighter-rouge">支出::$关键字</code> 是“支出”列表的“关键字”列，公式会观察这一列记下的所有的关键字，用它来跟我要的关键字匹配；<br />
+算式里面的 <code class="language-plaintext highlighter-rouge">支出::$关键字</code> 是“支出”表的“关键字”列，公式会观察这一列记下的所有的关键字，用它来跟我要的关键字匹配；<br />
 <code class="language-plaintext highlighter-rouge">$A3</code> 是告诉公式我要的关键字是哪个，公式会找对应这个关键字的行。它就是统计的表格里左边的关键字；<br />
-<code class="language-plaintext highlighter-rouge">支出::$金额</code> 是支出列表里的金额列，这个部分是告诉公式把这个数字加起来。</p>
+<code class="language-plaintext highlighter-rouge">支出::$金额</code> 是支出表里的金额列，这个部分是告诉公式把这个数字加起来。</p>
 
 <p>我算平均花费的办法不太精准。它是算从开始记账到现在的每天平均花了多少钱，再用这个数字算每周每月的数字。我也想不出来更好的算法，我就把这个数字当个估计吧。它的估计最准确时候是一周一月过完的时候。其他时候都只能当作一个大概的估计。</p>
 
@@ -172,7 +185,7 @@
   </tbody>
 </table>
 
-<hr />
+<p><br /></p>
 
 <p>现金的计算有点意思了。就是要写一个公式来算各个面额的纸币硬币加起来一共有多少钱。在我的表格里面我只需要输入我有多少个或多少张这种钱。</p>
 
@@ -190,19 +203,19 @@
       <td>10¢</td>
       <td>1</td>
       <td>0</td>
-      <td> </td>
+      <td>0.1</td>
     </tr>
     <tr>
       <td>20¢</td>
       <td>1</td>
       <td>0</td>
-      <td> </td>
+      <td>0.2</td>
     </tr>
     <tr>
       <td>50¢</td>
       <td>1</td>
       <td>0</td>
-      <td> </td>
+      <td>0.5</td>
     </tr>
     <tr>
       <td>$1</td>
@@ -214,37 +227,37 @@
       <td>$2</td>
       <td>1</td>
       <td>0</td>
-      <td> </td>
+      <td>2</td>
     </tr>
     <tr>
       <td>$5</td>
       <td>1</td>
       <td>0</td>
-      <td> </td>
+      <td>5</td>
     </tr>
     <tr>
       <td>$10</td>
       <td>1</td>
       <td>0</td>
-      <td> </td>
+      <td>10</td>
     </tr>
     <tr>
       <td>$20</td>
       <td>1</td>
       <td>0</td>
-      <td> </td>
+      <td>20</td>
     </tr>
     <tr>
       <td>$50</td>
       <td>1</td>
       <td>0</td>
-      <td> </td>
+      <td>50</td>
     </tr>
     <tr>
       <td>$100</td>
       <td>1</td>
       <td>0</td>
-      <td> </td>
+      <td>100</td>
     </tr>
     <tr>
       <td>总计</td>
@@ -261,7 +274,7 @@
 
 <p>现金的总额就是把钱包和小金库的总计结果加在一起。</p>
 
-<hr />
+<p><br /></p>
 
 <p>对账的表格可能稍微需要花点心思理解。</p>
 
@@ -318,7 +331,7 @@
 
 <h3 id="负债">负债</h3>
 
-<p>负债我还不确定我都需要知道什么，目前我只是粗略放了一个表格记下我什么时候借了多少。</p>
+<p>我还不确定我都需要记下来什么，因为我对于负债没什么经验。目前我只是粗略放了一个表格记下我什么时候借了多少。</p>
 
 <table>
   <thead>
@@ -359,7 +372,7 @@
 
 <h3 id="其他">其他</h3>
 
-<p>这里我放了一个拼单算钱工具和一个数天数的小表格。</p>
+<p>这里有一个拼单算钱表和一个计算记账天数的小表格。</p>
 
 <table>
   <thead>
@@ -372,7 +385,7 @@
   </thead>
   <tbody>
     <tr>
-      <td><strong>这一列的价格用上面的数字算平均</strong></td>
+      <td><strong>这一列的价格用来除以上面的数字算平均</strong></td>
       <td><strong>第一个人</strong></td>
       <td><strong>第二个人</strong></td>
       <td><strong>第三个人</strong></td>
@@ -398,7 +411,14 @@
   </tbody>
 </table>
 
-<p>现在最多就是算三个人，这是我很早以前做的了，现在不怎么用了。它要解决的问题是每个人有自己买的东西和一起分钱的东西。一起分钱的东西写进最左边的一列算平均，自己买的东西写在自己的那一列加上去。这样表格就会算出来每个人该付多少钱。</p>
+<p>这个表最多就算三个人，因为我没什么朋友吧。当每个人有自己买的东西和一起分钱的东西的时候用它算就安心一点。<br />
+一起分钱的东西写进最左边的一列算平均。每个人自己买的东西写在自己的那一列算总和。这样表格就会算出来每个人该付多少钱。</p>
+
+<p><br /></p>
+
+<p>计算天数的表是下面这样。<br />
+为了比较准确的算每个月的平均花费，我用每天的平均花费乘以这一年的月份平均有几天。比如平年就是 <code class="language-plaintext highlighter-rouge">365 ÷ 12 = 30.417</code>；<br />
+闰年就是 <code class="language-plaintext highlighter-rouge">366 ÷ 12 = 30.5</code>。</p>
 
 <table>
   <thead>
@@ -423,11 +443,15 @@
   </tbody>
 </table>
 
-<p>这个数天数的表格里有点难弄的是算出来记账多少天了，得去网上搜搜你用的表格软件怎么算。我用的软件里的算式是 <code class="language-plaintext highlighter-rouge">DATEDIF(B1,TODAY(),"D")</code>。里面的 <code class="language-plaintext highlighter-rouge">B1</code> 是开始算账的日期；<code class="language-plaintext highlighter-rouge">"D"</code> 是让它算出来天数。</p>
+<p>有点难弄的是最后一行的算记账多少天了。我用的算式是 <code class="language-plaintext highlighter-rouge">DATEDIF(B1,TODAY(),"D”)</code>。<br />
+里面的 <code class="language-plaintext highlighter-rouge">B1</code> 是引用上面的“开始算账的日期”；<br />
+<code class="language-plaintext highlighter-rouge">"D"</code> 是一个公式要求的参数，它让公式算出来天数而不是月数之类的。</p>
 
-<h2 id="最后一步做表格">最后一步：做表格</h2>
+<h2 id="最后一步动手做表格">最后一步：动手做表格</h2>
 
-<p>如果你熟悉用电子表格的话可以去网上搜索搜索就可以做出来啦。如果你不熟悉的话那就不好说了，得多花点些时间。慢慢花时间你肯定可以的。</p>]]></content><author><name></name></author><category term="words" /><summary type="html"><![CDATA[[toc] 第一步：理解问题]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">杂讯 Noise</title><link href="http://localhost:4000/photos/noise.html" rel="alternate" type="text/html" title="杂讯 Noise" /><published>2024-12-13T00:00:00+13:00</published><updated>2024-12-13T00:00:00+13:00</updated><id>http://localhost:4000/photos/noise</id><content type="html" xml:base="http://localhost:4000/photos/noise.html"><![CDATA[<p>我经常看到的一块大广告牌坏了，它原本应该显示广告的画面变成了不断闪动的灰白杂讯。我记得我小时候在电视上见到的这样的画面。好玩。可惜才过了一天这牌子就被修好了。搞笑的是过了大概一个星期之后它又坏了，然后我录下了一小段录像。</p>
+<p>如果你不熟悉使用电子自表格软件的话可能会多花点些时间。去网上搜索搜索会找到些有用的东西的。比如搜索“<span lang="en">Excel  DATEDIF</span>”这样的关键字。</p>
+
+<p>慢慢来你肯定可以的。祝你好运。</p>]]></content><author><name></name></author><category term="words" /><summary type="html"><![CDATA[第一步：理解问题 第二步：想好怎么用电子表格 第三步：理解电子表格的细节 收入 存款 负债 其他 最后一步：动手做表格]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">杂讯 Noise</title><link href="https://shon.li/photos/noise.html" rel="alternate" type="text/html" title="杂讯 Noise" /><published>2024-12-13T00:00:00+13:00</published><updated>2024-12-13T00:00:00+13:00</updated><id>https://shon.li/photos/noise</id><content type="html" xml:base="https://shon.li/photos/noise.html"><![CDATA[<p>我经常看到的一块大广告牌坏了，它原本应该显示广告的画面变成了不断闪动的灰白杂讯。我记得我小时候在电视上见到的这样的画面。好玩。可惜才过了一天这牌子就被修好了。搞笑的是过了大概一个星期之后它又坏了，然后我录下了一小段录像。</p>
 
 <p>后来我在网上冲浪的时候突然看到了“娱乐至死”这样的内容。我记得它里面说到媒介就是信息。当看电视看视频取代了读书读文章变成了人们获取信息的方式，这种行为上的改变也会造成思考习惯的改变。</p>
 
@@ -456,7 +480,7 @@
 
 <p lang="en">
   So the noise is always there, even if the billboard is fixed.
-</p>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[我经常看到的一块大广告牌坏了，它原本应该显示广告的画面变成了不断闪动的灰白杂讯。我记得我小时候在电视上见到的这样的画面。好玩。可惜才过了一天这牌子就被修好了。搞笑的是过了大概一个星期之后它又坏了，然后我录下了一小段录像。]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">Buttercup 毛茛</title><link href="http://localhost:4000/photos/buttercup.html" rel="alternate" type="text/html" title="Buttercup 毛茛" /><published>2024-12-09T00:00:00+13:00</published><updated>2024-12-09T00:00:00+13:00</updated><id>http://localhost:4000/photos/buttercup</id><content type="html" xml:base="http://localhost:4000/photos/buttercup.html"><![CDATA[<p lang="en">
+</p>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[我经常看到的一块大广告牌坏了，它原本应该显示广告的画面变成了不断闪动的灰白杂讯。我记得我小时候在电视上见到的这样的画面。好玩。可惜才过了一天这牌子就被修好了。搞笑的是过了大概一个星期之后它又坏了，然后我录下了一小段录像。]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">Buttercup 毛茛</title><link href="https://shon.li/photos/buttercup.html" rel="alternate" type="text/html" title="Buttercup 毛茛" /><published>2024-12-09T00:00:00+13:00</published><updated>2024-12-09T00:00:00+13:00</updated><id>https://shon.li/photos/buttercup</id><content type="html" xml:base="https://shon.li/photos/buttercup.html"><![CDATA[<p lang="en">
   I found this little yellow flower in Albert Park, and I am told it's called buttercup. Later I found its Chinese name (<ruby lang="zh">毛<rt>máo</rt>茛<rt>gèn</rt></ruby>), but disappointingly, I have never heard of that name before.
 </p>
 
@@ -482,7 +506,7 @@
 <blockquote>
   <p>你知道，你爱惜，花儿努力地开。<br />
 你不知，你厌恶，花儿努力地开。</p>
-</blockquote>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[I found this little yellow flower in Albert Park, and I am told it's called buttercup. Later I found its Chinese name (毛máo茛gèn), but disappointingly, I have never heard of that name before.]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">麻雀过得还好</title><link href="http://localhost:4000/words/sparrows-did-well.html" rel="alternate" type="text/html" title="麻雀过得还好" /><published>2024-12-07T00:00:00+13:00</published><updated>2024-12-07T00:00:00+13:00</updated><id>http://localhost:4000/words/sparrows-did-well</id><content type="html" xml:base="http://localhost:4000/words/sparrows-did-well.html"><![CDATA[<p>我阳台斜对角的房子水管上挂了一大簇枯死的像爬山虎一样的植物。我最近注意到麻雀在那簇看起来像垃圾的枯枝里面筑了一个巢。可能这就是为什么每天早上五点左右我都会听到尖锐的麻雀叫声吧。可能是小麻雀们早上在练嗓子。</p>
+</blockquote>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[I found this little yellow flower in Albert Park, and I am told it's called buttercup. Later I found its Chinese name (毛máo茛gèn), but disappointingly, I have never heard of that name before.]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">麻雀过得还好</title><link href="https://shon.li/words/sparrows-did-well.html" rel="alternate" type="text/html" title="麻雀过得还好" /><published>2024-12-07T00:00:00+13:00</published><updated>2024-12-07T00:00:00+13:00</updated><id>https://shon.li/words/sparrows-did-well</id><content type="html" xml:base="https://shon.li/words/sparrows-did-well.html"><![CDATA[<p>我阳台斜对角的房子水管上挂了一大簇枯死的像爬山虎一样的植物。我最近注意到麻雀在那簇看起来像垃圾的枯枝里面筑了一个巢。可能这就是为什么每天早上五点左右我都会听到尖锐的麻雀叫声吧。可能是小麻雀们早上在练嗓子。</p>
 
 <p>不知道为什么，我就是觉得麻雀特别可爱特别亲切。可能是因为我小时候见过他们吧，一些怀旧的感情就因此跟麻雀联系在了一起。当我看到麻雀的时候就会下意识的觉得自己也没有离开我曾经的家太远。麻雀还在。</p>
 
@@ -494,7 +518,7 @@
 
 <p>可是无论结果如何，我相信做人要知道怎样是好的，并且做好的事。</p>
 
-<p>我这样的观念是看<a href="https://youtube.com/watch?v=eWbqwcj9ALo">一个视频</a>了解到的。看过视频之后我决定看看视频里提到的书。如果 <span lang="en">Youtube</span> 打不开的话，这是哔哩哔哩的链接：<a href="https://www.bilibili.com/video/BV1p34y1E7GY/?share_source=copy_web">【<span lang="en">YouTube</span> 搬运】全球生态灾难的新解方：弃成长(<span lang="en">Degrowth) Jason Hickel</span> 《少即是多》</a>。</p>]]></content><author><name></name></author><category term="words" /><summary type="html"><![CDATA[我阳台斜对角的房子水管上挂了一大簇枯死的像爬山虎一样的植物。我最近注意到麻雀在那簇看起来像垃圾的枯枝里面筑了一个巢。可能这就是为什么每天早上五点左右我都会听到尖锐的麻雀叫声吧。可能是小麻雀们早上在练嗓子。]]></summary></entry><entry xml:lang="en"><title type="html">Learning Jekyll</title><link href="http://localhost:4000/words/learning-jekyll.html" rel="alternate" type="text/html" title="Learning Jekyll" /><published>2024-12-06T00:00:00+13:00</published><updated>2024-12-06T00:00:00+13:00</updated><id>http://localhost:4000/words/learning-jekyll</id><content type="html" xml:base="http://localhost:4000/words/learning-jekyll.html"><![CDATA[<p>I finally decided to use a static site generator. Tools like Jekyll once looked mysterious to me. After some irrelevant coding practices during my engineering study, I somehow feel more confident about learning to use them.</p>
+<p>我这样的观念是看<a href="https://youtube.com/watch?v=eWbqwcj9ALo">一个视频</a>了解到的。看过视频之后我决定看看视频里提到的书。如果 <span lang="en">Youtube</span> 打不开的话，这是哔哩哔哩的链接：<a href="https://www.bilibili.com/video/BV1p34y1E7GY/?share_source=copy_web">【<span lang="en">YouTube</span> 搬运】全球生态灾难的新解方：弃成长(<span lang="en">Degrowth) Jason Hickel</span> 《少即是多》</a>。</p>]]></content><author><name></name></author><category term="words" /><summary type="html"><![CDATA[我阳台斜对角的房子水管上挂了一大簇枯死的像爬山虎一样的植物。我最近注意到麻雀在那簇看起来像垃圾的枯枝里面筑了一个巢。可能这就是为什么每天早上五点左右我都会听到尖锐的麻雀叫声吧。可能是小麻雀们早上在练嗓子。]]></summary></entry><entry xml:lang="en"><title type="html">Learning Jekyll</title><link href="https://shon.li/words/learning-jekyll.html" rel="alternate" type="text/html" title="Learning Jekyll" /><published>2024-12-06T00:00:00+13:00</published><updated>2024-12-06T00:00:00+13:00</updated><id>https://shon.li/words/learning-jekyll</id><content type="html" xml:base="https://shon.li/words/learning-jekyll.html"><![CDATA[<p>I finally decided to use a static site generator. Tools like Jekyll once looked mysterious to me. After some irrelevant coding practices during my engineering study, I somehow feel more confident about learning to use them.</p>
 
 <p>I picked Jekyll because it is the classic – it is widely used and GitHub Page supports it well. So it is a perfect entry level tool for me. I want to understand how it works, so I can have a good sense about how other similar tools work. Also, I hope I can make my website more interesting for myself.</p>
 
@@ -504,7 +528,7 @@
 
 <p>I found something annoying – the apostrophe, “’”. It is always rendered in full width which is what I hate to see. My HTML file encoding is alright; CSS text align is non-negotiable; I want to use Markdown to simply writing. <del>So I am out of solution for now. I will try to avoid typing that key when I am writing here.</del> Agh… Turns out I only need to use a backslash to escape that character when writing in Markdown. <code class="language-plaintext highlighter-rouge">\'</code> gives '. Hahah… =D</p>
 
-<p>I will add some of my understandings about Jekyll here later.</p>]]></content><author><name></name></author><category term="words" /><summary type="html"><![CDATA[I finally decided to use a static site generator. Tools like Jekyll once looked mysterious to me. After some irrelevant coding practices during my engineering study, I somehow feel more confident about learning to use them.]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">你想写一句吗? What Will Your Verse Be?</title><link href="http://localhost:4000/words/verse.html" rel="alternate" type="text/html" title="你想写一句吗? What Will Your Verse Be?" /><published>2024-09-12T00:00:00+12:00</published><updated>2024-09-12T00:00:00+12:00</updated><id>http://localhost:4000/words/verse</id><content type="html" xml:base="http://localhost:4000/words/verse.html"><![CDATA[<table class="two-columns">
+<p>I will add some of my understandings about Jekyll here later.</p>]]></content><author><name></name></author><category term="words" /><summary type="html"><![CDATA[I finally decided to use a static site generator. Tools like Jekyll once looked mysterious to me. After some irrelevant coding practices during my engineering study, I somehow feel more confident about learning to use them.]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">你想写一句吗? What Will Your Verse Be?</title><link href="https://shon.li/words/verse.html" rel="alternate" type="text/html" title="你想写一句吗? What Will Your Verse Be?" /><published>2024-09-12T00:00:00+12:00</published><updated>2024-09-12T00:00:00+12:00</updated><id>https://shon.li/words/verse</id><content type="html" xml:base="https://shon.li/words/verse.html"><![CDATA[<table class="two-columns">
 
   <tr>
     <td>
@@ -610,12 +634,12 @@
 
 <div class="embedded-video video-16-9">
   <iframe src="https://www.youtube.com/embed/-7OE6bDfM2M" allowfullscreen="true"></iframe>
-</div>]]></content><author><name></name></author><category term="words" /><summary type="html"><![CDATA[]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">波纹</title><link href="http://localhost:4000/photos/ripples.html" rel="alternate" type="text/html" title="波纹" /><published>2024-02-12T00:00:00+13:00</published><updated>2024-02-12T00:00:00+13:00</updated><id>http://localhost:4000/photos/ripples</id><content type="html" xml:base="http://localhost:4000/photos/ripples.html"><![CDATA[<p>这是在阳光照射下，水滴落在一滩水上产生的倒影。画面里一圈圈的明暗变化让我看出了神。</p>
+</div>]]></content><author><name></name></author><category term="words" /><summary type="html"><![CDATA[]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">波纹</title><link href="https://shon.li/photos/ripples.html" rel="alternate" type="text/html" title="波纹" /><published>2024-02-12T00:00:00+13:00</published><updated>2024-02-12T00:00:00+13:00</updated><id>https://shon.li/photos/ripples</id><content type="html" xml:base="https://shon.li/photos/ripples.html"><![CDATA[<p>这是在阳光照射下，水滴落在一滩水上产生的倒影。画面里一圈圈的明暗变化让我看出了神。</p>
 
-<p>我想着像一个个大圆球一样的波在扩散。波与波相遇后发生的神奇的事情。如果两个波持续不停，那么他们可以叠加出驻波……这一大堆我还不知道的事，有点好玩，也有点让我觉得我永远都不会弄明白。</p>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[这是在阳光照射下，水滴落在一滩水上产生的倒影。画面里一圈圈的明暗变化让我看出了神。]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">闪光的沙子</title><link href="http://localhost:4000/photos/shiny-sand.html" rel="alternate" type="text/html" title="闪光的沙子" /><published>2023-01-18T00:00:00+13:00</published><updated>2023-01-18T00:00:00+13:00</updated><id>http://localhost:4000/photos/shiny-sand</id><content type="html" xml:base="http://localhost:4000/photos/shiny-sand.html"><![CDATA[<p>这是我跟朋友在 <span lang="en">Muriwai Beach</span> 玩时拍下的照片。那天阳光刺眼，海风微咸。我被地上闪着光的沙滩吸引了。那儿的沙颜色发黑，好像是因为富含矿物。</p>
+<p>我想着像一个个大圆球一样的波在扩散。波与波相遇后发生的神奇的事情。如果两个波持续不停，那么他们可以叠加出驻波……这一大堆我还不知道的事，有点好玩，也有点让我觉得我永远都不会弄明白。</p>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[这是在阳光照射下，水滴落在一滩水上产生的倒影。画面里一圈圈的明暗变化让我看出了神。]]></summary></entry><entry xml:lang="zh-Hans"><title type="html">闪光的沙子</title><link href="https://shon.li/photos/shiny-sand.html" rel="alternate" type="text/html" title="闪光的沙子" /><published>2023-01-18T00:00:00+13:00</published><updated>2023-01-18T00:00:00+13:00</updated><id>https://shon.li/photos/shiny-sand</id><content type="html" xml:base="https://shon.li/photos/shiny-sand.html"><![CDATA[<p>这是我跟朋友在 <span lang="en">Muriwai Beach</span> 玩时拍下的照片。那天阳光刺眼，海风微咸。我被地上闪着光的沙滩吸引了。那儿的沙颜色发黑，好像是因为富含矿物。</p>
 
-<p>我很喜欢这张照片，画面里人是遥远的、渺小的；沙是亲近的、渺小的。我上次把它放到网站上的时候配了一句“我是沙子，我要闪光的”。</p>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[这是我跟朋友在 Muriwai Beach 玩时拍下的照片。那天阳光刺眼，海风微咸。我被地上闪着光的沙滩吸引了。那儿的沙颜色发黑，好像是因为富含矿物。]]></summary></entry><entry xml:lang="en"><title type="html">Nonchalant</title><link href="http://localhost:4000/photos/nonchalant.html" rel="alternate" type="text/html" title="Nonchalant" /><published>2022-12-29T00:00:00+13:00</published><updated>2022-12-29T00:00:00+13:00</updated><id>http://localhost:4000/photos/nonchalant</id><content type="html" xml:base="http://localhost:4000/photos/nonchalant.html"><![CDATA[<p>I took this photo in the Auckland Zoo. This lizard stayed still the whole time while I was around. I see pride and disgust on its face.</p>
+<p>我很喜欢这张照片，画面里人是遥远的、渺小的；沙是亲近的、渺小的。我上次把它放到网站上的时候配了一句“我是沙子，我要闪光的”。</p>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[这是我跟朋友在 Muriwai Beach 玩时拍下的照片。那天阳光刺眼，海风微咸。我被地上闪着光的沙滩吸引了。那儿的沙颜色发黑，好像是因为富含矿物。]]></summary></entry><entry xml:lang="en"><title type="html">Nonchalant</title><link href="https://shon.li/photos/nonchalant.html" rel="alternate" type="text/html" title="Nonchalant" /><published>2022-12-29T00:00:00+13:00</published><updated>2022-12-29T00:00:00+13:00</updated><id>https://shon.li/photos/nonchalant</id><content type="html" xml:base="https://shon.li/photos/nonchalant.html"><![CDATA[<p>I took this photo in the Auckland Zoo. This lizard stayed still the whole time while I was around. I see pride and disgust on its face.</p>
 
-<p>This photo helped me to remember this word – nonchalant.</p>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[I took this photo in the Auckland Zoo. This lizard stayed still the whole time while I was around. I see pride and disgust on its face.]]></summary></entry><entry xml:lang="en"><title type="html">Orchy</title><link href="http://localhost:4000/photos/phatom-of-moth-orchids.html" rel="alternate" type="text/html" title="Orchy" /><published>2021-08-21T00:00:00+12:00</published><updated>2021-08-21T00:00:00+12:00</updated><id>http://localhost:4000/photos/phatom-of-moth-orchids</id><content type="html" xml:base="http://localhost:4000/photos/phatom-of-moth-orchids.html"><![CDATA[<p>This my friend Orchy. He was a lovely pink orchid. I wanted to take care of him, but sadly I didn't do well.</p>
+<p>This photo helped me to remember this word – nonchalant.</p>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[I took this photo in the Auckland Zoo. This lizard stayed still the whole time while I was around. I see pride and disgust on its face.]]></summary></entry><entry xml:lang="en"><title type="html">Orchy</title><link href="https://shon.li/photos/phatom-of-moth-orchids.html" rel="alternate" type="text/html" title="Orchy" /><published>2021-08-21T00:00:00+12:00</published><updated>2021-08-21T00:00:00+12:00</updated><id>https://shon.li/photos/phatom-of-moth-orchids</id><content type="html" xml:base="https://shon.li/photos/phatom-of-moth-orchids.html"><![CDATA[<p>This my friend Orchy. He was a lovely pink orchid. I wanted to take care of him, but sadly I didn't do well.</p>
 
 <p>Anyway, I had a great time with him. To save myself some trouble, I will not take any new plants home again.</p>]]></content><author><name></name></author><category term="photos" /><summary type="html"><![CDATA[This my friend Orchy. He was a lovely pink orchid. I wanted to take care of him, but sadly I didn't do well.]]></summary></entry></feed>

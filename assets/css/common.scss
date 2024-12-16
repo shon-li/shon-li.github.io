@@ -143,6 +143,12 @@ h1, h2, h3, h4, h5, h6 {
 ol,
 ul {
   margin: 1rem auto;
+
+  li ol,
+  li ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 pre,
