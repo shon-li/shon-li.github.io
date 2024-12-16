@@ -2,15 +2,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "Jekyll Build",
-      "type": "shell",
-      "command": "JEKYLL_ENV=production bundle exec jekyll build",
-      "group": "build"
-    },
-    {
       "label": "Jekyll Preview",
       "type": "shell",
-      "command": "JEKYLL_ENV=production bundle exec jekyll serve",
+      "command": "JEKYLL_ENV=production bundle exec jekyll serve -l",
       "group": "test"
     },
     {

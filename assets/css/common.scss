@@ -293,8 +293,13 @@ footer {
 }
 
 @media print {
+  :root {
+    font-size: normal;
+  }
+
   body,
   main {
+    width: max-content;
     background-color: white !important;
   }
 
@@ -303,8 +308,8 @@ footer {
   }
 
   main {
-    margin: -1rem auto;
-    padding: auto;
+    margin: auto;
+    padding: 1.5rem;
   }
 
   article {
