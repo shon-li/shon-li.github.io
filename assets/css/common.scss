@@ -224,17 +224,11 @@ footer {
   }
 }
 
-                           // Set breakpoint at a width that is a bit wider than desired paper width
+// Set breakpoint at a width that is a bit wider than desired paper width
 @media screen and ( max-width: 46rem ) {                         // 46 rem ~= `--paper_width` + 4rem
   main {
-    min-width: auto;
-    max-width: auto;
     margin: .8rem ;
     padding: 1.8rem;
-  }
-
-  .figure-page {                        // `.figure-page` selects `main` in '/_layouts/default.html'
-    margin-top: 6rem;
   }
 
   article {
@@ -260,23 +254,10 @@ footer {
     max-width: 9em;
   }
 
-  blockquote {
-    margin-left: .75rem;
-    margin-right: .75rem;
-  }
-
     a,
   pre,
   code {
     word-break: break-all;
-  }
-
-  figure {
-    img,
-    video {
-      max-width: 88vw;
-      max-height: 88vh;
-    }
   }
 
   footer {
@@ -289,6 +270,14 @@ footer {
       flex-direction: column;
       row-gap: 2em;
     }
+  }
+}
+
+// A new break point for small phone screens
+@media screen and ( max-width: 400px ) {
+  main {
+    margin: 0;
+    padding: 1.5rem;
   }
 }
 
