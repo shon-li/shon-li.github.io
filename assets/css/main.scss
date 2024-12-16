@@ -206,71 +206,7 @@ footer {
   }
 }
 
-/*--------------------------------- 3. Special page overwrites -----------------------------------*/
-
-.figure-page {                          // `.figure-page` selects `main` in '/_layouts/default.html'
-  margin-top: 4rem;
-}
-
-.figure-page-footer {          // `.figure-page-footer` selects `footer` in '/_includes/footer.html'
-  margin-bottom: 8rem;
-}
-
-.post-page {                              // `.post-page` selects `body` in '/_layouts/default.html'
-  article {
-    padding-left: 0;
-    letter-spacing: .125em;
-    text-align: justify;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin: auto;
-    text-align: center;
-  }
-}
-
-.en-page {                                  // `.en-page` selects `body` in '/_layouts/default.html'
-  article {
-    letter-spacing: normal;
-    word-spacing: .1em;
-    text-align: justify;
-    hyphens: auto !important;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    margin: auto;
-    word-spacing: .2em;
-  }
-}
-
-.two-columns {                                      // `two-columns` selects a `table` inside a post
-  td {
-    width: 50%;
-    border: none;
-    text-align: left;
-    vertical-align: top;
-  }
-
-  tr {
-    border-bottom: 1.25rem solid transparent;
-  }
-
-  :first-child {
-    td {
-      padding-top: 0;
-    }
-  }
-
-  :last-child {
-    border-bottom: none;
-
-    td {
-      padding-bottom: 0;
-    }
-  }
-}
-
-/*-------------------------- 4. Adjust to color scheme or width change ---------------------------*/
+/*-------------------------- 3. Adjust to color scheme or width change ---------------------------*/
 
 @media (prefers-color-scheme: light) {
   body {
