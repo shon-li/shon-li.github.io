@@ -1,5 +1,5 @@
 ---
-# Empty front matter that makes Jekyll process this file
+# These styles load for all pages
 ---
 
 /*-------------------------------------- 0. Initialisation ---------------------------------------*/
@@ -42,7 +42,41 @@ body {
   }
 }
 
-/*--------------------------------------- 1. Page & Main -----------------------------------------*/
+/*--------------------------------------- 1. Common Pages ----------------------------------------*/
+
+a:link,
+a:visited {
+  padding-bottom: 1px;
+  color: var(--color_text);
+  border-bottom: 1px dotted var(--color_text);
+  text-decoration: none;
+}
+
+.url{                                          // `.url` selects `a` marked as url text on all pages
+  font-family: "Roboto Mono", monospace;
+}
+
+a:hover {
+  text-decoration: none;
+
+  animation-name: underlineAnimation;
+  animation-timing-function: ease;
+  animation-duration: 1.5s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes underlineAnimation {
+  0% {
+    border-bottom: 1px solid var(--color_accent);
+  }
+
+  100% {
+    opacity: 1;
+    border-bottom: .25em solid var(--color_accent);
+  }
+}
 
 body {
   min-width: 16.5rem;
@@ -83,8 +117,6 @@ article {
   }
 }
 
-/*----------------------------------------- 2. Elements ------------------------------------------*/
-
 h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en), h5:lang(en), h6:lang(en),
 p:lang(en),
 li:lang(en),
@@ -95,22 +127,6 @@ blockquote:lang(en) {
   letter-spacing: normal;
   word-spacing: .08em;
   hyphens: none;
-}
-
-ruby:lang(zh) {
-  letter-spacing: .125em;
-}
-
-rt {
-  margin-bottom: -.35em;
-  font-family: "Noto Sans SC", sans-serif;
-  font-size: x-small;
-  font-weight: 450;
-  letter-spacing: .125em;
-}
-
-ruby {
-  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -150,115 +166,7 @@ code {
   padding: 0 .25em;
 }
 
-blockquote {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-
-cite {
-  font-style: italic;
-}
-
-.url{                                          // `.url` selects `a` marked as url text on all pages
-  font-family: "Roboto Mono", monospace;
-}
-
-a:link,
-a:visited {
-  padding-bottom: 1px;
-  color: var(--color_text);
-  border-bottom: 1px dotted var(--color_text);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-
-  animation-name: underlineAnimation;
-  animation-timing-function: ease;
-  animation-duration: 1.5s;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes underlineAnimation {
-  0% {
-    border-bottom: 1px solid var(--color_accent);
-  }
-
-  100% {
-    opacity: 1;
-    border-bottom: .25em solid var(--color_accent);
-  }
-}
-
-figure {
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  align-items: center;
-
-  img,
-  video {
-    max-width: 82vw;
-    max-height: 82vh;
-    margin: auto;
-    border-radius: 2px;
-    object-fit: scale-down;
-  }
-}
-
-article {
-  img,
-  video {
-    width: 100%;
-    height: auto;
-    border-radius: 2px;
-    object-fit: scale-down;
-  }
-
-  table {
-  width: 100%;
-  margin: 1.5em auto;
-  border-collapse: collapse;
-
-    th,
-    td {
-      padding: .25em .5em;
-      border: 1px var(--color_text) dotted;
-      letter-spacing: normal;
-      vertical-align: top;
-    }
-  }
-}
-
-.embedded-video {                // `embedded-video` selects `div` in '/_includes/youtubeVideo.html'
-  max-width: 100%;
-  height: fit-content;
-  margin-top: 4rem;
-  margin-bottom: 0;
-  position: relative;
-  overflow: hidden;
-
-  iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 2px;
-    border: none;
-  }
-}
-
-.video-16-9 {                       // `.video-16-9` selects `div` in '/_includes/youtubeVideo.html'
-  padding-top: 56.25%;                                                     // 100% * 9 / 16 = 56.25%
-}
-
-/*------------------------------------------ 3. Footer -------------------------------------------*/
+/*------------------------------------------ 2. Footer -------------------------------------------*/
 
 footer {
   max-width: fit-content;
@@ -298,7 +206,7 @@ footer {
   }
 }
 
-/*--------------------------------- 4. Special page overwrites -----------------------------------*/
+/*--------------------------------- 3. Special page overwrites -----------------------------------*/
 
 .figure-page {                          // `.figure-page` selects `main` in '/_layouts/default.html'
   margin-top: 4rem;
@@ -362,7 +270,7 @@ footer {
   }
 }
 
-/*-------------------------- 5. Adjust to color scheme or width change ---------------------------*/
+/*-------------------------- 4. Adjust to color scheme or width change ---------------------------*/
 
 @media (prefers-color-scheme: light) {
   body {
