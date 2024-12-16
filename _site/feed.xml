@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-16T13:37:17+13:00</updated><id>https://shon.li/feed.xml</id><entry xml:lang="zh-Hans"><title type="html">我怎么用电子表格记账</title><link href="https://shon.li/words/money-tracking.html" rel="alternate" type="text/html" title="我怎么用电子表格记账" /><published>2024-12-15T00:00:00+13:00</published><updated>2024-12-15T00:00:00+13:00</updated><id>https://shon.li/words/money-tracking</id><content type="html" xml:base="https://shon.li/words/money-tracking.html"><![CDATA[<h2 id="第一步理解问题">第一步：理解问题</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-16T15:07:51+13:00</updated><id>https://shon.li/feed.xml</id><entry xml:lang="zh-Hans"><title type="html">我怎么用电子表格记账</title><link href="https://shon.li/words/money-tracking.html" rel="alternate" type="text/html" title="我怎么用电子表格记账" /><published>2024-12-15T00:00:00+13:00</published><updated>2024-12-15T00:00:00+13:00</updated><id>https://shon.li/words/money-tracking</id><content type="html" xml:base="https://shon.li/words/money-tracking.html"><![CDATA[<h2 id="第一步理解问题">第一步：理解问题</h2>
 
-<p>解决问题的第一步是弄明白都要干啥。在过去的几年里我都不太确定我要搞明白什么。最一开始我只是想要记下来我都把钱花哪儿了。后来我想知道明确的知道我一共有多少钱。再后来我赚钱了，我想知道收入减去支出之后还剩多少。明年我就要借学生贷款了，我得知道我会欠多少钱。</p>
+<p>解决问题的第一步是弄明白都要干啥。在过去的几年里我都不太确定我要搞明白什么。最一开始我只是想要记下来我都把钱花哪儿了。后来我想准确地知道我一共有多少钱。再后来我赚钱了，我想知道收入减去支出之后还剩多少。明年我就要借学生贷款了，我得知道我会欠多少钱。</p>
+
+<p>我从 2020 年开始用电子表格记账。我从别人做的模板开始学习，后来自己慢慢改。我每年都试着做些调整。我因为想把所有的记录都写在一个大表格里，搞得到处都是字，很复杂。我今天开始为明年做新的表格了，做的时候我就觉得其实我之前弄的很多数字我都不在乎，看起来也没那么方便。所以我一边做一边试着简化我对问题的理解。试着试着就得到了这样的结果。</p>
 
 <p>所以现在看来我记账要搞清楚的问题是：</p>
-
 <ol>
-  <li>我现在一共有多少钱？</li>
   <li>我花了多少钱？平均一星期花多少？都花哪儿了？</li>
   <li>我赚了多少钱？平均一星期赚多少？都怎么赚的？</li>
+  <li>我现在一共有多少钱？</li>
   <li>我欠了多少债？怎么欠的？</li>
 </ol>
 
-<p>我从 2020 年开始用电子表格记账。我从别人做的模板开始学习，后来自己慢慢改。我以为我每年都在进步，我还弄了个很酷的柱状图，可以看我哪个星期花钱最多。我因为想把所有的记录都写在一个大表格里，搞得到处都是字，很复杂。我今天开始为明年做新的表格了，做的时候我就觉得其实我之前弄的很多数字我都不在乎，看起来也没那么方便。所以我一边做一边试着简化我对问题的理解。试着试着就得到了上面的结果。</p>
+<h2 id="第二步想好怎么用电子表格">第二步：想好怎么用电子表格</h2>
 
-<h2 id="第二步电子表格大概要怎么弄">第二步：电子表格大概要怎么弄</h2>
+<p>我对应上面的每个问题都单独做了一个表单（<span lang="en">sheet</span>）。又额外做了一个叫做“其他”的表单，在里面放了一个算数用的列表和计算天数的列表（<span lang="en">table</span>），天数是用来帮我算平均花费的。</p>
 
-<p>我对应上面的每个问题都单独弄了一个表单（<span lang="en">sheet</span>）。最后又加了一个叫做其他的表单，里面放了跟别人拼单的时候用的计算表格，还有数一共过了多少天，每个月平均有多少天的表格。</p>
+<p>我一共有下面这五个表单。我一般每个周末都会打开表格把每个表单里的记录更新一下。每个表单也都会显示一些对我来说有用的统计结果，比如从开始记账到现在我一共花了多少钱、吃饭一共花了多少钱、平均每周吃饭花多少钱、每个月平均吃饭花多少钱。</p>
 
 <ol>
   <li>支出</li>
@@ -25,9 +26,19 @@
   <li>其他</li>
 </ol>
 
+<h2 id="第三步制作电子表格的细节">第三步：制作电子表格的细节</h2>
+
+<p>我用的表格软件是斥巨资买苹果电脑送的 <span lang="en">Numbers</span>，我下面写的计算公式都是它的格式。各个表格软件比如微软的 <span lang="en">Excel</span> 和 <span lang="en">Libre Office</span> 开源免费的 <span lang="en">Calc</span> 公式都大同小异。你去网上搜索搜索应该都是可以弄明白我用的公式在它里面怎么写。</p>
+
+<p>提一嘴我讨厌的表格软件是金山的 <span lang="en">WPS</span>。不是因为它不好用，而是因为里面全是广告。但是如果它对你来说用起来比较顺手的话就用它吧。我把自己的表格文件上传到了网盘，以免我在电脑上弄丢了或者出了意外。提醒你一下也要做好备份噢。</p>
+
+<p>下面来看看我是怎么做每个表单的吧。</p>
+
 <h3 id="支出">支出</h3>
 
-<p>在支出页面里，我放了两个表格，分别是下面这样。</p>
+<p>在支出表单里，我放了两个表格。</p>
+
+<p>第一个表格就一直往下填每次花了多少钱，像下面这样。我每次记账的时候都会写一个关键字，比如吃饭和房租。记下来日期可以方便我自己去看看每周花了多少钱。</p>
 
 <table>
   <thead>
@@ -41,7 +52,7 @@
   </thead>
   <tbody>
     <tr>
-      <td>饭</td>
+      <td>吃饭</td>
       <td>9</td>
       <td>不确定写什么，但这里要宽一点。</td>
       <td>1/1/2025</td>
@@ -57,6 +68,15 @@
   </tbody>
 </table>
 
+<p>我的周号是让表格自动帮我算的，我用的计算公式（函数）是 <code class="language-plaintext highlighter-rouge">WEEKNUM(D2,2)</code>。<br />
+<code class="language-plaintext highlighter-rouge">D2</code> 是周号左边的日期单元格。<br />
+<code class="language-plaintext highlighter-rouge">2</code> 是公式要求我告诉它把星期一当作一周里的第一天。我想显示周号是因为它比日期更直观得告诉我哪些记录是在同一个星期里的。<br />
+一个我知道的小技巧是如果我在表格软件里选中一列数字，表格软件的状态栏会显示他们的总和和平均数。这是我在台湾代工厂里的上司教我的呢。</p>
+
+<hr />
+
+<p>第二个表格用来显示一些自动算出的统计数字。下面的例子里分别是：总计一共花了多少钱、吃饭花多少钱、房租花多少钱。</p>
+
 <table>
   <thead>
     <tr>
@@ -68,7 +88,13 @@
   </thead>
   <tbody>
     <tr>
-      <td>饭</td>
+      <td>总计</td>
+      <td>108</td>
+      <td>108 ÷ 1 × 7 = 756</td>
+      <td>108 ÷ 1 × 30.42 = 3,285.36</td>
+    </tr>
+    <tr>
+      <td>吃饭</td>
       <td>9</td>
       <td>9 ÷ 1 × 7 = 63</td>
       <td>9 ÷ 1 × 30.42 = 273.78</td>
@@ -79,26 +105,39 @@
       <td>99 ÷ 1 × 7 = 693</td>
       <td>99 ÷ 1 × 30.42 = 3,011.58</td>
     </tr>
-    <tr>
-      <td>总计</td>
-      <td>108</td>
-      <td>108 ÷ 1 × 7 = 756</td>
-      <td>108 ÷ 1 × 30.42 = 3,285.36</td>
-    </tr>
   </tbody>
 </table>
 
-<p>大概就像这样，我每次记账的时候都会写一个关键字，比如房租啊网费啊这些。第二个表格会用一个 <code class="language-plaintext highlighter-rouge">SUMIF</code> 的计算方法（函数）算出来这个关键字对应的金额是多少。然后我用从开始记账到今天过了多少天来算每天的平均花费，再用每天的平均花费算每周每月的平均。</p>
+<p>第一行“总计”就是把金额列的总和算出来，这样我就知道了一共花了多少钱。公式是 <code class="language-plaintext highlighter-rouge">SUM(支出::金额)</code>。<br />
+<code class="language-plaintext highlighter-rouge">支出::</code> 是上面提到的第一个列表（<span lang="en">table</span>）；<br />
+<code class="language-plaintext highlighter-rouge">金额</code> 是金额的那一列。<br />
+整个公式就是算那一列的总和。</p>
 
-<p>我在算平均的时候是用小结除以已经过了几天。我是怎么算出来过了多少天呢？那就是在我的“其他”表格里面了，我在那里记下了记账的开始日期，比如从 2024 年的最后一天开始记账。然后在表格软件里找到办法自动获得今天的日期，用今天的日期减去 2024 的最后一天就可以知道从开始记账过了多少天了。接下来就是手算一下今年是不是闰年，今年一个月平均有多少天了。</p>
+<p>我计算吃饭花多少钱的时候用了一个 <code class="language-plaintext highlighter-rouge">SUMIF</code> 的公式。它能帮我算出来一个关键字对应的金额的总和。我的算式是 <code class="language-plaintext highlighter-rouge">SUMIF(支出::$关键字,$A3,支出::$金额)</code>。<br />
+算式里面的 <code class="language-plaintext highlighter-rouge">支出::$关键字</code> 是“支出”列表的“关键字”列，公式会观察这一列记下的所有的关键字，用它来跟我要的关键字匹配；<br />
+<code class="language-plaintext highlighter-rouge">$A3</code> 是告诉公式我要的关键字是哪个，公式会找对应这个关键字的行。它就是统计的表格里左边的关键字；<br />
+<code class="language-plaintext highlighter-rouge">支出::$金额</code> 是支出列表里的金额列，这个部分是告诉公式把这个数字加起来。</p>
+
+<p>我算平均花费的办法不太精准。它是算从开始记账到现在的每天平均花了多少钱，再用这个数字算每周每月的数字。我也想不出来更好的算法，我就把这个数字当个估计吧。它的估计最准确时候是一周一月过完的时候。其他时候都只能当作一个大概的估计。</p>
+
+<p>我是怎么算出来过了多少天呢？<br />
+在我的“其他”表格里面，我有一个地方记下了记账的开始日期，比如从 2024 年的最后一天。<br />
+然后我有了一个公式用今天的日期减去 2024 的最后一天来算出开始记账了多少天。文章下面在“其他”表单的部分会告诉你。</p>
 
 <h3 id="收入">收入</h3>
 
-<p>我在收入跟支出里的计算方法是一模一样的。就还是同样的两个表格，类似的逻辑。不过我现在要等找到实习工作才会真的用到这个表格了。</p>
+<p>收入跟支出的计算方法是一模一样的，是相似的两个表单。同样的算式。改改表单和关键字的名字就好。</p>
 
 <h3 id="存款">存款</h3>
 
-<p>存款里有三个表格。前两个记银行和现金一共有多少。最后一个用来看记账是不是漏记了。</p>
+<p>存款里有三个表格：</p>
+<ol>
+  <li>记银行里有多少钱。</li>
+  <li>记现金有多少。</li>
+  <li>对账。确认一下没有多记或者漏记。</li>
+</ol>
+
+<p>对我来说，银行的部分就是把各个账户里的钱输进去而已。这个表格会算出来加起来我银行里一共有多少钱，像下面最后一列这样。</p>
 
 <table>
   <thead>
@@ -122,7 +161,7 @@
     <tr>
       <td>其他账户</td>
       <td>0</td>
-      <td> </td>
+      <td>可以在这里记定期存款之类的确定可以收回来的投资</td>
     </tr>
     <tr>
       <td>总计</td>
@@ -131,6 +170,10 @@
     </tr>
   </tbody>
 </table>
+
+<hr />
+
+<p>现金的计算有点意思了。就是要写一个公式来算各个面额的纸币硬币加起来一共有多少钱。在我的表格里面我只需要输入我有多少个或多少张这种钱。</p>
 
 <table>
   <thead>
@@ -203,13 +246,29 @@
       <td> </td>
     </tr>
     <tr>
-      <td>Total</td>
+      <td>总计</td>
       <td>188.8</td>
       <td>0</td>
       <td> </td>
     </tr>
   </tbody>
 </table>
+
+<p>对于左边的钱包列，我的算式是：<code class="language-plaintext highlighter-rouge">0.1×B$2 + 0.2×B$3 + 0.5×B$4 + B$5 + 2×B$6 + 5×B$7 + 10×B$8 + 20×B$9 + 50×B$10 + 100×B$11</code>。<br />
+公式里的美元符号 <code class="language-plaintext highlighter-rouge">$</code> 是用来锁定它后面的行号的。加这个的作用是我在把公式往右复制或者拓展的时候表格软件更不容易出错。这是个我最近在学校里学到的小技巧呢。<br />
+接下来把公式复制到右边的小金库列应该就可以直接用了。你想要再多加几个小金库列都可以直接加。</p>
+
+<p>现金的总额就是把钱包和小金库的总计结果加在一起。</p>
+
+<hr />
+
+<p>对账的表格可能稍微需要花点心思理解。</p>
+
+<p>我在这里不仅记下了去年的存款，还记下了往前两年的存款，只是为了大概看看每年我的存款变化。实际上只有去年的存款，也就是<strong>开始记账的日期的存款金额</strong>才是对账用到的数字。</p>
+
+<p>来看下面的表格吧。第一行右边的数字会告诉我有咩有记错账。如果等于零就说明没有记错。请看我下面怎么解释我的思路。<br />
+现有存款就是我现在表格里的银行与现金的总和相加。这个数字就是我自己也可以数出来的我一共有多少钱。<br />
+“收入减支出”是我的“收入”和“支出”两个表单里面的总和数字相减。这个数字的意义是根据我记下来的账，我的攒下来了多少钱，或者我花掉了多少钱。我下面把这个概念叫做“金额变化”。</p>
 
 <table>
   <thead>
@@ -221,28 +280,30 @@
   <tbody>
     <tr>
       <td>现有存款</td>
-      <td>$‎	1</td>
+      <td>$	1</td>
     </tr>
     <tr>
       <td>2024 余额</td>
-      <td>$‎	0</td>
+      <td>$	0</td>
     </tr>
     <tr>
       <td>2023 余额</td>
-      <td>$‎	0</td>
+      <td>$	0</td>
     </tr>
     <tr>
       <td>2022 余额</td>
-      <td>$‎	0</td>
+      <td>$	0</td>
     </tr>
     <tr>
-      <td>收入 – 支出</td>
-      <td><strong>$‎	1</strong></td>
+      <td>收入减支出</td>
+      <td><strong>$	1</strong></td>
     </tr>
   </tbody>
 </table>
 
-<p>现在有的存款减去去年的存款可以知道<strong>实际上的金额变化；</strong>收入减去支出得到的是从开始记账到现在<strong>账上记录的金额变化。</strong>这两个数字应该相等。也就是说：</p>
+<p>我是怎么得到对账那行的算式呢？<br />
+“现有存款”减“去年的存款”可以知道<strong>实际上的金额变化；</strong><br />
+“收入减支出”得到的是从开始记账到现在<strong>账上记录的金额变化。</strong>这两个数字应该相等。也就是说：</p>
 
 <p>现有存款 − 去年存款 = 收入 − 支出 <br />
 现有存款 − 去年存款 – 收入 + 支出 = 零</p>
