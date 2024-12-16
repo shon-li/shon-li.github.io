@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-16T19:32:36+13:00</updated><id>https://shon.li/feed.xml</id><entry xml:lang="zh-Hans"><title type="html">我怎么用电子表格记账</title><link href="https://shon.li/words/money-tracking.html" rel="alternate" type="text/html" title="我怎么用电子表格记账" /><published>2024-12-15T00:00:00+13:00</published><updated>2024-12-15T00:00:00+13:00</updated><id>https://shon.li/words/money-tracking</id><content type="html" xml:base="https://shon.li/words/money-tracking.html"><![CDATA[<ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://shon.li/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shon.li/" rel="alternate" type="text/html" /><updated>2024-12-16T19:46:23+13:00</updated><id>https://shon.li/feed.xml</id><entry xml:lang="zh-Hans"><title type="html">我怎么用电子表格记账</title><link href="https://shon.li/words/money-tracking.html" rel="alternate" type="text/html" title="我怎么用电子表格记账" /><published>2024-12-15T00:00:00+13:00</published><updated>2024-12-15T00:00:00+13:00</updated><id>https://shon.li/words/money-tracking</id><content type="html" xml:base="https://shon.li/words/money-tracking.html"><![CDATA[<ul>
   <li><a href="#第一步理解问题">第一步：理解问题</a></li>
   <li><a href="#第二步想好怎么用电子表格">第二步：想好怎么用电子表格</a></li>
   <li><a href="#第三步理解电子表格的细节">第三步：理解电子表格的细节</a>
@@ -16,7 +16,7 @@
 
 <p>解决问题的第一步是弄明白都要干啥。在过去的几年里我都不太确定我要搞明白什么。最一开始我只是想要记下来我都把钱花哪儿了。后来我想准确地知道我一共有多少钱。再后来我赚钱了，我想知道收入减去支出之后还剩多少。明年我就要借学生贷款了，我得知道我会欠多少钱。</p>
 
-<p>我从 2020 年开始用电子表格记账。我从别人做的模板开始学习，后来自己慢慢改。我每年都试着做些调整。我因为想把所有的记录都写在一个大表格里，搞得到处都是字，很复杂。我今天开始为明年做新的表格了，做的时候我就觉得其实我之前弄的很多数字我都不在乎，看起来也没那么方便。所以我一边做一边试着简化我对问题的理解。试着试着就得到了这样的结果。</p>
+<p>我从 2020 年开始用电子表格记账。从别人做的模板开始学习，后来自己慢慢改。我每年都试着做些调整。我因为想把所有的记录都写在一个大表格里，搞得到处都是字，很复杂。我今天开始为明年做新的表格了，做的时候我就觉得其实我之前弄的很多数字我都不在乎，看起来也没那么方便。所以我一边做一边试着简化我对问题的理解。试着试着就得到了这样的结果。</p>
 
 <p>所以现在看来我记账要搞清楚的问题是：</p>
 <ol>
@@ -28,7 +28,7 @@
 
 <h2 id="第二步想好怎么用电子表格">第二步：想好怎么用电子表格</h2>
 
-<p>我对应上面的每个问题都单独做了一个表单（<span lang="en">sheet</span>）。又额外做了一个叫做“其他”的表单，在里面放了一个算数用的表和计算天数的表（<span lang="en">table</span>），天数是用来帮我算平均花费的。</p>
+<p>我对应上面的每个问题都单独做了一个表单（<span lang="en">sheet</span>）。又额外做了一个叫做“其他”的表单，在里面放了一个算数用的表（<span lang="en">table</span>）和计算天数的表，天数是用来帮我算平均花费的。</p>
 
 <p>我一共有下面这五个表单。我一般每个周末都会打开表格把每个表单里的记录更新一下。每个表单也都会显示一些对我来说有用的统计结果，比如从开始记账到现在我一共花了多少钱、吃饭一共花了多少钱、平均每周吃饭花多少钱、每个月平均吃饭花多少钱。</p>
 
@@ -135,7 +135,7 @@
 <p>我算平均花费的办法不太精准。它是算从开始记账到现在的每天平均花了多少钱，再用这个数字算每周每月的数字。我也想不出来更好的算法，我就把这个数字当个估计吧。它的估计最准确时候是一周一月过完的时候。其他时候都只能当作一个大概的估计。</p>
 
 <p>我是怎么算出来过了多少天呢？<br />
-在我的“其他”表格里面，我有一个地方记下了记账的开始日期，比如从 2024 年的最后一天。<br />
+在我的“其他”表格里面，我有一个地方记下了记账的开始日期，比如 2024 年的最后一天。<br />
 然后我有了一个公式用今天的日期减去 2024 的最后一天来算出开始记账了多少天。文章下面在“其他”表单的部分会告诉你。</p>
 
 <h3 id="收入">收入</h3>
@@ -165,7 +165,7 @@
     <tr>
       <td>银行的现金账户（支票账户）</td>
       <td>0</td>
-      <td>这账户是刷卡直接扣款的地方，但是它不给利息</td>
+      <td>这账户是刷卡直接扣款的地方，但是它不给利息。</td>
     </tr>
     <tr>
       <td>有利息的存款账户（<span lang="en">Saving</span>）</td>
@@ -175,7 +175,7 @@
     <tr>
       <td>其他账户</td>
       <td>0</td>
-      <td>可以在这里记定期存款之类的确定可以收回来的投资</td>
+      <td>可以在这里记定期存款之类的确定可以收回来的投资。</td>
     </tr>
     <tr>
       <td>总计</td>
@@ -278,11 +278,11 @@
 
 <p>对账的表格可能稍微需要花点心思理解。</p>
 
-<p>我在这里不仅记下了去年的存款，还记下了往前两年的存款，只是为了大概看看每年我的存款变化。实际上只有去年的存款，也就是<strong>开始记账的日期的存款金额</strong>才是对账用到的数字。</p>
+<p>我在这里不仅记下了去年的存款，还记下了前两年的存款，只是为了大概看看每年我的存款变化。实际上只有去年的存款，也就是<strong>开始记账的日期的存款金额</strong>才是对账用到的数字。</p>
 
 <p>来看下面的表格吧。第一行右边的数字会告诉我有咩有记错账。如果等于零就说明没有记错。请看我下面怎么解释我的思路。<br />
 现有存款就是我现在表格里的银行与现金的总和相加。这个数字就是我自己也可以数出来的我一共有多少钱。<br />
-“收入减支出”是我的“收入”和“支出”两个表单里面的总和数字相减。这个数字的意义是根据我记下来的账，我的攒下来了多少钱，或者我花掉了多少钱。我下面把这个概念叫做“金额变化”。</p>
+“收入减支出”是我的“收入”和“支出”两个表单里面的总和数字相减。这个数字的意义是根据我记下来的账，我攒下来了多少钱，或者我花掉了多少钱。我下面把这个数字叫做“金额变化”。</p>
 
 <table>
   <thead>
