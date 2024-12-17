@@ -8,7 +8,7 @@ title     : 首页 Front-page
 
 我是个微不足道的人。我在这社会里的地位就像沙滩里的一粒沙。我不想被迫劳动，我不安分，我不想被定义。我想当个真诚、耐心、善良又温柔的人。我心里永远有一个好奇的小孩儿。
 
-我有时候自以为是、自怨自艾，觉得自己有的一切都很拙劣。我活着就像戴着镣铐跳舞。我笑啊跳啊；我被疼的再也不想动。这世上有太多东西让我觉得难受。我经常后悔许多我干过的坏事。可能因为这些经历，我才领悟到我想多干点好事。
+我有时候喜欢自己，有时候讨厌自己。我活着就像戴着镣铐跳舞。我笑啊跳啊；我被疼的再也不想动。这世上有太多东西让我觉得难受。我经常后悔许多我干过的坏事。可能因为这些经历，我才领悟到我想多干点好事。
 
 <h2 lang="en">Hello. My name is Shon Li.</h2>
 
@@ -16,7 +16,7 @@ title     : 首页 Front-page
 
 <p lang="en">I am a nobody. I am like a grain of sand on a beach. I don't like being forced to work; I don't want a life that is predictable; I refuse to be defined. I love being sincere, patient, kind, and gentle. I will always be a little kid who pursuits novelties.</p>
 
-<p lang="en">There are often times that I become arrogant, pity my life, and degrade everything I have. Life to me is like dancing with shackles. I jump and laugh; I cease to move in pain. So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.</p>
+<p lang="en">I like my life sometimes, and hate it sometimes. Life to me is like dancing with shackles. I jump and laugh; I cease to move in pain. So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.</p>
 
 ## 目前我在忙活的东西
 
