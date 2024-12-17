@@ -8,15 +8,15 @@ title     : 首页 Front-page
 
 我是个微不足道的人。我在这社会里的地位就像沙滩里的一粒沙。我不想被迫劳动，我不安分，我不想被定义。我想当个真诚、耐心、善良又温柔的人。我心里永远有一个好奇的小孩儿。
 
-这世上有太多东西让我觉得难受。我经常后悔许多我干过的坏事。可能因为这些经历，我才领悟到我想多干点好事。
+我有时候自以为是、自怨自艾，觉得自己有的一切都很拙劣。我活着就想戴着镣铐跳舞。我笑啊跳啊；我被疼的再也不想动。这世上有太多东西让我觉得难受。我经常后悔许多我干过的坏事。可能因为这些经历，我才领悟到我想多干点好事。
 
 <h2 lang="en">Hello. My name is Shon Li.</h2>
 
 <p lang="en">You are now looking at the front page of my website. I have some things I made here – weird words, weird photos.</p>
 
-<p lang="en">I am a nobody. I am like a grain of sand at a beach. I don't like being forced to work; I don't want a life that is predictable; I refuse to be defined. I love being sincere, patient, kind and gentle. I will always be a little kid who pursuits novelties.</p>
+<p lang="en">I am a nobody. I am like a grain of sand on a beach. I don't like being forced to work; I don't want a life that is predictable; I refuse to be defined. I love being sincere, patient, kind, and gentle. I will always be a little kid who pursuits novelties.</p>
 
-<p lang="en">So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.</p>
+<p lang="en">There are often times that I become arrogant, pity my life, and degrade everything I have. Life to me is like dancing in a cuff. I jump and laugh sometime; I cease to move in pain. So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.</p>
 
 ## 目前我在忙活的东西
 
@@ -55,4 +55,4 @@ title     : 首页 Front-page
 
 <h2 lang="en">Life Update</h2>
 
-<p lang="en">I just finished the part two of my electrical engineering degree at University of Auckland. I study because I once wanted to be at a competitive position on the job market. However, I am no longer a top grade student after a few crazily stressful years. I no longer care much about what kind of job I can get. I am sure I won't starve myself because of not doing a job. I decided to continue my study because I love learning new things, and the modern human technology based on electricity fascinates me. I also love making things on computers – making beautiful meaningful things. So I am somewhat learning what I love.</p>
+<p lang="en">I just finished the part two of my electrical engineering degree at the university of Auckland. I studied because I once wanted to be in a competitive position on the job market. However, I am no longer a top-grade student after a few crazily stressful years. I no longer care much about what kind of job I can get. I am sure I won't starve myself because of not doing a job. I decided to continue my study because I love learning new things, and the modern human technology based on electricity fascinates me. I also love making things on computers – making beautiful meaningful things. So I am somewhat learning what I love.</p>

@@ -7,10 +7,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto auto auto;
 }
 
-.index-page article {                    // `.index-page` selects `main` in '/_layouts/default.html'
+.index-page{
+  width: calc( var(--paper_width) * 0.96 );
+
+  article {                    // `.index-page` selects `main` in '/_layouts/default.html'
     padding-left: 0;
     letter-spacing: normal;
+  }
 }
+
 
 .contents-table,                               // `.contents-table` selects `table` in '/index.html'
 .contents-table th,
@@ -20,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contents-table {
-  width: 95%;
+  width: 100%;
   margin: 0 auto 2.6em auto;
 
   td,
