@@ -16,7 +16,7 @@ title     : 首页 Front-page
 
 <p lang="en">I am a nobody. I am like a grain of sand on a beach. I don't like being forced to work; I don't want a life that is predictable; I refuse to be defined. I love being sincere, patient, kind, and gentle. I will always be a little kid who pursuits novelties.</p>
 
-<p lang="en">There are often times that I become arrogant, pity my life, and degrade everything I have. Life to me is like dancing in a cuff. I jump and laugh sometime; I cease to move in pain. So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.</p>
+<p lang="en">There are often times that I become arrogant, pity my life, and degrade everything I have. Life to me is like dancing with shackles. I jump and laugh sometime; I cease to move in pain. So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.</p>
 
 ## 目前我在忙活的东西
 
