@@ -159,6 +159,7 @@ article {
   td {
     width: 50%;
     font-family: 'Noto Serif SC', serif;
+    font-size: large;
     letter-spacing: .125em;
     line-height: 2;
     border: none;
@@ -212,8 +213,8 @@ article {
 
       th,
       td {
-        min-width: 1em;
-        max-width: none;
+        min-width: min-content;
+        max-width: fit-content;
       }
     }
   }
