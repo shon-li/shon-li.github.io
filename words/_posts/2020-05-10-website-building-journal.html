@@ -291,7 +291,7 @@ sudo apt-get update</pre>
   <pre>sudo certbot certonly --nginx</pre>
   <p>测试证书自动续期功能。<span lang="en">Let&#39;s Encrypt</span> 提供的证书一般有效期是三个月，所以 <span lang="en">Certbot</span> 会在服务器系统里设置一个自动运行的任务，在证书到期一个月前申请并更换新的证书。</p>
   <pre>sudo certbot renew --dry-run</pre>
-  <p>完成之后你可以打开自己的网站看看地址栏是不是已经有 <code>https</code> 的字样或者一个小锁的图标了。你也可以去这个网站（<a lang="en" href='https://www.ssllabs.com/ssltest/'>https://www.ssllabs.com/ssltest/</a>）测试看看你的网站安全评级和相关建议。</p>
+  <p>完成之后你可以打开自己的网站看看地址栏是不是已经有 <code>https</code> 的字样或者一个小锁的图标了。你也可以去这个网站（<a lang="en"  class="url" href='https://www.ssllabs.com/ssltest/'>www.ssllabs.com/ssltest</a>）测试看看你的网站安全评级和相关建议。</p>
 </blockquote>
 <p>如果你想知道怎么配置购买的数字证书或者手动给 <span lang="en">Nginx</span> 安装证书的方法，我的过程在下面。</p>
 
@@ -352,7 +352,7 @@ lxtJ2dAeFT3ArIveYwsPLxM2VI4tcREzP16VHpcDOa8MQQ==
 <p>先用 <code>nano</code> 文本编辑器编辑 <code>mysite</code> 网站配置文件。</p>
 <pre>sudo nano /etc/nginx/sites-enabled/mysite</pre>
 <p>把配置文件改成像下面这样，之后重新加载或者重启 <span lang="en">Nginx</span>。我的配置里没有使用 <code>if</code> 语句来判断而分开设立了两个 <code>server</code> 是因为<a href='https://www.nginx.com/resources/wiki/start/topics/tutorials/config_pitfalls/'><span lang="en">Nginx</span> 默认配置文件的注释里提到的链接</a>网页里有说明，使用 <code>if</code> 是低效且容易出错的。大概是因为它会让 <span lang="en">Nginx</span> 的运算量不必要地增加，所以请你也尽量避免在配置文件里使用 <code>if</code> 语句。</p>
-<p>另外为了让网址更简洁好看不包含 <code>.html</code> 和斜杠 <code>/</code>，我搜索到了下面这个教程并且更新了我的配置文件。<a lang="en" href="https://cobwwweb.com/remove-html-extension-and-trailing-slash-in-nginx-config">https://cobwwweb.com/remove-html-extension-and-trailing-slash-in-nginx-config</a>
+<p>另外为了让网址更简洁好看不包含 <code>.html</code> 和斜杠 <code>/</code>，我搜索到了下面这个教程并且更新了我的配置文件。<a lang="en" class="url" href="https://cobwwweb.com/remove-html-extension-and-trailing-slash-in-nginx-config">cobwwweb.com/remove-html-extension-and-trailing-slash-in-nginx-config</a>
 <pre>#把 80 端口 http 连接全都转向到域名 https 连接
 server {
     listen 80;
@@ -407,7 +407,7 @@ server {
   请注意 <code>--delete</code> 的意思是如果你删除了原文件夹里的文件，那么也删除目的文件夹里对应的文件，不想这样可以删掉这段字。<br>
   <code>/home/shon/site/public</code> 是你本地的网页文件夹目录；<code>用户名@VPS_IP:</code> 冒号后面是 <span lang="en">VPS</span> 上的网页文件夹目录。<br>
   按下 <kbd>Enter</kbd> 键之后输入登陆 <span lang="en">VPS</span> 的密码就开始传输了。如果你把本地目录和网页目录左右颠倒过来，你就能把 <span lang="en">VPS</span> 里的文件传到本地电脑上。请一定注意把文件同步到本地时去掉 <code>--delete</code>。</p>
-<p><span lang="en">Rsync</span> 非常适合用来同步，它会只传输更改过的文件。另外我又发现了一个很实用的可以解释命令的网站（英文）：<a class="url" lang="en" href="https://explainshell.com/">explainshell.com/</a></p>
+<p><span lang="en">Rsync</span> 非常适合用来同步，它会只传输更改过的文件。另外我又发现了一个很实用的可以解释命令的网站（英文）：<a class="url" lang="en" href="https://explainshell.com/">explainshell.com</a></p>
 
 <h2 id="the-end">结语</h2>
 <p>从三月末下定决心买域名到五月初，我花了一个多月的时间去学去做这个网站，去写这篇文章。因为新型冠状病毒在全球被感染，我才有这么长的连续的时间，我感受到了有充足的时间去思考的重要性。我绝对认为瘟疫蔓延是灾难，我希望人类能理清前因后果，搞清楚为了防止灾难再发生而要做的事。<br>我想让你也相信的想法是：困难的事是要花时间的事，我们需要找到好的方法。在我生活里我有超级多摸不着头绪的事，我相信你也有。有些事让我痛苦与绝望，让我觉得我到死也不能做到。但是除了痛苦和绝望与你相伴之外，希望总在隐隐发光，别放弃它。相比是否能做到，我们更要花时间从最根本的地方去想的是：都要去做什么，为了什么要去。</p>
