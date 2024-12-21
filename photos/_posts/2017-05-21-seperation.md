@@ -2,6 +2,7 @@
 categories : photos
 date       : 2017-05-21
 title      : 分离
+image      : /assets/img/seperation.jpeg
 figure     : <img src="/assets/img/seperation.jpeg" alt="黑色地板上有夕阳的反光和离开的三个人影。">
 ---
 这是我在一个电影院里拍到的地板的倒影。倒影里是电影散场后离开的人。

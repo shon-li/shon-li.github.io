@@ -2,6 +2,7 @@
 categories : photos
 date       : 2024-12-09
 title      : Buttercup 毛茛
+image      : /assets/img/buttercup.jpeg
 figure     : <img src="/assets/img/buttercup.jpeg" alt="公园草地上不知名的小黄花">
 ---
 <p lang="en">

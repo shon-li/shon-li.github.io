@@ -5,41 +5,41 @@ layout: compress
 <html lang="{{- page.lang -}}">
 
 <head>
-  <title>
-    {%- if page.title -%}
-      {{- page.title -}}・
-    {%- endif -%}
-    {{- site.data.information.title -}}
-  </title>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="/assets/css/common.css">
 
   {%- if page.indexPage -%}
-    <link rel="stylesheet" href="/assets/css/index-page.css">
+  <link rel="stylesheet" href="/assets/css/index-page.css">
   {%- endif -%}
 
   {%- if page.categories -%}
-    <link rel="stylesheet" href="/assets/css/post.css">
+  <link rel="stylesheet" href="/assets/css/post.css">
   {%- endif -%}
 
   {%- if jekyll.environment != "production" -%}
-    <style>
-      /* Check en language mark-ups */
-      h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en), h5:lang(en), h6:lang(en),
-      p:lang(en),
-      li:lang(en),
-      i:lang(en),
-      a:lang(en),
-      span:lang(en),
-      blockquote:lang(en) {
-        color: var(--color_accent);
-      }
+  <style>
+    /* Check en language mark-ups */
+    h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en), h5:lang(en), h6:lang(en),
+    p:lang(en),
+    li:lang(en),
+    i:lang(en),
+    a:lang(en),
+    span:lang(en),
+    blockquote:lang(en) {
+      color: var(--color_accent);
+    }
     </style>
   {%- endif -%}
 
-  {%- seo -%}
+  <title>
+    {%- if page.title -%}
+      {{- page.title -}}・
+    {%- endif -%}
+    {{- site.title -}}
+  </title>
+  {% seo title=false %}
   {%- feed_meta -%}
 </head>
 

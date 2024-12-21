@@ -10,11 +10,11 @@
     {%- if page.lang == "en" -%}     {% comment %} Add english date and author name {% endcomment %}
       {{- page.date | date_to_long_string: "ordinal" -}}
       &nbsp;・&nbsp;
-      {{- site.data.information.author-en -}}
+      {{- site.author-en -}}
     {%- else -%}                      {% comment %} Add normal date and author name {% endcomment %}
       {{- page.date | date: "%Y 年 %-m 月 %-d 日 - %-d %b" -}}
       &nbsp;・&nbsp;
-      {{- site.data.information.author -}}
+      {{- site.author -}}
     {%- endif -%}
 
   {%- else -%}                            {% comment %} Add date and site name only {% endcomment %}
@@ -30,7 +30,7 @@
     {%- endif -%}
 
     &nbsp;・&nbsp;
-    {{- site.data.information.title -}}
+    {{- site.title -}}
 
   {%- endif -%}
 

@@ -2,6 +2,7 @@
 categories : photos
 date       : 2016-12-25
 title      : 考研失败
+image      : /assets/img/exam-night.jpeg
 figure     : <img src="/assets/img/exam-night.jpeg" alt="郑州街区的雨夜亮着红色的灯。">
 ---
 二零一六年十二月二十五日，夜，小雨。我坐在室友的电动车后座上用手机透过我的眼镜左边的镜片拍下了这张照片。

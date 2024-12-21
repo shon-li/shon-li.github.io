@@ -2,6 +2,7 @@
 categories : photos
 date       : 2016-11-09
 title      : 高空的鸟群与低空的电线
+image      : /assets/img/a-group-of-birds.jpeg
 figure     : <img src="/assets/img/a-group-of-birds.jpeg" alt="一大群鸟在天上飞，照片里还有直的电线。">
 ---
 
