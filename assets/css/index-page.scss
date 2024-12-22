@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .index-page{
-  width: calc( var(--paper_width) * 0.96 );
+  width: var(--paper_width);
 
   article {                    // `.index-page` selects `main` in '/_layouts/default.html'
     padding-left: 0;
