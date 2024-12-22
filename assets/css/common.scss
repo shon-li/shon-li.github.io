@@ -229,6 +229,7 @@ footer {
 // Set breakpoint at a width that is a bit wider than desired paper width
 @media screen and ( max-width: 46rem ) {                         // 46 rem ~= `--paper_width` + 4rem
   main {
+    width: auto;
     margin: .8rem ;
     padding: 1.8rem;
   }
