@@ -8,16 +8,12 @@ hr {
   border: .5px dotted var(--color_text);
 }
 
-ruby:lang(zh) {
-  letter-spacing: .125em;
-}
-
 rt {
   margin-bottom: -.35em;
   font-family: "Noto Sans SC", sans-serif;
-  font-size: x-small;
+  font-size: calc(1em * 0.56);
   font-weight: 450;
-  letter-spacing: .125em;
+  letter-spacing: .05em;
 }
 
 ruby {
