@@ -275,14 +275,6 @@ footer {
   }
 }
 
-// A new break point for small phone screens
-@media screen and ( max-width: 400px ) {
-  main {
-    margin: 0;
-    padding: 1.5rem;
-  }
-}
-
 @media print {
   :root {
     font-size: normal;
