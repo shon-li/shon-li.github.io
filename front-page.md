@@ -26,6 +26,7 @@ title     : 首页 Front-page
 4. 间歇性地看几眼这本书：<i lang="en">Less is More</i>。作者是 <span lang="en">Jason Hickel</span>。
 5. 保持规律的睡眠。我想每天都睡它个十小时。
 6. 了解我自己。了解我的压力。
+7. 预习新学期的数学课。
 
 <h2 lang="en">My Recent Focus</h2>
 <ol>
@@ -46,6 +47,9 @@ title     : 首页 Front-page
 </li>
 <li  lang="en">
   Understand myself. Know my stresses.
+</li>
+<li>
+  Preview my math course content in the new semester.
 </li>
 </ol>
 
