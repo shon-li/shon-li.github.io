@@ -44,11 +44,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contents-date-col {         // `.contents-table-col` selects the second `table td` in '/index.html'
-  width: 5.2em;
+  width: 8em;
   text-align: right;
 }
 
 .contents-date {         // `.contents-date` selects `.contents-table-col`'s `span` in '/index.html'
   font-family: "Roboto Mono", monospace;
   font-weight: 370;
+}
+
+@media screen and ( max-width: 46rem ) {                         // 46 rem ~= `--paper_width` + 4rem
+  .contents-date-col {
+    width: fit-content;
+  }
 }
