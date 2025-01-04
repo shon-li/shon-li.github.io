@@ -54,6 +54,7 @@ a:visited {
 
 .url{                                          // `.url` selects `a` marked as url text on all pages
   font-family: "Roboto Mono", monospace;
+  border-bottom: 1px dotted var(--color_paper);
 }
 
 a:hover {

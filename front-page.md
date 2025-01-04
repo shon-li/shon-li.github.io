@@ -20,6 +20,7 @@ title     : 首页 Front-page
 
 ## 目前我在忙活的东西
 
+0. 看[《再见爱人》第四季](https://www.mgtv.com/h/696137.html)
 1. 学新西兰交规和驾照考试。
 2. 停止挤痘痘。不用指甲碰我的皮肤。
 3. 戒掉视频网站和戒掉社交应用。
@@ -30,6 +31,9 @@ title     : 首页 Front-page
 
 <h2 lang="en">My Recent Focus</h2>
 <ol>
+<li  lang="en">
+  Watch <a href="https://www.mgtv.com/h/696137.html"><i>See You Again</i> Season Four</a>
+</li>
 <li  lang="en">
   Learn NZ road code and prepare for learner's license test.
 </li>
@@ -48,7 +52,7 @@ title     : 首页 Front-page
 <li  lang="en">
   Understand myself. Know my stresses.
 </li>
-<li>
+<li  lang="en">
   Preview my math course content in the new semester.
 </li>
 </ol>
