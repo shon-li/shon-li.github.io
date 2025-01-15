@@ -18,12 +18,9 @@ title     : 首页 Front-page
 
 <p lang="en">I like my life sometimes, and hate it sometimes. Life to me is like dancing with shackles. I jump and laugh; I cease to move in pain. So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.</p>
 
-## 目前我在忙活的东西
+## 目前我想做的事
 
-0. 看[《再见爱人》第四季](https://www.mgtv.com/h/696137.html)
 1. 学新西兰交规和驾照考试。
-2. 停止挤痘痘。不用指甲碰我的皮肤。
-3. 戒掉视频网站和戒掉社交应用。
 4. 间歇性地看几眼这本书：<i lang="en">Less is More</i>。作者是 <span lang="en">Jason Hickel</span>。
 5. 保持规律的睡眠。我想每天都睡它个十小时。
 6. 了解我自己。了解我的压力。
@@ -32,16 +29,7 @@ title     : 首页 Front-page
 <h2 lang="en">My Recent Focus</h2>
 <ol>
 <li  lang="en">
-  Watch <a href="https://www.mgtv.com/h/696137.html"><i>See You Again</i> Season Four</a>
-</li>
-<li  lang="en">
   Learn NZ road code and prepare for learner's license test.
-</li>
-<li  lang="en">
-  Stop picking my acnes. Avoid scratching my skin with my finger nails.
-</li>
-<li  lang="en">
-  Quit watching short videos and quit using social medias.
 </li>
 <li  lang="en">
   Read the book <i>Less is More</i> by Jason Hickel, sometimes.
