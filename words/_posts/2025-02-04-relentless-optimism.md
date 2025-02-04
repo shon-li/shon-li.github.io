@@ -10,7 +10,7 @@ vidRatio   : 16-9
 
   <tr>
     <td>
-      写给那些总能用不同的眼光看世界的人。
+      写给那些总能用不同的眼光看待事物的人。
     </td>
     <td>
       <span lang="en">
@@ -150,7 +150,7 @@ vidRatio   : 16-9
 
   <tr>
     <td>
-      视频链接：
+      视频链接：<br>
       <a lang="en" class="url" href="https://youtube.com/watch?v=JltqvJNLUlw">youtu.be/JltqvJNLUlw</a>
     </td>
     <td>
