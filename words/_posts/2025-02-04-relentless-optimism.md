@@ -155,7 +155,7 @@ vidRatio   : 16-9
     </td>
     <td>
       <span lang="en">
-        <i>Perspective</i> – Apple
+        <i>Perspective</i> – Apple<br>
         <a href="https://www.apple.com/perspective/" class="url">
           apple.com/perspective
         </a>
