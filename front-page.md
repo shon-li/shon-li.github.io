@@ -20,29 +20,17 @@ title     : 首页 Front-page
 
 ## 目前我想做的事
 
-1. 学新西兰交规和驾照考试。
-4. 间歇性地看几眼这本书：<i lang="en">Less is More</i>。作者是 <span lang="en">Jason Hickel</span>。
 5. 保持规律的睡眠。我想每天都睡它个十小时。
 6. 了解我自己。了解我的压力。
-7. 预习新学期的数学课。
 
 <h2 lang="en">My Recent Focus</h2>
 <ol>
-<li  lang="en">
-  Learn NZ road code and prepare for learner's license test.
-</li>
-<li  lang="en">
-  Read the book <i>Less is More</i> by Jason Hickel, sometimes.
-</li>
-<li  lang="en">
-  Keep a good sleeping cycle. I wanna sleep ten long hours every single night.
-</li>
-<li  lang="en">
-  Understand myself. Know my stresses.
-</li>
-<li  lang="en">
-  Preview my math course content in the new semester.
-</li>
+  <li  lang="en">
+    Keep a good sleeping cycle. I wanna sleep ten long hours every single night.
+  </li>
+  <li  lang="en">
+    Understand myself. Know my stresses.
+  </li>
 </ol>
 
 ## 我的近况
