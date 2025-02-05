@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contents-date-col {         // `.contents-table-col` selects the second `table td` in '/index.html'
-  width: 8em;
+  min-width: 6em;
   text-align: right;
 }
 
