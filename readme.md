@@ -31,9 +31,7 @@ title     : 备注 Appendix
 <h2 lang="en">Contact</h2>
 
 <p lang="en">
-  I would love to see an Email from you. It's kinda traditional. I know... My awesome email address is
-  <code>hi@shon.li</code>
-  . I can send ya the original images if you would like one.
+  I would love to see an Email from you. It's kinda traditional. I know... My awesome email address is <code>hi@shon.li</code>. I can send ya the original images if you would like one.
 </p>
 
 ## 你注意到我搞错东西啦？
