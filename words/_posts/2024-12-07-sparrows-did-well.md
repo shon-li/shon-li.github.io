@@ -15,4 +15,6 @@ title      : 麻雀过得还好
 
 可是无论结果如何，我相信做人要知道怎样是好的，并且做好的事。
 
-我这样的观念是看[一个视频](https://youtube.com/watch?v=eWbqwcj9ALo)了解到的。看过视频之后我决定看看视频里提到的书。如果 <span lang="en">Youtube</span> 打不开的话，这是哔哩哔哩的链接：[【<span lang="en">YouTube</span> 搬运】全球生态灾难的新解方：弃成长(<span lang="en">Degrowth) Jason Hickel</span> 《少即是多》](https://www.bilibili.com/video/BV1p34y1E7GY/?share_source=copy_web)。
+我这样的观念是看[一个视频](https://youtube.com/watch?v=eWbqwcj9ALo)了解到的。看过视频之后我决定看看视频里提到的书。如果 <span lang="en">Youtube</span> 打不开的话，这是有人把视频搬运到哔哩哔哩的链接：[全球生态灾难的新解方：弃成长(<span lang="en">Degrowth</span>) <span lang="en">Jason Hickel</span> 《少即是多》](https://www.bilibili.com/video/BV18k4y1G7d6/)。
+
+视频的内容大概是一本书的读后感。那本书是 <span lang="en">Jason Hickel</span> 写的 <span lang="en"><i>Less is More</i></span> 。
