@@ -10,7 +10,7 @@ id_COMPSYS302  : 120751
 ---
 <style>
   td {
-    padding-left: 0;
+    padding-left: 0 !important;
     text-align: center
   }
 </style>
