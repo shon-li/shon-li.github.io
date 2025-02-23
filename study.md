@@ -7,19 +7,25 @@ id_ENGSCI313   : unknown
 id_COMPSYS302  : 120751
 # title        : Links for study use
 ---
+<style>
+  td {
+    text-align: center
+  }
+</style>
+
 <table class="contents-table">
 
   <th colspan="2"><h2 class="contents-title">Electrical 310</h2></th>
 
   <tr>
     <td>
-      [Canvas Homepage](https://canvas.auckland.ac.nz/courses/{{- page.id_ELECTENG310 -}})
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ELECTENG310 -}}">Canvas Homepage</a>
     </td>
   </tr>
 
   <tr>
     <td>
-      [Panopto Video](https://canvas.auckland.ac.nz/courses/{{- page.id_ELECTENG310 -}}/external_tools/30243)
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ELECTENG310 -}}/external_tools/30243">Panopto Video</a>
     </td>
   </tr>
 
@@ -31,13 +37,13 @@ id_COMPSYS302  : 120751
 
   <tr>
     <td>
-      [Canvas Homepage](https://canvas.auckland.ac.nz/courses/{{- page.id_ENGGEN303 -}})
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ENGGEN303 -}}">Canvas Homepage</a>
     </td>
   </tr>
 
   <tr>
     <td>
-      [Panopto Video](https://canvas.auckland.ac.nz/courses/{{- page.id_ENGGEN303 -}}/external_tools/30243)
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ENGGEN303 -}}/external_tools/30243">Panopto Video</a>
     </td>
   </tr>
 
@@ -49,25 +55,25 @@ id_COMPSYS302  : 120751
 
   <tr>
     <td>
-      [Canvas Homepage](https://canvas.auckland.ac.nz/courses/{{- page.id_ENGSCI313 -}})
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ENGSCI313 -}}">Canvas Homepage</a>
     </td>
   </tr>
 
   <tr>
     <td>
-      [Panopto Video](https://canvas.auckland.ac.nz/courses/{{- page.id_ENGSCI313 -}}/external_tools/30243)
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ENGSCI313 -}}/external_tools/30243">Panopto Video</a>
     </td>
   </tr>
 
    <tr>
     <td>
-      [Complex Analysis MIT Open Course]([https://canvas.auckland.ac.nz/courses/{{- page.id_ENGSCI313 -}}/external_tools/30243](https://www.youtube.com/watch?v=rVvGqWyQB_0&list=PL5563BAB9EA968641&index=4))
+      <a target="_blank" href="https://www.youtube.com/watch?v=rVvGqWyQB_0&list=PL5563BAB9EA968641&index=4">Complex Analysis MIT Open Course</a>
     </td>
   </tr>
 
    <tr>
     <td>
-      [Resources on Complex Analysis]([https://canvas.auckland.ac.nz/courses/{{- page.id_ENGSCI313 -}}/external_tools/30243](https://www.reddit.com/r/learnmath/comments/l4wmpg/i_compiled_some_resources_for_complex_analysis/))
+      <a target="_blank" href="https://www.reddit.com/r/learnmath/comments/l4wmpg/i_compiled_some_resources_for_complex_analysis/">Resources on Complex Analysis</a>
     </td>
   </tr>
 
@@ -79,13 +85,13 @@ id_COMPSYS302  : 120751
 
   <tr>
     <td>
-      [Canvas Homepage](https://canvas.auckland.ac.nz/courses/{{- page.id_COMPSYS302 -}})
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_COMPSYS302 -}}">Canvas Homepage</a>
     </td>
   </tr>
 
   <tr>
     <td>
-      [Panopto Video](https://canvas.auckland.ac.nz/courses/{{- page.id_COMPSYS302 -}}/external_tools/30243)
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_COMPSYS302 -}}/external_tools/30243">Panopto Video</a>
     </td>
   </tr>
 
