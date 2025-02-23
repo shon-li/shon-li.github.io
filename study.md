@@ -1,11 +1,11 @@
 ---
 indexPage      : true
 copyright      : false
+title          : Links for Study
 id_ELECTENG310 : 119964
 id_ENGGEN303   : 119616
 id_ENGSCI313   : unknown
 id_COMPSYS302  : 120751
-# title        : Links for study use
 ---
 <style>
   td {
