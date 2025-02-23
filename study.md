@@ -2,6 +2,7 @@
 indexPage      : true
 copyright      : false
 title          : Links for Study
+lang           : en
 id_ELECTENG310 : 119964
 id_ENGGEN303   : 119616
 id_ENGSCI313   : unknown
@@ -9,6 +10,7 @@ id_COMPSYS302  : 120751
 ---
 <style>
   td {
+    padding-left: 0;
     text-align: center
   }
 </style>
