@@ -20,16 +20,16 @@ title     : 首页 Front-page
 
 ## 目前我想做的事
 
-5. 保持规律的睡眠。我想每天都睡它个十小时。
-6. 了解我自己。了解我的压力。
+6. 了解我自己。了解我的感受。
+5. 保持规律的睡眠，这样我上学才不会被累死吧。
 
 <h2 lang="en">My Recent Focus</h2>
 <ol>
   <li  lang="en">
-    Keep a good sleeping cycle. I wanna sleep ten long hours every single night.
+    Know myself. Understand my feelings.
   </li>
   <li  lang="en">
-    Understand myself. Know my stresses.
+    Keep a good sleeping cycle, so I don't get too tired during my study.
   </li>
 </ol>
 
