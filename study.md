@@ -17,7 +17,7 @@ id_COMPSYS302  : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Electrical 310</h2></th>
+  <th colspan="2"><h2 class="contents-title">Electrical・ELECTENG 310</h2></th>
 
   <tr>
     <td>
@@ -27,7 +27,7 @@ id_COMPSYS302  : 120751
 
   <tr>
     <td>
-      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ELECTENG310 -}}/external_tools/30243">Panopto Video</a>
+      <a target="_blank" href="https://auckland.au.panopto.com/Panopto/Pages/EmbeddedList.aspx?embedded=1&folderID=37917950-3474-46e5-a3c1-b22c00c8555e&isLTIEmbed=true&nomobileprompt=true">Panopto Video</a>
     </td>
   </tr>
 
@@ -35,7 +35,7 @@ id_COMPSYS302  : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Innovation 303</h2></th>
+  <th colspan="2"><h2 class="contents-title">Innovation・ENGGEN 303</h2></th>
 
   <tr>
     <td>
@@ -45,7 +45,7 @@ id_COMPSYS302  : 120751
 
   <tr>
     <td>
-      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ENGGEN303 -}}/external_tools/30243">Panopto Video</a>
+      <a target="_blank" href="https://auckland.au.panopto.com/Panopto/Pages/EmbeddedList.aspx?embedded=1&folderID=aaff8e31-8a63-4200-b8e7-b22c00c79829&isLTIEmbed=true&nomobileprompt=true">Panopto Video</a>
     </td>
   </tr>
 
@@ -53,7 +53,7 @@ id_COMPSYS302  : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Math 313</h2></th>
+  <th colspan="2"><h2 class="contents-title">Math・ENGSCI 313</h2></th>
 
   <tr>
     <td>
@@ -63,7 +63,7 @@ id_COMPSYS302  : 120751
 
   <tr>
     <td>
-      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ENGSCI313 -}}/external_tools/30243">Panopto Video</a>
+      <a target="_blank" href="https://auckland.au.panopto.com/Panopto/Pages/EmbeddedList.aspx?embedded=1&folderID=928b4f7e-9c04-450d-8d47-b22c00c90c92&isLTIEmbed=true&nomobileprompt=true">Panopto Video</a>
     </td>
   </tr>
 
@@ -83,7 +83,7 @@ id_COMPSYS302  : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Software 302</h2></th>
+  <th colspan="2"><h2 class="contents-title">Software・COMPSYS 302</h2></th>
 
   <tr>
     <td>
@@ -93,7 +93,7 @@ id_COMPSYS302  : 120751
 
   <tr>
     <td>
-      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_COMPSYS302 -}}/external_tools/30243">Panopto Video</a>
+      <a target="_blank" href="https://auckland.au.panopto.com/Panopto/Pages/Sessions/List.aspx?embedded=1&nomobileprompt=true#folderID=%222e87eaa3-ff0e-4a20-9480-b22c00c85752%22">Panopto Video</a>
     </td>
   </tr>
 
