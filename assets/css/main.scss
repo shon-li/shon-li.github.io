@@ -185,9 +185,8 @@ footer {
   margin: 1.25rem auto 32vh auto;
   color: var(--color_paper_alt);
   font-size: medium;
-  font-family: "Noto Serif SC", serif;
-  letter-spacing: .05em;
-  font-weight: 500;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 400;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -208,7 +207,6 @@ footer {
   nav {
     margin:auto;
     display: flex;
-    font-family: "Noto Sans SC", sans-serif;
     flex-direction: row;
     column-gap: 1.6em;
 
