@@ -4,7 +4,7 @@ date       : 2025-04-24
 title      : 碎语 Mind Pieces
 ---
 <p>
-  我经常会想点闲言碎语。我写下来免得忘了。<span lang="en">Pieces of my mind afloat time to time. I made this note to remember them.</span>
+  我脑子里偶尔会浮现点琐碎的东西。我记下来免得忘了。<span lang="en">Pieces of my mind surface from time to time. I made this note to remember them.</span>
 </p>
 
 <table class="two-columns">
