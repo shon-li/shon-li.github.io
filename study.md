@@ -17,24 +17,6 @@ id_COMPSYS302  : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Electrical・ELECTENG 310</h2></th>
-
-  <tr>
-    <td>
-      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ELECTENG310 -}}">Canvas Homepage</a>
-    </td>
-  </tr>
-
-  <tr>
-    <td>
-      <a target="_blank" href="https://auckland.au.panopto.com/Panopto/Pages/EmbeddedList.aspx?embedded=1&folderID=37917950-3474-46e5-a3c1-b22c00c8555e&isLTIEmbed=true&nomobileprompt=true">Panopto Video</a>
-    </td>
-  </tr>
-
-</table>
-
-<table class="contents-table">
-
   <th colspan="2"><h2 class="contents-title">Innovation・ENGGEN 303</h2></th>
 
   <tr>
