@@ -4,41 +4,54 @@
 
 /*-------------------------------------- 0. Initialisation ---------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
+// Include padding and border into size calculations
 * {
-  box-sizing: border-box;                       // Include padding and border into size calculations
+  box-sizing: border-box;
 }
 
+// Root font size is used as a metric for `--paper_width'
 :root {
-  font-size: large;                        // Root font size is used as a metric for `--paper_width'
+  font-size: large;
 }
 
 body {
-  --color_space:     hsl(0, 0%, 10%);
-  --color_paper:     hsl(46, 2%, 30%);
-  --color_text:      hsl(46, 10%, 80%);
+  --color_space: hsl(0, 0%, 10%);
+  --color_paper: hsl(46, 2%, 30%);
+  --color_text: hsl(46, 10%, 80%);
   --color_paper_alt: hsl(46, 1%, 50%);
-  --color_accent:    hsl(55, 100%, 60%);
-  --paper_width:     41rem;
+  --color_accent: hsl(55, 100%, 60%);
+  --paper_width: 41rem;
 
   animation-name: slideUpAnimation;
   animation-timing-function: ease;
-  animation-duration:  1.5s;
+  animation-duration: 1.5s;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
+// Scrolling edge fading effect
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+
+  box-shadow: 0 0 0.6em 0 var(--color_space) inset;
+}
+
 @keyframes slideUpAnimation {
   0% {
-      padding-top: 4rem;
-      opacity: 0;
+    padding-top: 4rem;
+    opacity: 0;
   }
 
   100% {
-      padding-top: 0;
-      opacity: 1;
+    padding-top: 0;
+    opacity: 1;
   }
 }
 
@@ -52,7 +65,8 @@ a:visited {
   text-decoration: none;
 }
 
-.url{                                          // `.url` selects `a` marked as url text on all pages
+// `.url` selects `a` marked as url text on all pages
+.url {
   font-family: "Roboto Mono", monospace;
   border-bottom: 1px dotted var(--color_paper);
 }
@@ -75,16 +89,18 @@ a:hover {
 
   100% {
     opacity: 1;
-    border-bottom: .25em solid var(--color_accent);
+    border-bottom: 0.25em solid var(--color_accent);
   }
 }
 
+// 'Space' background
 body {
   min-width: 16.5rem;
   margin: auto;
   background-color: var(--color_space);
 }
 
+// 'Paper' container shape
 main {
   width: fit-content;
   max-width: var(--paper_width);
@@ -94,17 +110,18 @@ main {
   border-radius: 2px;
 }
 
+// Text contents on paper
 article {
-  width:  auto;
+  width: auto;
   height: auto;
   margin: 0 auto;
-  padding-left: .15em;
+  padding-left: 0.15em;
   color: var(--color_text);
-  font-family: 'Noto Serif SC', serif;
+  font-family: "Noto Serif SC", serif;
   font-weight: 400;
   line-height: 2;
-  letter-spacing: .125em;
-  word-spacing: .06em;
+  letter-spacing: 0.125em;
+  word-spacing: 0.06em;
   word-break: normal;
   text-align: left;
 
@@ -113,13 +130,19 @@ article {
     margin-top: 0 !important;
   }
 
-  > :last-child {                                                // Remove last item's bottom margin
+  // Remove last item's bottom margin
+  > :last-child {
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
   }
 }
 
-h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en), h5:lang(en), h6:lang(en),
+h1:lang(en),
+h2:lang(en),
+h3:lang(en),
+h4:lang(en),
+h5:lang(en),
+h6:lang(en),
 p:lang(en),
 li:lang(en),
 i:lang(en),
@@ -127,11 +150,16 @@ a:lang(en),
 span:lang(en),
 blockquote:lang(en) {
   letter-spacing: normal;
-  word-spacing: .08em;
+  word-spacing: 0.08em;
   hyphens: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   width: fit-content;
   max-width: 16em;
   height: auto;
@@ -159,7 +187,7 @@ ul {
 pre,
 kbd,
 code {
-  margin-top: -.5em;
+  margin-top: -0.5em;
   background-color: var(--color_paper_alt);
   border-radius: 2px;
   font-family: "Roboto Mono", "Noto Sans SC", monospace, sans-serif;
@@ -170,12 +198,12 @@ code {
 }
 
 pre {
-  padding-left: .5em;
+  padding-left: 0.5em;
 }
 
 kbd,
 code {
-  padding: 0 .25em;
+  padding: 0 0.25em;
 }
 
 /*------------------------------------------ 2. Footer -------------------------------------------*/
@@ -190,14 +218,14 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-  row-gap: .8em;
+  row-gap: 0.8em;
 
   a,
   a:link,
   a:visited {
     color: var(--color_paper_alt);
     border-bottom: 1px dotted var(--color_paper);
-    font-family: 'Noto Sans SC', sans-serif;
+    font-family: "Noto Sans SC", sans-serif;
   }
 
   a:hover {
@@ -205,7 +233,7 @@ footer {
   }
 
   nav {
-    margin:auto;
+    margin: auto;
     display: flex;
     flex-direction: row;
     column-gap: 1.6em;
@@ -222,34 +250,41 @@ footer {
 
 @media (prefers-color-scheme: light) {
   body {
-    --color_space:     hsl(0, 0%, 60%);
-    --color_paper:     hsl(46 100% 99%);
-    --color_text:      hsl(46, 15%, 25%);
+    --color_space: hsl(0, 0%, 60%);
+    --color_paper: hsl(46 100% 99%);
+    --color_text: hsl(46, 15%, 25%);
     --color_paper_alt: hsl(46, 15%, 92%);
-    --color_accent:    hsl(230, 100%, 50%);
+    --color_accent: hsl(230, 100%, 50%);
   }
 }
 
 // Set breakpoint at a width that is a bit wider than desired paper width
-@media screen and ( max-width: 46rem ) {                         // 46 rem ~= `--paper_width` + 4rem
+// 46 rem ~= `--paper_width` + 4rem
+@media screen and (max-width: 46rem) {
   main {
     width: auto;
-    margin: .8rem ;
+    margin: 0.8rem;
     padding: 1.8rem;
   }
 
   article {
-    padding-top: .5rem;
+    padding-top: 0.5rem;
     padding-bottom: 1rem;
     letter-spacing: normal;
     text-align: left !important;
   }
 
-  .contents-table td {                      // `.contents-table` selects `table` in '/contents.html'
+  // `.contents-table` selects `table` in '/contents.html'
+  .contents-table td {
     vertical-align: top;
   }
 
-  h1:lang(en), h2:lang(en), h3:lang(en), h4:lang(en), h5:lang(en), h6:lang(en),
+  h1:lang(en),
+  h2:lang(en),
+  h3:lang(en),
+  h4:lang(en),
+  h5:lang(en),
+  h6:lang(en),
   p:lang(en),
   li:lang(en),
   span:lang(en),
@@ -257,11 +292,12 @@ footer {
     hyphens: auto !important;
   }
 
-  h1 {                                               // Avoid leaving one character at the last line
+  // Avoid leaving one character at the last line
+  h1 {
     max-width: 9em;
   }
 
-    a,
+  a,
   pre,
   code {
     word-break: break-all;

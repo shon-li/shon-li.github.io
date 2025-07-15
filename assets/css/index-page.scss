@@ -1,21 +1,27 @@
 ---
-# This style only load on index pages like contents
+# This style only load on index-like pages
 ---
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   padding-top: 0;
   margin: 0 auto auto auto;
 }
 
-.index-page{
-  article {                    // `.index-page` selects `main` in '/_layouts/default.html'
+// `.index-page` selects `main` in '/_layouts/default.html'
+.index-page {
+  article {
     padding-left: 0;
     letter-spacing: normal;
   }
 }
 
-
-.contents-table,                               // `.contents-table` selects `table` in '/index.html'
+// `.contents-table` selects `table` in '/index.html'
+.contents-table,
 .contents-table th,
 .contents-table td {
   padding: 0;
@@ -32,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   td {
-    padding: .8em 0 .8em .1em;
+    padding: 0.8em 0 0.8em 0.1em;
     font-weight: 380;
     vertical-align: baseline;
   }
@@ -43,17 +49,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.contents-date-col {         // `.contents-table-col` selects the second `table td` in '/index.html'
+// `.contents-table-col` selects the second `table td` in '/index.html'
+.contents-date-col {
   min-width: 6em;
   text-align: right;
 }
 
-.contents-date {         // `.contents-date` selects `.contents-table-col`'s `span` in '/index.html'
+// `.contents-date` selects `.contents-table-col`'s `span` in '/index.html'
+.contents-date {
   font-family: "Roboto Mono", monospace;
   font-weight: 370;
 }
 
-@media screen and ( max-width: 46rem ) {                         // 46 rem ~= `--paper_width` + 4rem
+// 46 rem ~= `--paper_width` + 4rem
+@media screen and (max-width: 46rem) {
   .contents-date-col {
     width: fit-content;
   }
