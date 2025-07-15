@@ -2,41 +2,47 @@
 copyright : false
 title     : 首页 Front-page
 ---
-## 你好，我叫李晓航。
 
-你现在看到的是我网站的首页。我在这里放了些我弄的东西，奇奇怪怪的字，奇奇怪怪的照片。
+## 你好。这是晓航的博客。
 
-我是个微不足道的人。我在这社会里的地位就像沙滩里的一粒沙。我不想被迫劳动，我不安分，我不想被定义。我想当个真诚、耐心、善良又温柔的人。我心里永远有一个好奇的小孩儿。
+晓航是个很普通的人。他活到现在最骄傲的事是他觉得他能弄懂电脑相关的东西。
 
-我有时候喜欢自己，有时候讨厌自己。我活着就像戴着镣铐跳舞。我笑啊跳啊；我被疼得再也不想动。这世上有太多东西让我觉得难受。我经常后悔许多我干过的坏事。可能因为这些经历，我才领悟到我想多干点好事。
+他喜欢好看的东西。他喜欢用心做出来的东西里面的美感。他最向往的是任何情况下心里都有一种踏实的感觉。
 
-<h2 lang="en">Hello. My name is Shon Li.</h2>
+他想当个真诚、耐心、善良又温柔的人。他希望有天他能跟好的人一块儿干点好的事。
 
-<p lang="en">You are now looking at the front page of my website. I have some things I made here – weird words, weird photos.</p>
+<h2 lang="en">Hi. This is Shon's Blog.</h2>
 
-<p lang="en">I am a nobody. I am like a grain of sand on a beach. I don't like being forced to work; I don't want a life that is predictable; I refuse to be defined. I love being sincere, patient, kind, and gentle. I will always be a little kid who pursuits novelties.</p>
+<p lang="en">
+  Shon is just an ordinary person. What he's most proud of in life is his ability to understand things related to computers.
+</p>
 
-<p lang="en">I like my life sometimes, and hate it sometimes. Life to me is like dancing with shackles. I jump and laugh; I cease to move in pain. So many things in this world pain me. I regularly regret bad things I have done. Perhaps my realisation above comes from these experiences.</p>
+<p lang="en">
+  He loves beautiful things. He believes that beauty comes from efforts of care and love. His ultimate pursuit is peace in his heart.</p>
 
-## 目前我想做的事
+<p lang="en">
+  He wants to be a sincere, patient, kind, and gentle person. He hopes to make good things with good people someday.
+  </p>
 
-6. 了解我自己。了解我的感受。
-5. 保持规律的睡眠，这样我上学才不会被累死吧。
+## 他目前想做的事
 
-<h2 lang="en">My Recent Focus</h2>
+1. 了解他自己。了解他的感受。
+2. 保持规律的睡眠。
+
+<h2 lang="en">His Recent Focus</h2>
 <ol>
   <li  lang="en">
-    Know myself. Understand my feelings.
+    Know himself. Understand his feelings.
   </li>
   <li  lang="en">
-    Keep a good sleeping cycle, so I don't get too tired during my study.
+    Keep a regular sleeping cycle.
   </li>
 </ol>
 
-## 我的近况
+## 他的近况
 
-我现在在奥克兰大学学电子工程。我学这个是因为当初想混上个好赚钱点的工作。经厉了一段高压后的疯狂之后，我的成绩烂掉了。我觉得赚不赚钱无所谓了。我应该不至于因为不上班而被饿死。我还继续学这个是因为我想弄懂一点现代人类科技的基础的知识。我喜欢在电脑上捯饬点东西，弄点好玩的有意思的东西。我的爱好也算是跟我学的东西接近吧。
+他的工程学专业转到了计算机系统工程。他需要找专业相关的实习工作。
 
 <h2 lang="en">Life Update</h2>
 
-<p lang="en">I just finished the part two of my electrical engineering degree at the university of Auckland. I studied because I once wanted to be in a competitive position on the job market. However, I am no longer a top-grade student after a few crazily stressful years. I no longer care much about what kind of job I can get. I am sure I won't starve myself because of not doing a job. I decided to continue my study because I love learning new things, and the modern human technology based on electricity fascinates me. I also love making things on computers – making beautiful meaningful things. So I am somewhat learning what I love.</p>
+<p lang="en">He changed his engineering specialisation to computer systems engineering. He needs an internship related to his specialisation.</p>
