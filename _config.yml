@@ -1,33 +1,31 @@
 # Site SEO information
-title     : "李晓航 Shon Li"
-author    : "李晓航"
-author-en : "Shon Li"
+title: "晓航的博客 Shon's Blog"
+author: "李晓航 Shon Li"
 
 # URLs
-url             : "https://shon.li"
-fullurl         : "shon.li"
-permalink       : none
+url: "https://shon.li"
+fullurl: "shon.li"
+permalink: none
 
 # Default front matter for all pages and posts
-defaults        :
-  -
-    scope       :
-      path      : ""
-    values      :
-      layout    : "default"
-      lang      : "zh-Hans"
-      copyright : true
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+      lang: "zh-Hans"
+      copyright: true
 
 # Config for compress-html layout
-compress_html   :
-  clippings     : all
-  comments      : []
-  endings       : all
-  ignore        :
-    envs        : []
-  blanklines    : false
-  profile       : false
-  startings     : []
+compress_html:
+  clippings: all
+  comments: []
+  endings: all
+  ignore:
+    envs: []
+  blanklines: false
+  profile: false
+  startings: []
 
 # Sass
 sass:

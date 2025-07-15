@@ -6,6 +6,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
+@font-face {
+  font-family: "fusion-pixel-12px-proportional-zh_hans";
+  src: url("/assets/fonts/fusion-pixel/fusion-pixel-12px-proportional-zh_hans.otf.woff2");
+}
+
 // Include padding and border into size calculations
 * {
   box-sizing: border-box;
@@ -210,10 +215,11 @@ code {
 
 footer {
   max-width: fit-content;
-  margin: 1.25rem auto 32vh auto;
+  margin: 1.5rem auto 32vh auto;
   color: var(--color_paper_alt);
   font-size: medium;
-  font-family: "Noto Sans SC", sans-serif;
+  font-family: "fusion-pixel-12px-proportional-zh_hans", "Noto Sans SC",
+    sans-serif;
   font-weight: 400;
   text-align: center;
   display: flex;
@@ -225,7 +231,6 @@ footer {
   a:visited {
     color: var(--color_paper_alt);
     border-bottom: 1px dotted var(--color_paper);
-    font-family: "Noto Sans SC", sans-serif;
   }
 
   a:hover {
