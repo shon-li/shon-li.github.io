@@ -2,13 +2,14 @@
 copyright : false
 title     : 备注 Appendix
 ---
+
 ## 网站信息
 
 这个网站是用静态网站生成器 <a lang="en" href="https://jekyllrb.com">Jekyll</a> 生成的，通过 <a lang="en" href="https://pages.github.com">Github Pages</a> 和 <a lang="en" href="https://www.cloudflare.com/">Cloudflare</a> 服务发布到互联网上的。[这是我的 <span lang="en">GitHub</span> 链接](https://github.com/shon-li/shon-li.github.io/)。我安装了 <span lang="en">Jekyll</span> 的 <span lang="en">RSS</span> 插件。你可以试试[订阅我的 <span lang="en">RSS</span>](https://shon.li/feed.xml) 噢。
 
-我用到了一个别人做的能压缩 <span lang="en">HTML</span> 文件的 <span lang="en">layout</span>，名叫：<a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a>。作者是 <span lang="en">Anatol Broder</span>。我在网页上用的字体是 <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>、<a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a> 还有 <a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>。我是从 <a lang="en" href="https://fonts.google.com">Google Fonts</a> 上嵌入的这些字体。
+我用到了一个别人做的能压缩 <span lang="en">HTML</span> 文件的 <span lang="en">layout</span>，名叫：<a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a>。作者是 <span lang="en">Anatol Broder</span>。我从 <a lang="en" href="https://fonts.google.com">Google Fonts</a> 上嵌入的字体有：<a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>、<a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a> 还有 <a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>。我在页面底部使用的像素字体是<a href="https://github.com/TakWolf/fusion-pixel-font">缝合像素字体 / <span lang="en">Fusion Pixel Font</span></a>。
 
-不好意思我把导航链接放到了页面的底部。这意味着在很长的文章里你得跑到最下面才能看见导航的链接。我目前就觉得放在下面比较好。只好劝你多用用手机浏览器里的返回功能，或者试试电脑上的 <kbd>End</kbd> 之类的按键。
+不好意思我把导航链接放到了页面的底部。这意味着在很长的文章里你得跑到最下面才能看见导航的链接。我就这样比较好。只好劝你多用用手机浏览器里的返回功能，或者试试电脑上的 <kbd>End</kbd> 之类的按键。
 
 <h2 lang="en">About This Site</h2>
 
@@ -17,7 +18,7 @@ title     : 备注 Appendix
 </p>
 
 <p lang="en">
-  A layout from <a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a> by Anatol Broder helps me to compress HTML files. My selection of typefaces are: <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>, <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a> and <a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>. They are from <a lang="en" href="https://fonts.google.com">Google Fonts</a>.
+  A layout from <a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a> by Anatol Broder helps me to compress HTML files. My selection of typefaces from <a lang="en" href="https://fonts.google.com">Google Fonts</a> are: <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>, <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a> and <a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>. The pixel font at the bottom of the page is <a href="https://github.com/TakWolf/fusion-pixel-font">Fusion Pixel Font</a>.
 </p>
 
 <p lang="en">
@@ -44,12 +45,12 @@ title     : 备注 Appendix
 
 ## 版权
 
-如果没有特别说明，这个网站上的内容都是李晓航的原创。请看页面底部的版权标志。希望您在获取或分享的时候不要隐去来源。请您不要用我做的东西去赚钱。故请遵从[署名-非商业性使用-相同方式共享 4.0 国际（<span lang="en">CC BY-NC-SA 4.0 DEED</span>）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)协议。感谢。
+页面底部标注了“<span lang="en">CC BY-NC-SA 4.0</span>”的内容是李晓航的原创。请您在分享的时候注明来源。请不要用我做的东西去赚钱。故请遵从[署名-非商业性使用-相同方式共享 4.0 国际（<span lang="en">CC BY-NC-SA 4.0 DEED</span>）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)协议。感谢。
 
-<h2 lang="en">Copyright Notice</h2>
+<h2 lang="en">Copyright</h2>
 
 <p lang="en">
-  Shon Li is the original author of all content on this website, unless otherwise specified. Please see the copyright notice at the bottom of pages. Please retain proper attribution when sharing. Do not use my content for commercial purposes. By sharing or acquiring my work, you agree to follow the
+  Content on the pages noted "CC BY-NC-SA 4.0" at the bottom are Shon Li's original work. Please retain proper attribution when sharing. Do not use my content for commercial purposes. By sharing or acquiring my work, you agree to follow the
   <a lang="en" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)</a>
     license. Thanks.
 </p>
