@@ -5,7 +5,7 @@ title     : 首页 Front-page
 
 ## 你好。这是晓航的博客。
 
-晓航是个很普通的人。他活到现在最骄傲的事是他觉得他能弄懂电脑相关的东西。
+晓航是个人。他活到现在最骄傲的事是他觉得他能弄懂电脑相关的东西。
 
 他喜欢好看的东西。他喜欢用心做出来的东西里面的美感。他最向往的是任何情况下心里都有一种踏实的感觉。
 
@@ -14,7 +14,7 @@ title     : 首页 Front-page
 <h2 lang="en">Hi. This is Shon's Blog.</h2>
 
 <p lang="en">
-  Shon is just an ordinary person. What he's most proud of in life is his ability to understand things related to computers.
+  Shon is a person. What he's most proud of in life is his ability to understand things related to computers.
 </p>
 
 <p lang="en">

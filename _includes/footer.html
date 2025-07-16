@@ -5,12 +5,12 @@
 >
 
   {%- if page.date -%}
-    {{- page.date | date: "%Y - %m - %-d" -}}
+    {{- page.date | date: "%Y-%m-%-d" -}}
   {%- else -%}
-    {{- site.time | date: "%Y - %m" -}}
+    {{- site.time | date: "%Y-%m" -}}
   {%- endif -%}
 
-   ・ 
+  &#32;・&#32;
   {%- if page.copyright -%}
     {{- site.author -}}
   {%- else -%}
@@ -19,7 +19,7 @@
 
   {% comment %} Show license {% endcomment %}
   {%- if page.copyright -%}
-     ・ CC BY - NC - SA 4.0
+    &#32;・&#32;CC BY-NC-SA 4.0
   {%- endif -%}
 
   <nav>
