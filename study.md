@@ -18,7 +18,9 @@ id_four   : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">AI & ML・COMPSYS 306</h2></th>
+  <tr>
+    <th colspan="2"><h2 class="contents-title">AI & ML・COMPSYS 306</h2></th>
+  </tr>
 
   <tr>
     <td>
@@ -36,8 +38,9 @@ id_four   : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Control・ELECTENG 332</h2></th>
-
+  <tr>
+    <th colspan="2"><h2 class="contents-title">Control・ELECTENG 332</h2></th>
+  </tr>
   <tr>
     <td>
       <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_two -}}">Canvas Homepage</a>
@@ -54,8 +57,9 @@ id_four   : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Electronics・ELECTENG 292</h2></th>
-
+  <tr>
+    <th colspan="2"><h2 class="contents-title">Electronics・ELECTENG 292</h2></th>
+  </tr>
   <tr>
     <td>
       <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_three -}}">Canvas Homepage</a>
@@ -72,8 +76,9 @@ id_four   : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Embedded・COMPSYS 303</h2></th>
-
+  <tr>
+    <th colspan="2"><h2 class="contents-title">Embedded・COMPSYS 303</h2></th>
+  </tr>
   <tr>
     <td>
       <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_four -}}">Canvas Homepage</a>

@@ -9,7 +9,9 @@ title     : 文字 Words
 
   {%- if category.keyword == folderName -%}
     <table class="contents-table">
-      <th colspan="2"><h2 class="contents-title">{{- category.name -}}</h2></th>
+      <tr>
+        <th colspan="2"><h2 class="contents-title">{{- category.name -}}</h2></th>
+      </tr>
 
       {%- for post in site.categories[category.keyword] -%}
         <tr>
