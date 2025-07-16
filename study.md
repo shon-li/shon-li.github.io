@@ -1,13 +1,14 @@
 ---
-indexPage      : true
-copyright      : false
-title          : Links for Study
-lang           : en
-id_ELECTENG310 : 119964
-id_ENGGEN303   : 119616
-id_ENGSCI313   : 120888
-id_COMPSYS302  : 120751
+indexPage : true
+copyright : false
+title     : Links for Study
+lang      : en
+id_one    : 120758
+id_two    : 119616
+id_three  : 120888
+id_four   : 120751
 ---
+
 <style>
   td {
     padding-left: 0 !important;
@@ -17,11 +18,11 @@ id_COMPSYS302  : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Innovation・ENGGEN 303</h2></th>
+  <th colspan="2"><h2 class="contents-title">AI & ML・COMPSYS 306</h2></th>
 
   <tr>
     <td>
-      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ENGGEN303 -}}">Canvas Homepage</a>
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_one -}}">Canvas Homepage</a>
     </td>
   </tr>
 
@@ -35,11 +36,11 @@ id_COMPSYS302  : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Math・ENGSCI 313</h2></th>
+  <th colspan="2"><h2 class="contents-title">Control・ELECTENG 332</h2></th>
 
   <tr>
     <td>
-      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_ENGSCI313 -}}">Canvas Homepage</a>
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_two -}}">Canvas Homepage</a>
     </td>
   </tr>
 
@@ -49,15 +50,21 @@ id_COMPSYS302  : 120751
     </td>
   </tr>
 
-   <tr>
+</table>
+
+<table class="contents-table">
+
+  <th colspan="2"><h2 class="contents-title">Electronics・ELECTENG 292</h2></th>
+
+  <tr>
     <td>
-      <a target="_blank" href="https://www.youtube.com/watch?v=rVvGqWyQB_0&list=PL5563BAB9EA968641&index=4">Complex Analysis MIT Open Course</a>
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_three -}}">Canvas Homepage</a>
     </td>
   </tr>
 
-   <tr>
+  <tr>
     <td>
-      <a target="_blank" href="https://www.reddit.com/r/learnmath/comments/l4wmpg/i_compiled_some_resources_for_complex_analysis/">Resources on Complex Analysis</a>
+      <a target="_blank" href="https://auckland.au.panopto.com/Panopto/Pages/Sessions/List.aspx?embedded=1&nomobileprompt=true#folderID=%222e87eaa3-ff0e-4a20-9480-b22c00c85752%22">Panopto Video</a>
     </td>
   </tr>
 
@@ -65,11 +72,11 @@ id_COMPSYS302  : 120751
 
 <table class="contents-table">
 
-  <th colspan="2"><h2 class="contents-title">Software・COMPSYS 302</h2></th>
+  <th colspan="2"><h2 class="contents-title">Embedded・COMPSYS 303</h2></th>
 
   <tr>
     <td>
-      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_COMPSYS302 -}}">Canvas Homepage</a>
+      <a target="_blank" href="https://canvas.auckland.ac.nz/courses/{{- page.id_four -}}">Canvas Homepage</a>
     </td>
   </tr>
 
