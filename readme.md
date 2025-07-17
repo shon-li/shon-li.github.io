@@ -37,10 +37,10 @@ title     : 备注 Appendix
 
 ## 版权
 
-页面底部标注了“<span lang="en">CC BY-NC-SA 4.0</span>”的内容是李晓航的原创。请在分享时注明来源。这些内容不可以用于商业用途。请遵从[署名-非商业性使用-相同方式共享 4.0 国际（<span lang="en">CC BY-NC-SA 4.0 DEED</span>）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)协议。
+页面底部标注了“<span lang="en">CC BY-NC-SA 4.0</span>”的内容包含李晓航的原创。请在分享时注明来源。这些内容不可以用于商业用途。请遵从[署名-非商业性使用-相同方式共享 4.0 国际（<span lang="en">CC BY-NC-SA 4.0 DEED</span>）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)协议。
 
 <h2 lang="en">Copyright</h2>
 
 <p lang="en">
-  The content on the pages with the "CC BY-NC-SA 4.0" attribution at the bottom is Shon Li's original work. Please attribute it properly when sharing. This content is not for commercial use. Please follow the <a lang="en" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)</a> license.
+  The content on the pages with the "CC BY-NC-SA 4.0" attribution at the bottom contains Shon Li's original work. Please attribute it properly when sharing. This content is not for commercial use. Please follow the <a lang="en" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL (CC BY-NC-SA 4.0 DEED)</a> license.
 </p>
