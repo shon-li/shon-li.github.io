@@ -332,6 +332,11 @@ footer {
     background-color: white !important;
   }
 
+  // Remove scrolling edge fading effect
+  body::before {
+    box-shadow: none;
+  }
+
   figure {
     margin: auto;
   }
