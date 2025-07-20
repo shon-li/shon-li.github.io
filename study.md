@@ -4,7 +4,7 @@ copyright : false
 title     : Links for Study
 lang      : en
 id_one    : 120758
-id_two    : 119616
+id_two    : 120848
 id_three  : 120888
 id_four   : 120753
 ---
@@ -49,7 +49,7 @@ id_four   : 120753
 
   <tr>
     <td>
-      <a target="_blank" href="https://auckland.au.panopto.com/Panopto/Pages/EmbeddedList.aspx?embedded=1&folderID=928b4f7e-9c04-450d-8d47-b22c00c90c92&isLTIEmbed=true&nomobileprompt=true">Panopto Video</a>
+      <a target="_blank" href="https://auckland.au.panopto.com/Panopto/Pages/Sessions/List.aspx?embedded=1&nomobileprompt=true#folderID=%2255c890fe-1076-47f8-9dc8-b22c00c8659c%22">Panopto Video</a>
     </td>
   </tr>
 
