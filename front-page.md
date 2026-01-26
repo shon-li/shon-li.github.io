@@ -18,7 +18,7 @@ title     : 首页 Front-page
 </p>
 
 <p lang="en">
-  He loves beautiful things. He believes that beauty comes from efforts of care and love. His ultimate pursuit is peace in his heart.</p>
+  He loves nice-looking things. He believes that beauty comes from efforts of care and love. His ultimate pursuit is peace in his heart.</p>
 
 <p lang="en">
   He wants to be a sincere, patient, kind, and gentle person. He hopes to make good things with good people someday.
@@ -41,8 +41,8 @@ title     : 首页 Front-page
 
 ## 他的近况
 
-他的工程学专业转到了计算机系统工程。他需要找专业相关的实习工作。
+他找到了一份帮忙修冰箱的工作。他打算以后做修冰箱的技师。
 
 <h2 lang="en">Life Update</h2>
 
-<p lang="en">He changed his engineering specialisation to computer systems engineering. He needs an internship related to his specialisation.</p>
+<p lang="en">He found a job helping to repair refrigerators. He plans to become a refrigeration technician in the future.</p>
