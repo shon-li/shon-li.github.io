@@ -37,17 +37,7 @@ body {
   animation-fill-mode: forwards;
 }
 
-// Scrolling edge fading effect
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-
-  box-shadow: 0 0 0.6em 0 var(--color_space) inset;
-}
-
+// Slide up animation for main content
 @keyframes slideUpAnimation {
   0% {
     padding-top: 4rem;
@@ -87,6 +77,7 @@ a:hover {
   animation-direction: alternate;
 }
 
+// Underline animation for links
 @keyframes underlineAnimation {
   0% {
     border-bottom: 1px solid var(--color_accent);
@@ -218,8 +209,8 @@ footer {
   margin: 1.5rem auto 32vh auto;
   color: var(--color_paper_alt);
   font-size: medium;
-  font-family: "fusion-pixel-12px-proportional-zh_hans", "Noto Sans SC",
-    sans-serif;
+  font-family:
+    "fusion-pixel-12px-proportional-zh_hans", "Noto Sans SC", sans-serif;
   font-weight: 400;
   text-align: center;
   display: flex;

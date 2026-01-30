@@ -17,8 +17,6 @@ vidRatio   : 16-9
 <span lang="en">
 Sophie Zelmani - Going Home\\
 <span class="url">
-[music.apple.com/nz/album/going-home/179129252](https://music.apple.com/nz/album/going-home/179129252)
-<br>
 [youtube.com/watch?v=hO6BgqS4814](https://youtube.com/watch?v=hO6BgqS4814)
 </span>
 </span>
