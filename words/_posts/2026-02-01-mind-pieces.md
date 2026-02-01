@@ -1,8 +1,9 @@
 ---
 categories : words
-date       : 2025-04-24
+date       : 2026-02-01
 title      : 碎语 Mind Pieces
 ---
+
 <p>
   我脑子里偶尔会浮现点琐碎的东西。我记下来免得忘了。<span lang="en">Pieces of my mind surface from time to time. I made this note to remember them.</span>
 </p>
@@ -11,33 +12,33 @@ title      : 碎语 Mind Pieces
 
   <tr>
     <td>
-      万事万物都有能感知的和不能感知的联系。
+      万事万物都有能感知的和不能感知的联系。我们全都是这个世界的一部分。
     </td>
     <td>
       <span lang="en">
-        Everything is connected, through sensible or unsensible ways.
+        Everything is connected, through sensible or unsensible ways. Together, we are the world.
       </span>
     </td>
   </tr>
 
 <tr>
     <td>
-      我改变不了什么东西，也做不了什么选择。我只能解读我的选择。我的解读就是我看到的世界。
+      我们对世界的解读决定了我们看到的世界。我们看不到我们不理解的东西。
     </td>
     <td>
       <span lang="en">
-        We don't change things or make choices. We interpret them. Our interpretation is our reality.
+        Our interpretation of the world determines what we see. We cannot see what we don't understand.
       </span>
     </td>
 </tr>
 
 <tr>
     <td>
-      我应该温柔对待一切。毁坏东西会麻烦我自己。
+      我们应该温柔地对待一切。毁坏东西会麻烦我们自己。
     </td>
     <td>
       <span lang="en">
-        I should treat everything gently. Damaging things cause inconvenience to myself.
+        We should treat everything gently. Damaging things cause inconvenience to ourselves.
       </span>
     </td>
 </tr>
@@ -48,7 +49,7 @@ title      : 碎语 Mind Pieces
     </td>
     <td>
       <span lang="en">
-        If you don't know what you want to do, you can start from stop doing what you don't want to do.
+        Think about what you don't want to do if you don't know what you want to do.
       </span>
     </td>
 </tr>
@@ -66,11 +67,11 @@ title      : 碎语 Mind Pieces
 
 <tr>
     <td>
-      做好的东西需要爱。爱在于花费的时间。
+      好的东西需要爱。爱在于花费的时间。
     </td>
     <td>
       <span lang="en">
-        Good things are made with love. Love is in the time devoted.</span>
+        Good things needs love. Love is in the time devoted.</span>
     </td>
 </tr>
 
@@ -109,55 +110,33 @@ title      : 碎语 Mind Pieces
 
 <tr>
     <td>
-        我一生的追求是接纳我的丑陋与改善我自己。
+        我一生的追求是接纳我的贪嗔痴并努力改善我自己。
     </td>
     <td>
       <span lang="en">
-        The purpose of my life is to embrace my ugliness and improve myself.
+        The purpose of my life is to embrace my greed, anger, and ignorance, and strive to improve myself.
       </span>
     </td>
 </tr>
 
 <tr>
     <td>
-        一次只弄一件事，能干好一件事就很好了。
+        一次能做到一件事就很好了。没做好也不必自责。
     </td>
     <td>
       <span lang="en">
-        Do one thing at a time and do it well.
+        Getting one thing done is worth a celebration. Forgive imperfections.
       </span>
     </td>
 </tr>
 
 <tr>
     <td>
-        所有的事物都有它的价值，值得被珍惜。
+        良好的关系是互利互惠的关系。人应该与万事万物保持良好的关系。
     </td>
     <td>
       <span lang="en">
-        Everything has its value and should be taken care of.
-      </span>
-    </td>
-</tr>
-
-<tr>
-    <td>
-        我的理想和谐世界是一个没有贪婪、仇恨与无知的世界。
-    </td>
-    <td>
-      <span lang="en">
-        My ideal harmonious world is a world without greed, hatred and ignorance.
-      </span>
-    </td>
-</tr>
-
-<tr>
-    <td>
-        良好的关系是互利互惠的关系。人应该与万物保持良好的关系。
-    </td>
-    <td>
-      <span lang="en">
-        A good relationship is reciprocal. People should maintain a good relationship to every thing.
+        A good relationship is reciprocal. We should maintain a good relationship with everyone and everything.
       </span>
     </td>
 </tr>
