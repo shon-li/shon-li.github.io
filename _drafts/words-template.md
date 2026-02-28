@@ -1,5 +1,5 @@
 ---
 categories : words
-date       : 
-title      : 
+date       :
+title      :
 ---

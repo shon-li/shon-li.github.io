@@ -3,6 +3,7 @@ categories : words
 date       :
 title      :
 ---
+
 <table class="two-columns">
 
   <tr>
