@@ -1,7 +1,7 @@
 ---
 categories : photos
 date       : 2017-05-21
-title      : 别离
+title      : 分别
 image      : /assets/img/seperation.jpeg
 figure     : <img src="/assets/img/seperation.jpeg" alt="黑色地板上有夕阳的反光和离开的三个人影。">
 ---
