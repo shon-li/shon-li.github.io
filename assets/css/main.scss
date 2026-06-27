@@ -21,7 +21,7 @@
   font-size: large;
 }
 
-// Define color and size variables
+// Define color, size variables, and page entrance animation
 body {
   --color_space: hsl(35, 2%, 5%);
   --color_paper: hsl(35, 9%, 28%);
@@ -30,12 +30,32 @@ body {
   --color_accent: hsl(55, 100%, 60%);
   --paper_width: 41rem;
 
-  animation-name: slideUpAnimation;
-  animation-timing-function: ease;
-  animation-duration: 1.5s;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+  // 'Space' background with noise texture
+  min-width: 16.5rem;
+  margin: auto;
+  background-color: var(--color_space);
+
+  // Necessary to anchor the absolute pseudo-element
+  position: relative;
+  min-height: 100vh;
+
+  animation: slideUpAnimation 1.5s ease forwards;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    // Noise texture
+    background-image: url("/assets/css/noise.svg");
+    pointer-events: none;
+    z-index: -1;
+    mix-blend-mode: overlay;
+    opacity: 0.15;
+  }
 }
 
 // Slide up animation for main content
@@ -69,13 +89,7 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-
-  animation-name: underlineAnimation;
-  animation-timing-function: ease;
-  animation-duration: 1.5s;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation: underlineAnimation 1.5s ease infinite alternate;
 }
 
 // Underline animation for links
@@ -90,38 +104,11 @@ a:hover {
   }
 }
 
-// 'Space' background with noise texture
-body {
-  min-width: 16.5rem;
-  margin: auto;
-  background-color: var(--color_space);
-
-  // Necessary to anchor the absolute pseudo-element
-  position: relative;
-  min-height: 100vh;
-
-  &::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    // Noise texture
-    background-image: url("/assets/css/noise.svg");
-    pointer-events: none;
-    z-index: -1;
-    mix-blend-mode: overlay;
-    opacity: 0.15;
-  }
-}
-
 // 'Paper' container shape
 main {
   width: fit-content;
   max-width: var(--paper_width);
-  margin: 37vh auto 0 auto;
+  margin: 37vh auto 0;
   padding: 5em 5.2em 5em 5.2em;
   background-color: var(--color_paper);
   border-radius: 2px;
@@ -227,7 +214,7 @@ code {
 
 footer {
   max-width: fit-content;
-  margin: 1.5rem auto 32vh auto;
+  margin: 1.5rem auto 32vh;
   color: var(--color_paper_alt);
   font-size: medium;
   font-family:

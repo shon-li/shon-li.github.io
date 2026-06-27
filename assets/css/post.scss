@@ -59,7 +59,7 @@ article {
     min-width: 50%;
     max-width: 100%;
     margin: 1.5em auto;
-    font-family: "Noto Sans Sc", sans-serif;
+    font-family: "Noto Sans SC", sans-serif;
     font-size: calc(1rem * 0.925);
     font-weight: 350;
     border-collapse: collapse;
@@ -185,13 +185,13 @@ article {
     border-bottom: 0.875rem solid transparent;
   }
 
-  :first-child {
+  tr:first-child {
     td {
       padding-top: 0;
     }
   }
 
-  :last-child {
+  tr:last-child {
     border-bottom: none;
 
     td {
