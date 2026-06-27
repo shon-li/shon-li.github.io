@@ -52,28 +52,21 @@ layout: compress
   {%- feed_meta -%}
 </head>
 
-<body
-  {% if page.lang == "en" %}
-    class="en-page"
-  {%- endif -%}
-
-  {% if page.date %}
-    class="post-page"
-  {%- endif -%}
->
+{%- capture bodyClass -%}
+  {%- if page.lang == "en" %}en-page {% endif -%}
+  {%- if page.date %}post-page{% endif -%}
+{%- endcapture -%}
+{%- capture mainClass -%}
+  {%- if page.indexPage %}index-page {% endif -%}
+  {%- if page.figure %}figure-page{% endif -%}
+{%- endcapture -%}
+<body{% if bodyClass != "" %} class="{{ bodyClass | strip }}"{% endif %}>
 
   {%- if page.figure -%}
     <figure>{{- page.figure -}}</figure>
   {%- endif -%}
 
-  <main
-    {% if page.indexPage %}
-      class="index-page"
-    {%- endif -%}
-    {% if page.figure %}
-      class="figure-page"
-    {%- endif -%}
-  >
+  <main{% if mainClass != "" %} class="{{ mainClass | strip }}"{% endif %}>
     <article>
       {% comment %}
         Show page's title if the page has a category variable.

@@ -4,8 +4,7 @@ author: "李晓航 Shon Li"
 
 # URLs
 url: "https://shon.li"
-fullurl: "shon.li"
-permalink: none
+permalink: /:categories/:title:output_ext
 
 # Default front matter for all pages and posts
 defaults:

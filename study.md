@@ -10,9 +10,9 @@ id_four   : 120753
 ---
 
 <style>
-  td {
+  .contents-table td {
     padding-left: 0 !important;
-    text-align: center
+    text-align: center;
   }
 </style>
 

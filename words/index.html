@@ -3,28 +3,4 @@ indexPage : true
 copyright : false
 title     : 文字 Words
 ---
-{% assign folderName = page.dir | remove: "/" %}
-
-{%- for category in site.data.categories -%}
-
-  {%- if category.keyword == folderName -%}
-    <table class="contents-table">
-      <tr>
-        <th colspan="2"><h2 class="contents-title">{{- category.name -}}</h2></th>
-      </tr>
-
-      {%- for post in site.categories[category.keyword] -%}
-        <tr>
-          <td>
-            {{- forloop.index -}} . &nbsp; <a href="{{- post.url -}}">{{- post.title -}}</a>
-          </td>
-
-          <td class="contents-date-col">
-            <span class="contents-date">{{- post.date | date: "%Y-%m" -}}</span>
-          </td>
-        </tr>
-      {%- endfor -%}
-    </table>
-  {%- endif -%}
-
-{%- endfor -%}
+{%- include category-index.html -%}

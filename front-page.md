@@ -31,10 +31,10 @@ title     : 首页 Front-page
 
 <h2 lang="en">His Recent Focus</h2>
 <ol>
-  <li  lang="en">
+  <li lang="en">
     Know himself. Understand his feelings.
   </li>
-  <li  lang="en">
+  <li lang="en">
     Keep a regular sleeping cycle.
   </li>
 </ol>
