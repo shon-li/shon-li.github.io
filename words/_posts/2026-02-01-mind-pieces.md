@@ -2,6 +2,7 @@
 categories : words
 date       : 2026-02-01
 title      : 碎语 Mind Pieces
+heading    : 碎语<br><span lang="en">Mind Pieces</span>
 ---
 
 <p>

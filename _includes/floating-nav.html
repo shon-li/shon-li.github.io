@@ -26,7 +26,7 @@
     function resetTimer() {
       show();
       clearTimeout(timer);
-      timer = setTimeout(hide, 5000);
+      timer = setTimeout(hide, 3000);
     }
 
     nav.addEventListener('mouseenter', function () {
@@ -35,14 +35,14 @@
     });
 
     nav.addEventListener('mouseleave', function () {
-      timer = setTimeout(hide, 5000);
+      timer = setTimeout(hide, 3000);
     });
 
     function positionNav() {
       if (!paper) return;
       var rect = paper.getBoundingClientRect();
       var navH = nav.offsetHeight;
-      var gap = 16;
+      var gap = 20;
 
       nav.style.left = (rect.right + gap) + 'px';
 

@@ -4,7 +4,8 @@
 
 /*-------------------------------------- 0. Initialisation ---------------------------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+// Google Fonts are loaded via <link rel="preconnect"/"stylesheet"> in `/_layouts/default.html`
+// to avoid the render-blocking @import.
 
 @font-face {
   font-family: "fusion-pixel-12px-proportional-zh_hans";
@@ -91,7 +92,9 @@ body {
 
   main,
   article,
-  figure {
+  figure,
+  footer,
+  #floating-nav {
     animation: none;
   }
 
@@ -99,6 +102,11 @@ body {
   footer a:hover,
   #floating-nav a:hover {
     @include link-hover-static;
+  }
+
+  #floating-nav {
+    transition: none;
+    opacity: 1 !important;
   }
 }
 
@@ -258,8 +266,9 @@ code {
 /*------------------------------------------ 2. Footer -------------------------------------------*/
 
 footer {
-  margin-top: 12px;
+  margin-top: 16px;
   margin-bottom: 32vh;
+  animation: fadeInAnimation 1.5s ease forwards;
   color: var(--color_paper_alt);
   font-size: medium;
   font-family:
@@ -279,19 +288,6 @@ footer {
 
   a:hover {
     @include link-hover;
-  }
-
-  nav {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    column-gap: 1.6em;
-
-    a {
-      width: fit-content;
-      height: max-content;
-      margin: 0 auto;
-    }
   }
 }
 
@@ -313,6 +309,7 @@ footer {
   font-size: medium;
   font-weight: 400;
 
+  animation: fadeInAnimation 1.5s ease forwards;
   opacity: 0.5;
   transition: opacity 0.8s ease;
 
@@ -329,13 +326,6 @@ footer {
 
   a:hover {
     @include link-hover;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  #floating-nav {
-    transition: none;
-    opacity: 1 !important;
   }
 }
 
@@ -401,12 +391,6 @@ footer {
     margin-bottom: 8em !important;
     padding-left: 2rem;
     padding-right: 2rem;
-
-    nav {
-      margin-top: 5em;
-      flex-direction: column;
-      row-gap: 2em;
-    }
   }
 
   #floating-nav {

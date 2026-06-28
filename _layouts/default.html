@@ -8,6 +8,11 @@ layout: compress
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap">
+
   <link rel="stylesheet" href="/assets/css/main.css">
 
   {%- if page.indexPage -%}
@@ -56,24 +61,32 @@ layout: compress
   {%- if page.lang == "en" %}en-page {% endif -%}
   {%- if page.date %}post-page{% endif -%}
 {%- endcapture -%}
-{%- assign _figure_ext = page.image | split: "." | last | downcase -%}
-{%- assign _is_video = false -%}
-{%- if _figure_ext == "mp4" or _figure_ext == "webm" -%}
-  {%- assign _is_video = true -%}
-{%- endif -%}
 {%- capture mainClass -%}
   {%- if page.indexPage %}index-page {% endif -%}
-  {%- if page.image %}figure-page{% endif -%}
+  {%- if page.video or page.image %}figure-page{% endif -%}
 {%- endcapture -%}
 <body{% if bodyClass != "" %} class="{{ bodyClass | strip }}"{% endif %}>
 
-  {%- if page.image -%}
+  {%- if page.video or page.image -%}
     <figure>
-      {%- if _is_video -%}
-        <video autoplay loop muted playsinline src="{{- page.image -}}"></video>
-        {%- if page.video_speed -%}
-          <script>document.querySelector('figure video').playbackRate = {{- page.video_speed -}};</script>
-        {%- endif -%}
+      {%- if page.video -%}
+        <video autoplay loop muted playsinline src="{{- page.video -}}"></video>
+        <script>
+          (function () {
+            var v = document.querySelector('figure video');
+            {%- if page.video_speed %}
+            v.playbackRate = {{ page.video_speed }};
+            {%- endif %}
+            /* Honour prefers-reduced-motion: stop the autoplay loop and let
+               the user play it manually instead. */
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+              v.removeAttribute('autoplay');
+              v.removeAttribute('loop');
+              v.setAttribute('controls', '');
+              v.pause();
+            }
+          })();
+        </script>
       {%- else -%}
         <img src="{{- page.image -}}" alt="{{- page.alt | default: "" -}}">
       {%- endif -%}
@@ -83,11 +96,13 @@ layout: compress
   <main{% if mainClass != "" %} class="{{ mainClass | strip }}"{% endif %}>
     <article>
       {% comment %}
-        Show page's title if the page has a category variable.
+        Show page's title if the page has a category variable. `page.heading`
+        is an optional display-only override (it may contain markup such as a
+        <br> to split a bilingual title); it falls back to the plain `title`.
       {% endcomment %}
 
       {%- if page.categories -%}
-        <h1>{{- page.title -}}</h1>
+        <h1>{{- page.heading | default: page.title -}}</h1>
       {%- endif -%}
 
       {{- content -}}
