@@ -19,6 +19,7 @@
 // Root font size is used as a metric for `--paper_width'
 :root {
   font-size: large;
+  scroll-behavior: smooth;
 }
 
 // Define color, size variables, and page entrance animation
@@ -28,6 +29,7 @@ body {
   --color_text: hsl(35, 55%, 80%);
   --color_paper_alt: hsl(35, 9%, 50%);
   --color_accent: hsl(55, 100%, 60%);
+  --color_accent_glow: hsla(55, 100%, 60%, 0.5);
   --paper_width: 41rem;
 
   // 'Space' background with noise texture
@@ -38,8 +40,6 @@ body {
   // Necessary to anchor the absolute pseudo-element
   position: relative;
   min-height: 100vh;
-
-  animation: slideUpAnimation 1.5s ease forwards;
 
   &::before {
     content: "";
@@ -58,27 +58,47 @@ body {
   }
 }
 
-// Slide up animation for main content
-@keyframes slideUpAnimation {
+// Fade-in animation for page load
+@keyframes fadeInAnimation {
   0% {
-    padding-top: 4rem;
     opacity: 0;
   }
 
   100% {
-    padding-top: 0;
     opacity: 1;
   }
 }
 
+// Shared hover state for all links
+@mixin link-hover {
+  color: var(--color_accent);
+  border-bottom: 1px solid var(--color_accent);
+  animation: glowAnimation 1.5s ease infinite alternate;
+}
+
+// Static fallback for prefers-reduced-motion
+@mixin link-hover-static {
+  animation: none;
+  color: var(--color_accent);
+  border-bottom: 1px solid var(--color_accent);
+  text-shadow: 0 0 0.4em var(--color_accent_glow);
+}
+
 @media (prefers-reduced-motion: reduce) {
-  body {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  main,
+  article,
+  figure {
     animation: none;
   }
 
-  a:hover {
-    animation: none;
-    border-bottom: 1px solid var(--color_accent);
+  a:hover,
+  footer a:hover,
+  #floating-nav a:hover {
+    @include link-hover-static;
   }
 }
 
@@ -90,6 +110,10 @@ a:visited {
   color: var(--color_text);
   border-bottom: 1px dotted var(--color_text);
   text-decoration: none;
+  transition:
+    color 0.3s ease,
+    border-bottom-color 0.3s ease,
+    text-shadow 0.3s ease;
 }
 
 // `.url` selects `a` marked as url text on all pages
@@ -100,33 +124,43 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  animation: underlineAnimation 1.5s ease infinite alternate;
+  @include link-hover;
 }
 
-// Underline animation for links
-@keyframes underlineAnimation {
+// Breathing glow animation for links
+@keyframes glowAnimation {
   0% {
-    border-bottom: 1px solid var(--color_accent);
+    text-shadow: none;
   }
 
   100% {
-    opacity: 1;
-    border-bottom: 0.25em solid var(--color_accent);
+    text-shadow:
+      0 0 0.4em var(--color_accent_glow),
+      0 0 1em var(--color_accent_glow);
   }
+}
+
+// Shared centering for paper and footer
+main,
+footer {
+  max-width: var(--paper_width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // 'Paper' container shape
 main {
-  width: fit-content;
-  max-width: var(--paper_width);
-  margin: 37vh auto 0;
+  margin-top: 37vh;
+  margin-bottom: 0;
   padding: 5em 5.2em 5em 5.2em;
   background-color: var(--color_paper);
   border-radius: 2px;
+  animation: fadeInAnimation 1.5s ease forwards;
 }
 
 // Text contents on paper
 article {
+  animation: fadeInAnimation 2s ease forwards;
   width: auto;
   height: auto;
   margin: 0 auto;
@@ -224,8 +258,8 @@ code {
 /*------------------------------------------ 2. Footer -------------------------------------------*/
 
 footer {
-  max-width: var(--paper_width);
-  margin: 12px auto 32vh;
+  margin-top: 12px;
+  margin-bottom: 32vh;
   color: var(--color_paper_alt);
   font-size: medium;
   font-family:
@@ -244,7 +278,7 @@ footer {
   }
 
   a:hover {
-    color: var(--color_accent);
+    @include link-hover;
   }
 
   nav {
@@ -294,7 +328,7 @@ footer {
   }
 
   a:hover {
-    color: var(--color_accent);
+    @include link-hover;
   }
 }
 
@@ -313,7 +347,8 @@ footer {
     --color_paper: hsl(40 100% 95%);
     --color_text: hsl(40, 15%, 30%);
     --color_paper_alt: hsl(40, 35%, 85%);
-    --color_accent: hsl(20, 75%, 38%);
+    --color_accent: hsl(25, 100%, 65%);
+    --color_accent_glow: hsla(25, 100%, 65%, 0.6);
   }
 }
 

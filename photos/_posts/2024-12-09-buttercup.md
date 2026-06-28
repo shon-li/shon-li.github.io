@@ -3,7 +3,7 @@ categories : photos
 date       : 2024-12-09
 title      : Buttercup 毛茛
 image      : /assets/img/buttercup.jpeg
-figure     : <img src="/assets/img/buttercup.jpeg" alt="公园草地上不知名的小黄花">
+alt        : 公园草地上不知名的小黄花
 ---
 <p lang="en">
   I found this little yellow flower in Albert Park, and I am told it's called buttercup. Later I found its Chinese name (<ruby lang="zh">毛<rt>máo</rt>茛<rt>gèn</rt></ruby>), but disappointingly, I have never heard of that name before.

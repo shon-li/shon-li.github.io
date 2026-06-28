@@ -56,14 +56,28 @@ layout: compress
   {%- if page.lang == "en" %}en-page {% endif -%}
   {%- if page.date %}post-page{% endif -%}
 {%- endcapture -%}
+{%- assign _figure_ext = page.image | split: "." | last | downcase -%}
+{%- assign _is_video = false -%}
+{%- if _figure_ext == "mp4" or _figure_ext == "webm" -%}
+  {%- assign _is_video = true -%}
+{%- endif -%}
 {%- capture mainClass -%}
   {%- if page.indexPage %}index-page {% endif -%}
-  {%- if page.figure %}figure-page{% endif -%}
+  {%- if page.image %}figure-page{% endif -%}
 {%- endcapture -%}
 <body{% if bodyClass != "" %} class="{{ bodyClass | strip }}"{% endif %}>
 
-  {%- if page.figure -%}
-    <figure>{{- page.figure -}}</figure>
+  {%- if page.image -%}
+    <figure>
+      {%- if _is_video -%}
+        <video autoplay loop muted playsinline src="{{- page.image -}}"></video>
+        {%- if page.video_speed -%}
+          <script>document.querySelector('figure video').playbackRate = {{- page.video_speed -}};</script>
+        {%- endif -%}
+      {%- else -%}
+        <img src="{{- page.image -}}" alt="{{- page.alt | default: "" -}}">
+      {%- endif -%}
+    </figure>
   {%- endif -%}
 
   <main{% if mainClass != "" %} class="{{ mainClass | strip }}"{% endif %}>
