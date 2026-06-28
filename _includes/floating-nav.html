@@ -13,30 +13,6 @@
   (function () {
     var nav = document.getElementById('floating-nav');
     var paper = document.querySelector('main');
-    var timer;
-
-    function hide() {
-      nav.classList.remove('is-visible');
-    }
-
-    function show() {
-      nav.classList.add('is-visible');
-    }
-
-    function resetTimer() {
-      show();
-      clearTimeout(timer);
-      timer = setTimeout(hide, 3000);
-    }
-
-    nav.addEventListener('mouseenter', function () {
-      clearTimeout(timer);
-      show();
-    });
-
-    nav.addEventListener('mouseleave', function () {
-      timer = setTimeout(hide, 3000);
-    });
 
     function positionNav() {
       if (!paper) return;
@@ -53,22 +29,12 @@
 
       var top = Math.min(Math.max(idealTop, minTop), maxTop);
       nav.style.top = top + 'px';
-
-      if (idealTop >= maxTop) {
-        clearTimeout(timer);
-        show();
-      }
     }
 
-    window.addEventListener('scroll', function () {
-      resetTimer();
-      positionNav();
-    }, { passive: true });
-
+    window.addEventListener('scroll', positionNav, { passive: true });
     window.addEventListener('resize', positionNav, { passive: true });
 
     positionNav();
-    resetTimer();
 
     var scrollTop = document.getElementById('scroll-to-top');
     if (scrollTop) {
