@@ -71,6 +71,17 @@ body {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+
+  a:hover {
+    animation: none;
+    border-bottom: 1px solid var(--color_accent);
+  }
+}
+
 /*--------------------------------------- 1. Common Pages ----------------------------------------*/
 
 a:link,
@@ -250,7 +261,51 @@ footer {
   }
 }
 
-/*-------------------------- 3. Adjust to color scheme or width change ---------------------------*/
+/*--------------------------------------- 3. Floating Nav -----------------------------------------*/
+
+#floating-nav {
+  position: fixed;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.7em;
+
+  color: var(--color_paper_alt);
+  font-family:
+    "fusion-pixel-12px-proportional-zh_hans", "Noto Sans SC", sans-serif;
+  font-size: medium;
+  font-weight: 400;
+
+  opacity: 0.2;
+  transition: opacity 0.8s ease;
+
+  &.is-visible {
+    opacity: 1;
+  }
+
+  a,
+  a:link,
+  a:visited {
+    color: var(--color_paper_alt);
+    border-bottom: 1px dotted var(--color_paper);
+  }
+
+  a:hover {
+    color: var(--color_accent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #floating-nav {
+    transition: none;
+    opacity: 1 !important;
+  }
+}
+
+/*-------------------------- 4. Adjust to color scheme or width change ---------------------------*/
 
 @media (prefers-color-scheme: light) {
   body {
@@ -258,7 +313,7 @@ footer {
     --color_paper: hsl(40 100% 95%);
     --color_text: hsl(40, 15%, 30%);
     --color_paper_alt: hsl(40, 35%, 85%);
-    --color_accent: hsl(230, 100%, 50%);
+    --color_accent: hsl(20, 75%, 38%);
   }
 }
 
@@ -318,6 +373,10 @@ footer {
       row-gap: 2em;
     }
   }
+
+  #floating-nav {
+    display: none;
+  }
 }
 
 @media print {
@@ -355,6 +414,10 @@ footer {
   }
 
   footer {
+    display: none;
+  }
+
+  #floating-nav {
     display: none;
   }
 }
