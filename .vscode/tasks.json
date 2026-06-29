@@ -1,5 +1,11 @@
 {
   "version": "2.0.0",
+  "options": {
+    "shell": {
+      "executable": "/bin/zsh",
+      "args": ["-i", "-l", "-c"]
+    }
+  },
   "tasks": [
     {
       "label": "Jekyll Serve",
