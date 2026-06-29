@@ -19,7 +19,7 @@ id_four   : 120753
 <table class="contents-table">
 
   <tr>
-    <th colspan="2"><h2 class="contents-title">AI & ML・COMPSYS 306</h2></th>
+    <th colspan="2"><h1 class="contents-title">AI & ML・COMPSYS 306</h1></th>
   </tr>
 
   <tr>
@@ -39,7 +39,7 @@ id_four   : 120753
 <table class="contents-table">
 
   <tr>
-    <th colspan="2"><h2 class="contents-title">Control・ELECTENG 332</h2></th>
+    <th colspan="2"><h1 class="contents-title">Control・ELECTENG 332</h1></th>
   </tr>
   <tr>
     <td>
@@ -58,7 +58,7 @@ id_four   : 120753
 <table class="contents-table">
 
   <tr>
-    <th colspan="2"><h2 class="contents-title">Electronics・ELECTENG 292</h2></th>
+    <th colspan="2"><h1 class="contents-title">Electronics・ELECTENG 292</h1></th>
   </tr>
   <tr>
     <td>
@@ -77,7 +77,7 @@ id_four   : 120753
 <table class="contents-table">
 
   <tr>
-    <th colspan="2"><h2 class="contents-title">Embedded・COMPSYS 303</h2></th>
+    <th colspan="2"><h1 class="contents-title">Embedded・COMPSYS 303</h1></th>
   </tr>
   <tr>
     <td>

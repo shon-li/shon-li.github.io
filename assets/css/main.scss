@@ -30,7 +30,6 @@ body {
   --color_text: hsl(35, 55%, 80%);
   --color_paper_alt: hsl(35, 9%, 50%);
   --color_accent: hsl(55, 100%, 60%);
-  // Resting font colour a link breathes out of on hover; overridden per context
   --color_link_rest: var(--color_text);
   --paper_width: 41rem;
 
@@ -140,7 +139,6 @@ main {
   padding: 5rem 5.2rem 5rem 5.2rem;
   background-color: var(--color_paper);
   border-radius: 2px;
-  animation: fadeInAnimation 1.5s ease forwards;
 
   // Blue-noise grain on the paper; tiled 1:1 for crisp texture.
   // z-index:-1 keeps it above the paper fill but below the text.
@@ -162,7 +160,7 @@ main {
 
 // Text contents on paper
 article {
-  animation: fadeInAnimation 2s ease forwards;
+  animation: fadeInAnimation 1.5s ease forwards;
   width: auto;
   height: auto;
   margin: 0 auto;
@@ -170,10 +168,13 @@ article {
   color: var(--color_text);
   font-family: "Noto Serif SC", serif;
   font-weight: 400;
-  line-height: 2;
+  // Body leading; block spacing below is derived from it so the two stay in sync.
+  --leading: 2;
+  line-height: var(--leading);
   letter-spacing: 0.125em;
   word-spacing: 0.06em;
   word-break: normal;
+  // Left-aligned (ragged right) on all pages.
   text-align: left;
 
   > :first-child {
@@ -202,6 +203,7 @@ span:lang(en),
 blockquote:lang(en) {
   letter-spacing: normal;
   word-spacing: 0.08em;
+  // Ragged-left text is not hyphenated; let lines break only at spaces.
   hyphens: none;
 }
 
@@ -212,7 +214,13 @@ h4,
 h5,
 h6 {
   width: fit-content;
-  max-width: 16rem;
+  // Share the body's measure: headings wrap at the text-column edge like
+  // paragraphs, never at an arbitrary fixed width. A heading is display type
+  // and should not be set narrower than the prose it introduces.
+  max-width: 100%;
+  // Balance the lines of any heading that does wrap, keeping them even and
+  // avoiding a lone orphan word or character on the last line.
+  text-wrap: balance;
   // em-based margins scale spacing with each heading's own size and collapse
   // with adjacent paragraph margins. More space above than below binds the
   // heading to the section it introduces.
@@ -226,7 +234,9 @@ h6 {
 // Levels below h3 share the body size and rely on weight/spacing for hierarchy.
 h1 {
   font-size: 1.728rem; // 1.2^3
-  line-height: 1.25; // tighter leading for the largest display size
+  // No line-height override here: CJK ideographs fill the em box edge to edge,
+  // so even the largest heading needs the roomier base 1.5 leading to avoid
+  // looking cramped when it wraps. Latin h1 is tightened separately below.
 }
 
 h2 {
@@ -243,13 +253,30 @@ h6 {
   font-size: 1rem;
 }
 
+// Latin glyphs carry their own ascender/descender whitespace, so display-size
+// English headings read crisper with tighter leading than CJK needs.
+h1:lang(en) {
+  line-height: 1.2;
+}
+
+// Block rhythm: paragraphs and lists carry their separation on the bottom only.
+// Bottom-only margins collapse cleanly and never override a heading's tight
+// space-below (see the heading margins above), so headings stay bound to their
+// text while paragraphs read as distinct blocks against the line-height: 2 body.
+//
+// Spacing = the body's extra leading, (--leading - 1) * 1em. It tracks `--leading`
+// automatically: a paragraph break advances one line + this, i.e. 1.5x a line at
+// --leading: 2. The `2` fallback covers any paragraph outside `article`.
+p {
+  margin: 0 0 calc((var(--leading, 2) - 1) * 1em);
+}
+
 ol,
 ul {
-  margin: 1rem auto;
+  margin: 0 auto calc((var(--leading, 2) - 1) * 1em);
 
   li ol,
   li ul {
-    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -257,18 +284,20 @@ ul {
 pre,
 kbd,
 code {
-  margin-top: -0.5em;
   background-color: var(--color_paper_alt);
   border-radius: 2px;
   font-family: "Roboto Mono", "Noto Sans SC", monospace, sans-serif;
   font-size: 0.925rem;
   letter-spacing: normal;
-  overflow-x: auto;
   hyphens: none !important;
 }
 
+// Block-only: negative top margin and horizontal scroll belong on `pre`,
+// not on inline `code`/`kbd` where they have no effect.
 pre {
+  margin-top: -0.5em;
   padding-left: 0.5em;
+  overflow-x: auto;
 }
 
 kbd,
@@ -280,7 +309,7 @@ code {
 
 footer {
   --color_link_rest: var(--color_paper_alt);
-  margin-top: 16px;
+  margin-top: 1rem;
   margin-bottom: 32vh;
   animation: fadeInAnimation 1.5s ease forwards;
   color: var(--color_paper_alt);
@@ -346,7 +375,7 @@ footer {
     --color_paper: hsl(40 100% 95%);
     --color_text: hsl(40, 15%, 30%);
     --color_paper_alt: hsl(40, 35%, 85%);
-    --color_accent: hsl(55, 98%, 40%);
+    --color_accent: hsl(55, 100%, 45%);
   }
 
   // Stronger paper grain in light mode
@@ -387,12 +416,6 @@ footer {
   span:lang(en),
   blockquote:lang(en) {
     hyphens: auto !important;
-  }
-
-  // Avoid leaving one character at the last line; rem keeps this consistent
-  // with the base heading max-width and independent of h1's font-size.
-  h1 {
-    max-width: 12rem;
   }
 
   a,
