@@ -140,7 +140,7 @@ main {
   isolation: isolate;
   margin-top: 37vh;
   margin-bottom: 0;
-  padding: 5em 5.2em 5em 5.2em;
+  padding: 5rem 5.2rem 5rem 5.2rem;
   background-color: var(--color_paper);
   border-radius: 2px;
   animation: fadeInAnimation 1.5s ease forwards;
@@ -215,16 +215,35 @@ h4,
 h5,
 h6 {
   width: fit-content;
-  max-width: 16em;
-  height: auto;
-  padding-top: 1.25rem;
+  max-width: 16rem;
+  // em-based margins scale spacing with each heading's own size and collapse
+  // with adjacent paragraph margins. More space above than below binds the
+  // heading to the section it introduces.
+  margin: 1.6em 0 0.6em;
   line-height: 1.5;
   letter-spacing: normal;
   text-align: left;
 }
 
+// Modular type scale (minor third, ratio 1.2) anchored to the 1rem body size.
+// Levels below h3 share the body size and rely on weight/spacing for hierarchy.
 h1 {
-  padding-bottom: 1rem;
+  font-size: 1.728rem; // 1.2^3
+  line-height: 1.25; // tighter leading for the largest display size
+}
+
+h2 {
+  font-size: 1.44rem; // 1.2^2
+}
+
+h3 {
+  font-size: 1.2rem; // 1.2^1
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1rem;
 }
 
 ol,
@@ -245,7 +264,7 @@ code {
   background-color: var(--color_paper_alt);
   border-radius: 2px;
   font-family: "Roboto Mono", "Noto Sans SC", monospace, sans-serif;
-  font-size: calc(1rem * 0.925);
+  font-size: 0.925rem;
   letter-spacing: normal;
   overflow-x: auto;
   hyphens: none !important;
@@ -334,7 +353,7 @@ footer {
 
   // Stronger paper grain in light mode
   main::before {
-    opacity: 0.2;
+    opacity: 0.5;
   }
 }
 
@@ -372,9 +391,10 @@ footer {
     hyphens: auto !important;
   }
 
-  // Avoid leaving one character at the last line
+  // Avoid leaving one character at the last line; rem keeps this consistent
+  // with the base heading max-width and independent of h1's font-size.
   h1 {
-    max-width: 9em;
+    max-width: 12rem;
   }
 
   a,

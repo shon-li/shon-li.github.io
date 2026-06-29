@@ -11,7 +11,7 @@ hr {
 rt {
   margin-bottom: -0.35em;
   font-family: "Noto Sans SC", sans-serif;
-  font-size: calc(1em * 0.56);
+  font-size: 0.56em;
   font-weight: 450;
   letter-spacing: 0.05em;
 }
@@ -61,7 +61,7 @@ article {
     max-width: 100%;
     margin: 1.5em auto;
     font-family: "Noto Sans SC", sans-serif;
-    font-size: calc(1rem * 0.925);
+    font-size: 0.925rem;
     font-weight: 350;
     border-collapse: collapse;
     overflow-x: auto;
@@ -144,7 +144,8 @@ article {
   h4,
   h5,
   h6 {
-    margin: 0;
+    // Keep headings left-aligned against the justified body; spacing comes
+    // from the shared em-based heading margins.
     text-align: left;
   }
 }
@@ -164,7 +165,6 @@ article {
   h4,
   h5,
   h6 {
-    margin: 0;
     word-spacing: 0.2em;
   }
 }
