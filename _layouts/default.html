@@ -111,6 +111,51 @@ layout: compress
 
   {%- include footer.html -%}
   {%- include floating-nav.html -%}
+
+  <script>
+    /* Smoothly scroll to the top before following an in-site link, so leaving
+       a page feels continuous rather than an abrupt jump. */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      document.addEventListener('click', function (e) {
+        /* Let the browser keep modified clicks (new tab, middle-click, etc.). */
+        if (e.defaultPrevented || e.button !== 0 ||
+            e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+        var link = e.target.closest('a[href]');
+        if (!link) return;
+        if (link.hasAttribute('download')) return;
+        if (link.target && link.target !== '_self') return;
+
+        var url = new URL(link.href, location.href);
+
+        /* Only intercept navigations to a different page on this site. */
+        if (url.origin !== location.origin) return;
+        if (url.href === location.href) return;
+        if (url.pathname === location.pathname && url.hash) return;
+
+        /* Already at the top: nothing to animate, follow the link normally. */
+        if (window.scrollY === 0) return;
+
+        e.preventDefault();
+
+        var navigated = false;
+        function go() {
+          if (navigated) return;
+          navigated = true;
+          location.href = url.href;
+        }
+
+        /* Navigate the moment the scroll settles, with a fallback for browsers
+           that don't fire `scrollend`. */
+        window.addEventListener('scrollend', go, { once: true });
+        setTimeout(go, 700);
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
 </body>
 
 </html>
