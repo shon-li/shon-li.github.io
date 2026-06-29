@@ -7,7 +7,7 @@ title     : 备注 Appendix
 
 静态网站生成器 <a lang="en" href="https://jekyllrb.com">Jekyll</a> 为这个博客生成网页。<a lang="en" href="https://pages.github.com">Github Pages</a> 和 <a lang="en" href="https://www.cloudflare.com/">Cloudflare</a> 托管和代理 <span lang="en">DNS</span>。[这是博客的 <span lang="en">GitHub Repository</span> 的链接](https://github.com/shon-li/shon-li.github.io/)。[这是博客的 <span lang="en">RSS 链接</span>](https://shon.li/feed.xml)。
 
-晓航用了 <span lang="en">Anatol Broder</span> 做的 <a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a> 来压缩 <span lang="en">HTML</span> 源码。博客用到的来自 <a lang="en" href="https://fonts.google.com">Google Fonts</a> 的字体是：<a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>、<a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a>、<a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>。博客使用的像素字体是<a href="https://github.com/TakWolf/fusion-pixel-font">缝合像素字体</a>。晓航用 <a lang="en" href="https://claude.ai">Claude <span lang="en">AI</span></a> 辅助改进博客的代码。
+晓航用了 <span lang="en">Anatol Broder</span> 做的 <a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a> 来压缩 <span lang="en">HTML</span> 源码。博客用到的来自 <a lang="en" href="https://fonts.google.com">Google Fonts</a> 的字体是：<a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>、<a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a>、<a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>。博客使用的像素字体是<a href="https://github.com/TakWolf/fusion-pixel-font">缝合像素字体</a>。<a lang="en" href="https://claude.ai">Claude <span lang="en">AI</span></a> 帮晓航写博客的代码。
 
 <h2 lang="en">About This Site</h2>
 
@@ -16,7 +16,7 @@ title     : 备注 Appendix
 </p>
 
 <p lang="en">
-  <a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a> by Anatol Broder helps Shon to compress HTML source code. Typefaces from <a lang="en" href="https://fonts.google.com">Google Fonts</a> are: <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>, <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a> and <a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>. The pixel font on this blog is <a href="https://github.com/TakWolf/fusion-pixel-font">Fusion Pixel Font</a>. Shon uses <a lang="en" href="https://claude.ai">Claude AI</a> to assist with code improvements.
+  <a lang="en" href="https://jch.penibelst.de/">Compress HTML in Jekyll</a> by Anatol Broder helps Shon to compress HTML source code. Typefaces from <a lang="en" href="https://fonts.google.com">Google Fonts</a> are: <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Serif+SC">Noto Serif SC</a>, <a lang="en" href="https://fonts.google.com/noto/specimen/Noto+Sans+SC">Noto Sans SC</a> and <a lang="en" href="https://fonts.google.com/specimen/Roboto+Mono">Roboto Mono</a>. The pixel font on this blog is <a href="https://github.com/TakWolf/fusion-pixel-font">Fusion Pixel Font</a>. <a lang="en" href="https://claude.ai">Claude AI</a> is a co-author of the blog's code.
 </p>
 
 ## 联系方式
