@@ -33,30 +33,11 @@ body {
   --color_accent_glow: hsla(55, 100%, 60%, 0.6);
   --paper_width: 41rem;
 
-  // 'Space' background with noise texture
+  // 'Space' background (solid)
   min-width: 16.5rem;
   margin: auto;
-  background-color: var(--color_space);
-
-  // Necessary to anchor the absolute pseudo-element
-  position: relative;
   min-height: 100vh;
-
-  &::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    // Noise texture
-    background-image: url("/assets/css/noise.svg");
-    pointer-events: none;
-    z-index: -1;
-    mix-blend-mode: overlay;
-    opacity: 0.15;
-  }
+  background-color: var(--color_space);
 }
 
 // Fade-in animation for page load
@@ -153,12 +134,33 @@ footer {
 
 // 'Paper' container shape
 main {
+  // `isolation` creates a stacking context so the noise layer's
+  // negative z-index stays inside the paper
+  position: relative;
+  isolation: isolate;
   margin-top: 37vh;
   margin-bottom: 0;
   padding: 5em 5.2em 5em 5.2em;
   background-color: var(--color_paper);
   border-radius: 2px;
   animation: fadeInAnimation 1.5s ease forwards;
+
+  // Blue-noise grain on the paper; tiled 1:1 for crisp texture.
+  // z-index:-1 keeps it above the paper fill but below the text.
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background-image: url("/assets/css/bluenoise.png");
+    background-size: 128px 128px;
+    background-repeat: repeat;
+    image-rendering: pixelated;
+    mix-blend-mode: overlay;
+    opacity: 0.1;
+    pointer-events: none;
+  }
 }
 
 // Text contents on paper
@@ -328,6 +330,11 @@ footer {
     --color_paper_alt: hsl(40, 35%, 85%);
     --color_accent: hsl(25, 100%, 40%);
     --color_accent_glow: hsla(25, 100%, 40%, 0.7);
+  }
+
+  // Stronger paper grain in light mode
+  main::before {
+    opacity: 0.2;
   }
 }
 
