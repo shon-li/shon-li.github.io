@@ -1,6 +1,6 @@
 ---
 copyright : false
-title     : 首页 Front-page
+title     : 介绍 Intro
 ---
 
 # 你好。这是晓航的博客。
