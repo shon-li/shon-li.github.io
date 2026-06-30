@@ -93,13 +93,14 @@ layout: compress
   <main{% if mainClass != "" %} class="{{ mainClass | strip }}"{% endif %}>
     <article>
       {% comment %}
-        Show page's title if the page has a category variable. `page.heading`
+        Show page's title if the page has a category variable. `page.headline`
         is an optional display-only override (it may contain markup such as a
-        <br> to split a bilingual title); it falls back to the plain `title`.
+        <br> to manually break the title across two lines); it falls back to
+        the plain `title`.
       {% endcomment %}
 
       {%- if page.categories -%}
-        <h1>{{- page.heading | default: page.title -}}</h1>
+        <h1>{{- page.headline | default: page.title -}}</h1>
       {%- endif -%}
 
       {{- content -}}
