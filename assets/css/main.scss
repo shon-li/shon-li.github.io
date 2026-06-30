@@ -134,7 +134,7 @@ main {
   // negative z-index stays inside the paper
   position: relative;
   isolation: isolate;
-  margin-top: 37vh;
+  margin-top: 36vh;
   margin-bottom: 0;
   padding: 5rem 5.2rem 5rem 5.2rem;
   background-color: var(--color_paper);
@@ -380,7 +380,7 @@ footer {
 
   // Stronger paper grain in light mode
   main::before {
-    opacity: 0.5;
+    opacity: 0.9;
   }
 }
 
