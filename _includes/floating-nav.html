@@ -13,27 +13,47 @@
   (function () {
     var nav = document.getElementById('floating-nav');
     var paper = document.querySelector('main');
+    /* Only position on wide screens; at or below 72rem the nav is a static
+       in-flow row (see the media query in main.scss), where left/top do
+       nothing. 72.0625rem clears the 72rem breakpoint by one pixel. */
+    var wide = window.matchMedia('(min-width: 72.0625rem)');
 
     function positionNav() {
       if (!paper) return;
+      if (!wide.matches) {
+        /* Drop any inline values from a previous wide-screen layout so the
+           static row isn't offset. */
+        nav.style.left = '';
+        nav.style.top = '';
+        nav.style.bottom = '';
+        return;
+      }
+
+      /* The stylesheet sets `bottom: 1.25rem` as the pre-script default. We
+         drive the vertical position with `top` below, so clear `bottom` — a
+         fixed box with both set stretches to span them, inflating the nav. */
+      nav.style.bottom = 'auto';
+
       var rect = paper.getBoundingClientRect();
       var navH = nav.offsetHeight;
       var gap = 20;
 
+      /* Sit just to the right of the paper. */
       nav.style.left = (rect.right + gap) + 'px';
 
+      /* Rest near the viewport bottom, but never above the paper's top nor
+         below its bottom edge — so beside a full-screen figure (paper still
+         below the fold) the nav is pinned off-screen until the paper scrolls
+         in, and at page end it stops at the paper's bottom-right corner. */
       var idealTop = window.innerHeight - navH - gap;
       var minTop = rect.top;
       var maxTop = rect.bottom - navH;
       if (maxTop < minTop) maxTop = minTop;
-
-      var top = Math.min(Math.max(idealTop, minTop), maxTop);
-      nav.style.top = top + 'px';
+      nav.style.top = Math.min(Math.max(idealTop, minTop), maxTop) + 'px';
     }
 
     window.addEventListener('scroll', positionNav, { passive: true });
     window.addEventListener('resize', positionNav, { passive: true });
-
     positionNav();
 
     var scrollTop = document.getElementById('scroll-to-top');

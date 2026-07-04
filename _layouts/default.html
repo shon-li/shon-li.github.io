@@ -1,5 +1,6 @@
 ---
 layout: compress
+# Use `/* */` for comments, not `//`, because the 'compress' layout strips out `//` comments.
 ---
 <!DOCTYPE html>
 <html lang="{{- page.lang -}}">
@@ -107,6 +108,12 @@ layout: compress
     </article>
   </main>
 
+  {%- comment -%}
+    Nav after footer: on narrow screens it renders in-flow after the paper
+    and the footer; on wide screens a script positions it (fixed) beside the
+    paper's right edge (see #floating-nav in main.scss and the script in
+    floating-nav.html). DOM order only matters for the narrow in-flow case.
+  {%- endcomment -%}
   {%- include footer.html -%}
   {%- include floating-nav.html -%}
 

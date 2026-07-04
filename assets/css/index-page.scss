@@ -61,8 +61,8 @@ h6 {
   font-weight: 370;
 }
 
-// 46 rem ~= `--paper_width` + 4rem
-@media screen and (max-width: 46rem) {
+// Matches the narrow-layout breakpoint in main.scss
+@media screen and (width <= 52rem) {
   .contents-date-col {
     width: fit-content;
   }

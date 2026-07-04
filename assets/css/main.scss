@@ -36,7 +36,10 @@ body {
   // 'Space' background (solid)
   min-width: 16.5rem;
   margin: auto;
+  // `svh` excludes the collapsing mobile browser chrome; plain `vh` line is
+  // the fallback for browsers without small-viewport units.
   min-height: 100vh;
+  min-height: 100svh;
   background-color: var(--color_space);
 }
 
@@ -65,6 +68,8 @@ body {
   border-bottom: 1px solid var(--color_accent);
 }
 
+// The static hover fallback lives in section 4 so it follows every animated
+// `a:hover` rule in the cascade.
 @media (prefers-reduced-motion: reduce) {
   :root {
     scroll-behavior: auto;
@@ -76,12 +81,6 @@ body {
   footer,
   #floating-nav {
     animation: none;
-  }
-
-  a:hover,
-  footer a:hover,
-  #floating-nav a:hover {
-    @include link-hover-static;
   }
 }
 
@@ -135,8 +134,13 @@ main {
   position: relative;
   isolation: isolate;
   margin-top: 36vh;
+  margin-top: 36svh;
   margin-bottom: 0;
-  padding: 5rem 5.2rem 5rem 5.2rem;
+  // Fluid padding: full 5rem/5.2rem on wide screens, easing down toward
+  // 1.8rem as the viewport narrows instead of jumping at the breakpoint.
+  // 13vw - 1rem reaches the caps at ~830px, right at the layout breakpoint.
+  padding: clamp(1.8rem, calc(13vw - 1rem), 5rem)
+    clamp(1.8rem, calc(13vw - 1rem), 5.2rem);
   background-color: var(--color_paper);
   border-radius: 2px;
 
@@ -310,6 +314,7 @@ footer {
   --color_link_rest: var(--color_paper_alt);
   margin-top: 1rem;
   margin-bottom: 32vh;
+  margin-bottom: 32svh;
   animation: fadeInAnimation 1.5s ease forwards;
   color: var(--color_paper_alt);
   font-size: medium;
@@ -337,7 +342,17 @@ footer {
 
 #floating-nav {
   --color_link_rest: var(--color_paper_alt);
+  // Floats in the empty space to the right of the paper. The script in
+  // '/_includes/floating-nav.html' measures the paper's box each scroll/resize
+  // and sets `left`/`top`: it rests the nav 1.25rem above the viewport bottom
+  // but clamps it to the paper's vertical extent, so at page end it stops at
+  // the paper's bottom-right corner and — because it tracks the paper, not the
+  // viewport — it stays hidden beside a full-screen figure until the paper
+  // scrolls into view. The values here are the pre-script default; `left` is a
+  // fallback for when the script hasn't run (e.g. the paper's right edge).
   position: fixed;
+  left: calc(50% + var(--paper_width) / 2 + 1.25rem);
+  bottom: 1.25rem;
   z-index: 100;
 
   display: flex;
@@ -383,13 +398,40 @@ footer {
   }
 }
 
-// Set breakpoint at a width that is a bit wider than desired paper width
-// 46 rem ~= `--paper_width` + 4rem
-@media screen and (max-width: 46rem) {
+// Breakpoint caveat: `rem` in media queries always resolves against the
+// browser's initial font size (16px), while `--paper_width: 41rem` resolves
+// against the `font-size: large` root (~18px, so the paper is ~738px wide).
+// The thresholds below are chosen in 16px-rem with that in mind.
+
+// Below 72rem (1152px) there is no longer room for the floating nav column
+// beside the centered paper, so the nav drops in-flow: a horizontal row after
+// the footer (the positioning script is a no-op at this width). As the last
+// content it takes over the footer's page-end margin.
+@media screen and (width <= 72rem) {
+  #floating-nav {
+    position: static;
+    width: 100%;
+    max-width: var(--paper_width);
+    margin: 1rem auto 32svh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    column-gap: 1.4em;
+    row-gap: 0.7em;
+    text-align: right;
+  }
+
+  footer {
+    margin-bottom: 0;
+  }
+}
+
+// 52rem (832px) leaves the full-width paper (~738px) comfortable side margins
+// before switching to the narrow layout.
+@media screen and (width <= 52rem) {
   main {
     width: auto;
-    margin: 0.8rem;
-    padding: 1.8rem;
+    margin: 36vh 0.8rem 0 0.8rem;
   }
 
   article {
@@ -417,20 +459,35 @@ footer {
     hyphens: auto !important;
   }
 
+  // Break only when a line genuinely cannot fit (long URLs, identifiers),
+  // instead of `word-break: break-all` splitting ordinary words mid-syllable.
   a,
-  pre,
   code {
-    word-break: break-all;
+    overflow-wrap: anywhere;
   }
 
   footer {
-    margin-bottom: 8em !important;
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
+  // Match the footer's gutters so the in-flow nav aligns with it; the nav is
+  // the last content, so it carries the page-end space.
   #floating-nav {
-    display: none;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 8em;
+  }
+}
+
+// Static hover for touch screens — a tap's synthetic hover would freeze the
+// infinite glow animation — and for reduced-motion users. Last in the cascade
+// so it beats every animated `a:hover` rule above.
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  a:hover,
+  footer a:hover,
+  #floating-nav a:hover {
+    @include link-hover-static;
   }
 }
 

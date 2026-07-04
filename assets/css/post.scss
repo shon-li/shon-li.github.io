@@ -30,7 +30,10 @@ cite {
 }
 
 figure {
+  // `svh` excludes the collapsing mobile browser chrome; plain `vh` lines are
+  // the fallback for browsers without small-viewport units.
   height: 100vh;
+  height: 100svh;
   margin: 0;
   display: flex;
   align-items: center;
@@ -40,6 +43,7 @@ figure {
   video {
     max-width: 82vw;
     max-height: 82vh;
+    max-height: 82svh;
     margin: auto;
     border-radius: 2px;
     object-fit: scale-down;
@@ -93,29 +97,21 @@ article {
 // `embedded-video` selects `div` in '/_includes/youtubeVideo.html'
 .embedded-video {
   max-width: 100%;
-  height: fit-content;
   margin-top: 4rem;
   margin-bottom: 0;
-  position: relative;
-  overflow: hidden;
 
   iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    display: block;
     width: 100%;
-    height: 100%;
     border-radius: 2px;
     border: none;
   }
 }
 
-// `.video-16-9` selects `div` in '/_includes/youtubeVideo.html'
-// 100% * 9 / 16 = 56.25%
-.video-16-9 {
-  padding-top: 56.25%;
+// `.video-16-9` selects `div` in '/_includes/youtubeVideo.html';
+// `aspect-ratio` replaces the old padding-top percentage hack.
+.video-16-9 iframe {
+  aspect-ratio: 16 / 9;
 }
 
 /*--------------------------------- 1. Special page overwrites -----------------------------------*/
@@ -184,7 +180,8 @@ article {
   dd {
     margin: 0; // reset the browser's default <dd> indent
     font-family: "Noto Serif SC", serif;
-    font-size: large;
+    // 1rem tracks the root size instead of pinning the keyword `large`
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.125em;
     line-height: 2;
@@ -194,9 +191,9 @@ article {
 
 /*---------------------------------- 2. Adjust to width change -----------------------------------*/
 
-// Set breakpoint at a width that is a bit wider than desired paper width
-// 46 rem ~= `--paper_width` + 4rem
-@media screen and (max-width: 46rem) {
+// Matches the narrow-layout breakpoint in main.scss (52rem = 832px in
+// media-query rem; the ~738px paper keeps comfortable margins above it).
+@media screen and (width <= 52rem) {
   // `.figure-page` selects `main` in '/_layouts/default.html'
   .figure-page {
     margin-top: 6rem;
@@ -207,6 +204,7 @@ article {
     video {
       max-width: 88vw;
       max-height: 88vh;
+      max-height: 88svh;
     }
   }
 
@@ -217,6 +215,10 @@ article {
 
   article {
     table {
+      // Browsers ignore `overflow` on `display: table`; block display turns
+      // the element into a scroll container so wide tables pan horizontally
+      // instead of overflowing the paper.
+      display: block;
       overflow-x: auto;
 
       th,
