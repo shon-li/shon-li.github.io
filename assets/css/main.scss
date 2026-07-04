@@ -203,7 +203,6 @@ span:lang(en),
 blockquote:lang(en) {
   letter-spacing: normal;
   word-spacing: 0.08em;
-  // Ragged-left text is not hyphenated; let lines break only at spaces.
   hyphens: none;
 }
 

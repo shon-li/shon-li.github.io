@@ -250,13 +250,24 @@ article {
   // grid gap, they don't collapse) to restore breathing room between couplets.
   .two-columns {
     grid-template-columns: 1fr;
-    row-gap: -1rem; // gap within a couplet (Chinese ↔ its English)
+    // Negative gaps are invalid CSS — the browser drops the declaration and
+    // falls back to the base rule's 1rem. Keep the gap at 0 and pull the
+    // couplet together with the negative margin below instead.
+    row-gap: 0;
+
+    // Even at row-gap: 0 the couplet's lines sit a full em apart: line-height
+    // 2 bakes 0.5em of leading below the Chinese line and 0.5em above the
+    // English one. The negative margin cancels part of that built-in leading.
+    // dd,
+    // td:last-child {
+    //   margin-top: -0.25em;
+    // }
 
     // The couplet start is a `<dt>` after a `<dd>`, or a table row's first
     // cell after the first row.
     dd + dt,
     tr + tr td:first-child {
-      margin-top: 1rem; // extra space between couplets (adds to row-gap)
+      margin-top: 1.25rem; // extra space between couplets (adds to row-gap)
     }
   }
 }

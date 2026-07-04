@@ -5,9 +5,8 @@ title      : 碎语 Mind Pieces
 headline   : 碎语<br><span lang="en">Mind Pieces</span>
 ---
 
-<p>
-  我脑子里偶尔会浮现点琐碎的东西。我记下来免得忘了。<span lang="en">Pieces of my mind surface from time to time. I made this note to remember them.</span>
-</p>
+我脑子里偶尔会浮现点琐碎的东西。我记下来免得忘了。
+: <span lang="en">Pieces of my mind surface from time to time. I made this note to remember them.</span>
 
 万事万物都有能感知的和不能感知的联系。我们全都是这个世界的一部分。
 : <span lang="en">Everything is connected, through sensible or unsensible ways. Together, we are the world.</span>
