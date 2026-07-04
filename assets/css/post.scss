@@ -170,35 +170,18 @@ article {
 // two-column grid; each language pair fills one grid row, gutter and row gaps
 // are native instead of an invisible border.
 //
-// Preferred markup is a kramdown definition list (`<dl>` of `<dt>`/`<dd>`
-// pairs): `<dt>`/`<dd>` are direct children, so they drop straight into the
-// grid and read as term/translation rather than tabular data.
-//
-// The `table` branch below supports the older `<table class="two-columns">`
-// markup: `display: contents` dissolves the table and rows so the cells become
-// grid items too, and the cells opt out of the `article table` data-table
-// styling. Remove it once every post has moved to the definition-list form.
+// Markup is a kramdown definition list (`<dl>` of `<dt>`/`<dd>` pairs, see
+// '_drafts/two-columns-template.md'): `<dt>`/`<dd>` are direct children, so
+// they drop straight into the grid and read as term/translation rather than
+// tabular data.
 .two-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 1.5em; // gutter between the two languages
   row-gap: 1rem; // gap between couplets
 
-  tbody,
-  tr {
-    display: contents;
-  }
-
-  td {
-    min-width: 0;
-    max-width: none;
-    padding: 0;
-    border: none;
-  }
-
   dt,
-  dd,
-  td {
+  dd {
     margin: 0; // reset the browser's default <dd> indent
     font-family: "Noto Serif SC", serif;
     font-size: large;
@@ -255,18 +238,8 @@ article {
     // couplet together with the negative margin below instead.
     row-gap: 0;
 
-    // Even at row-gap: 0 the couplet's lines sit a full em apart: line-height
-    // 2 bakes 0.5em of leading below the Chinese line and 0.5em above the
-    // English one. The negative margin cancels part of that built-in leading.
-    // dd,
-    // td:last-child {
-    //   margin-top: -0.25em;
-    // }
-
-    // The couplet start is a `<dt>` after a `<dd>`, or a table row's first
-    // cell after the first row.
-    dd + dt,
-    tr + tr td:first-child {
+    // The couplet start is a `<dt>` after a `<dd>`.
+    dd + dt {
       margin-top: 1.25rem; // extra space between couplets (adds to row-gap)
     }
   }

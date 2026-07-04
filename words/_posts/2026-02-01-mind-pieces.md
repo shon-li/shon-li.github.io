@@ -12,13 +12,13 @@ headline   : 碎语<br><span lang="en">Mind Pieces</span>
 : <span lang="en">Everything is connected, through sensible or unsensible ways. Together, we are the world.</span>
 
 我们对世界的解读决定了我们看到的世界。我们看不到我们不理解的东西。
-: <span lang="en">Our interpretation of the world determines what we see. We cannot see what we don't understand.</span>
+: <span lang="en">Our interpretation of the world determines what we see. We cannot see what we don\'t understand.</span>
 
 我们应该温柔地对待一切。毁坏东西会麻烦我们自己。
 : <span lang="en">We should treat everything gently. Damaging things cause inconvenience to ourselves.</span>
 
 不知道想干啥的话就想想不想干啥。
-: <span lang="en">Think about what you don't want to do if you don't know what you want to do.</span>
+: <span lang="en">Think about what you don\'t want to do if you don\'t know what you want to do.</span>
 
 人生是一个学习自己能做什么和为什么要做的过程。
 : <span lang="en">Life is a process of learning what one can do and why one does it.</span>
