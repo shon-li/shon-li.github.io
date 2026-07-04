@@ -32,6 +32,9 @@ body {
   --color_accent: hsl(55, 100%, 60%);
   --color_link_rest: var(--color_text);
   --paper_width: 41rem;
+  // Side gap between the paper and the viewport edge on narrow screens. The
+  // footer and floating nav reuse it so their edges line up with the paper.
+  --edge_gap: 0.8rem;
 
   // 'Space' background (solid)
   min-width: 16.5rem;
@@ -413,14 +416,18 @@ footer {
     width: 100%;
     max-width: var(--paper_width);
     margin: 1rem auto 32svh;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    column-gap: 1.4em;
-    row-gap: 0.7em;
+    // Keep the desktop vertical stack, but align it to the right so it reads
+    // as a continuation of the right-aligned footer above it.
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.7em;
     text-align: right;
   }
 
+  // The nav is the last in-flow element and carries the page-end space, so no
+  // footer needs a bottom margin. Zeroing it also unifies the footer-to-nav
+  // gap to the nav's 1rem top margin. (The figure-page footer's own bottom
+  // margin is gated to wide screens in post.scss for the same reason.)
   footer {
     margin-bottom: 0;
   }
@@ -431,7 +438,7 @@ footer {
 @media screen and (width <= 52rem) {
   main {
     width: auto;
-    margin: 36vh 0.8rem 0 0.8rem;
+    margin: 36vh var(--edge_gap) 0;
   }
 
   article {
@@ -466,16 +473,17 @@ footer {
     overflow-wrap: anywhere;
   }
 
+  // Match the paper's side gap so the footer's and nav's right edges line up
+  // with the paper's edge instead of sitting further in.
   footer {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: var(--edge_gap);
+    padding-right: var(--edge_gap);
   }
 
-  // Match the footer's gutters so the in-flow nav aligns with it; the nav is
-  // the last content, so it carries the page-end space.
+  // The nav is the last content, so it carries the page-end space.
   #floating-nav {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: var(--edge_gap);
+    padding-right: var(--edge_gap);
     margin-bottom: 8em;
   }
 }

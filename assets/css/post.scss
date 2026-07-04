@@ -121,9 +121,17 @@ article {
   margin-top: 4rem;
 }
 
-// `.figure-page-footer` selects `footer` in '/_includes/footer.html'
-.figure-page-footer {
-  margin-bottom: 8rem;
+// `.figure-page-footer` selects `footer` in '/_includes/footer.html'.
+// The extra bottom margin is only wanted on wide screens, where the nav is
+// fixed and the footer is the last in-flow element. At or below 72rem the nav
+// follows the footer in flow and carries the page-end space, so the footer
+// needs no bottom margin there (main.scss zeroes it) — otherwise its 8rem
+// would open a gap between the footer and the nav. 72.0625rem clears the
+// 72rem nav breakpoint by a pixel, matching the script's threshold.
+@media screen and (min-width: 72.0625rem) {
+  .figure-page-footer {
+    margin-bottom: 8rem;
+  }
 }
 
 // `.post-page` selects `body` in '/_layouts/default.html'
