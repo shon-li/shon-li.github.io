@@ -166,35 +166,46 @@ article {
   }
 }
 
-// `two-columns` selects a `table` inside a post
+// `.two-columns` lays out parallel bilingual (CJK / English) couplets as a
+// two-column grid; each language pair fills one grid row, gutter and row gaps
+// are native instead of an invisible border.
+//
+// Preferred markup is a kramdown definition list (`<dl>` of `<dt>`/`<dd>`
+// pairs): `<dt>`/`<dd>` are direct children, so they drop straight into the
+// grid and read as term/translation rather than tabular data.
+//
+// The `table` branch below supports the older `<table class="two-columns">`
+// markup: `display: contents` dissolves the table and rows so the cells become
+// grid items too, and the cells opt out of the `article table` data-table
+// styling. Remove it once every post has moved to the definition-list form.
 .two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5em; // gutter between the two languages
+  row-gap: 1rem; // gap between couplets
+
+  tbody,
+  tr {
+    display: contents;
+  }
+
   td {
-    width: 50%;
+    min-width: 0;
+    max-width: none;
+    padding: 0;
+    border: none;
+  }
+
+  dt,
+  dd,
+  td {
+    margin: 0; // reset the browser's default <dd> indent
     font-family: "Noto Serif SC", serif;
     font-size: large;
+    font-weight: 400;
     letter-spacing: 0.125em;
     line-height: 2;
-    border: none;
     text-align: left;
-    vertical-align: top;
-  }
-
-  tr {
-    border-bottom: 0.875rem solid transparent;
-  }
-
-  tr:first-child {
-    td {
-      padding-top: 0;
-    }
-  }
-
-  tr:last-child {
-    border-bottom: none;
-
-    td {
-      padding-bottom: 0;
-    }
   }
 }
 
@@ -230,6 +241,22 @@ article {
         min-width: min-content;
         max-width: fit-content;
       }
+    }
+  }
+
+  // Stack the two languages: items auto-flow into one column, Chinese above
+  // English. A tight `row-gap` binds each couplet's two lines into one block;
+  // the start of every new couplet then adds top margin (margins add to the
+  // grid gap, they don't collapse) to restore breathing room between couplets.
+  .two-columns {
+    grid-template-columns: 1fr;
+    row-gap: -1rem; // gap within a couplet (Chinese ↔ its English)
+
+    // The couplet start is a `<dt>` after a `<dd>`, or a table row's first
+    // cell after the first row.
+    dd + dt,
+    tr + tr td:first-child {
+      margin-top: 1rem; // extra space between couplets (adds to row-gap)
     }
   }
 }
