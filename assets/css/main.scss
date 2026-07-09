@@ -59,16 +59,19 @@ body {
 
 // Shared hover state for all links
 @mixin link-hover {
-  // currentColor lets the border breathe in sync with the font-colour animation
-  border-bottom: 1px solid currentColor;
-  animation: glowAnimation 1.5s ease infinite alternate;
+  text-decoration-style: solid;
+  // currentColor lets the line breathe in sync with the font-colour animation
+  // (and overrides the muted line colour on `.url`, footer, and nav links)
+  text-decoration-color: currentColor;
+  animation: glowAnimation 2s ease infinite alternate;
 }
 
 // Static fallback for prefers-reduced-motion
 @mixin link-hover-static {
   animation: none;
   color: var(--color_accent);
-  border-bottom: 1px solid var(--color_accent);
+  text-decoration-style: solid;
+  text-decoration-color: var(--color_accent);
 }
 
 // The static hover fallback lives in section 4 so it follows every animated
@@ -89,25 +92,33 @@ body {
 
 /*--------------------------------------- 1. Common Pages ----------------------------------------*/
 
+// Underlines are text-decoration, not border-bottom: a border hangs below the
+// whole inline box (descender space included), while text-underline-offset
+// positions the line a controlled distance under the baseline, hugging the
+// text. The browser skips ink around descenders by default.
 a:link,
 a:visited {
-  padding-bottom: 1px;
   color: var(--color_text);
-  border-bottom: 1px dotted var(--color_text);
-  text-decoration: none;
+  text-decoration: underline dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  // WebKit doesn't draw the decoration across the extra advance that
+  // word-spacing adds, so any inherited spacing (e.g. the en-page's 0.1em)
+  // gaps the dotted line at each space in Safari. Neutral spacing keeps the
+  // line continuous; the difference inside links is imperceptible.
+  word-spacing: normal;
   transition:
     color 0.3s ease,
-    border-bottom-color 0.3s ease;
+    text-decoration-color 0.3s ease;
 }
 
 // `.url` selects `a` marked as url text on all pages
 .url {
   font-family: "Roboto Mono", monospace;
-  border-bottom: 1px dotted var(--color_paper);
+  text-decoration-color: var(--color_paper);
 }
 
 a:hover {
-  text-decoration: none;
   @include link-hover;
 }
 
@@ -167,7 +178,7 @@ main {
 
 // Text contents on paper
 article {
-  animation: fadeInAnimation 1.5s ease forwards;
+  animation: fadeInAnimation 2s ease forwards;
   width: auto;
   height: auto;
   margin: 0 auto;
@@ -178,8 +189,6 @@ article {
   // Body leading; block spacing below is derived from it so the two stay in sync.
   --leading: 2;
   line-height: var(--leading);
-  letter-spacing: 0.125em;
-  word-spacing: 0.06em;
   word-break: normal;
   // Left-aligned (ragged right) on all pages.
   text-align: left;
@@ -209,7 +218,6 @@ a:lang(en),
 span:lang(en),
 blockquote:lang(en) {
   letter-spacing: normal;
-  word-spacing: 0.08em;
   hyphens: none;
 }
 
@@ -318,7 +326,7 @@ footer {
   margin-top: 1rem;
   margin-bottom: 32vh;
   margin-bottom: 32svh;
-  animation: fadeInAnimation 1.5s ease forwards;
+  animation: fadeInAnimation 2s ease forwards;
   color: var(--color_paper_alt);
   font-size: medium;
   font-family:
@@ -333,7 +341,7 @@ footer {
   a:link,
   a:visited {
     color: var(--color_paper_alt);
-    border-bottom: 1px dotted var(--color_paper);
+    text-decoration-color: var(--color_paper);
   }
 
   a:hover {
@@ -370,13 +378,13 @@ footer {
   font-size: medium;
   font-weight: 400;
 
-  animation: fadeInAnimation 1.5s ease forwards;
+  animation: fadeInAnimation 2s ease forwards;
 
   a,
   a:link,
   a:visited {
     color: var(--color_paper_alt);
-    border-bottom: 1px dotted var(--color_paper);
+    text-decoration-color: var(--color_paper);
   }
 
   a:hover {

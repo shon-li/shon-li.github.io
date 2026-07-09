@@ -13,7 +13,6 @@ rt {
   font-family: "Noto Sans SC", sans-serif;
   font-size: 0.56em;
   font-weight: 450;
-  letter-spacing: 0.05em;
 }
 
 ruby {
@@ -138,7 +137,7 @@ article {
 .post-page {
   article {
     padding-left: 0;
-    letter-spacing: 0.125em;
+    letter-spacing: 0.12em;
   }
 
   h1,
@@ -191,7 +190,6 @@ article {
     // 1rem tracks the root size instead of pinning the keyword `large`
     font-size: 1rem;
     font-weight: 400;
-    letter-spacing: 0.125em;
     line-height: 2;
     text-align: left;
   }
