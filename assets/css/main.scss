@@ -103,7 +103,7 @@ a:visited {
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3em;
   // WebKit doesn't draw the decoration across the extra advance that
-  // word-spacing adds, so any inherited spacing (e.g. the en-page's 0.1em)
+  // word-spacing adds, so any inherited spacing (e.g. English text's 0.125em)
   // gaps the dotted line at each space in Safari. Neutral spacing keeps the
   // line continuous; the difference inside links is imperceptible.
   word-spacing: normal;
@@ -186,6 +186,10 @@ article {
   color: var(--color_text);
   font-family: "Noto Serif SC", serif;
   font-weight: 400;
+  // Serif body tracking for CJK text, site-wide. Latin text swaps this for
+  // word-spacing instead (see the :lang(en) rules below), and elements that
+  // leave the serif face (tables, code, the index lists) reset it.
+  letter-spacing: 0.125em;
   // Body leading; block spacing below is derived from it so the two stay in sync.
   --leading: 2;
   line-height: var(--leading);
@@ -221,6 +225,13 @@ blockquote:lang(en) {
   hyphens: none;
 }
 
+// Latin text reads with normal tracking but slightly open word gaps — the
+// counterpart of the CJK letter-spacing above. `a` is left out: a:link pins
+// word-spacing to normal so Safari's dotted underline stays continuous.
+:is(p, li, i, span, blockquote):lang(en) {
+  word-spacing: 0.06em;
+}
+
 h1,
 h2,
 h3,
@@ -240,7 +251,10 @@ h6 {
   // heading to the section it introduces.
   margin: 1.6em 0 0.6em;
   line-height: 1.5;
+  // Headings stay untracked: neither the article's CJK letter-spacing nor the
+  // Latin word gap applies to display type.
   letter-spacing: normal;
+  word-spacing: normal;
   text-align: left;
 }
 
@@ -452,7 +466,6 @@ footer {
   article {
     padding-top: 0.5rem;
     padding-bottom: 1rem;
-    letter-spacing: normal;
     text-align: left !important;
   }
 

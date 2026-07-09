@@ -136,8 +136,7 @@ article {
 // `.post-page` selects `body` in '/_layouts/default.html'
 .post-page {
   article {
-    padding-left: 0;
-    letter-spacing: 0.12em;
+    padding: 0;
   }
 
   h1,
@@ -156,16 +155,7 @@ article {
 .en-page {
   article {
     letter-spacing: normal;
-    word-spacing: 0.1em;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    word-spacing: 0.2em;
+    word-spacing: 0.06em;
   }
 }
 
