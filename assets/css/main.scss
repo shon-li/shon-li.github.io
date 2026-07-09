@@ -32,11 +32,17 @@ body {
   --color_accent: hsl(55, 100%, 60%);
   --color_link_rest: var(--color_text);
   --paper_width: 41rem;
+  // Side gap between the paper and the viewport edge on narrow screens. The
+  // footer and floating nav reuse it so their edges line up with the paper.
+  --edge_gap: 0.8rem;
 
   // 'Space' background (solid)
   min-width: 16.5rem;
   margin: auto;
+  // `svh` excludes the collapsing mobile browser chrome; plain `vh` line is
+  // the fallback for browsers without small-viewport units.
   min-height: 100vh;
+  min-height: 100svh;
   background-color: var(--color_space);
 }
 
@@ -53,18 +59,23 @@ body {
 
 // Shared hover state for all links
 @mixin link-hover {
-  // currentColor lets the border breathe in sync with the font-colour animation
-  border-bottom: 1px solid currentColor;
-  animation: glowAnimation 1.5s ease infinite alternate;
+  text-decoration-style: solid;
+  // currentColor lets the line breathe in sync with the font-colour animation
+  // (and overrides the muted line colour on `.url`, footer, and nav links)
+  text-decoration-color: currentColor;
+  animation: glowAnimation 2s ease infinite alternate;
 }
 
 // Static fallback for prefers-reduced-motion
 @mixin link-hover-static {
   animation: none;
   color: var(--color_accent);
-  border-bottom: 1px solid var(--color_accent);
+  text-decoration-style: solid;
+  text-decoration-color: var(--color_accent);
 }
 
+// The static hover fallback lives in section 4 so it follows every animated
+// `a:hover` rule in the cascade.
 @media (prefers-reduced-motion: reduce) {
   :root {
     scroll-behavior: auto;
@@ -77,35 +88,37 @@ body {
   #floating-nav {
     animation: none;
   }
-
-  a:hover,
-  footer a:hover,
-  #floating-nav a:hover {
-    @include link-hover-static;
-  }
 }
 
 /*--------------------------------------- 1. Common Pages ----------------------------------------*/
 
+// Underlines are text-decoration, not border-bottom: a border hangs below the
+// whole inline box (descender space included), while text-underline-offset
+// positions the line a controlled distance under the baseline, hugging the
+// text. The browser skips ink around descenders by default.
 a:link,
 a:visited {
-  padding-bottom: 1px;
   color: var(--color_text);
-  border-bottom: 1px dotted var(--color_text);
-  text-decoration: none;
+  text-decoration: underline dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  // WebKit doesn't draw the decoration across the extra advance that
+  // word-spacing adds, so any inherited spacing (e.g. the en-page's 0.1em)
+  // gaps the dotted line at each space in Safari. Neutral spacing keeps the
+  // line continuous; the difference inside links is imperceptible.
+  word-spacing: normal;
   transition:
     color 0.3s ease,
-    border-bottom-color 0.3s ease;
+    text-decoration-color 0.3s ease;
 }
 
 // `.url` selects `a` marked as url text on all pages
 .url {
   font-family: "Roboto Mono", monospace;
-  border-bottom: 1px dotted var(--color_paper);
+  text-decoration-color: var(--color_paper);
 }
 
 a:hover {
-  text-decoration: none;
   @include link-hover;
 }
 
@@ -135,8 +148,13 @@ main {
   position: relative;
   isolation: isolate;
   margin-top: 36vh;
+  margin-top: 36svh;
   margin-bottom: 0;
-  padding: 5rem 5.2rem 5rem 5.2rem;
+  // Fluid padding: full 5rem/5.2rem on wide screens, easing down toward
+  // 1.8rem as the viewport narrows instead of jumping at the breakpoint.
+  // 13vw - 1rem reaches the caps at ~830px, right at the layout breakpoint.
+  padding: clamp(1.8rem, calc(13vw - 1rem), 5rem)
+    clamp(1.8rem, calc(13vw - 1rem), 5.2rem);
   background-color: var(--color_paper);
   border-radius: 2px;
 
@@ -160,7 +178,7 @@ main {
 
 // Text contents on paper
 article {
-  animation: fadeInAnimation 1.5s ease forwards;
+  animation: fadeInAnimation 2s ease forwards;
   width: auto;
   height: auto;
   margin: 0 auto;
@@ -171,8 +189,6 @@ article {
   // Body leading; block spacing below is derived from it so the two stay in sync.
   --leading: 2;
   line-height: var(--leading);
-  letter-spacing: 0.125em;
-  word-spacing: 0.06em;
   word-break: normal;
   // Left-aligned (ragged right) on all pages.
   text-align: left;
@@ -202,8 +218,6 @@ a:lang(en),
 span:lang(en),
 blockquote:lang(en) {
   letter-spacing: normal;
-  word-spacing: 0.08em;
-  // Ragged-left text is not hyphenated; let lines break only at spaces.
   hyphens: none;
 }
 
@@ -311,7 +325,8 @@ footer {
   --color_link_rest: var(--color_paper_alt);
   margin-top: 1rem;
   margin-bottom: 32vh;
-  animation: fadeInAnimation 1.5s ease forwards;
+  margin-bottom: 32svh;
+  animation: fadeInAnimation 2s ease forwards;
   color: var(--color_paper_alt);
   font-size: medium;
   font-family:
@@ -326,7 +341,7 @@ footer {
   a:link,
   a:visited {
     color: var(--color_paper_alt);
-    border-bottom: 1px dotted var(--color_paper);
+    text-decoration-color: var(--color_paper);
   }
 
   a:hover {
@@ -338,7 +353,17 @@ footer {
 
 #floating-nav {
   --color_link_rest: var(--color_paper_alt);
+  // Floats in the empty space to the right of the paper. The script in
+  // '/_includes/floating-nav.html' measures the paper's box each scroll/resize
+  // and sets `left`/`top`: it rests the nav 1.25rem above the viewport bottom
+  // but clamps it to the paper's vertical extent, so at page end it stops at
+  // the paper's bottom-right corner and — because it tracks the paper, not the
+  // viewport — it stays hidden beside a full-screen figure until the paper
+  // scrolls into view. The values here are the pre-script default; `left` is a
+  // fallback for when the script hasn't run (e.g. the paper's right edge).
   position: fixed;
+  left: calc(50% + var(--paper_width) / 2 + 1.25rem);
+  bottom: 1.25rem;
   z-index: 100;
 
   display: flex;
@@ -353,13 +378,13 @@ footer {
   font-size: medium;
   font-weight: 400;
 
-  animation: fadeInAnimation 1.5s ease forwards;
+  animation: fadeInAnimation 2s ease forwards;
 
   a,
   a:link,
   a:visited {
     color: var(--color_paper_alt);
-    border-bottom: 1px dotted var(--color_paper);
+    text-decoration-color: var(--color_paper);
   }
 
   a:hover {
@@ -380,17 +405,48 @@ footer {
 
   // Stronger paper grain in light mode
   main::before {
-    opacity: 0.9;
+    opacity: 1;
   }
 }
 
-// Set breakpoint at a width that is a bit wider than desired paper width
-// 46 rem ~= `--paper_width` + 4rem
-@media screen and (max-width: 46rem) {
+// Breakpoint caveat: `rem` in media queries always resolves against the
+// browser's initial font size (16px), while `--paper_width: 41rem` resolves
+// against the `font-size: large` root (~18px, so the paper is ~738px wide).
+// The thresholds below are chosen in 16px-rem with that in mind.
+
+// Below 72rem (1152px) there is no longer room for the floating nav column
+// beside the centered paper, so the nav drops in-flow: a horizontal row after
+// the footer (the positioning script is a no-op at this width). As the last
+// content it takes over the footer's page-end margin.
+@media screen and (width <= 72rem) {
+  #floating-nav {
+    position: static;
+    width: 100%;
+    max-width: var(--paper_width);
+    margin: 1rem auto 32svh;
+    // Keep the desktop vertical stack, but align it to the right so it reads
+    // as a continuation of the right-aligned footer above it.
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.7em;
+    text-align: right;
+  }
+
+  // The nav is the last in-flow element and carries the page-end space, so no
+  // footer needs a bottom margin. Zeroing it also unifies the footer-to-nav
+  // gap to the nav's 1rem top margin. (The figure-page footer's own bottom
+  // margin is gated to wide screens in post.scss for the same reason.)
+  footer {
+    margin-bottom: 0;
+  }
+}
+
+// 52rem (832px) leaves the full-width paper (~738px) comfortable side margins
+// before switching to the narrow layout.
+@media screen and (width <= 52rem) {
   main {
     width: auto;
-    margin: 0.8rem;
-    padding: 1.8rem;
+    margin: 36vh var(--edge_gap) 0;
   }
 
   article {
@@ -418,20 +474,36 @@ footer {
     hyphens: auto !important;
   }
 
+  // Break only when a line genuinely cannot fit (long URLs, identifiers),
+  // instead of `word-break: break-all` splitting ordinary words mid-syllable.
   a,
-  pre,
   code {
-    word-break: break-all;
+    overflow-wrap: anywhere;
   }
 
+  // Match the paper's side gap so the footer's and nav's right edges line up
+  // with the paper's edge instead of sitting further in.
   footer {
-    margin-bottom: 8em !important;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: var(--edge_gap);
+    padding-right: var(--edge_gap);
   }
 
+  // The nav is the last content, so it carries the page-end space.
   #floating-nav {
-    display: none;
+    padding-left: var(--edge_gap);
+    padding-right: var(--edge_gap);
+    margin-bottom: 8em;
+  }
+}
+
+// Static hover for touch screens — a tap's synthetic hover would freeze the
+// infinite glow animation — and for reduced-motion users. Last in the cascade
+// so it beats every animated `a:hover` rule above.
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  a:hover,
+  footer a:hover,
+  #floating-nav a:hover {
+    @include link-hover-static;
   }
 }
 
