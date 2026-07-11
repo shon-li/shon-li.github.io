@@ -493,9 +493,14 @@ footer {
 // before switching to the narrow layout.
 @media screen and (width <= 52rem) {
   // The narrow layout spans the full viewport (minus edge gaps), so the
-  // column wrapper must not shrink to short content here.
+  // column wrapper must not shrink to short content here. It is still capped
+  // at the paper's outer width (--paper_width plus an edge gap each side):
+  // just under the 52rem breakpoint the viewport is wider than that, the
+  // paper stops growing, and without the cap the full-width footer and nav
+  // would poke out past the paper's edges.
   .page-column {
     width: auto;
+    max-width: calc(var(--paper_width) + 2 * var(--edge_gap));
   }
 
   main {
@@ -541,8 +546,12 @@ footer {
     padding-right: var(--edge_gap);
   }
 
-  // The nav is the last content, so it carries the page-end space.
+  // The nav is the last content, so it carries the page-end space. Lift the
+  // 72rem rule's --paper_width cap: here the edge gap lives in the nav's own
+  // padding, so the cap would pull its text inside the paper's edge whenever
+  // the wrapper sits at its capped width.
   #floating-nav {
+    max-width: none;
     padding-left: var(--edge_gap);
     padding-right: var(--edge_gap);
     margin-bottom: 8em;
