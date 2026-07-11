@@ -370,6 +370,9 @@ footer {
   font-family:
     "fusion-pixel-12px-proportional-zh_hans", "Noto Sans SC", sans-serif;
   font-weight: 400;
+  // Opens the gap between wrapped footer lines (the ・-separated chunks) to
+  // about 0.5rem; single-line footers just get a slightly taller line box.
+  line-height: calc(1em + 0.5rem);
   text-align: right;
   display: flex;
   flex-direction: column;
@@ -384,6 +387,13 @@ footer {
 
   a:hover {
     @include link-hover;
+  }
+
+  // Each chunk binds a ・ separator to the text after it and never breaks
+  // internally, so a too-long footer wraps only at the spaces before a ・
+  // (see the markup in '/_includes/footer.html').
+  .footer-chunk {
+    white-space: nowrap;
   }
 }
 
