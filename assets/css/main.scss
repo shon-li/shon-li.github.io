@@ -141,8 +141,24 @@ footer {
   margin-right: auto;
 }
 
+// Column wrapper around the paper, footer, and nav (see default.html). It
+// shrinks to its widest child — in practice the paper, whose fit-content
+// width is capped at --paper_width — so the footer and the in-flow nav,
+// stretching to the wrapper as block children, track the paper's edges even
+// when the content is narrower than --paper_width.
+.page-column {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // 'Paper' container shape
 main {
+  // Shrink to the content's width when it's narrower than --paper_width;
+  // the shared max-width above still caps it, and the wrapper keeps the
+  // shrunken paper centered.
+  width: fit-content;
   // `isolation` creates a stacking context so the noise layer's
   // negative z-index stays inside the paper
   position: relative;
@@ -337,6 +353,14 @@ code {
 
 footer {
   --color_link_rest: var(--color_paper_alt);
+  // Inside the shrink-to-fit .page-column wrapper, the footer must not set
+  // the column's width — only the paper should. `width: 0` removes the
+  // footer's intrinsic contribution from the wrapper's fit-content sizing;
+  // `min-width: 100%` then stretches it back to the wrapper's final width,
+  // so a footer line longer than a narrow paper wraps instead of widening
+  // the column.
+  width: 0;
+  min-width: 100%;
   margin-top: 1rem;
   margin-bottom: 32vh;
   margin-bottom: 32svh;
@@ -458,6 +482,12 @@ footer {
 // 52rem (832px) leaves the full-width paper (~738px) comfortable side margins
 // before switching to the narrow layout.
 @media screen and (width <= 52rem) {
+  // The narrow layout spans the full viewport (minus edge gaps), so the
+  // column wrapper must not shrink to short content here.
+  .page-column {
+    width: auto;
+  }
+
   main {
     width: auto;
     margin: 36vh var(--edge_gap) 0;

@@ -91,6 +91,13 @@ layout: compress
     </figure>
   {%- endif -%}
 
+  {%- comment -%}
+    The column wrapper shrinks to the paper's fit-content width (see
+    .page-column in main.scss), so the footer and the in-flow nav below
+    track the paper's edges even when the content is narrower than
+    --paper_width.
+  {%- endcomment -%}
+  <div class="page-column">
   <main{% if mainClass != "" %} class="{{ mainClass | strip }}"{% endif %}>
     <article>
       {% comment %}
@@ -116,6 +123,7 @@ layout: compress
   {%- endcomment -%}
   {%- include footer.html -%}
   {%- include floating-nav.html -%}
+  </div>
 
   <script>
     /* Smoothly scroll to the top before following an in-site link, so leaving
