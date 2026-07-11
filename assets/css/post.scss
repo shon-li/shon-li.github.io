@@ -95,7 +95,14 @@ article {
 
 // `embedded-video` selects `div` in '/_includes/youtubeVideo.html'
 .embedded-video {
-  max-width: 100%;
+  // Inside the fit-content paper, the iframe's default intrinsic 300px width
+  // must not set the paper's width — only the text should. `width: 0` removes
+  // this block's intrinsic contribution from the paper's fit-content sizing;
+  // `min-width: 100%` then stretches it back to the paper's final width, so
+  // the video tracks the text-driven column (same trick as the footer in
+  // main.scss).
+  width: 0;
+  min-width: 100%;
   margin-top: 4rem;
   margin-bottom: 0;
 
