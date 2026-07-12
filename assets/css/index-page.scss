@@ -14,8 +14,22 @@ h6 {
 
 // `.index-page` selects `main` in '/_layouts/default.html'
 .index-page {
+  // The index always takes the full paper width instead of shrinking to its
+  // content (overrides main's `width: fit-content` in main.scss). max-width
+  // keeps it inside the .page-column wrapper just under the 52rem breakpoint.
+  width: var(--paper_width);
+  max-width: 100%;
+
   article {
     padding-left: 0;
+  }
+}
+
+// Matches main.scss's narrow-layout breakpoint: there `main` gets
+// `width: auto` plus side margins, and this class would out-specify it.
+@media screen and (width <= 52rem) {
+  .index-page {
+    width: auto;
   }
 }
 
