@@ -425,8 +425,8 @@ footer {
   color: var(--color_paper_alt);
   font-family:
     "fusion-pixel-12px-proportional-zh_hans", "Noto Sans SC", sans-serif;
-  // Matches the footer's size (see the footer rule above).
-  font-size: 1rem;
+  // Slightly smaller than the footer's 1rem (see the footer rule above).
+  font-size: 0.9rem;
   font-weight: 400;
 
   animation: fadeInAnimation 2s ease forwards;
