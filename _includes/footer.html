@@ -1,34 +1,33 @@
 <footer
-  {% if page.figure %}
+  {% if page.video or page.image %}
     class="figure-page-footer"
   {%- endif -%}
 >
-
-  {%- if page.date -%}
-    {{- page.date | date: "%Y-%m-%-d" -}}
-  {%- else -%}
-    {{- site.time | date: "%Y-%m" -}}
-  {%- endif -%}
-
-  &#32;・&#32;
-  {%- if page.copyright -%}
-    {{- site.author -}}
-  {%- else -%}
-    {{- site.title -}}
-  {%- endif -%}
-
-  {%- if page.copyright -%}
-    &#32;・&#32;CC BY-NC-SA 4.0
-  {%- endif -%}
-
-  <nav>
-    {%- for item in site.data.navigation -%}
-
-      {%- if item.link != page.url -%}
-          <a href="{{ item.link }}">{{- item.name -}}</a>
+  {%- comment -%}
+    One outer span = one flex item, so the chunks flow as a single line.
+    Each chunk (a ・ separator bound to the text after it) is unbreakable
+    (see `.footer-chunk` in main.scss); when the footer is narrower than
+    its text, the line wraps only at the spaces before a ・, e.g.:
+      2026-01-16 ・ 李晓航 Shon Li
+      ・ CC BY-NC-SA 4.0
+  {%- endcomment -%}
+  <span>
+    <span class="footer-chunk">
+      {%- if page.date -%}
+        {{- page.date | date: "%Y-%m-%-d" -}}
+      {%- else -%}
+        {{- site.time | date: "%Y-%m" -}}
       {%- endif -%}
-
-    {%- endfor -%}
-  </nav>
-
+    </span>
+    <span class="footer-chunk">
+      {%- if page.copyright -%}
+        ・&#32;{{- site.author -}}
+      {%- else -%}
+        ・&#32;{{- site.title -}}
+      {%- endif -%}
+    </span>
+    {%- if page.copyright %}
+    <span class="footer-chunk">・&#32;CC BY-NC-SA 4.0</span>
+    {%- endif %}
+  </span>
 </footer>

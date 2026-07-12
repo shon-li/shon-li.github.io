@@ -14,56 +14,62 @@ h6 {
 
 // `.index-page` selects `main` in '/_layouts/default.html'
 .index-page {
+  // The index always takes the full paper width instead of shrinking to its
+  // content (overrides main's `width: fit-content` in main.scss). max-width
+  // keeps it inside the .page-column wrapper just under the 52rem breakpoint.
+  width: var(--paper_width);
+  max-width: 100%;
+
   article {
     padding-left: 0;
-    letter-spacing: normal;
   }
 }
 
-// `.contents-table` selects `table` in '/index.html'
-.contents-table,
-.contents-table th,
-.contents-table td {
+// Matches main.scss's narrow-layout breakpoint: there `main` gets
+// `width: auto` plus side margins, and this class would out-specify it.
+@media screen and (width <= 52rem) {
+  .index-page {
+    width: auto;
+  }
+}
+
+// `.contents-title` selects each category's `h1` in '/index.html'
+.contents-title {
+  margin-bottom: 1.8rem;
+}
+
+// `.contents-list` selects each category's post list in '/index.html'.
+// The `<ul>` is a two-column grid — titles left, dates right — and the `<li>`
+// rows dissolve into it with `display: contents`, so every row shares the
+// same date column and baseline alignment. The date column auto-sizes to its
+// content; long titles wrap within their own column.
+.contents-list {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1.5em;
+  row-gap: 1.6rem;
+  align-items: baseline;
+  margin: 0 0 3.4rem;
   padding: 0;
-  border: none;
-}
+  list-style: none;
+  font-family: "Noto Sans SC", sans-serif;
+  font-weight: 380;
+  // Not the serif face, so the article's CJK letter-spacing doesn't apply.
+  letter-spacing: normal;
 
-.contents-table {
-  width: 100%;
-  margin: 0 auto 2.6em;
-
-  td,
-  td a {
-    font-family: "Noto Sans SC", sans-serif;
+  li {
+    display: contents;
   }
 
-  td {
-    padding: 0.8em 0 0.8em 0.1em;
-    font-weight: 380;
-    vertical-align: baseline;
-  }
-
-  th {
-    padding-bottom: 1em;
-    vertical-align: middle;
+  // As grid items the links would stretch to the full title column, dragging
+  // their underline with them; start-justify so the underline hugs the text.
+  a {
+    justify-self: start;
   }
 }
 
-// `.contents-table-col` selects the second `table td` in '/index.html'
-.contents-date-col {
-  min-width: 6em;
-  text-align: right;
-}
-
-// `.contents-date` selects `.contents-table-col`'s `span` in '/index.html'
+// `.contents-date` selects the `time` in each '.contents-list' row
 .contents-date {
   font-family: "Roboto Mono", monospace;
   font-weight: 370;
-}
-
-// 46 rem ~= `--paper_width` + 4rem
-@media screen and (max-width: 46rem) {
-  .contents-date-col {
-    width: fit-content;
-  }
 }

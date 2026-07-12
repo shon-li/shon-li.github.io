@@ -3,7 +3,7 @@ categories : photos
 date       : 2018-03-29
 title      : 无人公交
 image      : /assets/img/going-home.jpeg
-figure     : <img src="/assets/img/going-home.jpeg" alt="黑暗的公交车里有红色的灯光，驾驶窗外是昏黄的景色。">
+alt        : 黑暗的公交车里有红色的灯光，驾驶窗外是昏黄的景色。
 vidId      : hO6BgqS4814
 vidRatio   : 16-9
 ---

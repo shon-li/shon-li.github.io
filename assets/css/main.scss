@@ -4,7 +4,8 @@
 
 /*-------------------------------------- 0. Initialisation ---------------------------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+// Google Fonts are loaded via <link rel="preconnect"/"stylesheet"> in `/_layouts/default.html`
+// to avoid the render-blocking @import.
 
 @font-face {
   font-family: "fusion-pixel-12px-proportional-zh_hans";
@@ -19,103 +20,181 @@
 // Root font size is used as a metric for `--paper_width'
 :root {
   font-size: large;
+  scroll-behavior: smooth;
 }
 
 // Define color, size variables, and page entrance animation
 body {
-  --color_space: hsl(35, 2%, 5%);
+  --color_space: hsl(35, 2%, 2%);
   --color_paper: hsl(35, 9%, 28%);
   --color_text: hsl(35, 55%, 80%);
   --color_paper_alt: hsl(35, 9%, 50%);
   --color_accent: hsl(55, 100%, 60%);
+  --color_link_rest: var(--color_text);
   --paper_width: 41rem;
+  // Side gap between the paper and the viewport edge on narrow screens. The
+  // footer and floating nav reuse it so their edges line up with the paper.
+  --edge_gap: 0.8rem;
 
-  // 'Space' background with noise texture
+  // 'Space' background (solid)
   min-width: 16.5rem;
   margin: auto;
-  background-color: var(--color_space);
-
-  // Necessary to anchor the absolute pseudo-element
-  position: relative;
+  // `svh` excludes the collapsing mobile browser chrome; plain `vh` line is
+  // the fallback for browsers without small-viewport units.
   min-height: 100vh;
-
-  animation: slideUpAnimation 1.5s ease forwards;
-
-  &::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    // Noise texture
-    background-image: url("/assets/css/noise.svg");
-    pointer-events: none;
-    z-index: -1;
-    mix-blend-mode: overlay;
-    opacity: 0.15;
-  }
+  min-height: 100svh;
+  background-color: var(--color_space);
 }
 
-// Slide up animation for main content
-@keyframes slideUpAnimation {
+// Fade-in animation for page load
+@keyframes fadeInAnimation {
   0% {
-    padding-top: 4rem;
     opacity: 0;
   }
 
   100% {
-    padding-top: 0;
     opacity: 1;
+  }
+}
+
+// Shared hover state for all links
+@mixin link-hover {
+  text-decoration-style: solid;
+  // currentColor lets the line breathe in sync with the font-colour animation
+  // (and overrides the muted line colour on `.url`, footer, and nav links)
+  text-decoration-color: currentColor;
+  animation: glowAnimation 2s ease infinite alternate;
+}
+
+// Static fallback for prefers-reduced-motion
+@mixin link-hover-static {
+  animation: none;
+  color: var(--color_accent);
+  text-decoration-style: solid;
+  text-decoration-color: var(--color_accent);
+}
+
+// The static hover fallback lives in section 4 so it follows every animated
+// `a:hover` rule in the cascade.
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  main,
+  article,
+  figure,
+  footer,
+  #floating-nav {
+    animation: none;
   }
 }
 
 /*--------------------------------------- 1. Common Pages ----------------------------------------*/
 
+// Underlines are text-decoration, not border-bottom: a border hangs below the
+// whole inline box (descender space included), while text-underline-offset
+// positions the line a controlled distance under the baseline, hugging the
+// text. The browser skips ink around descenders by default.
 a:link,
 a:visited {
-  padding-bottom: 1px;
   color: var(--color_text);
-  border-bottom: 1px dotted var(--color_text);
-  text-decoration: none;
+  text-decoration: underline dotted;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3rem;
+  // WebKit doesn't draw the decoration across the extra advance that
+  // word-spacing adds, so any inherited spacing (e.g. English text's 0.125em)
+  // gaps the dotted line at each space in Safari. Neutral spacing keeps the
+  // line continuous; the difference inside links is imperceptible.
+  word-spacing: normal;
+  transition:
+    color 0.3s ease,
+    text-decoration-color 0.3s ease;
 }
 
 // `.url` selects `a` marked as url text on all pages
 .url {
   font-family: "Roboto Mono", monospace;
-  border-bottom: 1px dotted var(--color_paper);
+  text-decoration-color: var(--color_paper);
 }
 
 a:hover {
-  text-decoration: none;
-  animation: underlineAnimation 1.5s ease infinite alternate;
+  @include link-hover;
 }
 
-// Underline animation for links
-@keyframes underlineAnimation {
+// Breathing font-colour animation for links
+@keyframes glowAnimation {
   0% {
-    border-bottom: 1px solid var(--color_accent);
+    color: var(--color_link_rest);
   }
 
   100% {
-    opacity: 1;
-    border-bottom: 0.25em solid var(--color_accent);
+    color: var(--color_accent);
   }
+}
+
+// Shared centering for paper and footer
+main,
+footer {
+  max-width: var(--paper_width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Column wrapper around the paper, footer, and nav (see default.html). It
+// shrinks to its widest child — in practice the paper, whose fit-content
+// width is capped at --paper_width — so the footer and the in-flow nav,
+// stretching to the wrapper as block children, track the paper's edges even
+// when the content is narrower than --paper_width.
+.page-column {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // 'Paper' container shape
 main {
+  // Shrink to the content's width when it's narrower than --paper_width;
+  // the shared max-width above still caps it, and the wrapper keeps the
+  // shrunken paper centered.
   width: fit-content;
-  max-width: var(--paper_width);
-  margin: 37vh auto 0;
-  padding: 5em 5.2em 5em 5.2em;
+  // `isolation` creates a stacking context so the noise layer's
+  // negative z-index stays inside the paper
+  position: relative;
+  isolation: isolate;
+  margin-top: 36vh;
+  margin-top: 36svh;
+  margin-bottom: 0;
+  // Fluid padding: full 5rem/5.2rem on wide screens, easing down toward
+  // 1.8rem as the viewport narrows instead of jumping at the breakpoint.
+  // 13vw - 1rem reaches the caps at ~830px, right at the layout breakpoint.
+  padding: clamp(1.8rem, calc(13vw - 1rem), 5rem)
+    clamp(1.8rem, calc(13vw - 1rem), 5.2rem);
   background-color: var(--color_paper);
   border-radius: 2px;
+
+  // Blue-noise grain on the paper; tiled 1:1 for crisp texture.
+  // z-index:-1 keeps it above the paper fill but below the text.
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background-image: url("/assets/css/bluenoise.png");
+    background-size: 128px 128px;
+    background-repeat: repeat;
+    image-rendering: pixelated;
+    mix-blend-mode: overlay;
+    opacity: 0.1;
+    pointer-events: none;
+  }
 }
 
 // Text contents on paper
 article {
+  animation: fadeInAnimation 2s ease forwards;
   width: auto;
   height: auto;
   margin: 0 auto;
@@ -123,10 +202,15 @@ article {
   color: var(--color_text);
   font-family: "Noto Serif SC", serif;
   font-weight: 400;
-  line-height: 2;
-  letter-spacing: 0.125em;
-  word-spacing: 0.06em;
+  // Serif body tracking for CJK text, site-wide. Latin text swaps this for
+  // word-spacing instead (see the :lang(en) rules below), and elements that
+  // leave the serif face (tables, code, the index lists) reset it.
+  letter-spacing: 0.125rem;
+  // Body leading; block spacing below is derived from it so the two stay in sync.
+  --leading: 2;
+  line-height: var(--leading);
   word-break: normal;
+  // Left-aligned (ragged right) on all pages.
   text-align: left;
 
   > :first-child {
@@ -154,8 +238,14 @@ a:lang(en),
 span:lang(en),
 blockquote:lang(en) {
   letter-spacing: normal;
-  word-spacing: 0.08em;
   hyphens: none;
+}
+
+// Latin text reads with normal tracking but slightly open word gaps — the
+// counterpart of the CJK letter-spacing above. `a` is left out: a:link pins
+// word-spacing to normal so Safari's dotted underline stays continuous.
+:is(p, li, i, span, blockquote):lang(en) {
+  word-spacing: 0.0625rem;
 }
 
 h1,
@@ -165,25 +255,72 @@ h4,
 h5,
 h6 {
   width: fit-content;
-  max-width: 16em;
-  height: auto;
-  padding-top: 1.25rem;
+  // Share the body's measure: headings wrap at the text-column edge like
+  // paragraphs, never at an arbitrary fixed width. A heading is display type
+  // and should not be set narrower than the prose it introduces.
+  max-width: 100%;
+  // Balance the lines of any heading that does wrap, keeping them even and
+  // avoiding a lone orphan word or character on the last line.
+  text-wrap: balance;
+  // em-based margins scale spacing with each heading's own size and collapse
+  // with adjacent paragraph margins. More space above than below binds the
+  // heading to the section it introduces.
+  margin: 1.6em 0 0.6em;
   line-height: 1.5;
+  // Headings stay untracked: neither the article's CJK letter-spacing nor the
+  // Latin word gap applies to display type.
   letter-spacing: normal;
+  word-spacing: normal;
   text-align: left;
 }
 
+// Modular type scale (minor third, ratio 1.2) anchored to the 1rem body size.
+// Levels below h3 share the body size and rely on weight/spacing for hierarchy.
 h1 {
-  padding-bottom: 1rem;
+  font-size: 1.728rem; // 1.2^3
+  // No line-height override here: CJK ideographs fill the em box edge to edge,
+  // so even the largest heading needs the roomier base 1.5 leading to avoid
+  // looking cramped when it wraps. Latin h1 is tightened separately below.
+}
+
+h2 {
+  font-size: 1.44rem; // 1.2^2
+}
+
+h3 {
+  font-size: 1.2rem; // 1.2^1
+}
+
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+// Latin glyphs carry their own ascender/descender whitespace, so display-size
+// English headings read crisper with tighter leading than CJK needs.
+h1:lang(en) {
+  line-height: 1.2;
+}
+
+// Block rhythm: paragraphs and lists carry their separation on the bottom only.
+// Bottom-only margins collapse cleanly and never override a heading's tight
+// space-below (see the heading margins above), so headings stay bound to their
+// text while paragraphs read as distinct blocks against the line-height: 2 body.
+//
+// Spacing = the body's extra leading, (--leading - 1) * 1em. It tracks `--leading`
+// automatically: a paragraph break advances one line + this, i.e. 1.5x a line at
+// --leading: 2. The `2` fallback covers any paragraph outside `article`.
+p {
+  margin: 0 0 calc((var(--leading, 2) - 1) * 1em);
 }
 
 ol,
 ul {
-  margin: 1rem auto;
+  margin: 0 auto calc((var(--leading, 2) - 1) * 1em);
 
   li ol,
   li ul {
-    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -191,18 +328,20 @@ ul {
 pre,
 kbd,
 code {
-  margin-top: -0.5em;
   background-color: var(--color_paper_alt);
   border-radius: 2px;
   font-family: "Roboto Mono", "Noto Sans SC", monospace, sans-serif;
-  font-size: calc(1rem * 0.925);
+  font-size: 0.925rem;
   letter-spacing: normal;
-  overflow-x: auto;
   hyphens: none !important;
 }
 
+// Block-only: negative top margin and horizontal scroll belong on `pre`,
+// not on inline `code`/`kbd` where they have no effect.
 pre {
+  margin-top: -0.5em;
   padding-left: 0.5em;
+  overflow-x: auto;
 }
 
 kbd,
@@ -213,14 +352,30 @@ code {
 /*------------------------------------------ 2. Footer -------------------------------------------*/
 
 footer {
-  max-width: fit-content;
-  margin: 1.5rem auto 32vh;
+  --color_link_rest: var(--color_paper_alt);
+  // Inside the shrink-to-fit .page-column wrapper, the footer must not set
+  // the column's width — only the paper should. `width: 0` removes the
+  // footer's intrinsic contribution from the wrapper's fit-content sizing;
+  // `min-width: 100%` then stretches it back to the wrapper's final width,
+  // so a footer line longer than a narrow paper wraps instead of widening
+  // the column.
+  width: 0;
+  min-width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 32vh;
+  margin-bottom: 32svh;
+  animation: fadeInAnimation 2s ease forwards;
   color: var(--color_paper_alt);
-  font-size: medium;
+  // 1rem tracks the root size instead of pinning the keyword `medium`, and
+  // keeps the footer and the floating nav at the same size.
+  font-size: 1rem;
   font-family:
     "fusion-pixel-12px-proportional-zh_hans", "Noto Sans SC", sans-serif;
   font-weight: 400;
-  text-align: center;
+  // Opens the gap between wrapped footer lines (the ・-separated chunks) to
+  // about 0.5rem; single-line footers just get a slightly taller line box.
+  line-height: calc(1em + 0.5rem);
+  text-align: right;
   display: flex;
   flex-direction: column;
   row-gap: 0.8em;
@@ -229,52 +384,136 @@ footer {
   a:link,
   a:visited {
     color: var(--color_paper_alt);
-    border-bottom: 1px dotted var(--color_paper);
+    text-decoration-color: var(--color_paper);
   }
 
   a:hover {
-    color: var(--color_accent);
+    @include link-hover;
   }
 
-  nav {
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    column-gap: 1.6em;
-
-    a {
-      width: fit-content;
-      height: max-content;
-      margin: 0 auto;
-    }
+  // Each chunk binds a ・ separator to the text after it and never breaks
+  // internally, so a too-long footer wraps only at the spaces before a ・
+  // (see the markup in '/_includes/footer.html').
+  .footer-chunk {
+    white-space: nowrap;
   }
 }
 
-/*-------------------------- 3. Adjust to color scheme or width change ---------------------------*/
+/*--------------------------------------- 3. Floating Nav -----------------------------------------*/
+
+#floating-nav {
+  --color_link_rest: var(--color_paper_alt);
+  // Floats in the empty space to the right of the paper. The script in
+  // '/_includes/floating-nav.html' measures the paper's box each scroll/resize
+  // and sets `left`/`top`: it rests the nav 1.25rem above the viewport bottom
+  // but clamps it to the paper's vertical extent, so at page end it stops at
+  // the paper's bottom-right corner and — because it tracks the paper, not the
+  // viewport — it stays hidden beside a full-screen figure until the paper
+  // scrolls into view. The values here are the pre-script default; `left` is a
+  // fallback for when the script hasn't run (e.g. the paper's right edge).
+  position: fixed;
+  left: calc(50% + var(--paper_width) / 2 + 1.25rem);
+  bottom: 1.25rem;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.7em;
+
+  color: var(--color_paper_alt);
+  font-family:
+    "fusion-pixel-12px-proportional-zh_hans", "Noto Sans SC", sans-serif;
+  // Matches the footer's size (see the footer rule above).
+  font-size: 1rem;
+  font-weight: 400;
+
+  animation: fadeInAnimation 2s ease forwards;
+
+  a,
+  a:link,
+  a:visited {
+    color: var(--color_paper_alt);
+    text-decoration-color: var(--color_paper);
+  }
+
+  a:hover {
+    @include link-hover;
+  }
+}
+
+/*-------------------------- 4. Adjust to color scheme or width change ---------------------------*/
 
 @media (prefers-color-scheme: light) {
   body {
-    --color_space: hsl(40, 2%, 56%);
+    --color_space: hsl(40, 2%, 50%);
     --color_paper: hsl(40 100% 95%);
     --color_text: hsl(40, 15%, 30%);
     --color_paper_alt: hsl(40, 35%, 85%);
-    --color_accent: hsl(230, 100%, 50%);
+    --color_accent: hsl(50, 100%, 47%);
+  }
+
+  // Stronger paper grain in light mode
+  main::before {
+    opacity: 1;
   }
 }
 
-// Set breakpoint at a width that is a bit wider than desired paper width
-// 46 rem ~= `--paper_width` + 4rem
-@media screen and (max-width: 46rem) {
+// Breakpoint caveat: `rem` in media queries always resolves against the
+// browser's initial font size (16px), while `--paper_width: 41rem` resolves
+// against the `font-size: large` root (~18px, so the paper is ~738px wide).
+// The thresholds below are chosen in 16px-rem with that in mind.
+
+// Below 72rem (1152px) there is no longer room for the floating nav column
+// beside the centered paper, so the nav drops in-flow: a horizontal row after
+// the footer (the positioning script is a no-op at this width). As the last
+// content it takes over the footer's page-end margin.
+@media screen and (width <= 72rem) {
+  #floating-nav {
+    position: static;
+    width: 100%;
+    max-width: var(--paper_width);
+    margin: 1rem auto 32svh;
+    // Keep the desktop vertical stack, but align it to the right so it reads
+    // as a continuation of the right-aligned footer above it.
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.7em;
+    text-align: right;
+  }
+
+  // The nav is the last in-flow element and carries the page-end space, so no
+  // footer needs a bottom margin. Zeroing it also unifies the footer-to-nav
+  // gap to the nav's 1rem top margin. (The figure-page footer's own bottom
+  // margin is gated to wide screens in post.scss for the same reason.)
+  footer {
+    margin-bottom: 0;
+  }
+}
+
+// 52rem (832px) leaves the full-width paper (~738px) comfortable side margins
+// before switching to the narrow layout.
+@media screen and (width <= 52rem) {
+  // The narrow layout spans the full viewport (minus edge gaps), so the
+  // column wrapper must not shrink to short content here. It is still capped
+  // at the paper's outer width (--paper_width plus an edge gap each side):
+  // just under the 52rem breakpoint the viewport is wider than that, the
+  // paper stops growing, and without the cap the full-width footer and nav
+  // would poke out past the paper's edges.
+  .page-column {
+    width: auto;
+    max-width: calc(var(--paper_width) + 2 * var(--edge_gap));
+  }
+
   main {
     width: auto;
-    margin: 0.8rem;
-    padding: 1.8rem;
+    margin: 36vh var(--edge_gap) 0;
   }
 
   article {
     padding-top: 0.5rem;
     padding-bottom: 1rem;
-    letter-spacing: normal;
     text-align: left !important;
   }
 
@@ -296,27 +535,40 @@ footer {
     hyphens: auto !important;
   }
 
-  // Avoid leaving one character at the last line
-  h1 {
-    max-width: 9em;
-  }
-
+  // Break only when a line genuinely cannot fit (long URLs, identifiers),
+  // instead of `word-break: break-all` splitting ordinary words mid-syllable.
   a,
-  pre,
   code {
-    word-break: break-all;
+    overflow-wrap: anywhere;
   }
 
+  // Match the paper's side gap so the footer's and nav's right edges line up
+  // with the paper's edge instead of sitting further in.
   footer {
-    margin-bottom: 8em !important;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: var(--edge_gap);
+    padding-right: var(--edge_gap);
+  }
 
-    nav {
-      margin-top: 5em;
-      flex-direction: column;
-      row-gap: 2em;
-    }
+  // The nav is the last content, so it carries the page-end space. Lift the
+  // 72rem rule's --paper_width cap: here the edge gap lives in the nav's own
+  // padding, so the cap would pull its text inside the paper's edge whenever
+  // the wrapper sits at its capped width.
+  #floating-nav {
+    max-width: none;
+    padding-left: var(--edge_gap);
+    padding-right: var(--edge_gap);
+    margin-bottom: 8em;
+  }
+}
+
+// Static hover for touch screens — a tap's synthetic hover would freeze the
+// infinite glow animation — and for reduced-motion users. Last in the cascade
+// so it beats every animated `a:hover` rule above.
+@media (hover: none), (prefers-reduced-motion: reduce) {
+  a:hover,
+  footer a:hover,
+  #floating-nav a:hover {
+    @include link-hover-static;
   }
 }
 
@@ -355,6 +607,10 @@ footer {
   }
 
   footer {
+    display: none;
+  }
+
+  #floating-nav {
     display: none;
   }
 }

@@ -1,5 +1,6 @@
 ---
 layout: compress
+# Use `/* */` for comments, not `//`, because the 'compress' layout strips out `//` comments.
 ---
 <!DOCTYPE html>
 <html lang="{{- page.lang -}}">
@@ -8,6 +9,11 @@ layout: compress
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&family=Noto+Serif+SC:wght@200..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap">
+
   <link rel="stylesheet" href="/assets/css/main.css">
 
   {%- if page.indexPage -%}
@@ -18,11 +24,8 @@ layout: compress
   <link rel="stylesheet" href="/assets/css/post.css">
   {%- endif -%}
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/16x16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/96x96.png" />
   <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="/assets/favicon/48x48.ico" />
+  <link rel="icon" href="/assets/favicon/48x48.ico" sizes="32x32" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Shon's Blog" />
   <link rel="manifest" href="/assets/favicon/site.webmanifest" />
@@ -58,29 +61,114 @@ layout: compress
 {%- endcapture -%}
 {%- capture mainClass -%}
   {%- if page.indexPage %}index-page {% endif -%}
-  {%- if page.figure %}figure-page{% endif -%}
+  {%- if page.video or page.image %}figure-page{% endif -%}
 {%- endcapture -%}
 <body{% if bodyClass != "" %} class="{{ bodyClass | strip }}"{% endif %}>
 
-  {%- if page.figure -%}
-    <figure>{{- page.figure -}}</figure>
+  {%- if page.video or page.image -%}
+    <figure>
+      {%- if page.video -%}
+        <video autoplay loop muted playsinline src="{{- page.video -}}"></video>
+        <script>
+          (function () {
+            var v = document.querySelector('figure video');
+            {%- if page.video_speed %}
+            v.playbackRate = {{ page.video_speed }};
+            {%- endif %}
+            /* Honour prefers-reduced-motion: stop the autoplay loop and let
+               the user play it manually instead. */
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+              v.removeAttribute('autoplay');
+              v.removeAttribute('loop');
+              v.setAttribute('controls', '');
+              v.pause();
+            }
+          })();
+        </script>
+      {%- else -%}
+        <img src="{{- page.image -}}" alt="{{- page.alt | default: "" -}}">
+      {%- endif -%}
+    </figure>
   {%- endif -%}
 
+  {%- comment -%}
+    The column wrapper shrinks to the paper's fit-content width (see
+    .page-column in main.scss), so the footer and the in-flow nav below
+    track the paper's edges even when the content is narrower than
+    --paper_width.
+  {%- endcomment -%}
+  <div class="page-column">
   <main{% if mainClass != "" %} class="{{ mainClass | strip }}"{% endif %}>
     <article>
       {% comment %}
-        Show page's title if the page has a category variable.
+        Show page's title if the page has a category variable. `page.headline`
+        is an optional display-only override (it may contain markup such as a
+        <br> to manually break the title across two lines); it falls back to
+        the plain `title`.
       {% endcomment %}
 
       {%- if page.categories -%}
-        <h1>{{- page.title -}}</h1>
+        <h1>{{- page.headline | default: page.title -}}</h1>
       {%- endif -%}
 
       {{- content -}}
     </article>
   </main>
 
+  {%- comment -%}
+    Nav after footer: on narrow screens it renders in-flow after the paper
+    and the footer; on wide screens a script positions it (fixed) beside the
+    paper's right edge (see #floating-nav in main.scss and the script in
+    floating-nav.html). DOM order only matters for the narrow in-flow case.
+  {%- endcomment -%}
   {%- include footer.html -%}
+  {%- include floating-nav.html -%}
+  </div>
+
+  <script>
+    /* Smoothly scroll to the top before following an in-site link, so leaving
+       a page feels continuous rather than an abrupt jump. */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      document.addEventListener('click', function (e) {
+        /* Let the browser keep modified clicks (new tab, middle-click, etc.). */
+        if (e.defaultPrevented || e.button !== 0 ||
+            e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+        var link = e.target.closest('a[href]');
+        if (!link) return;
+        if (link.hasAttribute('download')) return;
+        if (link.target && link.target !== '_self') return;
+
+        var url = new URL(link.href, location.href);
+
+        /* Only intercept navigations to a different page on this site. */
+        if (url.origin !== location.origin) return;
+        if (url.href === location.href) return;
+        if (url.pathname === location.pathname && url.hash) return;
+
+        /* Already at the top: nothing to animate, follow the link normally. */
+        if (window.scrollY === 0) return;
+
+        e.preventDefault();
+
+        var navigated = false;
+        function go() {
+          if (navigated) return;
+          navigated = true;
+          location.href = url.href;
+        }
+
+        /* Navigate the moment the scroll settles, with a fallback for browsers
+           that don't fire `scrollend`. */
+        window.addEventListener('scrollend', go, { once: true });
+        setTimeout(go, 700);
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
+  </script>
 </body>
 
 </html>

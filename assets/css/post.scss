@@ -11,9 +11,8 @@ hr {
 rt {
   margin-bottom: -0.35em;
   font-family: "Noto Sans SC", sans-serif;
-  font-size: calc(1em * 0.56);
+  font-size: 0.56em;
   font-weight: 450;
-  letter-spacing: 0.05em;
 }
 
 ruby {
@@ -30,15 +29,20 @@ cite {
 }
 
 figure {
+  // `svh` excludes the collapsing mobile browser chrome; plain `vh` lines are
+  // the fallback for browsers without small-viewport units.
   height: 100vh;
+  height: 100svh;
   margin: 0;
   display: flex;
   align-items: center;
+  animation: fadeInAnimation 1.5s ease forwards;
 
   img,
   video {
     max-width: 82vw;
     max-height: 82vh;
+    max-height: 82svh;
     margin: auto;
     border-radius: 2px;
     object-fit: scale-down;
@@ -60,7 +64,7 @@ article {
     max-width: 100%;
     margin: 1.5em auto;
     font-family: "Noto Sans SC", sans-serif;
-    font-size: calc(1rem * 0.925);
+    font-size: 0.925rem;
     font-weight: 350;
     border-collapse: collapse;
     overflow-x: auto;
@@ -91,30 +95,29 @@ article {
 
 // `embedded-video` selects `div` in '/_includes/youtubeVideo.html'
 .embedded-video {
-  max-width: 100%;
-  height: fit-content;
+  // Inside the fit-content paper, the iframe's default intrinsic 300px width
+  // must not set the paper's width — only the text should. `width: 0` removes
+  // this block's intrinsic contribution from the paper's fit-content sizing;
+  // `min-width: 100%` then stretches it back to the paper's final width, so
+  // the video tracks the text-driven column (same trick as the footer in
+  // main.scss).
+  width: 0;
+  min-width: 100%;
   margin-top: 4rem;
   margin-bottom: 0;
-  position: relative;
-  overflow: hidden;
 
   iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    display: block;
     width: 100%;
-    height: 100%;
     border-radius: 2px;
     border: none;
   }
 }
 
-// `.video-16-9` selects `div` in '/_includes/youtubeVideo.html'
-// 100% * 9 / 16 = 56.25%
-.video-16-9 {
-  padding-top: 56.25%;
+// `.video-16-9` selects `div` in '/_includes/youtubeVideo.html';
+// `aspect-ratio` replaces the old padding-top percentage hack.
+.video-16-9 iframe {
+  aspect-ratio: 16 / 9;
 }
 
 /*--------------------------------- 1. Special page overwrites -----------------------------------*/
@@ -124,17 +127,23 @@ article {
   margin-top: 4rem;
 }
 
-// `.figure-page-footer` selects `footer` in '/_includes/footer.html'
-.figure-page-footer {
-  margin-bottom: 8rem;
+// `.figure-page-footer` selects `footer` in '/_includes/footer.html'.
+// The extra bottom margin is only wanted on wide screens, where the nav is
+// fixed and the footer is the last in-flow element. At or below 72rem the nav
+// follows the footer in flow and carries the page-end space, so the footer
+// needs no bottom margin there (main.scss zeroes it) — otherwise its 8rem
+// would open a gap between the footer and the nav. 72.0625rem clears the
+// 72rem nav breakpoint by a pixel, matching the script's threshold.
+@media screen and (min-width: 72.0625rem) {
+  .figure-page-footer {
+    margin-bottom: 8rem;
+  }
 }
 
 // `.post-page` selects `body` in '/_layouts/default.html'
 .post-page {
   article {
-    padding-left: 0;
-    letter-spacing: 0.125em;
-    text-align: justify;
+    padding: 0;
   }
 
   h1,
@@ -143,8 +152,9 @@ article {
   h4,
   h5,
   h6 {
-    margin: auto;
-    text-align: center;
+    // Keep headings left-aligned against the justified body; spacing comes
+    // from the shared em-based heading margins.
+    text-align: left;
   }
 }
 
@@ -152,59 +162,41 @@ article {
 .en-page {
   article {
     letter-spacing: normal;
-    word-spacing: 0.1em;
-    text-align: justify;
-    hyphens: auto !important;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: auto;
-    word-spacing: 0.2em;
+    word-spacing: 0.0625rem;
   }
 }
 
-// `two-columns` selects a `table` inside a post
+// `.two-columns` lays out parallel bilingual (CJK / English) couplets as a
+// two-column grid; each language pair fills one grid row, gutter and row gaps
+// are native instead of an invisible border.
+//
+// Markup is a kramdown definition list (`<dl>` of `<dt>`/`<dd>` pairs, see
+// '_drafts/two-columns-template.md'): `<dt>`/`<dd>` are direct children, so
+// they drop straight into the grid and read as term/translation rather than
+// tabular data.
 .two-columns {
-  td {
-    width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5em; // gutter between the two languages
+  row-gap: 1rem; // gap between couplets
+
+  dt,
+  dd {
+    margin: 0; // reset the browser's default <dd> indent
     font-family: "Noto Serif SC", serif;
-    font-size: large;
-    letter-spacing: 0.125em;
+    // 1rem tracks the root size instead of pinning the keyword `large`
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 2;
-    border: none;
     text-align: left;
-    vertical-align: top;
-  }
-
-  tr {
-    border-bottom: 0.875rem solid transparent;
-  }
-
-  tr:first-child {
-    td {
-      padding-top: 0;
-    }
-  }
-
-  tr:last-child {
-    border-bottom: none;
-
-    td {
-      padding-bottom: 0;
-    }
   }
 }
 
 /*---------------------------------- 2. Adjust to width change -----------------------------------*/
 
-// Set breakpoint at a width that is a bit wider than desired paper width
-// 46 rem ~= `--paper_width` + 4rem
-@media screen and (max-width: 46rem) {
+// Matches the narrow-layout breakpoint in main.scss (52rem = 832px in
+// media-query rem; the ~738px paper keeps comfortable margins above it).
+@media screen and (width <= 52rem) {
   // `.figure-page` selects `main` in '/_layouts/default.html'
   .figure-page {
     margin-top: 6rem;
@@ -215,6 +207,7 @@ article {
     video {
       max-width: 88vw;
       max-height: 88vh;
+      max-height: 88svh;
     }
   }
 
@@ -225,6 +218,10 @@ article {
 
   article {
     table {
+      // Browsers ignore `overflow` on `display: table`; block display turns
+      // the element into a scroll container so wide tables pan horizontally
+      // instead of overflowing the paper.
+      display: block;
       overflow-x: auto;
 
       th,
@@ -232,6 +229,23 @@ article {
         min-width: min-content;
         max-width: fit-content;
       }
+    }
+  }
+
+  // Stack the two languages: items auto-flow into one column, Chinese above
+  // English. A tight `row-gap` binds each couplet's two lines into one block;
+  // the start of every new couplet then adds top margin (margins add to the
+  // grid gap, they don't collapse) to restore breathing room between couplets.
+  .two-columns {
+    grid-template-columns: 1fr;
+    // Negative gaps are invalid CSS — the browser drops the declaration and
+    // falls back to the base rule's 1rem. Keep the gap at 0 and pull the
+    // couplet together with the negative margin below instead.
+    row-gap: 0;
+
+    // The couplet start is a `<dt>` after a `<dd>`.
+    dd + dt {
+      margin-top: 1.25rem; // extra space between couplets (adds to row-gap)
     }
   }
 }
