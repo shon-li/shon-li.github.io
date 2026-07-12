@@ -366,7 +366,9 @@ footer {
   margin-bottom: 32svh;
   animation: fadeInAnimation 2s ease forwards;
   color: var(--color_paper_alt);
-  font-size: medium;
+  // 1rem tracks the root size instead of pinning the keyword `medium`, and
+  // keeps the footer and the floating nav at the same size.
+  font-size: 1rem;
   font-family:
     "fusion-pixel-12px-proportional-zh_hans", "Noto Sans SC", sans-serif;
   font-weight: 400;
@@ -423,7 +425,8 @@ footer {
   color: var(--color_paper_alt);
   font-family:
     "fusion-pixel-12px-proportional-zh_hans", "Noto Sans SC", sans-serif;
-  font-size: medium;
+  // Matches the footer's size (see the footer rule above).
+  font-size: 1rem;
   font-weight: 400;
 
   animation: fadeInAnimation 2s ease forwards;
