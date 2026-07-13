@@ -122,6 +122,14 @@ a:hover {
   @include link-hover;
 }
 
+// `.hidden-link` marks links that look like plain text — the index's category
+// titles and the footer's licence — no underline in any state, but the
+// breathing `a:hover` above still applies. `a.hidden-link` ties with `a:link`
+// on specificity and wins by coming later.
+a.hidden-link {
+  text-decoration: none;
+}
+
 // Breathing font-colour animation for links
 @keyframes glowAnimation {
   0% {
