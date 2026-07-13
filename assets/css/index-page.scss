@@ -68,6 +68,20 @@ h6 {
   }
 }
 
+// `.numbered` marks the category pages' lists ('category-index.html'):
+// each entry gets a counter in front of its title. The number lives in the
+// link's ::before as an inline-block, so the link's dotted underline doesn't
+// propagate to it — it reads as plain text, like the dates.
+.contents-list.numbered {
+  counter-reset: entry;
+
+  a::before {
+    counter-increment: entry;
+    content: counter(entry) ".\a0";
+    display: inline-block;
+  }
+}
+
 // `.contents-date` selects the `time` in each '.contents-list' row
 .contents-date {
   font-family: "Roboto Mono", monospace;
