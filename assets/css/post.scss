@@ -192,6 +192,15 @@ article {
   }
 }
 
+// This stylesheet loads after main.css, so main.scss's reduced-motion block
+// can't disable the figure fade-in above (same specificity, earlier in the
+// cascade) — it needs its own override here.
+@media (prefers-reduced-motion: reduce) {
+  figure {
+    animation: none;
+  }
+}
+
 /*---------------------------------- 2. Adjust to width change -----------------------------------*/
 
 // Matches the narrow-layout breakpoint in main.scss (52rem = 832px in

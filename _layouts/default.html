@@ -126,6 +126,77 @@ layout: compress
   </div>
 
   <script>
+    /* Let a link's glow fade out smoothly. The hover glow is a keyframe
+       animation, and browsers won't transition *from* an animation-driven
+       colour once the animation is removed — unhovering snaps straight back.
+       So while a link is hovered we sample its animated colour each frame,
+       and on mouse-out pin that colour inline for one style pass; clearing
+       the pin then lets the stylesheet's 0.5s colour transition carry the
+       link back to its resting colour. */
+    (function () {
+      if (!window.matchMedia('(hover: hover)').matches) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      var glowing = null;
+      var raf = 0;
+      var textColor = '';
+      var lineColor = '';
+
+      /* The underline is fading too (`text-decoration-color: currentColor`
+         while glowing, a muted colour at rest on `.url`, footer, and nav
+         links), so it is sampled and pinned alongside `color`. */
+      function sample() {
+        var s = getComputedStyle(glowing);
+        textColor = s.color;
+        lineColor = s.textDecorationColor;
+        raf = requestAnimationFrame(sample);
+      }
+
+      /* Write both colours inline and flush styles with transitions muted,
+         so the write itself lands instantly (and any in-flight fade on the
+         link is cancelled) before the stylesheet's transitions resume. */
+      function pin(link, text, line) {
+        link.style.transition = 'none';
+        link.style.color = text;
+        link.style.textDecorationColor = line;
+        void link.offsetWidth;
+        link.style.transition = '';
+      }
+
+      function release() {
+        cancelAnimationFrame(raf);
+        var link = glowing;
+        glowing = null;
+        /* Freeze the glow's current colours, then unpin: the stylesheet's
+           0.5s transition carries both back to their resting colours. */
+        pin(link, textColor, lineColor);
+        link.style.color = '';
+        link.style.textDecorationColor = '';
+      }
+
+      document.addEventListener('mouseover', function (e) {
+        var link = e.target.closest('a');
+        if (!link || link === glowing) return;
+        if (glowing) release();
+        /* Cancel any still-running fade-out on this link. A transition
+           outranks the glow animation while it runs, so a leftover fade
+           would hold the colour for up to 0.5s and then jump to wherever
+           the glow had advanced; clearing it restarts the glow cleanly
+           from the resting colour. */
+        pin(link, '', '');
+        glowing = link;
+        sample();
+      });
+
+      document.addEventListener('mouseout', function (e) {
+        if (!glowing || !glowing.contains(e.target)) return;
+        if (e.relatedTarget && glowing.contains(e.relatedTarget)) return;
+        release();
+      });
+    })();
+  </script>
+
+  <script>
     /* Smoothly scroll to the top before following an in-site link, so leaving
        a page feels continuous rather than an abrupt jump. */
     (function () {

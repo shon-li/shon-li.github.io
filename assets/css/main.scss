@@ -74,21 +74,8 @@ body {
   text-decoration-color: var(--color_accent);
 }
 
-// The static hover fallback lives in section 4 so it follows every animated
-// `a:hover` rule in the cascade.
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    scroll-behavior: auto;
-  }
-
-  main,
-  article,
-  figure,
-  footer,
-  #floating-nav {
-    animation: none;
-  }
-}
+// All reduced-motion overrides live in section 4: they share specificity with
+// the animated rules they disable, so they must come later in the cascade.
 
 /*--------------------------------------- 1. Common Pages ----------------------------------------*/
 
@@ -108,8 +95,8 @@ a:visited {
   // line continuous; the difference inside links is imperceptible.
   word-spacing: normal;
   transition:
-    color 0.3s ease,
-    text-decoration-color 0.3s ease;
+    color 0.5s ease,
+    text-decoration-color 0.5s ease;
 }
 
 // `.url` selects `a` marked as url text on all pages
@@ -525,8 +512,8 @@ footer {
     text-align: left !important;
   }
 
-  // `.contents-table` selects the course-link tables in '/study.md'
-  .contents-table td {
+  // `.course-index` selects the course-link tables in '/study.md'
+  .course-index td {
     vertical-align: top;
   }
 
@@ -577,6 +564,22 @@ footer {
   footer a:hover,
   #floating-nav a:hover {
     @include link-hover-static;
+  }
+}
+
+// Disable the page-load fade-ins and smooth scrolling for reduced-motion
+// users. These share specificity with the `animation` rules above, so they
+// must sit after them in the cascade to win. (post.scss carries its own
+// matching block for `figure`, which that later stylesheet animates.)
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+
+  article,
+  footer,
+  #floating-nav {
+    animation: none;
   }
 }
 

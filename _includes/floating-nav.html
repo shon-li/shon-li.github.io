@@ -60,7 +60,10 @@
     if (scrollTop) {
       scrollTop.addEventListener('click', function (e) {
         e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        /* No explicit `behavior`: it defaults to the root's CSS
+           scroll-behavior — smooth normally, instant under
+           prefers-reduced-motion (see main.scss). */
+        window.scrollTo({ top: 0 });
       });
     }
   })();
