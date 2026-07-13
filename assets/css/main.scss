@@ -39,10 +39,24 @@ body {
   // 'Space' background (solid)
   min-width: 16.5rem;
   margin: auto;
+  // With `viewport-fit=cover` (see default.html) the page extends under the
+  // iOS safe areas so the space background reaches the physical screen edges.
+  // The side insets are the only ones content can collide with (landscape
+  // notch; the paper's 0.8rem edge gap is smaller than them), so pad them
+  // back. Top/bottom need nothing: the paper's large viewport-relative
+  // margins keep content clear. The insets are 0 everywhere else.
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
   // `svh` excludes the collapsing mobile browser chrome; plain `vh` line is
   // the fallback for browsers without small-viewport units.
   min-height: 100vh;
   min-height: 100svh;
+  // `flow-root` keeps children's margins inside the body's own height. Without
+  // it, the page-end space (the footer's / in-flow nav's 32svh bottom margin)
+  // only reaches the document via margin collapse-through — which the
+  // min-height above blocks whenever the content is shorter than the viewport,
+  // silently dropping the space below the footer on short posts.
+  display: flow-root;
   background-color: var(--color_space);
 }
 
@@ -469,6 +483,10 @@ footer {
     position: static;
     width: 100%;
     max-width: var(--paper_width);
+    // vh fallback first, as everywhere: a browser without `svh` drops the
+    // whole shorthand, which would cost the nav its centering and the page
+    // its end space (the footer's own margin is zeroed at this width).
+    margin: 1rem auto 32vh;
     margin: 1rem auto 32svh;
     // Keep the desktop vertical stack, but align it to the right so it reads
     // as a continuation of the right-aligned footer above it.
@@ -503,18 +521,17 @@ footer {
 
   main {
     width: auto;
+    // Same vh-then-svh pair as the base rule: shorthands reset the whole
+    // margin, so the svh refinement must be restated here or narrow screens
+    // (where the collapsing mobile chrome matters most) would lose it.
     margin: 36vh var(--edge_gap) 0;
+    margin: 36svh var(--edge_gap) 0;
   }
 
   article {
     padding-top: 0.5rem;
     padding-bottom: 1rem;
     text-align: left !important;
-  }
-
-  // `.course-index` selects the course-link tables in '/study.md'
-  .course-index td {
-    vertical-align: top;
   }
 
   h1:lang(en),
@@ -525,6 +542,7 @@ footer {
   h6:lang(en),
   p:lang(en),
   li:lang(en),
+  i:lang(en),
   span:lang(en),
   blockquote:lang(en) {
     hyphens: auto !important;
@@ -585,18 +603,15 @@ footer {
 
 @media print {
   :root {
-    font-size: normal;
+    // The browser's default size (`normal` is not a valid font-size and was
+    // silently dropped, leaving the screen's `large` in print).
+    font-size: medium;
   }
 
   body,
   main {
     width: max-content;
     background-color: white !important;
-  }
-
-  // Remove scrolling edge fading effect
-  body::before {
-    box-shadow: none;
   }
 
   figure {
@@ -606,6 +621,11 @@ footer {
   main {
     margin: auto;
     padding: 1.5rem;
+
+    // No paper grain on print's white paper
+    &::before {
+      content: none;
+    }
   }
 
   article {

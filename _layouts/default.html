@@ -8,7 +8,11 @@ layout: compress
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- `viewport-fit=cover` extends the canvas under the iOS safe areas (notch,
+       home indicator); without it the space background stops short of the
+       screen's top and bottom edges. Content keeps clear of the insets on its
+       own via the paper's large viewport-relative margins. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

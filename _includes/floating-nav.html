@@ -15,8 +15,10 @@
     var paper = document.querySelector('main');
     /* Only position on wide screens; at or below 72rem the nav is a static
        in-flow row (see the media query in main.scss), where left/top do
-       nothing. 72.0625rem clears the 72rem breakpoint by one pixel. */
-    var wide = window.matchMedia('(min-width: 72.0625rem)');
+       nothing. `width > 72rem` is the exact complement of that breakpoint
+       (same range syntax the stylesheets already require), so the script
+       and the CSS switch modes at the same pixel with no seam. */
+    var wide = window.matchMedia('(width > 72rem)');
 
     function positionNav() {
       if (!paper) return;

@@ -132,9 +132,10 @@ article {
 // fixed and the footer is the last in-flow element. At or below 72rem the nav
 // follows the footer in flow and carries the page-end space, so the footer
 // needs no bottom margin there (main.scss zeroes it) — otherwise its 8rem
-// would open a gap between the footer and the nav. 72.0625rem clears the
-// 72rem nav breakpoint by a pixel, matching the script's threshold.
-@media screen and (min-width: 72.0625rem) {
+// would open a gap between the footer and the nav. `width > 72rem` is the
+// exact complement of the nav breakpoint (and the script's matchMedia in
+// '/_includes/floating-nav.html'), leaving no unmatched seam between them.
+@media screen and (width > 72rem) {
   .figure-page-footer {
     margin-bottom: 8rem;
   }
@@ -198,6 +199,15 @@ article {
 @media (prefers-reduced-motion: reduce) {
   figure {
     animation: none;
+  }
+}
+
+// Same cascade constraint as above: main.scss's print block can't undo the
+// viewport-height figure, so the override lives here. Without it a photo
+// post prints each figure as a full page-height box that is mostly blank.
+@media print {
+  figure {
+    height: auto;
   }
 }
 
